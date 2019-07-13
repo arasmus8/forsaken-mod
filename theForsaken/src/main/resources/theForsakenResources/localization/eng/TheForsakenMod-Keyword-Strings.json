@@ -1,0 +1,34 @@
+[
+  {
+    "NAMES": [
+      "Fear",
+      "fear"
+    ],
+    "DESCRIPTION": "Damage dealt is reduced to 1."
+  },
+  {
+    "NAMES": [
+      "Unplayed",
+      "unplayed"
+    ],
+    "DESCRIPTION": "This effect is triggered if the card remains in your hand at the end of turn."
+  },
+  {
+    "NAMES": [
+      "keyword",
+      "keywords"
+    ],
+    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords",
+      "multikey",
+      "multikeyword"
+    ],
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  }
+]

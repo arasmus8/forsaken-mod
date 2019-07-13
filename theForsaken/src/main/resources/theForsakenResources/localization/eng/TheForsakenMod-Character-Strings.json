@@ -1,0 +1,13 @@
+{
+  "theForsaken:DefaultCharacter": {
+    "NAMES": [
+      "The Forsaken",
+      "the Forsaken"
+    ],
+    "TEXT": [
+      "A forlorn pilgrim, the last survivor of his order. NL Uses divine enchantments to empower himself and weaken foes.",
+      "NL You pray the evil may be eliminated",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~forsaken~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+    ]
+  }
+}

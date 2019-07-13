@@ -1,0 +1,106 @@
+{
+  "theForsaken:TheForsaken_Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theForsaken:TheForsaken_Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theForsaken:FatRoll": {
+    "NAME": "Fat Roll",
+    "DESCRIPTION": "Gain !B! Block. NL theforsaken:Unplayed: Draw an additional card next turn."
+  },
+  "theForsaken:FuryStrikes": {
+    "NAME": "Fury Strikes",
+    "DESCRIPTION": "Deal !D! Damage 3 times."
+  },
+  "theForsaken:InspiringBlow": {
+    "NAME": "Inspiring Blow",
+    "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
+  },
+  "theForsaken:Penitence": {
+    "NAME": "Penitence",
+    "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! bonus damage."
+  },
+  "theForsaken:RainingSunlight": {
+    "NAME": "Raining Sunlight",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL theforsaken:Unplayed: Your next attack deals !M! bonus damage."
+  },
+  "theForsaken:SacredOath": {
+    "NAME": "Sacred Oath",
+    "DESCRIPTION": "Double your Strength and Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your Strength and Dexterity. NL Exhaust."
+  },
+  "theForsaken:ShieldBash": {
+    "NAME": "Shield Bash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! Damage. Increase the power of ALL Shield Bash cards by !M! this combat."
+  },
+  "theForsaken:Smite": {
+    "NAME": "Smite",
+    "DESCRIPTION": "Deal !D! Damage. NL Gain !M! Regen."
+  },
+  "theForsaken:TearsOfSunlight": {
+    "NAME": "Tears of Sunlight",
+    "DESCRIPTION": "Gain !M! Regen each turn."
+  },
+  "theForsaken:Terrorize": {
+    "NAME": "Terrorize",
+    "DESCRIPTION": "Apply !M! theforsaken:Fear."
+  },
+  "theForsaken:WrathOfGod": {
+    "NAME": "Wrath of God",
+    "DESCRIPTION": "Deal !D! Damage and gain !B! Block X times. NL Can be upgraded any number of times."
+  },
+  "theForsaken:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "theForsaken:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL theforsaken:Multiword_Keyword."
+  },
+  "theForsaken:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! theforsaken:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! theforsaken:Keywords."
+  },
+  "theForsaken:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theForsaken:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "theForsaken:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X theforsaken:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 theforsaken:Keywords."
+  },
+  "theForsaken:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theForsaken:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
+  },
+  "theForsaken:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "theForsaken:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !theForsaken:ENERGY_DAMAGE! damage total.)"
+  },
+  "theForsaken:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !theForsaken:SecondMagic! poison to an enemy."
+  },
+  "theForsaken:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  }
+}
