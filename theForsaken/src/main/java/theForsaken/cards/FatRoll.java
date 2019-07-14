@@ -2,6 +2,7 @@ package theForsaken.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -35,7 +36,6 @@ public class FatRoll extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
-
     public FatRoll() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
@@ -45,13 +45,17 @@ public class FatRoll extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        if (this.dontTriggerOnUseCard) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 1), 1));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        }
     }
 
     @Override
-    public void triggerOnEndOfPlayerTurn() {
-        AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 1), 1));
+    public void triggerOnEndOfTurnForPlayingCard() {
+        this.dontTriggerOnUseCard = true;
+        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
     // Upgraded stats.

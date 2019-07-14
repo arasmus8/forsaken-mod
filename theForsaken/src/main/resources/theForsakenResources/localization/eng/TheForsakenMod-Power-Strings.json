@@ -3,8 +3,8 @@
                 "NAME": "Fear",
                 "DESCRIPTIONS": ["Damage is reduced to #b1 for #b", " turn.", " turns."]
         },
-        "theForsaken:PenitencePower": {
-                "NAME": "Penitence",
+        "theForsaken:BonusDamagePower": {
+                "NAME": "Bonus Damage",
                 "DESCRIPTIONS": ["The next attack deals #b", " bonus damage."]
         },
         "theForsaken:TearsOfSunlightPower": {
