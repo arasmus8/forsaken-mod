@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
-import theForsaken.powers.PenitencePower;
+import theForsaken.powers.BonusDamagePower;
 
 import static theForsaken.TheForsakenMod.makeCardPath;
 
@@ -51,7 +51,7 @@ public class Penitence extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PenitencePower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, this.magicNumber)));
     }
 
 

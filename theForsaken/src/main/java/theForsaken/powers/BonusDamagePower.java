@@ -3,7 +3,6 @@ package theForsaken.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,8 +20,8 @@ import static theForsaken.TheForsakenMod.makePowerPath;
 
 //Reduce damage dealt to 1
 
-public class PenitencePower extends AbstractPower implements CloneablePowerInterface {
-    public static final String POWER_ID = TheForsakenMod.makeID(PenitencePower.class.getSimpleName());
+public class BonusDamagePower extends AbstractPower implements CloneablePowerInterface {
+    private static final String POWER_ID = TheForsakenMod.makeID(BonusDamagePower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -34,7 +33,7 @@ public class PenitencePower extends AbstractPower implements CloneablePowerInter
 
     private boolean justApplied = false;
 
-    public PenitencePower(final AbstractCreature owner, final int amount) {
+    public BonusDamagePower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -73,6 +72,6 @@ public class PenitencePower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public AbstractPower makeCopy() {
-        return new PenitencePower(owner, amount);
+        return new BonusDamagePower(owner, amount);
     }
 }
