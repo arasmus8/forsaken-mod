@@ -32,7 +32,7 @@ public class FuryStrikes extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
 
     // /STAT DECLARATION/
 
