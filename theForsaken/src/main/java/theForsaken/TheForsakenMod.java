@@ -74,13 +74,13 @@ public class TheForsakenMod implements
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
-    public static final Logger logger = LogManager.getLogger(TheForsakenMod.class.getName());
+    private static final Logger logger = LogManager.getLogger(TheForsakenMod.class.getName());
     private static String modID;
 
     // Mod-settings settings. This is if you want an on/off savable button
-    public static Properties theForsakenDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
+    private static Properties theForsakenDefaultSettings = new Properties();
+    private static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
+    private static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Forsaken";
@@ -94,9 +94,9 @@ public class TheForsakenMod implements
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
     
     // Potion Colors in RGB
-    public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
-    public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
-    public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
+    private static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
+    private static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
+    private static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
     
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -126,7 +126,7 @@ public class TheForsakenMod implements
     public static final String THE_DEFAULT_CORPSE = "theForsakenResources/images/char/defaultCharacter/corpse.png";
     
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
-    public static final String BADGE_IMAGE = "theForsakenResources/images/Badge.png";
+    private static final String BADGE_IMAGE = "theForsakenResources/images/Badge.png";
     
     // Atlas and JSON files for the Animations
     public static final String THE_DEFAULT_SKELETON_ATLAS = "theForsakenResources/images/char/defaultCharacter/skeleton.atlas";
@@ -227,7 +227,7 @@ public class TheForsakenMod implements
     // DON'T TOUCH THIS STUFF. IT IS HERE FOR STANDARDIZATION BETWEEN MODS AND TO ENSURE GOOD CODE PRACTICES.
     // IF YOU MODIFY THIS I WILL HUNT YOU DOWN AND DOWNVOTE YOUR MOD ON WORKSHOP
     
-    public static void setModID(String ID) { // DON'T EDIT
+    private static void setModID(String ID) { // DON'T EDIT
         Gson coolG = new Gson(); // EY DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i hate u Gdx.files
         InputStream in = TheForsakenMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
@@ -243,7 +243,7 @@ public class TheForsakenMod implements
         logger.info("Success! ID is " + modID); // WHY WOULD U WANT IT NOT TO LOG?? DON'T EDIT THIS.
     } // NO
     
-    public static String getModID() { // NO
+    private static String getModID() { // NO
         return modID; // DOUBLE NO
     } // NU-UH
     
@@ -345,8 +345,8 @@ public class TheForsakenMod implements
     
     
     // ================ ADD POTIONS ===================
-    
-    public void receiveEditPotions() {
+
+    private void receiveEditPotions() {
         logger.info("Beginning to edit potions");
         
         // Class Specific Potion. If you want your potion to not be class-specific,
@@ -408,6 +408,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new InspiringBlow());
         BaseMod.addCard(new Penitence());
         BaseMod.addCard(new RainingSunlight());
+        BaseMod.addCard(new Retribution());
         BaseMod.addCard(new SacredOath());
         BaseMod.addCard(new ShieldBash());
         BaseMod.addCard(new Smite());

@@ -27,6 +27,10 @@
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL theforsaken:Unplayed: Your next attack deals !M! bonus damage."
   },
+  "theForsaken:Retribution": {
+    "NAME": "Retribution",
+    "DESCRIPTION": "Ethereal. NL Reflect all incoming damage this turn. NL theforsaken:Unplayed: Reflect !M! damage when attacked."
+  },
   "theForsaken:SacredOath": {
     "NAME": "Sacred Oath",
     "DESCRIPTION": "Double your Strength and Dexterity. NL Exhaust.",

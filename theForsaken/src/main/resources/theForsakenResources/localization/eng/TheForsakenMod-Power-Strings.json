@@ -1,12 +1,16 @@
 {
-        "theForsaken:FearPower": {
-                "NAME": "Fear",
-                "DESCRIPTIONS": ["Damage is reduced to #b1 for #b", " turn.", " turns."]
-        },
         "theForsaken:BonusDamagePower": {
                 "NAME": "Bonus Damage",
                 "DESCRIPTIONS": ["The next attack deals #b", " bonus damage."]
         },
+        "theForsaken:FearPower": {
+                "NAME": "Fear",
+                "DESCRIPTIONS": ["Damage is reduced to #b1 for #b", " turn.", " turns."]
+        },
+  "theForsaken:RetributionPower": {
+          "NAME": "Reflect Damage",
+          "DESCRIPTIONS": ["Reflect all damage ", "this turn.", "for #b", " turns."]
+  },
         "theForsaken:TearsOfSunlightPower": {
                 "NAME": "Tears of Sunlight",
                 "DESCRIPTIONS": ["At the start of your turn, gain #b", " regen."]
