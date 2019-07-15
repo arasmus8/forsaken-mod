@@ -30,6 +30,7 @@ import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
 import theForsaken.variables.DefaultCustomVariable;
 import theForsaken.variables.DefaultSecondMagicNumber;
+import theForsaken.variables.SacrificeSoulVariable;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -393,6 +394,7 @@ public class TheForsakenMod implements
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
         // Add the Custom Dynamic variables
+        BaseMod.addDynamicVariable(new SacrificeSoulVariable());
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         
@@ -410,6 +412,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new RainingSunlight());
         BaseMod.addCard(new Retribution());
         BaseMod.addCard(new SacredOath());
+        BaseMod.addCard(new SacrificeSoul());
         BaseMod.addCard(new ShieldBash());
         BaseMod.addCard(new Smite());
         BaseMod.addCard(new TearsOfSunlight());
@@ -422,7 +425,6 @@ public class TheForsakenMod implements
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
         BaseMod.addCard(new DefaultRareAttack());
-        BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
         
         logger.info("Making sure the cards are unlocked.");
@@ -435,7 +437,6 @@ public class TheForsakenMod implements
         UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
-        UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
         
         logger.info("Done adding cards!");
