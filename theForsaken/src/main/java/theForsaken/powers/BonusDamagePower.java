@@ -31,8 +31,6 @@ public class BonusDamagePower extends AbstractPower implements CloneablePowerInt
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("penitence84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("penitence32.png"));
 
-    private boolean justApplied = false;
-
     public BonusDamagePower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
