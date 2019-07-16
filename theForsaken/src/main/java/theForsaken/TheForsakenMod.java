@@ -406,6 +406,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new TheForsaken_Defend());
         BaseMod.addCard(new TheForsaken_Strike());
         BaseMod.addCard(new DarkRift());
+        BaseMod.addCard(new Eulogy());
         BaseMod.addCard(new FatRoll());
         BaseMod.addCard(new FuryStrikes());
         BaseMod.addCard(new InspiringBlow());

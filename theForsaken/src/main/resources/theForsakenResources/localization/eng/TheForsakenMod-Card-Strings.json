@@ -11,6 +11,10 @@
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."
   },
+  "theForsaken:Eulogy": {
+    "NAME": "Eulogy",
+    "DESCRIPTION": "Apply !M! vulnerability. NL theforsaken:Unplayed: Your next attack deals 3 bonus damage."
+  },
   "theForsaken:FatRoll": {
     "NAME": "Fat Roll",
     "DESCRIPTION": "Gain !B! Block. NL theforsaken:Unplayed: Draw an additional card next turn."
