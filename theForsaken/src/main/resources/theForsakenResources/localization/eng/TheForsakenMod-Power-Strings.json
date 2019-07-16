@@ -1,26 +1,55 @@
 {
-        "theForsaken:BonusDamagePower": {
-                "NAME": "Bonus Damage",
-                "DESCRIPTIONS": ["The next attack deals #b", " bonus damage."]
-        },
-        "theForsaken:FearPower": {
-                "NAME": "Fear",
-                "DESCRIPTIONS": ["Damage is reduced to #b1 for #b", " turn.", " turns."]
-        },
-  "theForsaken:RetributionPower": {
-          "NAME": "Reflect Damage",
-          "DESCRIPTIONS": ["Reflect all damage ", "this turn.", "for #b", " turns."]
+  "theForsaken:BonusDamagePower": {
+    "NAME": "Bonus Damage",
+    "DESCRIPTIONS": [
+      "The next attack deals #b",
+      " bonus damage."
+    ]
   },
-        "theForsaken:TearsOfSunlightPower": {
-                "NAME": "Tears of Sunlight",
-                "DESCRIPTIONS": ["At the start of your turn, gain #b", " regen."]
-        },
-        "theForsaken:CommonPower": {
-                "NAME": "Placeholder Power",
-                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-        },
-        "theForsaken:RarePower": {
-                "NAME": "Placeholder Power",
-                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-        }
+  "theForsaken:FearPower": {
+    "NAME": "Fear",
+    "DESCRIPTIONS": [
+      "Damage is reduced to #b1 for #b",
+      " turn.",
+      " turns."
+    ]
+  },
+  "theForsaken:RetributionPower": {
+    "NAME": "Reflect Damage",
+    "DESCRIPTIONS": [
+      "Reflect all damage ",
+      "this turn.",
+      "for #b",
+      " turns."
+    ]
+  },
+  "theForsaken:RipostePower": {
+    "NAME": "Riposte",
+    "DESCRIPTIONS": [
+      "When your block is broken, your attacks deal double damage next turn."
+    ]
+  },
+  "theForsaken:TearsOfSunlightPower": {
+    "NAME": "Tears of Sunlight",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " regen."
+    ]
+  },
+  "theForsaken:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "theForsaken:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  }
 }

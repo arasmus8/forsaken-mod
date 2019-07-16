@@ -31,6 +31,10 @@
     "NAME": "Retribution",
     "DESCRIPTION": "Ethereal. NL Reflect all incoming damage this turn. NL theforsaken:Unplayed: Reflect !M! damage when attacked."
   },
+  "theForsaken:Riposte": {
+    "NAME": "Riposte",
+    "DESCRIPTION": "When your block is broken, your attacks deal double damage next turn."
+  },
   "theForsaken:SacredOath": {
     "NAME": "Sacred Oath",
     "DESCRIPTION": "Double your Strength and Dexterity. NL Exhaust.",
