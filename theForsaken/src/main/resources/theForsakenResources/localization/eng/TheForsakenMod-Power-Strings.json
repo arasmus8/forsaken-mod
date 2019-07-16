@@ -6,6 +6,12 @@
       " bonus damage."
     ]
   },
+  "theForsaken:DoubleDamageAttackPower": {
+    "NAME": "Double Damage",
+    "DESCRIPTIONS": [
+      "The next attack deals double damage."
+    ]
+  },
   "theForsaken:FearPower": {
     "NAME": "Fear",
     "DESCRIPTIONS": [

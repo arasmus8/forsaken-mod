@@ -7,6 +7,11 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! Damage."
   },
+  "theForsaken:BlessedWeapon": {
+    "NAME": "Blessed Weapon",
+    "DESCRIPTION": "Your next !M! attack deals double damage.",
+    "UPGRADE_DESCRIPTION": "Your next !M! attacks deal double damage."
+  },
   "theForsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."
