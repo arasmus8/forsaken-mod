@@ -22,7 +22,7 @@ import theForsaken.util.TextureLoader;
 import static theForsaken.TheForsakenMod.makePowerPath;
 
 
-//Reflect all incoming damage.
+//Double damage next turn when block is broken.
 
 public class RipostePower extends AbstractPower implements CloneablePowerInterface {
     private static final String POWER_ID = TheForsakenMod.makeID(RipostePower.class.getSimpleName());

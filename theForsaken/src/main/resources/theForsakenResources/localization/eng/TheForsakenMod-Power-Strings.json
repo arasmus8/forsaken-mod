@@ -14,6 +14,13 @@
       " turns."
     ]
   },
+  "theForsaken:HealNextTurnPower": {
+    "NAME": "Heal next turn",
+    "DESCRIPTIONS": [
+      "Heal #b",
+      " at the beginning of next turn."
+    ]
+  },
   "theForsaken:RetributionPower": {
     "NAME": "Reflect Damage",
     "DESCRIPTIONS": [

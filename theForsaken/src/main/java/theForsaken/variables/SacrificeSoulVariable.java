@@ -37,17 +37,20 @@ public class SacrificeSoulVariable extends DynamicVariable
     public int value(AbstractCard card)
     {
         AbstractPlayer player = AbstractDungeon.player;
-        Iterator powerIterator = player.powers.iterator();
-        int buffsRemoved = 0;
+        if (player != null) {
+            Iterator powerIterator = player.powers.iterator();
+            int buffsRemoved = 0;
 
-        while(powerIterator.hasNext()) {
-            AbstractPower p = (AbstractPower)powerIterator.next();
-            if (p.type == AbstractPower.PowerType.BUFF) {
-                buffsRemoved += 1;
+            while (powerIterator.hasNext()) {
+                AbstractPower p = (AbstractPower) powerIterator.next();
+                if (p.type == AbstractPower.PowerType.BUFF) {
+                    buffsRemoved += 1;
+                }
             }
-        }
 
-        return card.damage * buffsRemoved;
+            return card.damage * buffsRemoved;
+        }
+        return card.damage;
     }
     
     // The baseValue the variable should display.
