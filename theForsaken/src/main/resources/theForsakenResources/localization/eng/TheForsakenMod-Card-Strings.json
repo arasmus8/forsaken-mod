@@ -9,7 +9,7 @@
   },
   "theForsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
-    "DESCRIPTION": "Your next !M! attack deals double damage.",
+    "DESCRIPTION": "Your next attack deals double damage.",
     "UPGRADE_DESCRIPTION": "Your next !M! attacks deal double damage."
   },
   "theForsaken:DarkRift": {
@@ -18,7 +18,7 @@
   },
   "theForsaken:Eulogy": {
     "NAME": "Eulogy",
-    "DESCRIPTION": "Apply !M! vulnerability. NL theforsaken:Unplayed: Your next attack deals 3 bonus damage."
+    "DESCRIPTION": "Apply !M! vulnerability to ALL enemies. NL theforsaken:Unplayed: Your next attack deals 3 bonus damage."
   },
   "theForsaken:FatRoll": {
     "NAME": "Fat Roll",
