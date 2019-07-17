@@ -36,6 +36,9 @@ public class SacrificeSoul extends AbstractDynamicCard {
     private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
 
+    private static final int DAMAGE_PER_BUFF = 3;
+    private static final int UPGRADE_DAMAGE_PER_BUFF = 4;
+
     // /STAT DECLARATION/
 
     public SacrificeSoul() {
@@ -43,13 +46,15 @@ public class SacrificeSoul extends AbstractDynamicCard {
         isMultiDamage = true;
         exhaust = true;
         baseDamage = DAMAGE;
+        baseMagicNumber = DAMAGE_PER_BUFF;
+        magicNumber = DAMAGE_PER_BUFF;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SacrificeSoulAction(p, multiDamage, this.damageTypeForTurn));
+        AbstractDungeon.actionManager.addToBottom(new SacrificeSoulAction(p, multiDamage, this.magicNumber, this.damageTypeForTurn));
     }
 
 
@@ -60,6 +65,7 @@ public class SacrificeSoul extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADE_DAMAGE_PER_BUFF);
             initializeDescription();
         }
     }

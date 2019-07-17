@@ -18,13 +18,15 @@ public class SacrificeSoulAction extends AbstractGameAction {
     private final AbstractPlayer player;
     private float duration;
     private int[] damage;
+    private int bonusDamage;
     private DamageType damageType;
 
-    public SacrificeSoulAction(AbstractPlayer player, int[] damage, DamageType damageType) {
+    public SacrificeSoulAction(AbstractPlayer player, int[] damage, int bonusDamage, DamageType damageType) {
         this.duration = Settings.ACTION_DUR_XFAST;
         this.player = player;
         this.damage = damage;
         this.damageType = damageType;
+        this.bonusDamage = bonusDamage;
     }
 
     @Override
@@ -46,7 +48,7 @@ public class SacrificeSoulAction extends AbstractGameAction {
 
             int[] damageModified = new int[damage.length];
             for(int i=0; i<damage.length; i++) {
-                damageModified[i] = damage[i] * buffsRemoved;
+                damageModified[i] = damage[i] + bonusDamage * buffsRemoved;
             }
 
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {

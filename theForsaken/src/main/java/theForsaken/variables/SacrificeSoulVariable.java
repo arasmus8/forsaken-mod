@@ -48,9 +48,9 @@ public class SacrificeSoulVariable extends DynamicVariable
                 }
             }
 
-            return card.damage * buffsCount;
+            return card.damage + card.magicNumber * buffsCount;
         }
-        return 0;
+        return card.damage;
     }
     
     // The baseValue the variable should display.

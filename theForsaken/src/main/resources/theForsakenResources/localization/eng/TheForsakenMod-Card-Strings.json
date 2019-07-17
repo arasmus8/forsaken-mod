@@ -67,7 +67,7 @@
   },
   "theForsaken:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
-    "DESCRIPTION": "Sacrifice all your buffs, dealing !D! damage to ALL enemies for each. NL ( !theForsaken:SACRIFICE_SOUL_DAMAGE! damage) NL Exhaust."
+    "DESCRIPTION": "Sacrifice all your buffs, dealing !D! damage, + !M! for each buff to ALL enemies. NL ( !theForsaken:SACRIFICE_SOUL_DAMAGE! damage) NL Exhaust."
   },
   "theForsaken:TearsOfSunlight": {
     "NAME": "Tears of Sunlight",
