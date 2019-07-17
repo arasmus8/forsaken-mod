@@ -410,6 +410,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new Eulogy());
         BaseMod.addCard(new FatRoll());
         BaseMod.addCard(new FuryStrikes());
+        BaseMod.addCard(new HorrifyingStrike());
         BaseMod.addCard(new InspiringBlow());
         BaseMod.addCard(new Penitence());
         BaseMod.addCard(new RainingSunlight());

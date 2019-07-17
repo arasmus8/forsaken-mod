@@ -28,6 +28,10 @@
     "NAME": "Fury Strikes",
     "DESCRIPTION": "Deal !D! Damage 3 times."
   },
+  "theForsaken:HorrifyingStrike": {
+    "NAME": "Horrifying Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Inflict !M! theforsaken:Fear on yourself."
+  },
   "theForsaken:InspiringBlow": {
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
