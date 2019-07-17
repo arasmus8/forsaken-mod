@@ -85,6 +85,10 @@
     "NAME": "Terrorize",
     "DESCRIPTION": "Apply !M! theforsaken:Fear. NL Exhaust."
   },
+  "theForsaken:WordsOfMight": {
+    "NAME": "Words of Might",
+    "DESCRIPTION": "Gain !M! strength and dexterity."
+  },
   "theForsaken:WrathOfGod": {
     "NAME": "Wrath of God",
     "DESCRIPTION": "Deal !D! Damage and gain !B! Block X times. NL Can be upgraded any number of times."

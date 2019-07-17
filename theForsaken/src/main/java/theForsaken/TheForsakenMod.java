@@ -424,6 +424,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new SpinAttack());
         BaseMod.addCard(new TearsOfSunlight());
         BaseMod.addCard(new Terrorize());
+        BaseMod.addCard(new WordsOfMight());
         BaseMod.addCard(new WrathOfGod());
 
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
