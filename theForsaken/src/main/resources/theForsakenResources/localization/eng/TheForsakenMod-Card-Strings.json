@@ -12,6 +12,10 @@
     "DESCRIPTION": "Your next attack deals double damage.",
     "UPGRADE_DESCRIPTION": "Your next !M! attacks deal double damage."
   },
+  "theForsaken:BountifulSunlight": {
+    "NAME": "Bountiful Sunlight",
+    "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
+  },
   "theForsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."
