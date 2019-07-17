@@ -40,6 +40,7 @@ public class Terrorize extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = FEAR_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
 
