@@ -41,12 +41,14 @@ public class Eulogy extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = VULNERABILITY_AMT;
         magicNumber = VULNERABILITY_AMT;
+        this.isEthereal = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster target) {
         if(this.dontTriggerOnUseCard) {
+            this.exhaust = true;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, 3), 3));
         } else {
             for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
