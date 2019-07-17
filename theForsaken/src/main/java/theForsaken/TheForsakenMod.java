@@ -421,6 +421,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new SacrificeSoul());
         BaseMod.addCard(new ShieldBash());
         BaseMod.addCard(new Smite());
+        BaseMod.addCard(new SpinAttack());
         BaseMod.addCard(new TearsOfSunlight());
         BaseMod.addCard(new Terrorize());
         BaseMod.addCard(new WrathOfGod());
