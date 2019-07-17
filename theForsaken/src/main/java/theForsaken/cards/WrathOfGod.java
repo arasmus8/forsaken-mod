@@ -35,10 +35,10 @@ public class WrathOfGod extends AbstractDynamicCard {
 
     private static final int COST = -1;
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
     private static final int BLOCK = 3;
-    private static final int UPGRADE_PLUS_DMG = 1;
-    private static final int UPGRADE_PLUS_BLK = 1;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_BLK = 2;
 
     // /STAT DECLARATION/
 
@@ -64,8 +64,8 @@ public class WrathOfGod extends AbstractDynamicCard {
     // Upgraded stats.
     @Override
     public void upgrade() {
-        this.upgradeDamage(UPGRADE_PLUS_DMG + this.timesUpgraded);
-        this.upgradeBlock(UPGRADE_PLUS_BLK + this.timesUpgraded);
+        this.upgradeDamage(UPGRADE_PLUS_DMG);
+        this.upgradeBlock(UPGRADE_PLUS_BLK);
         ++this.timesUpgraded;
         this.upgraded = true;
         this.name = NAME + "+" + this.timesUpgraded;
