@@ -4,7 +4,6 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -21,8 +20,8 @@ import static theForsaken.TheForsakenMod.makePowerPath;
 
 //Next attack deals double damage
 
-public class DoubleDamageAttackPower extends AbstractPower implements CloneablePowerInterface {
-    private static final String POWER_ID = TheForsakenMod.makeID(DoubleDamageAttackPower.class.getSimpleName());
+public class PercentageBonusDamagePower extends AbstractPower implements CloneablePowerInterface {
+    private static final String POWER_ID = TheForsakenMod.makeID(PercentageBonusDamagePower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -32,7 +31,9 @@ public class DoubleDamageAttackPower extends AbstractPower implements CloneableP
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("double_damage_attack84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("double_damage_attack32.png"));
 
-    public DoubleDamageAttackPower(final AbstractCreature owner, final int amount) {
+    private static final float INCREASE_BY = 1.5F;
+
+    public PercentageBonusDamagePower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -59,7 +60,7 @@ public class DoubleDamageAttackPower extends AbstractPower implements CloneableP
 
     public float atDamageGive(float damage, DamageType type) {
         if (type == DamageType.NORMAL) {
-            return damage * 2.0F;
+            return damage * INCREASE_BY;
         }
         return damage;
     }
@@ -72,6 +73,6 @@ public class DoubleDamageAttackPower extends AbstractPower implements CloneableP
 
     @Override
     public AbstractPower makeCopy() {
-        return new DoubleDamageAttackPower(owner, amount);
+        return new PercentageBonusDamagePower(owner, amount);
     }
 }

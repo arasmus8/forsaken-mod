@@ -13,10 +13,10 @@
       "Reduce lost HP by half, convert to poison instead."
     ]
   },
-  "theForsaken:DoubleDamageAttackPower": {
-    "NAME": "Double Damage",
+  "theForsaken:PercentageBonusDamagePower": {
+    "NAME": "50% Bonus Damage",
     "DESCRIPTIONS": [
-      "The next attack deals double damage."
+      "The next attack deals 50% more damage."
     ]
   },
   "theForsaken:FearPower": {
