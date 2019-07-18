@@ -3,14 +3,14 @@
     "NAME": "Judgement Scales",
     "FLAVOR": "Seek balance in all things.",
     "DESCRIPTIONS": [
-      "Each turn, gain #b1 #yStrength if you've played no attacks, and #b1 #yDexterity if you've played no skills."
+      "Each turn, gain #yStrength / #yDexterity based on played cards. NL (Gain #b1 #yStrength if you've played no attacks, and #b1 #yDexterity if you've played no skills.)"
     ]
   },
   "theForsaken:PaleLantern": {
     "NAME": "Pale Lantern",
     "FLAVOR": "Provides a comforting glow in the dark.",
     "DESCRIPTIONS": [
-      "Gain #b1 [E] ."
+      "Gain #b1 [E]. Draw 1 less card each turn."
     ]
   },
   "theForsaken:PlaceholderRelic": {
