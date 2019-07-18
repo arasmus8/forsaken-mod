@@ -6,6 +6,13 @@
       " bonus damage."
     ]
   },
+  "theForsaken:CorruptedFormPower": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTIONS": [
+      "Reduce lost HP by 1/3, convert to poison instead.",
+      "Reduce lost HP by half, convert to poison instead."
+    ]
+  },
   "theForsaken:DoubleDamageAttackPower": {
     "NAME": "Double Damage",
     "DESCRIPTIONS": [

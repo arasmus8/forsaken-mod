@@ -9,12 +9,17 @@
   },
   "theForsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
-    "DESCRIPTION": "Your next attack deals double damage.",
-    "UPGRADE_DESCRIPTION": "Your next !M! attacks deal double damage."
+    "DESCRIPTION": "Your next attack deals 50% more damage.",
+    "UPGRADE_DESCRIPTION": "Your next !M! attacks deal 50% more damage."
   },
   "theForsaken:BountifulSunlight": {
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
+  },
+  "theForsaken:CorruptedForm": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Reduce damage taken by one third. Convert all HP lost to poison.",
+    "UPGRADE_DESCRIPTION": "Reduce damage taken by half. Convert all HP lost to poison."
   },
   "theForsaken:DarkRift": {
     "NAME": "Dark Rift",

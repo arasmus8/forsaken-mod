@@ -407,6 +407,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new TheForsaken_Strike());
         BaseMod.addCard(new BlessedWeapon());
         BaseMod.addCard(new BountifulSunlight());
+        BaseMod.addCard(new CorruptedForm());
         BaseMod.addCard(new DarkRift());
         BaseMod.addCard(new Eulogy());
         BaseMod.addCard(new FatRoll());
