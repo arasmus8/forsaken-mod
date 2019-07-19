@@ -395,9 +395,7 @@ public class TheForsakenMod implements
         logger.info("Add variables");
         // Add the Custom Dynamic variables
         BaseMod.addDynamicVariable(new SacrificeSoulVariable());
-        BaseMod.addDynamicVariable(new DefaultCustomVariable());
-        BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
-        
+
         logger.info("Adding cards");
         // Add the cards
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
@@ -407,6 +405,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new TheForsaken_Strike());
         BaseMod.addCard(new BlessedWeapon());
         BaseMod.addCard(new BountifulSunlight());
+        BaseMod.addCard(new CleansingLight());
         BaseMod.addCard(new CorruptedForm());
         BaseMod.addCard(new DarkRift());
         BaseMod.addCard(new Eulogy());
@@ -428,26 +427,11 @@ public class TheForsakenMod implements
         BaseMod.addCard(new WordsOfMight());
         BaseMod.addCard(new WrathOfGod());
 
-        BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        BaseMod.addCard(new DefaultCommonPower());
-        BaseMod.addCard(new DefaultUncommonSkill());
-        BaseMod.addCard(new DefaultUncommonAttack());
-        BaseMod.addCard(new DefaultUncommonPower());
-        BaseMod.addCard(new DefaultRareAttack());
-        BaseMod.addCard(new DefaultRarePower());
-        
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
-        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonPower.ID);
-        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-        UnlockTracker.unlockCard(DefaultRareAttack.ID);
-        UnlockTracker.unlockCard(DefaultRarePower.ID);
-        
+
         logger.info("Done adding cards!");
     }
     

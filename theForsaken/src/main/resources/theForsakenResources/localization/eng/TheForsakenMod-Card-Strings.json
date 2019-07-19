@@ -16,6 +16,10 @@
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
   },
+  "theForsaken:CleansingLight": {
+    "NAME": "Cleansing Light",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Remove theforsaken:Fear, Poison, and Vulnerable."
+  },
   "theForsaken:CorruptedForm": {
     "NAME": "Corrupted Form",
     "DESCRIPTION": "Reduce damage taken by one third. Convert all HP lost to poison.",
