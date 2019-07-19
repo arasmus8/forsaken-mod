@@ -42,7 +42,7 @@ public class SpinAttackAction extends AbstractGameAction {
                     AbstractDungeon.actionManager.addToTop(new SpinAttackAction(AbstractDungeon.getRandomMonster(), damageInfo, amount - 1));
                 }
 
-                AbstractDungeon.actionManager.addToTop(new WaitAction(0.2F));
+                AbstractDungeon.actionManager.addToTop(new WaitAction(POST_ATTACK_WAIT_DURATION));
             }
 
             this.isDone = true;
