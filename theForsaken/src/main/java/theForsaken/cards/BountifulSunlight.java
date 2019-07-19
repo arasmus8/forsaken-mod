@@ -41,6 +41,7 @@ public class BountifulSunlight extends AbstractDynamicCard {
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         exhaust = true;
+        this.tags.add(CardTags.HEALING);
     }
 
 

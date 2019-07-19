@@ -45,6 +45,7 @@ public class HorrifyingStrike extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
+        this.tags.add(CardTags.STRIKE);
     }
 
 

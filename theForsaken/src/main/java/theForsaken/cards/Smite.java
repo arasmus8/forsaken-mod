@@ -50,6 +50,7 @@ public class Smite extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = REGEN_AMOUNT;
         magicNumber = REGEN_AMOUNT;
+        this.tags.add(CardTags.HEALING);
     }
 
 

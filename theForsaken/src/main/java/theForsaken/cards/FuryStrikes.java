@@ -39,6 +39,7 @@ public class FuryStrikes extends AbstractDynamicCard {
     public FuryStrikes() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.tags.add(CardTags.STRIKE);
     }
 
 
