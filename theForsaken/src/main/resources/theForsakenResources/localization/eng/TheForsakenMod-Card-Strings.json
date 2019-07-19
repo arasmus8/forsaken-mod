@@ -25,6 +25,10 @@
     "DESCRIPTION": "Reduce damage taken by one third. Convert all HP lost to poison.",
     "UPGRADE_DESCRIPTION": "Reduce damage taken by half. Convert all HP lost to poison."
   },
+  "theForsaken:CorruptedWord": {
+    "NAME": "Corrupted Word",
+    "DESCRIPTION": "Apply !M! poison to ALL enemies AND yourself."
+  },
   "theForsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."

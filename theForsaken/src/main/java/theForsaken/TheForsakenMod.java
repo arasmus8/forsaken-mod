@@ -407,6 +407,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new BountifulSunlight());
         BaseMod.addCard(new CleansingLight());
         BaseMod.addCard(new CorruptedForm());
+        BaseMod.addCard(new CorruptedWord());
         BaseMod.addCard(new DarkRift());
         BaseMod.addCard(new Eulogy());
         BaseMod.addCard(new FatRoll());
