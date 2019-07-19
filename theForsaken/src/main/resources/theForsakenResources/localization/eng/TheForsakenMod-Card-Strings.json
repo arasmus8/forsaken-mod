@@ -53,6 +53,10 @@
     "NAME": "Horrifying Strike",
     "DESCRIPTION": "Deal !D! damage. NL Inflict !M! theforsaken:Fear on yourself."
   },
+  "theForsaken:HymnOfPatience": {
+    "NAME": "Hymn of Patience",
+    "DESCRIPTION": "Next turn, gain !M! [E] and draw !M! additional card."
+  },
   "theForsaken:InspiringBlow": {
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
