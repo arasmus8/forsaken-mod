@@ -29,6 +29,10 @@
     "NAME": "Corrupted Word",
     "DESCRIPTION": "Apply !M! poison to ALL enemies AND yourself."
   },
+  "theForsaken:CowardsBrand": {
+    "NAME": "Coward's Brand",
+    "DESCRIPTION": "Deal !D! damage. NL If the target has theforsaken:Fear, the damage is doubled."
+  },
   "theForsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."
