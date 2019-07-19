@@ -415,6 +415,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new HorrifyingStrike());
         BaseMod.addCard(new InspiringBlow());
         BaseMod.addCard(new Penitence());
+        BaseMod.addCard(new Purification());
         BaseMod.addCard(new RainingSunlight());
         BaseMod.addCard(new Retribution());
         BaseMod.addCard(new Riposte());

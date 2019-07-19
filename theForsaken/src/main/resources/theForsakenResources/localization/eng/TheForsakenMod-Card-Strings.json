@@ -57,6 +57,10 @@
     "NAME": "Penitence",
     "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! bonus damage."
   },
+  "theForsaken:Purification": {
+    "NAME": "Purification",
+    "DESCRIPTION": "Deal !D! Damage. NL Transfer your debuffs to the target."
+  },
   "theForsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL theforsaken:Unplayed: Your next attack deals !M! bonus damage."
