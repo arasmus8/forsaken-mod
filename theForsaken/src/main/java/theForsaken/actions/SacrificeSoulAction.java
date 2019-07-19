@@ -52,7 +52,9 @@ public class SacrificeSoulAction extends AbstractGameAction {
             }
 
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(player, new DarkOrbActivateEffect(m.hb.cX, m.hb.cY), Settings.ACTION_DUR_XFAST));
+                if (m != null) {
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(player, new DarkOrbActivateEffect(m.hb.cX, m.hb.cY), Settings.ACTION_DUR_XFAST));
+                }
             }
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, damageModified, damageType, AttackEffect.FIRE));
             this.isDone = true;
