@@ -403,6 +403,7 @@ public class TheForsakenMod implements
 
         BaseMod.addCard(new TheForsaken_Defend());
         BaseMod.addCard(new TheForsaken_Strike());
+        BaseMod.addCard(new BattleHymn());
         BaseMod.addCard(new BlessedWeapon());
         BaseMod.addCard(new BountifulSunlight());
         BaseMod.addCard(new CleansingLight());

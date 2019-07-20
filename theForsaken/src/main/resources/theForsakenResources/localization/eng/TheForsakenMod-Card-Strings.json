@@ -7,6 +7,13 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! Damage."
   },
+  "theForsaken:BattleHymn": {
+    "NAME": "Battle Hymn",
+    "DESCRIPTION": "Unplayable NL Deal !D! damage to a random enemy. NL Reduce by !M! for each card played.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card."
+    ]
+  },
   "theForsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
     "DESCRIPTION": "Your next attack deals 50% more damage.",
