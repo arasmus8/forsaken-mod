@@ -40,6 +40,11 @@
     "NAME": "Coward's Brand",
     "DESCRIPTION": "Deal !D! damage. NL If the target has theforsaken:Fear, the damage is doubled."
   },
+  "theForsaken:DarkBarrier": {
+    "NAME": "Dark Barrier",
+    "DESCRIPTION": "Prevent the next X times you would lose HP. Inflict X Frail on yourself. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Prevent the next X + 1 times you would lose HP. Inflict X - 1 Frail on yourself. NL Exhaust."
+  },
   "theForsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."
