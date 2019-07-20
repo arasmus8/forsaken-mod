@@ -45,7 +45,6 @@ public class WardingHymn extends AbstractDynamicCard {
 
     public WardingHymn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.isEthereal = true;
         this.baseBlock = BLOCK;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;

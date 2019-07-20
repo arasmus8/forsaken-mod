@@ -46,7 +46,6 @@ public class HymnOfRest extends AbstractDynamicCard {
 
     public HymnOfRest() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.isEthereal = true;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
         this.otherCardsPlayed = 0;
