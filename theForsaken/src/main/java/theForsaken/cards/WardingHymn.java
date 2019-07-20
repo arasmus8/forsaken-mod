@@ -1,10 +1,8 @@
 package theForsaken.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,12 +13,13 @@ import theForsaken.characters.TheForsaken;
 
 import static theForsaken.TheForsakenMod.makeCardPath;
 
-public class BattleHymn extends AbstractDynamicCard {
+public class WardingHymn extends AbstractDynamicCard {
+
     // TEXT DECLARATION
 
-    public static final String ID = TheForsakenMod.makeID(BattleHymn.class.getSimpleName());
-    public static final String IMG = makeCardPath("BattleHymn.png");
-    // Must have an image with the same NAME as the card in your image folder!.
+    public static final String ID = TheForsakenMod.makeID(WardingHymn.class.getSimpleName());
+    public static final String IMG = makeCardPath("WardingHymn.png");
+    // Must have an image with the same NAME as the card in your image folder!
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
 
@@ -30,35 +29,36 @@ public class BattleHymn extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheForsaken.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
-
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int BLOCK = 15;
+    private static final int UPGRADE_BLOCK_AMT = 5;
 
     private static final int MAGIC = 5;
 
     private int otherCardsPlayed;
+
     // /STAT DECLARATION/
 
-    public BattleHymn() {
+
+    public WardingHymn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        baseMagicNumber = MAGIC;
-        magicNumber = baseMagicNumber;
-        otherCardsPlayed = 0;
+        this.isEthereal = true;
+        this.baseBlock = BLOCK;
+        this.baseMagicNumber = MAGIC;
+        this.magicNumber = MAGIC;
+        this.otherCardsPlayed = 0;
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.dontTriggerOnUseCard) {
-            int adjustedDamage = damage - magicNumber * otherCardsPlayed;
-            if (adjustedDamage > 0) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, adjustedDamage, damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
+        if (dontTriggerOnUseCard) {
+            int adjustedBlock = block - magicNumber * otherCardsPlayed;
+            if (adjustedBlock > 0) {
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, adjustedBlock));
             }
             otherCardsPlayed = 0;
         }
@@ -93,7 +93,7 @@ public class BattleHymn extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBlock(UPGRADE_BLOCK_AMT);
             initializeDescription();
         }
     }

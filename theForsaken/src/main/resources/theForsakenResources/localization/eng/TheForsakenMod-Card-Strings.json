@@ -9,7 +9,7 @@
   },
   "theForsaken:BattleHymn": {
     "NAME": "Battle Hymn",
-    "DESCRIPTION": "Unplayable NL Deal !D! damage to a random enemy. NL Reduce by !M! for each card played.",
+    "DESCRIPTION": "Unplayable NL Deal !D! damage to a random enemy at the end of turn. NL Reduce by !M! for each card played.",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
     ]
@@ -116,6 +116,13 @@
   "theForsaken:Terrorize": {
     "NAME": "Terrorize",
     "DESCRIPTION": "Apply !M! theforsaken:Fear. NL Exhaust."
+  },
+  "theForsaken:WardingHymn": {
+    "NAME": "Warding Hymn",
+    "DESCRIPTION": "Unplayable NL Gain !B! block at the end of turn. NL Reduce by !M! for each card played.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card."
+    ]
   },
   "theForsaken:WordsOfMight": {
     "NAME": "Words of Might",
