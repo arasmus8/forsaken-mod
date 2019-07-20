@@ -416,6 +416,7 @@ public class TheForsakenMod implements
         BaseMod.addCard(new FuryStrikes());
         BaseMod.addCard(new HorrifyingStrike());
         BaseMod.addCard(new HymnOfPatience());
+        BaseMod.addCard(new HymnOfRest());
         BaseMod.addCard(new InspiringBlow());
         BaseMod.addCard(new Penitence());
         BaseMod.addCard(new Purification());

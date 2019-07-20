@@ -64,6 +64,13 @@
     "NAME": "Hymn of Patience",
     "DESCRIPTION": "Next turn, gain !M! [E] and draw !M! additional card."
   },
+  "theForsaken:HymnOfRest": {
+    "NAME": "Hymn of Rest",
+    "DESCRIPTION": "Unplayable. NL Gain !M! Blur at end of turn. Reduce by 1 for each card played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card."
+    ]
+  },
   "theForsaken:InspiringBlow": {
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
