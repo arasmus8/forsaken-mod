@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.CardLibrary;
 import theForsaken.TheForsakenMod;
+import theForsaken.cards.DivineGuidance;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -44,7 +45,7 @@ public class DivineGuidanceAction extends AbstractGameAction {
                 } else {
                     tipMessage = numberOfCards > 1 ? TEXT[2] + this.numberOfCards + TEXT[3] : TEXT[0];
                 }
-                CardLibrary library = new CardLibrary(false, false, false, "");
+                CardLibrary library = new CardLibrary(false, false, false, DivineGuidance.ID);
 
                 AbstractDungeon.gridSelectScreen.open(library.cardGroup, this.numberOfCards, tipMessage, false);
 
