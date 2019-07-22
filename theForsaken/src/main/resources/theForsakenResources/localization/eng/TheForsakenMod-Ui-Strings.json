@@ -1,0 +1,11 @@
+{
+  "theForsaken:DivineGuidanceAction": {
+    "TEXT": [
+      "Choose a card to add to your discard pile.",
+      "Choose a card to add to your draw pile.",
+      "Choose ",
+      "cards to add to your discard pile.",
+      "cards to add to your draw pile."
+    ]
+  }
+}

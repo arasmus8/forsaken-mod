@@ -51,8 +51,8 @@
   },
   "theForsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
-    "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Choose ANY card. NL Add a copy to your #gdraw pile."
+    "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose ANY card. NL Add a copy to your draw pile. NL Exhaust."
   },
   "theForsaken:Eulogy": {
     "NAME": "Eulogy",

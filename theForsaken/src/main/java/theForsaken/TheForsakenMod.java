@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -21,15 +22,12 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theForsaken.cards.*;
 import theForsaken.characters.TheForsaken;
 import theForsaken.events.IdentityCrisisEvent;
 import theForsaken.potions.FearPotion;
 import theForsaken.relics.*;
 import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
-import theForsaken.variables.DefaultCustomVariable;
-import theForsaken.variables.DefaultSecondMagicNumber;
 import theForsaken.variables.SacrificeSoulVariable;
 
 import java.io.InputStream;
@@ -401,39 +399,10 @@ public class TheForsakenMod implements
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
-        BaseMod.addCard(new TheForsaken_Defend());
-        BaseMod.addCard(new TheForsaken_Strike());
-        BaseMod.addCard(new BattleHymn());
-        BaseMod.addCard(new BlessedWeapon());
-        BaseMod.addCard(new BountifulSunlight());
-        BaseMod.addCard(new CleansingLight());
-        BaseMod.addCard(new CorruptedForm());
-        BaseMod.addCard(new CorruptedWord());
-        BaseMod.addCard(new CowardsBrand());
-        BaseMod.addCard(new DarkBarrier());
-        BaseMod.addCard(new DarkRift());
-        BaseMod.addCard(new Eulogy());
-        BaseMod.addCard(new FatRoll());
-        BaseMod.addCard(new FuryStrikes());
-        BaseMod.addCard(new HorrifyingStrike());
-        BaseMod.addCard(new HymnOfPatience());
-        BaseMod.addCard(new HymnOfRest());
-        BaseMod.addCard(new InspiringBlow());
-        BaseMod.addCard(new Penitence());
-        BaseMod.addCard(new Purification());
-        BaseMod.addCard(new RainingSunlight());
-        BaseMod.addCard(new Retribution());
-        BaseMod.addCard(new Riposte());
-        BaseMod.addCard(new SacredOath());
-        BaseMod.addCard(new SacrificeSoul());
-        BaseMod.addCard(new ShieldBash());
-        BaseMod.addCard(new Smite());
-        BaseMod.addCard(new SpinAttack());
-        BaseMod.addCard(new TearsOfSunlight());
-        BaseMod.addCard(new Terrorize());
-        BaseMod.addCard(new WardingHymn());
-        BaseMod.addCard(new WordsOfMight());
-        BaseMod.addCard(new WrathOfGod());
+        CardLibrary library = new CardLibrary();
+        for(AbstractCard card : library.cardGroup.group) {
+            BaseMod.addCard(card);
+        }
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -484,6 +453,10 @@ public class TheForsakenMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/TheForsakenMod-Orb-Strings.json");
+
+        // UIStrings
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/eng/TheForsakenMod-Ui-Strings.json");
         
         logger.info("Done editing strings");
     }
