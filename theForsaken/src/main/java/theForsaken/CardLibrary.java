@@ -22,6 +22,7 @@ public class CardLibrary {
         ArrayList<AbstractCard> list = new ArrayList<>();
         list.add(new BattleHymn());
         list.add(new BlessedWeapon());
+        list.add(new BlightOfFamine());
         list.add(new BountifulSunlight());
         list.add(new CleansingLight());
         list.add(new CorruptedForm());

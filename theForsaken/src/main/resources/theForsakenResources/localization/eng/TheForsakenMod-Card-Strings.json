@@ -20,6 +20,10 @@
     "DESCRIPTION": "Your next attack deals 50% more damage.",
     "UPGRADE_DESCRIPTION": "Your next !M! attacks deal 50% more damage."
   },
+  "theForsaken:BlightOfFamine": {
+    "NAME": "Blight of Famine",
+    "DESCRIPTION": "Apply !M! vulnerability and weakness to ALL enemies AND yourself."
+  },
   "theForsaken:BountifulSunlight": {
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
