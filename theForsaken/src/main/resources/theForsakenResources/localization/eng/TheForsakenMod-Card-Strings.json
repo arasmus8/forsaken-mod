@@ -151,6 +151,10 @@
     "NAME": "Words of Might",
     "DESCRIPTION": "Gain !M! strength and dexterity."
   },
+  "theForsaken:WordsOfPestilence": {
+    "NAME": "Words of Pestilence",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies and !M! to yourself."
+  },
   "theForsaken:WrathOfGod": {
     "NAME": "Wrath of God",
     "DESCRIPTION": "Deal !D! Damage and gain !B! Block X times. NL Can be upgraded any number of times."
