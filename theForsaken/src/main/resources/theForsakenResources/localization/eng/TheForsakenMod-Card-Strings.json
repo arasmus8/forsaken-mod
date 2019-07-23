@@ -90,6 +90,10 @@
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
   },
+  "theForsaken:PanicDive": {
+    "NAME": "Panic Dive",
+    "DESCRIPTION": "Gain !B! block. NL Shuffle !M! dazed into your discard pile."
+  },
   "theForsaken:Penitence": {
     "NAME": "Penitence",
     "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! bonus damage."
