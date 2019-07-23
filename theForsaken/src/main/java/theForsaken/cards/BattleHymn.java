@@ -23,6 +23,7 @@ public class BattleHymn extends AbstractDynamicCard {
     // Must have an image with the same NAME as the card in your image folder!.
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
+    private static final String UPGRADE_DESC = CARD_STRINGS.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -38,27 +39,32 @@ public class BattleHymn extends AbstractDynamicCard {
     private static final int DAMAGE = 15;
     private static final int UPGRADE_PLUS_DMG = 5;
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_MAGIC = 1;
 
     private int otherCardsPlayed;
+    private int actualBaseDamage;
     // /STAT DECLARATION/
 
     public BattleHymn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        actualBaseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         otherCardsPlayed = 0;
     }
 
+    private void calculateDamage() {
+        this.baseDamage = Math.max(this.actualBaseDamage - ((this.actualBaseDamage * this.otherCardsPlayed) / this.magicNumber), 0);
+    }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            int adjustedDamage = damage - magicNumber * otherCardsPlayed;
-            if (adjustedDamage > 0) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, adjustedDamage, damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
+            if (damage > 0) {
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
             }
             otherCardsPlayed = 0;
         }
@@ -80,12 +86,14 @@ public class BattleHymn extends AbstractDynamicCard {
     public void triggerOnOtherCardPlayed(AbstractCard card) {
         if (!card.dontTriggerOnUseCard) {
             this.otherCardsPlayed += 1;
+            this.calculateDamage();
         }
     }
 
     @Override
     public void atTurnStart() {
         this.otherCardsPlayed = 0;
+        this.calculateDamage();
     }
 
     // Upgraded stats.
@@ -94,6 +102,9 @@ public class BattleHymn extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            actualBaseDamage += UPGRADE_PLUS_DMG;
+            upgradeMagicNumber(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESC;
             initializeDescription();
         }
     }

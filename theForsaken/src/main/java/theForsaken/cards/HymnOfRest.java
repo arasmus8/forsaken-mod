@@ -39,6 +39,7 @@ public class HymnOfRest extends AbstractDynamicCard {
     private static final int MAGIC = 4;
     private static final int UPGRADE_MAGIC_AMT = 2;
 
+    private int actualBaseMagicNumber;
     private int otherCardsPlayed;
 
     // /STAT DECLARATION/
@@ -48,18 +49,21 @@ public class HymnOfRest extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
-        this.otherCardsPlayed = 0;
+        this.actualBaseMagicNumber = MAGIC;
     }
 
+    private void calculateMagic() {
+        this.baseMagicNumber = this.actualBaseMagicNumber - this.otherCardsPlayed;
+        this.magicNumber = this.baseMagicNumber;
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (dontTriggerOnUseCard) {
-            int adjustedAmount = magicNumber - otherCardsPlayed;
-            if (adjustedAmount > 0) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BlurPower(p, adjustedAmount), adjustedAmount));
+            if (magicNumber > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BlurPower(p, magicNumber), magicNumber));
             }
-            otherCardsPlayed = 0;
+            magicNumber = baseMagicNumber;
         }
     }
 
@@ -79,12 +83,15 @@ public class HymnOfRest extends AbstractDynamicCard {
     public void triggerOnOtherCardPlayed(AbstractCard card) {
         if (!card.dontTriggerOnUseCard) {
             this.otherCardsPlayed += 1;
+            this.calculateMagic();
         }
     }
 
     @Override
     public void atTurnStart() {
         this.otherCardsPlayed = 0;
+        this.baseMagicNumber = this.actualBaseMagicNumber;
+        this.magicNumber = this.actualBaseMagicNumber;
     }
 
     // Upgraded stats.
@@ -93,6 +100,7 @@ public class HymnOfRest extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC_AMT);
+            this.actualBaseMagicNumber += UPGRADE_MAGIC_AMT;
             initializeDescription();
         }
     }
