@@ -130,6 +130,10 @@
     "NAME": "Tears of Sunlight",
     "DESCRIPTION": "Gain !M! Regen each turn."
   },
+  "theForsaken:Temperance": {
+    "NAME": "Temperance",
+    "DESCRIPTION": "Deal !D! Damage. NL Damage is increased by !M! for each unplayed card in your discard pile."
+  },
   "theForsaken:Terrorize": {
     "NAME": "Terrorize",
     "DESCRIPTION": "Apply !M! theforsaken:Fear. NL Exhaust."
