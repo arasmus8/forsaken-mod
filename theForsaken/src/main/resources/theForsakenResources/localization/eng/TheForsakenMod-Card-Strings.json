@@ -140,7 +140,8 @@
   },
   "theForsaken:WardingHymn": {
     "NAME": "Warding Hymn",
-    "DESCRIPTION": "Unplayable NL Gain !B! block at the end of turn. NL Reduce by !M! for each card played.",
+    "DESCRIPTION": "Unplayable NL Gain !B! block at the end of turn. NL Reduce by 1/3 for each card played.",
+    "UPGRADE_DESCRIPTION": "Unplayable NL Gain !B! block at the end of turn. NL Reduce by 1/4 for each card played.",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
     ]

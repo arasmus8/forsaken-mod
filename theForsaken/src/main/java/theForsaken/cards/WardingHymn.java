@@ -1,5 +1,6 @@
 package theForsaken.cards;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -22,6 +23,7 @@ public class WardingHymn extends AbstractDynamicCard {
     // Must have an image with the same NAME as the card in your image folder!
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
+    private static final String UPGRADE_DESC = CARD_STRINGS.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -36,7 +38,10 @@ public class WardingHymn extends AbstractDynamicCard {
     private static final int BLOCK = 15;
     private static final int UPGRADE_BLOCK_AMT = 5;
 
-    private static final int MAGIC = 5;
+    private int actualBaseBlock;
+
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_MAGIC_AMOUNT = 1;
 
     private int otherCardsPlayed;
 
@@ -46,20 +51,24 @@ public class WardingHymn extends AbstractDynamicCard {
     public WardingHymn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
+        this.actualBaseBlock = BLOCK;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
         this.otherCardsPlayed = 0;
     }
 
+    public void calculateBlock() {
+       this.baseBlock = Math.max(this.actualBaseBlock - ((this.actualBaseBlock * this.otherCardsPlayed) / this.magicNumber), 0);
+       this.applyPowers();
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (dontTriggerOnUseCard) {
-            int adjustedBlock = block - magicNumber * otherCardsPlayed;
-            if (adjustedBlock > 0) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, adjustedBlock));
+        if (this.dontTriggerOnUseCard) {
+            if (this.block > 0) {
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
             }
-            otherCardsPlayed = 0;
+            this.otherCardsPlayed = 0;
         }
     }
 
@@ -79,12 +88,14 @@ public class WardingHymn extends AbstractDynamicCard {
     public void triggerOnOtherCardPlayed(AbstractCard card) {
         if (!card.dontTriggerOnUseCard) {
             this.otherCardsPlayed += 1;
+            this.calculateBlock();
         }
     }
 
     @Override
     public void atTurnStart() {
         this.otherCardsPlayed = 0;
+        this.calculateBlock();
     }
 
     // Upgraded stats.
@@ -93,6 +104,9 @@ public class WardingHymn extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK_AMT);
+            this.actualBaseBlock += UPGRADE_BLOCK_AMT;
+            upgradeMagicNumber(UPGRADE_MAGIC_AMOUNT);
+            rawDescription = UPGRADE_DESC;
             initializeDescription();
         }
     }
