@@ -31,8 +31,8 @@ public class Eulogy extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int VULNERABILITY_AMT = 2;
-    private static final int UPGRADE_PLUS_VULNERABILITY = 2;
+    private static final int VULNERABILITY_AMT = 1;
+    private static final int UPGRADE_PLUS_VULNERABILITY = 1;
 
     // /STAT DECLARATION/
 
