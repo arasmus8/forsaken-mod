@@ -39,6 +39,7 @@ public class WordsOfPestilence extends AbstractDynamicCard {
 
     public WordsOfPestilence() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.isMultiDamage = true;
         baseDamage = DAMAGE;
         baseMagicNumber = SELF_DAMAGE;
         magicNumber = SELF_DAMAGE;
