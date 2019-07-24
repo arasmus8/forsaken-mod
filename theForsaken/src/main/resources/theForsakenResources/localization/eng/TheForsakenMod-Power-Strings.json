@@ -1,4 +1,11 @@
 {
+  "theForsaken:BolsterPower": {
+    "NAME": "Bolster",
+    "DESCRIPTIONS": [
+      "The first attack each turn applies weak and gains ",
+      " block."
+    ]
+  },
   "theForsaken:BonusDamagePower": {
     "NAME": "Bonus Damage",
     "DESCRIPTIONS": [

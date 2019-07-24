@@ -23,6 +23,7 @@ public class CardLibrary {
         list.add(new BattleHymn());
         list.add(new BlessedWeapon());
         list.add(new BlightOfFamine());
+        list.add(new Bolster());
         list.add(new BountifulSunlight());
         list.add(new CleansingLight());
         list.add(new CorruptedForm());

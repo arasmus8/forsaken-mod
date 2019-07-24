@@ -24,6 +24,10 @@
     "NAME": "Blight of Famine",
     "DESCRIPTION": "Apply !M! vulnerable and weak to ALL enemies AND yourself."
   },
+  "theForsaken:Bolster": {
+    "NAME": "Bolster",
+    "DESCRIPTION": "The first attack each turn applies 1 weak and gains !M! block."
+  },
   "theForsaken:BountifulSunlight": {
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
