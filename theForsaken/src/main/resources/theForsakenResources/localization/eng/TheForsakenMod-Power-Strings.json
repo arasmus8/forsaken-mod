@@ -34,6 +34,13 @@
       " at the beginning of next turn."
     ]
   },
+  "theForsaken:SpreadingPlaguePower": {
+    "NAME": "Spreading Plague",
+    "DESCRIPTIONS": [
+      "Inflict ",
+      " poison when attacked."
+    ]
+  },
   "theForsaken:RetributionPower": {
     "NAME": "Reflect Damage",
     "DESCRIPTIONS": [

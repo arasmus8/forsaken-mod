@@ -139,6 +139,10 @@
     "NAME": "Spin Attack",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each dexterity."
   },
+  "theForsaken:SpreadingPlague": {
+    "NAME": "Spreading Plague",
+    "DESCRIPTION": "Whenever you are attacked, inflict !M! poison on the attacker."
+  },
   "theForsaken:StoreUp": {
     "NAME": "Store Up",
     "DESCRIPTION": "Choose a card. Add !M! copy to your discard pile.",
