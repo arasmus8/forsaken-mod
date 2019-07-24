@@ -7,5 +7,10 @@
       "cards to add to your discard pile.",
       "cards to add to your draw pile."
     ]
+  },
+  "theForsaken:StoreUpAction": {
+    "TEXT": [
+      "to add to your discard pile."
+    ]
   }
 }
