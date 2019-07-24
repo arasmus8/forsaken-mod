@@ -123,6 +123,10 @@
     "NAME": "Sacrifice Soul",
     "DESCRIPTION": "Sacrifice all your buffs, dealing !D! damage, + !M! for each buff to ALL enemies. NL ( !theForsaken:SACRIFICE_SOUL_DAMAGE! damage) NL Exhaust."
   },
+  "theForsaken:ScorchingSunlight": {
+    "NAME": "Scorching Sunlight",
+    "DESCRIPTION": "Deal !D! damage to all enemies !M! times. NL Shuffle a burn into your discard pile."
+  },
   "theForsaken:ShieldBash": {
     "NAME": "Shield Bash",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! Damage. Increase the power of ALL Shield Bash cards by !M! this combat."

@@ -45,6 +45,7 @@ public class CardLibrary {
         list.add(new Riposte());
         list.add(new SacredOath());
         list.add(new SacrificeSoul());
+        list.add(new ScorchingSunlight());
         list.add(new ShieldBash());
         list.add(new SpinAttack());
         list.add(new TearsOfSunlight());
