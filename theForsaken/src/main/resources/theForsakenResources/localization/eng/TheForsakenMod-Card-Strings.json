@@ -49,6 +49,11 @@
     "NAME": "Coward's Brand",
     "DESCRIPTION": "Deal !D! damage. NL If the target has theforsaken:Fear, the damage is doubled."
   },
+  "theForsaken:DarkBargain": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTION": "Each turn, gain [E] and shuffle a void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Each turn, gain [E] and shuffle a void into your discard pile. NL Innate"
+  },
   "theForsaken:DarkBarrier": {
     "NAME": "Dark Barrier",
     "DESCRIPTION": "Prevent the next X times you would lose HP. Inflict X Frail on yourself. NL Exhaust.",

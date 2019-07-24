@@ -30,6 +30,7 @@ public class CardLibrary {
         list.add(new CorruptedWord());
         list.add(new CowardsBrand());
         list.add(new DarkBarrier());
+        list.add(new DarkBargain());
         list.add(new DarkRift());
         list.add(new DivineGuidance());
         list.add(new Eulogy());

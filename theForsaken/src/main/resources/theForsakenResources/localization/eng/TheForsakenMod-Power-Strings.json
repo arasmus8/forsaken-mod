@@ -20,6 +20,15 @@
       "Reduce lost HP by half, convert to poison instead."
     ]
   },
+  "theForsaken:DarkBargainPower": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " and shuffle ",
+      " void into your discard pile.",
+      " voids into your discard pile."
+    ]
+  },
   "theForsaken:PercentageBonusDamagePower": {
     "NAME": "50% Bonus Damage",
     "DESCRIPTIONS": [
