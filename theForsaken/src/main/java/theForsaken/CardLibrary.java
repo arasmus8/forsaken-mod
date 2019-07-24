@@ -32,6 +32,7 @@ public class CardLibrary {
         list.add(new DarkBarrier());
         list.add(new DarkBargain());
         list.add(new DarkRift());
+        list.add(new DefensiveStance());
         list.add(new DivineGuidance());
         list.add(new Eulogy());
         list.add(new FatRoll());

@@ -63,6 +63,10 @@
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies AND yourself. Next turn, heal each twice as much."
   },
+  "theForsaken:DefensiveStance": {
+    "NAME": "Defensive Stance",
+    "DESCRIPTION": "Gain !M! Plated Armor."
+  },
   "theForsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
     "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust.",
