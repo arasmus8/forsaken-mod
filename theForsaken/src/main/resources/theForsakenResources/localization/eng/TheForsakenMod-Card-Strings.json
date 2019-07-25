@@ -67,6 +67,10 @@
     "NAME": "Defensive Stance",
     "DESCRIPTION": "Gain !M! Plated Armor."
   },
+  "theForsaken:DesperatePlea": {
+    "NAME": "Desperate Plea",
+    "DESCRIPTION": "Remove all debuffs. Gain !M! strength. If you are below 1/2 hp, NL Gain [E] [E]."
+  },
   "theForsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
     "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust.",
