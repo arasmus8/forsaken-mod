@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.actions.SacredOathAction;
 import theForsaken.characters.TheForsaken;
@@ -42,6 +43,7 @@ public class SacredOath extends AbstractDynamicCard {
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         this.exhaust = true;
+        this.tags.add(CustomTags.WORD_CARD);
     }
 
 

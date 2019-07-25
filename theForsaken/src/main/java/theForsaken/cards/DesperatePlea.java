@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.actions.DesperatePleaAction;
 import theForsaken.characters.TheForsaken;
@@ -44,6 +45,7 @@ public class DesperatePlea extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = STRENGTH_AMT;
         magicNumber = STRENGTH_AMT;
+        this.tags.add(CustomTags.WORD_CARD);
     }
 
     // Actions the card should do.

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.BonusDamagePower;
@@ -42,6 +43,7 @@ public class Eulogy extends AbstractDynamicCard {
         baseMagicNumber = VULNERABILITY_AMT;
         magicNumber = VULNERABILITY_AMT;
         this.isEthereal = true;
+        this.tags.add(CustomTags.WORD_CARD);
     }
 
     // Actions the card should do.

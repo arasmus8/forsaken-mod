@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
@@ -40,6 +41,7 @@ public class CorruptedWord extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
+        this.tags.add(CustomTags.WORD_CARD);
     }
 
 

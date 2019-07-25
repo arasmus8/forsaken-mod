@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
@@ -43,6 +44,7 @@ public class WordsOfPestilence extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = SELF_DAMAGE;
         magicNumber = SELF_DAMAGE;
+        this.tags.add(CustomTags.WORD_CARD);
     }
 
 

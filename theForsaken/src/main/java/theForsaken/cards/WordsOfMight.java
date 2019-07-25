@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
@@ -42,6 +43,7 @@ public class WordsOfMight extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = POWER;
         magicNumber = POWER;
+        this.tags.add(CustomTags.WORD_CARD);
     }
 
 
