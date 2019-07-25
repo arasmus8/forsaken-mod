@@ -20,6 +20,7 @@ public class CardLibrary {
             group.addToBottom(new Penitence());
         }
         ArrayList<AbstractCard> list = new ArrayList<>();
+        list.add(new AncientWords());
         list.add(new BattleHymn());
         list.add(new BlessedWeapon());
         list.add(new BlightOfFamine());

@@ -7,6 +7,10 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! Damage."
   },
+  "theForsaken:AncientWords": {
+    "NAME": "Ancient Words",
+    "DESCRIPTION": "Gain !M! artifact."
+  },
   "theForsaken:BattleHymn": {
     "NAME": "Battle Hymn",
     "DESCRIPTION": "Unplayable NL Deal !D! damage to a random enemy at the end of turn. NL Reduce by 1/3 for each card played.",
