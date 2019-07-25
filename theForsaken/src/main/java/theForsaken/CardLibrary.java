@@ -59,6 +59,7 @@ public class CardLibrary {
         list.add(new Temperance());
         list.add(new Terrorize());
         list.add(new WardingHymn());
+        list.add(new WordOfPower());
         list.add(new WordsOfMight());
         list.add(new WordsOfPestilence());
         list.add(new WrathOfGod());

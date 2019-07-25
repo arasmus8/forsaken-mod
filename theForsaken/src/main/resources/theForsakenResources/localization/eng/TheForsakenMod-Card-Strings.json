@@ -189,6 +189,10 @@
       "I can't play this card."
     ]
   },
+  "theForsaken:WordOfPower": {
+    "NAME": "Word of Power",
+    "DESCRIPTION": "Deal !D! damage. Increase by !M! for each \"Words\" card in your deck."
+  },
   "theForsaken:WordsOfMight": {
     "NAME": "Words of Might",
     "DESCRIPTION": "Gain !M! strength and dexterity."
