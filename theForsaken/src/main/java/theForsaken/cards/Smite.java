@@ -36,7 +36,7 @@ public class Smite extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     private static final int REGEN_AMOUNT = 2;

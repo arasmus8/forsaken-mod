@@ -33,8 +33,8 @@ public class Penitence extends AbstractDynamicCard {
     private static final int BLOCK = 12;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 
-    private static final int DMG_AMT = 5;
-    private static final int UPGRADE_DMG_AMT = 3;
+    private static final int DMG_AMT = 3;
+    private static final int UPGRADE_DMG_AMT = 2;
 
     // /STAT DECLARATION/
 
