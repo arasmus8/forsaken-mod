@@ -30,6 +30,7 @@ import theForsaken.relics.*;
 import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
 import theForsaken.variables.SacrificeSoulVariable;
+import theForsaken.variables.UnplayedCardsVariable;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -396,6 +397,7 @@ public class TheForsakenMod implements
         logger.info("Add variables");
         // Add the Custom Dynamic variables
         BaseMod.addDynamicVariable(new SacrificeSoulVariable());
+        BaseMod.addDynamicVariable(new UnplayedCardsVariable());
 
         logger.info("Adding cards");
         // Add the cards

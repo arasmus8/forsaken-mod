@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
+import theForsaken.variables.UnplayedCardsVariable;
 
 import java.util.UUID;
 
@@ -45,17 +46,6 @@ public class Temperance extends AbstractDynamicCard {
         magicNumber = baseMagicNumber;
     }
 
-    private int countUnplayedCards(AbstractPlayer p) {
-        int count = 0;
-        for (AbstractCard c : p.discardPile.group) {
-            UUID uuid = c.uuid;
-            if (!TheForsakenMod.usedCards.contains(uuid)) {
-                count += 1;
-            }
-        }
-        return count;
-    }
-
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -65,7 +55,7 @@ public class Temperance extends AbstractDynamicCard {
     @Override
     public void calculateCardDamage(AbstractMonster m) {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * this.countUnplayedCards(AbstractDungeon.player);
+        this.baseDamage += this.magicNumber * UnplayedCardsVariable.unplayedCardCount();
         super.calculateCardDamage(m);
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
@@ -74,7 +64,7 @@ public class Temperance extends AbstractDynamicCard {
     @Override
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * countUnplayedCards(AbstractDungeon.player);
+        this.baseDamage += this.magicNumber * UnplayedCardsVariable.unplayedCardCount();
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;

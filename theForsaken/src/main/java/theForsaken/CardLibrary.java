@@ -40,6 +40,7 @@ public class CardLibrary {
         list.add(new Eulogy());
         list.add(new FatRoll());
         list.add(new FuryStrikes());
+        list.add(new HealingLight());
         list.add(new Horror());
         list.add(new HorrifyingStrike());
         list.add(new HymnOfPatience());

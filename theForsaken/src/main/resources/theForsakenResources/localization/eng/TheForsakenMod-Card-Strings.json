@@ -96,6 +96,10 @@
     "NAME": "Fury Strikes",
     "DESCRIPTION": "Deal !D! Damage 3 times."
   },
+  "theForsaken:HealingLight": {
+    "NAME": "Healing Light",
+    "DESCRIPTION": "Heal !M! HP for each unplayed card in your discard pile. NL (Discarded !theForsaken:UNPLAYED_CARDS! unplayed cards) NL Exhaust."
+  },
   "theForsaken:Horror": {
     "NAME": "Horror",
     "DESCRIPTION": "Apply X theforsaken:Fear on an enemy. You cannot gain block for !M! turns. NL Exhaust.",
