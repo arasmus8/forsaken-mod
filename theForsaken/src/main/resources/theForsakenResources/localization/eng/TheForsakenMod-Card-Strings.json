@@ -96,6 +96,11 @@
     "NAME": "Fury Strikes",
     "DESCRIPTION": "Deal !D! Damage 3 times."
   },
+  "theForsaken:Horror": {
+    "NAME": "Horror",
+    "DESCRIPTION": "Apply X theforsaken:Fear on an enemy. You cannot gain block for !M! turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply X + 1 theforsaken:Fear on an enemy. You cannot gain block for !M! turns. NL Exhaust."
+  },
   "theForsaken:HorrifyingStrike": {
     "NAME": "Horrifying Strike",
     "DESCRIPTION": "Deal !D! damage. NL Inflict !M! theforsaken:Fear on yourself."
