@@ -27,6 +27,7 @@ public class CardLibrary {
         list.add(new Bolster());
         list.add(new BountifulSunlight());
         list.add(new CleansingLight());
+        list.add(new CorruptDeck());
         list.add(new CorruptedForm());
         list.add(new CorruptedWord());
         list.add(new CowardsBrand());

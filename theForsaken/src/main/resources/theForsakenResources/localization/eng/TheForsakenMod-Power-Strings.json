@@ -13,6 +13,15 @@
       " bonus damage."
     ]
   },
+  "theForsaken:CorruptDeckPower": {
+    "NAME": "Corrupt Deck",
+    "DESCRIPTIONS": [
+      "Draw more cards. NL Can only play ",
+      " more cards this turn.",
+      " more card this turn.",
+      "Draw more cards. NL Cannot play any more cards this turn."
+    ]
+  },
   "theForsaken:CorruptedFormPower": {
     "NAME": "Corrupted Form",
     "DESCRIPTIONS": [
