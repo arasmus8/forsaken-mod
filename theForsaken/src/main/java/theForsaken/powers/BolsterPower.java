@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theForsaken.TheForsakenMod;
@@ -62,8 +63,15 @@ public class BolsterPower extends AbstractPower implements CloneablePowerInterfa
         if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && !usedThisTurn) {
             this.flash();
             usedThisTurn = true;
-            AbstractCreature target = action.target;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, owner, new WeakPower(target, 1, false), 1));
+            if (card.target.equals(AbstractCard.CardTarget.ALL) || card.target.equals(AbstractCard.CardTarget.ALL_ENEMY)) {
+                for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, owner, new WeakPower(m, 1, false), 1));
+                }
+            } else {
+                AbstractCreature m = action.target;
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, owner, new WeakPower(m, 1, false), 1));
+            }
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, amount));
         }
     }
