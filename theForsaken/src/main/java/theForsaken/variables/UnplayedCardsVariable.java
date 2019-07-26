@@ -19,7 +19,7 @@ public class UnplayedCardsVariable extends DynamicVariable
 
     public static int unplayedCardCount() {
         int count = 0;
-        if(AbstractDungeon.player.discardPile != null) {
+        if(AbstractDungeon.player != null && AbstractDungeon.player.discardPile != null) {
             for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
                 UUID uuid = c.uuid;
                 if (!TheForsakenMod.usedCards.contains(uuid)) {
