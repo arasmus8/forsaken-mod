@@ -34,7 +34,7 @@ public class StoreUpAction extends AbstractGameAction {
             } else if (this.p.hand.size() == 1) {
                 AbstractCard c = this.p.hand.getTopCard();
 
-                this.p.hand.moveToDeck(c, false);
+                AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(c.makeStatEquivalentCopy()));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c.makeStatEquivalentCopy(), this.amount));
                 AbstractDungeon.player.hand.refreshHandLayout();
                 this.isDone = true;
