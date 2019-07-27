@@ -13,11 +13,18 @@
       "Gain #b1 [E]. Draw 1 less card each turn."
     ]
   },
+  "theForsaken:PlagueMask": {
+    "NAME": "Plague Mask",
+    "FLAVOR": "It was believed these masks could prevent disease, but they only seem to spread it.",
+    "DESCRIPTIONS": [
+      "Whenever you are inflicted with poison, apply it to a random enemy also."
+    ]
+  },
   "theForsaken:ScaryMask": {
     "NAME": "Scary Mask",
     "FLAVOR": "Created to terrify the Spire's weaker denizens.",
     "DESCRIPTIONS": [
-      "The first attack played each combat inflicts 1 Fear"
+      "The first attack played each combat inflicts #b1 #yFear"
     ]
   },
   "theForsaken:PlaceholderRelic": {

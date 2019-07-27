@@ -10,13 +10,16 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import theForsaken.TheForsakenMod;
+import theForsaken.relics.PlagueMask;
 import theForsaken.util.TextureLoader;
 
 import static theForsaken.TheForsakenMod.makePowerPath;
@@ -47,6 +50,7 @@ public class CorruptedFormPower extends AbstractPower implements CloneablePowerI
         this.isUpgraded = isUpgraded;
 
         type = PowerType.BUFF;
+        priority = 4;
 
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -64,6 +68,12 @@ public class CorruptedFormPower extends AbstractPower implements CloneablePowerI
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner, this.owner, new PoisonPower(this.owner, this.owner, poisonToApply), poisonToApply)
             );
+            AbstractPlayer p = AbstractDungeon.player;
+            if(owner == p && p.hasRelic(PlagueMask.ID)) {
+                p.getRelic(PlagueMask.ID).flash();
+                AbstractMonster mo = AbstractDungeon.getRandomMonster();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, poisonToApply), poisonToApply, AttackEffect.POISON));
+            }
             return 0;
         }
         return damageAmount;

@@ -371,6 +371,7 @@ public class TheForsakenMod implements
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);

@@ -2,6 +2,7 @@ package theForsaken.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerToRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
+import theForsaken.relics.PlagueMask;
 
 import static theForsaken.TheForsakenMod.makeCardPath;
 
@@ -51,6 +53,11 @@ public class CorruptedWord extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonPower(p, p, magicNumber), magicNumber, AttackEffect.POISON));
         for (AbstractMonster monster:AbstractDungeon.getCurrRoom().monsters.monsters) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, magicNumber), magicNumber, AttackEffect.POISON));
+        }
+        if(p.hasRelic(PlagueMask.ID)) {
+            p.getRelic(PlagueMask.ID).flash();
+            AbstractMonster mo = AbstractDungeon.getRandomMonster();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, magicNumber), magicNumber, AttackEffect.POISON));
         }
     }
 
