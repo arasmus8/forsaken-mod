@@ -132,6 +132,10 @@
     "NAME": "Penitence",
     "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! bonus damage."
   },
+  "theForsaken:PlagueCurse": {
+    "NAME": "Plague",
+    "DESCRIPTION": "Unplayable NL At the end of your turn, you are inflicted with 2 poison."
+  },
   "theForsaken:Purification": {
     "NAME": "Purification",
     "DESCRIPTION": "Deal !D! Damage. NL Transfer your debuffs to the target."

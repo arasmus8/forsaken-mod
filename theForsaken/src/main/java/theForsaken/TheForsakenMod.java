@@ -23,8 +23,10 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theForsaken.cards.PlagueCurse;
 import theForsaken.characters.TheForsaken;
 import theForsaken.events.IdentityCrisisEvent;
+import theForsaken.events.PlagueDoctorEvent;
 import theForsaken.potions.FearPotion;
 import theForsaken.relics.*;
 import theForsaken.util.IDCheckDontTouchPls;
@@ -338,7 +340,7 @@ public class TheForsakenMod implements
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-        BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
+        BaseMod.addEvent(PlagueDoctorEvent.ID, PlagueDoctorEvent.class);
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -405,6 +407,9 @@ public class TheForsakenMod implements
         for(AbstractCard card : library.cardGroup.group) {
             BaseMod.addCard(card);
         }
+
+        BaseMod.addCard(new PlagueCurse());
+        UnlockTracker.markCardAsSeen(PlagueCurse.ID);
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
