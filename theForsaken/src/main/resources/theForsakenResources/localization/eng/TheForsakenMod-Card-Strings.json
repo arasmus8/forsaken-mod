@@ -136,6 +136,11 @@
     "NAME": "Plague",
     "DESCRIPTION": "Unplayable NL At the end of your turn, you are inflicted with 2 poison."
   },
+  "theForsaken:Preservation": {
+    "NAME": "Preservation",
+    "DESCRIPTION": "When you gain block this turn, gain block next turn as well. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "When you gain block this turn, gain block next turn as well."
+  },
   "theForsaken:Purification": {
     "NAME": "Purification",
     "DESCRIPTION": "Deal !D! Damage. NL Transfer your debuffs to the target."

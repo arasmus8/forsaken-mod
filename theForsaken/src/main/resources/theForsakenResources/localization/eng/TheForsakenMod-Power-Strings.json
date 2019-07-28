@@ -59,6 +59,12 @@
       " at the beginning of next turn."
     ]
   },
+  "theForsaken:PreservationPower": {
+    "NAME": "Preservation",
+    "DESCRIPTIONS": [
+      "When you gain block this turn, also gain block next turn."
+    ]
+  },
   "theForsaken:SpreadingPlaguePower": {
     "NAME": "Spreading Plague",
     "DESCRIPTIONS": [
