@@ -124,6 +124,11 @@
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
   },
+  "theForsaken:NobleSacrifice": {
+    "NAME": "Noble Sacrifice",
+    "DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost + 1."
+  },
   "theForsaken:PanicDive": {
     "NAME": "Panic Dive",
     "DESCRIPTION": "Gain !B! block. NL Shuffle !M! dazed into your discard pile."

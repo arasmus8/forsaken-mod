@@ -46,6 +46,7 @@ public class CardLibrary {
         list.add(new HymnOfPatience());
         list.add(new HymnOfRest());
         list.add(new InspiringBlow());
+        list.add(new NobleSacrifice());
         list.add(new PanicDive());
         list.add(new Preservation());
         list.add(new Purification());

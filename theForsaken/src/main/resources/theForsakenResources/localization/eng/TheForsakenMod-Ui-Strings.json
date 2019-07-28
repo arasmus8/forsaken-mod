@@ -8,6 +8,11 @@
       "cards to add to your draw pile."
     ]
   },
+  "theForsaken:NobleSacrificeAction": {
+    "TEXT": [
+      "to exhaust."
+    ]
+  },
   "theForsaken:StoreUpAction": {
     "TEXT": [
       "to add to your discard pile."
