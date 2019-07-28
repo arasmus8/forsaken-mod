@@ -62,6 +62,7 @@ public class CardLibrary {
         list.add(new TearsOfSunlight());
         list.add(new Temperance());
         list.add(new Terrorize());
+        list.add(new Thunderbolt());
         list.add(new WardingHymn());
         list.add(new WordOfPower());
         list.add(new WordsOfMight());

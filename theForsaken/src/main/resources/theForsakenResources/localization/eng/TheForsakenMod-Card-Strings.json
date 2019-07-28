@@ -203,6 +203,10 @@
     "NAME": "Terrorize",
     "DESCRIPTION": "Apply !M! theforsaken:Fear. NL Exhaust."
   },
+  "theForsaken:Thunderbolt": {
+    "NAME": "Thunderbolt",
+    "DESCRIPTION": "Deal !D! damage. Also targets 1 random enemy."
+  },
   "theForsaken:WardingHymn": {
     "NAME": "Warding Hymn",
     "DESCRIPTION": "Unplayable NL Gain !B! block at the end of turn. NL Reduce by 1/3 for each card played.",
