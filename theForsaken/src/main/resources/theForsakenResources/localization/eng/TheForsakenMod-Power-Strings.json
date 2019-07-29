@@ -72,6 +72,13 @@
       "When you gain block this turn, also gain block next turn."
     ]
   },
+  "theForsaken:PrudencePower": {
+    "NAME": "Prudence",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " block for each card in hand at the end of turn."
+    ]
+  },
   "theForsaken:SpreadingPlaguePower": {
     "NAME": "Spreading Plague",
     "DESCRIPTIONS": [

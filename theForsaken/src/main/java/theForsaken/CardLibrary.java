@@ -56,6 +56,7 @@ public class CardLibrary {
         list.add(new PowerUp());
         list.add(new PreciseStrike());
         list.add(new Preservation());
+        list.add(new Prudence());
         list.add(new Purification());
         list.add(new QuickAttack());
         list.add(new RainingSunlight());
