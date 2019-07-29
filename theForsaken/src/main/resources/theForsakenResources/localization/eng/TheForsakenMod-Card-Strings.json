@@ -128,6 +128,10 @@
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! block each turn."
   },
+  "theForsaken:LightRoll": {
+    "NAME": "Light Roll",
+    "DESCRIPTION": "Gain !B! block, apply !M! weak. NL Add a copy to your hand. NL Exhaust."
+  },
   "theForsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",
     "DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost.",
