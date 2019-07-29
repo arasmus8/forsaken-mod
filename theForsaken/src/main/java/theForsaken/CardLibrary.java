@@ -50,6 +50,7 @@ public class CardLibrary {
         list.add(new LightRoll());
         list.add(new NobleSacrifice());
         list.add(new PanicDive());
+        list.add(new PowerUp());
         list.add(new PreciseStrike());
         list.add(new Preservation());
         list.add(new Purification());
