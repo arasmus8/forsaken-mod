@@ -59,6 +59,13 @@
       " at the beginning of next turn."
     ]
   },
+  "theForsaken:MagicWeaponPower": {
+    "NAME": "Magic Weapon",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " bonus damage for your next attack each turn."
+    ]
+  },
   "theForsaken:PreservationPower": {
     "NAME": "Preservation",
     "DESCRIPTIONS": [

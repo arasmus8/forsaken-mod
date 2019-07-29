@@ -136,6 +136,10 @@
     "NAME": "Light Roll",
     "DESCRIPTION": "Gain !B! block, apply !M! weak. NL Add a copy to your hand. NL Exhaust."
   },
+  "theForsaken:MagicWeapon": {
+    "NAME": "Magic Weapon",
+    "DESCRIPTION": "Each turn, gain !M! bonus damage for your next attack."
+  },
   "theForsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",
     "DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost.",
