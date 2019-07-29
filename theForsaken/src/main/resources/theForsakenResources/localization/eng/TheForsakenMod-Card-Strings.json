@@ -145,6 +145,10 @@
     "NAME": "Panic Dive",
     "DESCRIPTION": "Gain !B! block. NL Shuffle !M! dazed into your discard pile."
   },
+  "theForsaken:Parry": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Gain !B! block. NL Add a copy to your discard pile."
+  },
   "theForsaken:Penitence": {
     "NAME": "Penitence",
     "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! bonus damage."
