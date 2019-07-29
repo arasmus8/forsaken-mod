@@ -57,6 +57,7 @@ public class CardLibrary {
         list.add(new SacrificeSoul());
         list.add(new ScorchingSunlight());
         list.add(new ShieldBash());
+        list.add(new ShieldCharge());
         list.add(new SpinAttack());
         list.add(new SpreadingPlague());
         list.add(new StoreUp());

@@ -179,6 +179,10 @@
     "NAME": "Shield Bash",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! Damage. Increase the power of ALL Shield Bash cards by !M! this combat."
   },
+  "theForsaken:ShieldCharge": {
+    "NAME": "Shield Charge",
+    "DESCRIPTION": "Deal !D! damage. NL theforsaken:Unplayed: gain !M! block next turn."
+  },
   "theForsaken:Smite": {
     "NAME": "Smite",
     "DESCRIPTION": "Deal !D! Damage. NL Gain !M! Regen."
