@@ -57,6 +57,10 @@
     "NAME": "Coward's Brand",
     "DESCRIPTION": "Deal !D! damage. NL If the target has theforsaken:Fear, the damage is doubled."
   },
+  "theForsaken:CreepingInfection": {
+    "NAME": "Creeping Infection",
+    "DESCRIPTION": "Apply !M! poison. NL When drawn, add a copy to your hand. NL Exhaust."
+  },
   "theForsaken:DarkBargain": {
     "NAME": "Dark Bargain",
     "DESCRIPTION": "Each turn, gain [E] and shuffle a void into your discard pile.",

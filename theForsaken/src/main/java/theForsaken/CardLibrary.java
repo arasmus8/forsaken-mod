@@ -31,6 +31,7 @@ public class CardLibrary {
         list.add(new CorruptedForm());
         list.add(new CorruptedWord());
         list.add(new CowardsBrand());
+        list.add(new CreepingInfection());
         list.add(new DarkBarrier());
         list.add(new DarkBargain());
         list.add(new DarkRift());
