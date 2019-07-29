@@ -21,6 +21,7 @@ public class CardLibrary {
         }
         ArrayList<AbstractCard> list = new ArrayList<>();
         list.add(new AncientWords());
+        list.add(new Backlash());
         list.add(new BattleHymn());
         list.add(new BlessedWeapon());
         list.add(new BlightOfFamine());
