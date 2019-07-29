@@ -26,6 +26,7 @@ public class CardLibrary {
         list.add(new BlessedWeapon());
         list.add(new BlightOfFamine());
         list.add(new Bolster());
+        list.add(new BottledPlague());
         list.add(new BountifulSunlight());
         list.add(new CleansingLight());
         list.add(new CorruptDeck());

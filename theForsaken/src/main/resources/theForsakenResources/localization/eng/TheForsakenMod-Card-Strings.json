@@ -36,6 +36,13 @@
     "NAME": "Bolster",
     "DESCRIPTION": "The first attack each turn applies 1 weak and gains !M! block."
   },
+  "theForsaken:BottledPlague": {
+    "NAME": "Bottled Plague",
+    "DESCRIPTION": "Remove all your poison. NL Receive a poison potion.",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have an open potion slot!"
+    ]
+  },
   "theForsaken:BountifulSunlight": {
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
