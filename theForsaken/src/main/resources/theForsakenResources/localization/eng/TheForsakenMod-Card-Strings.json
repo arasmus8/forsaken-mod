@@ -162,6 +162,10 @@
     "NAME": "Purification",
     "DESCRIPTION": "Deal !D! Damage. NL Transfer your debuffs to the target."
   },
+  "theForsaken:QuickAttack": {
+    "NAME": "Quick Attack",
+    "DESCRIPTION": "Deal !D! damage. Draw 1 card. NL Innate."
+  },
   "theForsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL theforsaken:Unplayed: Your next attack deals !M! bonus damage."
