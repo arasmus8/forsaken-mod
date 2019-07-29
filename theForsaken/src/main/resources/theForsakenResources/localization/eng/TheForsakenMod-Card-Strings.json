@@ -145,6 +145,10 @@
     "NAME": "Plague",
     "DESCRIPTION": "Unplayable NL At the end of your turn, you are inflicted with 2 poison."
   },
+  "theForsaken:PreciseStrike": {
+    "NAME": "Precise Strike",
+    "DESCRIPTION": "Deal !D! damage, apply !M! vulnerable. NL Add a copy to your hand. NL Exhaust."
+  },
   "theForsaken:Preservation": {
     "NAME": "Preservation",
     "DESCRIPTION": "When you gain block this turn, gain block next turn as well. NL Exhaust.",
