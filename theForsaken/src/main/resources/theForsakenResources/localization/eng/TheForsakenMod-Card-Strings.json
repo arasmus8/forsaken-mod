@@ -51,6 +51,14 @@
     "NAME": "Cleansing Light",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Remove theforsaken:Fear, Poison, and Vulnerable."
   },
+  "theForsaken:Confusion": {
+    "NAME": "Confusion",
+    "DESCRIPTION": "If the target intends to attack, deal its damage to a random enemy 3 times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If the target intends to attack, deal its damage to a random enemy 3 times.",
+    "EXTENDED_DESCRIPTION": [
+      "That monster is not attacking."
+    ]
+  },
   "theForsaken:CorruptedForm": {
     "NAME": "Corrupted Form",
     "DESCRIPTION": "Reduce damage taken by one third. Convert all HP lost to poison.",
