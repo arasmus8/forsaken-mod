@@ -107,6 +107,10 @@
     "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose ANY card. NL Add a copy to your draw pile. NL Exhaust."
   },
+  "theForsaken:Enfeeble": {
+    "NAME": "Enfeeble",
+    "DESCRIPTION": "Deal !D! damage 6 times. The target loses !M! strength this turn. NL Exhaust."
+  },
   "theForsaken:Eulogy": {
     "NAME": "Eulogy",
     "DESCRIPTION": "Ethereal. NL Apply !M! vulnerable to ALL enemies. NL theforsaken:Unplayed: Your next attack deals 3 bonus damage."

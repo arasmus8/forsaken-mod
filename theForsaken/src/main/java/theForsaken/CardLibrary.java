@@ -41,6 +41,7 @@ public class CardLibrary {
         list.add(new DefensiveStance());
         list.add(new DesperatePlea());
         list.add(new DivineGuidance());
+        list.add(new Enfeeble());
         list.add(new Eulogy());
         list.add(new FatRoll());
         list.add(new FuryStrikes());
