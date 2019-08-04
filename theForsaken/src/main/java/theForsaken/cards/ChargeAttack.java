@@ -44,16 +44,24 @@ public class ChargeAttack extends AbstractDynamicCard {
         isMultiDamage = true;
     }
 
-    @Override
-    public void triggerWhenDrawn() {
+    private void recalculateCost() {
         int tempCost = Math.max(this.cost - UnplayedCardsVariable.unplayedCardCount(), 0);
         this.setCostForTurn(tempCost);
     }
 
     @Override
+    public void triggerWhenDrawn() {
+        this.recalculateCost();
+    }
+
+    @Override
     public void didDiscard() {
-        int tempCost = Math.max(this.cost - UnplayedCardsVariable.unplayedCardCount(), 0);
-        this.setCostForTurn(tempCost);
+        this.recalculateCost();
+    }
+
+    @Override
+    public void triggerWhenCardAddedInCombat() {
+        this.recalculateCost();
     }
 
     // Actions the card should do.

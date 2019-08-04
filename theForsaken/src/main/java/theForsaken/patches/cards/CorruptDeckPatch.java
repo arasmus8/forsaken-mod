@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theForsaken.powers.CorruptDeckPower;
 
 @SpirePatch(clz = AbstractCard.class, method = "hasEnoughEnergy")
-public class HasEnoughEnergyPatch {
+public class CorruptDeckPatch {
 
     @SpirePostfixPatch
     public static boolean postHasEnoughEnergyCheckPowers(boolean __result, AbstractCard __instance) {

@@ -2,7 +2,7 @@ package theForsaken.cards;
 
 import basemod.abstracts.CustomCard;
 
-public abstract class AbstractDefaultCard extends CustomCard {
+public abstract class AbstractExtendedCard extends CustomCard {
 
     // Custom Abstract Cards can be a bit confusing. While this is a simple base for simply adding a second magic number,
     // if you're new to modding I suggest you skip this file until you know what unique things that aren't provided
@@ -17,15 +17,15 @@ public abstract class AbstractDefaultCard extends CustomCard {
     public boolean upgradedDefaultSecondMagicNumber; // A boolean to check whether the number has been upgraded or not.
     public boolean isDefaultSecondMagicNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
 
-    public AbstractDefaultCard(final String id,
-                               final String name,
-                               final String img,
-                               final int cost,
-                               final String rawDescription,
-                               final CardType type,
-                               final CardColor color,
-                               final CardRarity rarity,
-                               final CardTarget target) {
+    public AbstractExtendedCard(final String id,
+                                final String name,
+                                final String img,
+                                final int cost,
+                                final String rawDescription,
+                                final CardType type,
+                                final CardColor color,
+                                final CardRarity rarity,
+                                final CardTarget target) {
 
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
 
@@ -51,5 +51,9 @@ public abstract class AbstractDefaultCard extends CustomCard {
         defaultBaseSecondMagicNumber += amount; // Upgrade the number by the amount you provide in your card.
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Set the number to be equal to the base value.
         upgradedDefaultSecondMagicNumber = true; // Upgraded = true - which does what the above method does.
+    }
+
+    // called when cards are added during combat
+    public void triggerWhenCardAddedInCombat() {
     }
 }
