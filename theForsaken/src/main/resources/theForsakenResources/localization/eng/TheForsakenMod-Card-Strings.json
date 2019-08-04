@@ -47,6 +47,10 @@
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
   },
+  "theForsaken:ChargeAttack": {
+    "NAME": "Charge Attack",
+    "DESCRIPTION": "Deal !D! damage !M! times. Costs 1 less for each unplayed card in your discard pile."
+  },
   "theForsaken:CleansingLight": {
     "NAME": "Cleansing Light",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Remove theforsaken:Fear, Poison, and Vulnerable."

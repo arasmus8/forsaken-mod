@@ -28,6 +28,7 @@ public class CardLibrary {
         list.add(new Bolster());
         list.add(new BottledPlague());
         list.add(new BountifulSunlight());
+        list.add(new ChargeAttack());
         list.add(new CleansingLight());
         list.add(new Confusion());
         list.add(new CorruptDeck());
