@@ -22,7 +22,10 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theForsaken.TheForsakenMod;
-import theForsaken.cards.*;
+import theForsaken.cards.Penitence;
+import theForsaken.cards.Smite;
+import theForsaken.cards.TheForsaken_Defend;
+import theForsaken.cards.TheForsaken_Strike;
 import theForsaken.relics.JudgementScales;
 
 import java.util.ArrayList;
@@ -184,7 +187,7 @@ public class TheForsaken extends CustomPlayer {
     // character Select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
+        CardCrawlGame.sound.playA("BUFF_3", 1.25f); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
     }
@@ -192,7 +195,7 @@ public class TheForsaken extends CustomPlayer {
     // character Select on-button-press sound effect
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_DAGGER_1";
+        return "BUFF_3";
     }
 
     // Should return how much HP your maximum HP reduces by when starting a run at
