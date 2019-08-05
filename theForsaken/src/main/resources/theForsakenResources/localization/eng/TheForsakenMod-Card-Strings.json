@@ -242,6 +242,10 @@
     "NAME": "Shield Charge",
     "DESCRIPTION": "Deal !D! damage. NL theforsaken:Unplayed: gain !M! block next turn."
   },
+  "theForsaken:SiphonStrike": {
+    "NAME": "Siphon Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills the target, heal !M! HP."
+  },
   "theForsaken:Smite": {
     "NAME": "Smite",
     "DESCRIPTION": "Deal !D! Damage. NL Gain !M! Regen."
