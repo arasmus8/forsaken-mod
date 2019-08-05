@@ -44,6 +44,7 @@ public class LightRoll extends AbstractDynamicCard {
         baseBlock = BLOCK;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
+        exhaust = true;
     }
 
 
