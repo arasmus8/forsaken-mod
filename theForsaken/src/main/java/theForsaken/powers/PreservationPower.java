@@ -5,17 +5,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import com.megacrit.cardcrawl.powers.PhantasmalPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
@@ -35,8 +31,6 @@ public class PreservationPower extends AbstractPower implements CloneablePowerIn
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("preservation84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("preservation32.png"));
 
-    private boolean hasBlock = false;
-
     public PreservationPower(final AbstractCreature owner) {
         name = NAME;
         ID = POWER_ID;
@@ -45,10 +39,6 @@ public class PreservationPower extends AbstractPower implements CloneablePowerIn
         this.amount = -1;
 
         type = PowerType.BUFF;
-
-        if (owner.currentBlock > 0) {
-            hasBlock = true;
-        }
 
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
