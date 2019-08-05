@@ -72,6 +72,7 @@ public class CardLibrary {
         list.add(new ShieldBash());
         list.add(new ShieldCharge());
         list.add(new SiphonStrike());
+        list.add(new SolarFlare());
         list.add(new SpinAttack());
         list.add(new SpreadingPlague());
         list.add(new StoreUp());

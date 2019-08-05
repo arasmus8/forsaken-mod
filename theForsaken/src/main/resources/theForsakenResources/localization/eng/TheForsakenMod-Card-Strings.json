@@ -250,6 +250,10 @@
     "NAME": "Smite",
     "DESCRIPTION": "Deal !D! Damage. NL Gain !M! Regen."
   },
+  "theForsaken:SolarFlare": {
+    "NAME": "Solar Flare",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Lose !M! strength."
+  },
   "theForsaken:SpinAttack": {
     "NAME": "Spin Attack",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each dexterity."
