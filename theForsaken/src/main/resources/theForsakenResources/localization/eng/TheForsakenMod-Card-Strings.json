@@ -32,6 +32,10 @@
     "NAME": "Blight of Famine",
     "DESCRIPTION": "Apply !M! vulnerable and weak to ALL enemies AND yourself."
   },
+  "theForsaken:BlindFaith": {
+    "NAME": "Blind Faith",
+    "DESCRIPTION": "Discard your hand. Draw !M! cards. You retain your hand for 2 turns, but cannot draw cards for 2 turns."
+  },
   "theForsaken:Bolster": {
     "NAME": "Bolster",
     "DESCRIPTION": "The first attack each turn applies 1 weak and gains !M! block."

@@ -1,4 +1,12 @@
 {
+  "theForsaken:BlindFaithPower": {
+    "NAME": "Blind Faith",
+    "DESCRIPTIONS": [
+      "You cannot draw cards for #b",
+      " turn.",
+      " turns."
+    ]
+  },
   "theForsaken:BolsterPower": {
     "NAME": "Bolster",
     "DESCRIPTIONS": [
