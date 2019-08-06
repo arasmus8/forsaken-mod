@@ -108,6 +108,12 @@
       " regen."
     ]
   },
+  "theForsaken:TranquilityPower": {
+    "NAME": "Tranquility",
+    "DESCRIPTIONS": [
+      "Half the strength is returned each turn."
+    ]
+  },
   "theForsaken:CommonPower": {
     "NAME": "Placeholder Power",
     "DESCRIPTIONS": [

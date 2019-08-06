@@ -283,6 +283,10 @@
     "NAME": "Thunderbolt",
     "DESCRIPTION": "Deal !D! damage. Also targets 1 random enemy."
   },
+  "theForsaken:Tranquility": {
+    "NAME": "Tranquility",
+    "DESCRIPTION": "Reduce target strength by !M!. Return half each turn. Permanently increase by 1. NL Exhaust."
+  },
   "theForsaken:WardingHymn": {
     "NAME": "Warding Hymn",
     "DESCRIPTION": "Unplayable NL Gain !B! block at the end of turn. NL Reduce by 1/3 for each card played.",
