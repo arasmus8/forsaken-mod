@@ -37,6 +37,7 @@ public class Preservation extends AbstractDynamicCard {
 
     public Preservation() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        exhaust = true;
     }
 
 
@@ -49,6 +50,7 @@ public class Preservation extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
+            exhaust = false;
             upgradeName();
             rawDescription = UPGRADE_DESC;
             initializeDescription();
