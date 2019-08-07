@@ -48,6 +48,7 @@ public class CardLibrary {
         list.add(new Enfeeble());
         list.add(new Eulogy());
         list.add(new FatRoll());
+        list.add(new FountainOfLife());
         list.add(new FuryStrikes());
         list.add(new HealingLight());
         list.add(new Horror());

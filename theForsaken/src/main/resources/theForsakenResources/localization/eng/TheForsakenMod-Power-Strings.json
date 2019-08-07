@@ -67,6 +67,12 @@
       " turns."
     ]
   },
+  "theForsaken:FountainOfLifePower": {
+    "NAME": "Fountain of Life",
+    "DESCRIPTIONS": [
+      "At the end of battle, increase your Max HP by #b"
+    ]
+  },
   "theForsaken:HealNextTurnPower": {
     "NAME": "Heal next turn",
     "DESCRIPTIONS": [

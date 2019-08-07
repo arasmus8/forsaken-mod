@@ -135,6 +135,10 @@
     "NAME": "Fat Roll",
     "DESCRIPTION": "Gain !B! Block. NL theforsaken:Unplayed: Draw an additional card next turn."
   },
+  "theForsaken:FountainOfLife": {
+    "NAME": "Fountain of Life",
+    "DESCRIPTION": "At the end of battle, increase your Max HP by !M!."
+  },
   "theForsaken:FuryStrikes": {
     "NAME": "Fury Strikes",
     "DESCRIPTION": "Deal !D! Damage 3 times."
