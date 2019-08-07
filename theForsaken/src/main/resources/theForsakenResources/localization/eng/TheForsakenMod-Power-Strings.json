@@ -1,4 +1,11 @@
 {
+  "theForsaken:BindingThornsPower": {
+    "NAME": "Binding Thorns",
+    "DESCRIPTIONS": [
+      "Whenever this monster attacks, it takes #b",
+      " damage."
+    ]
+  },
   "theForsaken:BlindFaithPower": {
     "NAME": "Blind Faith",
     "DESCRIPTIONS": [

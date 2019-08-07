@@ -23,6 +23,10 @@
       "I can't play this card."
     ]
   },
+  "theForsaken:BindingThorns": {
+    "NAME": "Binding Thorns",
+    "DESCRIPTION": "Whenever the target attacks, it takes !M! damage."
+  },
   "theForsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
     "DESCRIPTION": "Your next attack deals 50% more damage.",

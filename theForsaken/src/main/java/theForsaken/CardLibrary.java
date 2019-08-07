@@ -23,6 +23,7 @@ public class CardLibrary {
         list.add(new AncientWords());
         list.add(new Backlash());
         list.add(new BattleHymn());
+        list.add(new BindingThorns());
         list.add(new BlessedWeapon());
         list.add(new BlightOfFamine());
         list.add(new BlindFaith());
