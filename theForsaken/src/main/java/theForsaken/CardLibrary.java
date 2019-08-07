@@ -58,6 +58,7 @@ public class CardLibrary {
         list.add(new InspiringBlow());
         list.add(new LightRoll());
         list.add(new MagicWeapon());
+        list.add(new Mantra());
         list.add(new NobleSacrifice());
         list.add(new PanicDive());
         list.add(new Parry());

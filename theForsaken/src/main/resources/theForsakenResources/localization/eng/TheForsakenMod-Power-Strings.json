@@ -87,6 +87,14 @@
       " bonus damage for your next attack each turn."
     ]
   },
+  "theForsaken:MantraPower": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "The first card played next turn is repeated #b",
+      " time.",
+      " times."
+    ]
+  },
   "theForsaken:PreservationPower": {
     "NAME": "Preservation",
     "DESCRIPTIONS": [

@@ -179,6 +179,11 @@
     "NAME": "Magic Weapon",
     "DESCRIPTION": "Each turn, gain !M! bonus damage for your next attack."
   },
+  "theForsaken:Mantra": {
+    "NAME": "Mantra",
+    "DESCRIPTION": "The first card you play next turn is repeated !M! time.",
+    "UPGRADE_DESCRIPTION": "The first card you play next turn is repeated !M! times."
+  },
   "theForsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",
     "DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost.",
