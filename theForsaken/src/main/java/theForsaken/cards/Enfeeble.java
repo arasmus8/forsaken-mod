@@ -46,6 +46,7 @@ public class Enfeeble extends AbstractDynamicCard {
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         isMultiDamage = true;
+        exhaust = true;
     }
 
 
