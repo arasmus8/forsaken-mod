@@ -3,6 +3,7 @@ package theForsaken.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RegenPower;
@@ -41,6 +42,8 @@ public class Lifeblossom extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+        this.flash();
+        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractPlayer p = AbstractDungeon.player;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, REGEN_AMOUNT), REGEN_AMOUNT));
     }
