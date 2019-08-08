@@ -377,6 +377,7 @@ public class TheForsakenMod implements
         BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
+        BaseMod.addRelic(new Gavel(), RelicType.SHARED);
         BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file

@@ -6,6 +6,14 @@
       "Whenever you gain armor, deal #b4 damage to all enemies."
     ]
   },
+  "theForsaken:Gavel": {
+    "NAME": "Gavel",
+    "FLAVOR": "Figuratively renders judgement. Literraly renders unconscious.",
+    "DESCRIPTIONS": [
+      "Whenever you play #b3 skills in a turn, gain #b",
+      " bonus damage."
+    ]
+  },
   "theForsaken:JudgementScales": {
     "NAME": "Judgement Scales",
     "FLAVOR": "Seek balance in all things.",
