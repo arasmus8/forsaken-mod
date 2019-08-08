@@ -28,7 +28,7 @@ public class Eulogy extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
     private static final int COST = 0;
 

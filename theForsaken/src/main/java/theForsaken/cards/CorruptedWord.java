@@ -2,7 +2,6 @@ package theForsaken.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerToRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,7 +28,7 @@ public class CorruptedWord extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
     private static final int COST = 1;
 

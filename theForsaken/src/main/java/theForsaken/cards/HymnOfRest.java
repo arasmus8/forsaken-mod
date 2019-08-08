@@ -1,7 +1,6 @@
 package theForsaken.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,7 +31,7 @@ public class HymnOfRest extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
     private static final int COST = -2;
 

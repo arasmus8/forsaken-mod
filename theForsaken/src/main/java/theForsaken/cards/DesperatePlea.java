@@ -9,9 +9,6 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.DesperatePleaAction;
 import theForsaken.characters.TheForsaken;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import static theForsaken.TheForsakenMod.makeCardPath;
 
 public class DesperatePlea extends AbstractDynamicCard {
@@ -31,7 +28,7 @@ public class DesperatePlea extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
     private static final int COST = 3;
 

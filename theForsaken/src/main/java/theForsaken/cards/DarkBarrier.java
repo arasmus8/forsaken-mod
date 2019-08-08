@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import org.lwjgl.Sys;
 import theForsaken.TheForsakenMod;
 import theForsaken.actions.DarkBarrierAction;
 import theForsaken.characters.TheForsaken;
@@ -29,7 +28,7 @@ public class DarkBarrier extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
     private static final int COST = -1;
     // /STAT DECLARATION/
