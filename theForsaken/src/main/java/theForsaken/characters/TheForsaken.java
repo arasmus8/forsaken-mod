@@ -215,7 +215,7 @@ public class TheForsaken extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return TheForsakenMod.DEFAULT_GRAY;
+        return TheForsakenMod.FORSAKEN_GOLD;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -252,14 +252,14 @@ public class TheForsaken extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return TheForsakenMod.DEFAULT_GRAY;
+        return TheForsakenMod.FORSAKEN_GOLD;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return TheForsakenMod.DEFAULT_GRAY;
+        return TheForsakenMod.FORSAKEN_GOLD;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects
