@@ -15,7 +15,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -25,10 +24,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theForsaken.cards.PlagueCurse;
 import theForsaken.characters.TheForsaken;
-import theForsaken.events.IdentityCrisisEvent;
 import theForsaken.events.PlagueDoctorEvent;
 import theForsaken.potions.FearPotion;
-import theForsaken.relics.*;
+import theForsaken.relics.JudgementScales;
+import theForsaken.relics.PaleLantern;
+import theForsaken.relics.PlagueMask;
+import theForsaken.relics.ScaryMask;
 import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
 import theForsaken.variables.SacrificeSoulVariable;
@@ -95,6 +96,7 @@ public class TheForsakenMod implements
 
     // Colors (RGB)
     // Character Color
+    // TODO: update character color / cardback etc.
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
 
     // Potion Colors in RGB
@@ -200,9 +202,9 @@ public class TheForsakenMod implements
 
         logger.info("Done subscribing");
 
-        logger.info("Creating the color " + TheForsaken.Enums.COLOR_GRAY.toString());
+        logger.info("Creating the color " + TheForsaken.Enums.COLOR_GOLD.toString());
 
-        BaseMod.addColor(TheForsaken.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
+        BaseMod.addColor(TheForsaken.Enums.COLOR_GOLD, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
@@ -372,8 +374,9 @@ public class TheForsakenMod implements
         logger.info("Adding relics");
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GOLD);
+        BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
+        BaseMod.addRelicToCustomPool(new PaleLantern(), TheForsaken.Enums.COLOR_GOLD);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);

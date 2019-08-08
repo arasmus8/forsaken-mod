@@ -10,7 +10,7 @@ import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
 import static theForsaken.TheForsakenMod.makeRelicPath;
 
 
-public class PlaceholderRelic extends CustomRelic {
+public class PaleLantern extends CustomRelic {
 
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
@@ -19,19 +19,20 @@ public class PlaceholderRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = TheForsakenMod.makeID("PlaceholderRelic");
+    public static final String ID = TheForsakenMod.makeID("PaleLantern");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PaleLantern.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("PaleLantern.png"));
 
-    public PlaceholderRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+    public PaleLantern() {
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     // Flash at the start of Battle.
     @Override
     public void atBattleStartPreDraw() {
         flash();
+        AbstractDungeon.player.gameHandSize = AbstractDungeon.player.masterHandSize - 1;
     }
 
     // Gain 1 energy on equip.

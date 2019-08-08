@@ -10,7 +10,7 @@
     "NAME": "Pale Lantern",
     "FLAVOR": "Provides a comforting glow in the dark.",
     "DESCRIPTIONS": [
-      "Gain #b1 [E]. Draw 1 less card each turn."
+      "Gain [E] at the start of your turn. Draw 1 less card each turn."
     ]
   },
   "theForsaken:PlagueMask": {
@@ -25,13 +25,6 @@
     "FLAVOR": "Created to terrify the Spire's weaker denizens.",
     "DESCRIPTIONS": [
       "The first attack played each combat inflicts #b1 #yFear"
-    ]
-  },
-  "theForsaken:PlaceholderRelic": {
-    "NAME": "Placeholder Energy Relic",
-    "FLAVOR": "The snake is a friend.",
-    "DESCRIPTIONS": [
-      "Gain #b1 [E] ."
     ]
   },
   "theForsaken:PlaceholderRelic2": {
