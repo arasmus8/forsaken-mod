@@ -21,6 +21,14 @@
       "Each turn, gain #yStrength / #yDexterity based on played cards. NL (Gain #b1 #yStrength if you've played no attacks, and #b1 #yDexterity if you've played no skills.)"
     ]
   },
+  "theForsaken:Lifeblossom": {
+    "NAME": "Lifeblossom",
+    "FLAVOR": "This rare flower grows only in a hidden garden in a legendary forest.",
+    "DESCRIPTIONS": [
+      "At the beginning of each battle, gain #b",
+      " regen."
+    ]
+  },
   "theForsaken:PaleLantern": {
     "NAME": "Pale Lantern",
     "FLAVOR": "Provides a comforting glow in the dark.",
