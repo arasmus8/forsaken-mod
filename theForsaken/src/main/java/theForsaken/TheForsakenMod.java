@@ -26,10 +26,7 @@ import theForsaken.cards.PlagueCurse;
 import theForsaken.characters.TheForsaken;
 import theForsaken.events.PlagueDoctorEvent;
 import theForsaken.potions.FearPotion;
-import theForsaken.relics.JudgementScales;
-import theForsaken.relics.PaleLantern;
-import theForsaken.relics.PlagueMask;
-import theForsaken.relics.ScaryMask;
+import theForsaken.relics.*;
 import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
 import theForsaken.variables.SacrificeSoulVariable;
@@ -374,9 +371,10 @@ public class TheForsakenMod implements
         logger.info("Adding relics");
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
+        BaseMod.addRelicToCustomPool(new ArmorOfThorns(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GOLD);
-        BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new PaleLantern(), TheForsaken.Enums.COLOR_GOLD);
+        BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);
