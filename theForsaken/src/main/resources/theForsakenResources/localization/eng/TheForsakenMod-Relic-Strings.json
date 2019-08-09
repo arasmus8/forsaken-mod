@@ -21,6 +21,13 @@
       "Each turn, gain #yStrength / #yDexterity based on played cards. NL (Gain #b1 #yStrength if you've played no attacks, and #b1 #yDexterity if you've played no skills.)"
     ]
   },
+  "theForsaken:Kindling": {
+    "NAME": "Kindling",
+    "FLAVOR": "Brighter flames seem to fend off the encroaching dark.",
+    "DESCRIPTIONS": [
+      "Whenever you rest at a rest site, increase your Max HP by #b"
+    ]
+  },
   "theForsaken:Lifeblossom": {
     "NAME": "Lifeblossom",
     "FLAVOR": "This rare flower grows only in a hidden garden in a legendary forest.",

@@ -378,6 +378,7 @@ public class TheForsakenMod implements
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new Gavel(), RelicType.SHARED);
+        BaseMod.addRelic(new Kindling(), RelicType.SHARED);
         BaseMod.addRelic(new Lifeblossom(), RelicType.SHARED);
         BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);
 
