@@ -14,6 +14,13 @@
       " bonus damage."
     ]
   },
+  "theForsaken:HumbleEgg": {
+    "NAME": "Humble Egg",
+    "FLAVOR": "It's just an egg.",
+    "DESCRIPTIONS": [
+      "Whenever you add a #yCommon card into your deck, #yUpgrade it. When you first draw a common card each turn, draw an extra card."
+    ]
+  },
   "theForsaken:JudgementScales": {
     "NAME": "Judgement Scales",
     "FLAVOR": "Seek balance in all things.",
