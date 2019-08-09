@@ -1,11 +1,11 @@
 package theForsaken.cards;
 
+import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
-import theForsaken.actions.SpinAttackAction;
 import theForsaken.characters.TheForsaken;
 
 import static theForsaken.TheForsakenMod.makeCardPath;
@@ -42,7 +42,7 @@ public class SpinAttack extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 1 + (p.hasPower("Dexterity") ? p.getPower("Dexterity").amount : 0);
-        AbstractDungeon.actionManager.addToBottom(new SpinAttackAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, damage, damageTypeForTurn), amount));
+        AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, damage, damageTypeForTurn), amount));
     }
 
 
