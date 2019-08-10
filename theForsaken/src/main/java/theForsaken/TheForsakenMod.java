@@ -93,7 +93,6 @@ public class TheForsakenMod implements
 
     // Colors (RGB)
     // Character Color
-    // TODO: update character color / cardback etc.
     public static final Color FORSAKEN_GOLD = CardHelper.getColor(227.0f, 203.0f, 43.0f);
 
     // Potion Colors in RGB
@@ -109,17 +108,17 @@ public class TheForsakenMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "theForsakenResources/images/512/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY = "theForsakenResources/images/512/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY = "theForsakenResources/images/512/bg_power_default_gray.png";
+    private static final String ATTACK_FORSAKEN_GOLD = "theForsakenResources/images/512/bg_attack.png";
+    private static final String SKILL_FORSAKEN_GOLD = "theForsakenResources/images/512/bg_skill.png";
+    private static final String POWER_FORSAKEN_GOLD = "theForsakenResources/images/512/bg_power.png";
 
-    private static final String ENERGY_ORB_DEFAULT_GRAY = "theForsakenResources/images/512/card_default_gray_orb.png";
+    private static final String ENERGY_ORB_FORSAKEN_GOLD = "theForsakenResources/images/512/card_orb.png";
     private static final String CARD_ENERGY_ORB = "theForsakenResources/images/512/card_small_orb.png";
 
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "theForsakenResources/images/1024/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theForsakenResources/images/1024/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "theForsakenResources/images/1024/bg_power_default_gray.png";
-    private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theForsakenResources/images/1024/card_default_gray_orb.png";
+    private static final String ATTACK_FORSAKEN_GOLD_PORTRAIT = "theForsakenResources/images/1024/bg_attack.png";
+    private static final String SKILL_FORSAKEN_GOLD_PORTRAIT = "theForsakenResources/images/1024/bg_skill.png";
+    private static final String POWER_FORSAKEN_GOLD_PORTRAIT = "theForsakenResources/images/1024/bg_power.png";
+    private static final String ENERGY_ORB_FORSAKEN_GOLD_PORTRAIT = "theForsakenResources/images/1024/card_orb.png";
 
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theForsakenResources/images/charSelect/DefaultCharacterButton.png";
@@ -203,9 +202,9 @@ public class TheForsakenMod implements
 
         BaseMod.addColor(TheForsaken.Enums.COLOR_GOLD, FORSAKEN_GOLD, FORSAKEN_GOLD, FORSAKEN_GOLD,
                 FORSAKEN_GOLD, FORSAKEN_GOLD, FORSAKEN_GOLD, FORSAKEN_GOLD,
-                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
-                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+                ATTACK_FORSAKEN_GOLD, SKILL_FORSAKEN_GOLD, POWER_FORSAKEN_GOLD, ENERGY_ORB_FORSAKEN_GOLD,
+                ATTACK_FORSAKEN_GOLD_PORTRAIT, SKILL_FORSAKEN_GOLD_PORTRAIT, POWER_FORSAKEN_GOLD_PORTRAIT,
+                ENERGY_ORB_FORSAKEN_GOLD_PORTRAIT, CARD_ENERGY_ORB);
 
         logger.info("Done creating the color");
 
