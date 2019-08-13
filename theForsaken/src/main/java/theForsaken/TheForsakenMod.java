@@ -121,8 +121,8 @@ public class TheForsakenMod implements
     private static final String ENERGY_ORB_FORSAKEN_GOLD_PORTRAIT = "theForsakenResources/images/1024/card_orb.png";
 
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "theForsakenResources/images/charSelect/DefaultCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theForsakenResources/images/charSelect/DefaultCharacterPortraitBG.png";
+    private static final String THE_DEFAULT_BUTTON = "theForsakenResources/images/charSelect/ForsakenButton.png";
+    private static final String THE_DEFAULT_PORTRAIT = "theForsakenResources/images/charSelect/ForsakenPortraitBG.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theForsakenResources/images/char/forsaken/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theForsakenResources/images/char/forsaken/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theForsakenResources/images/char/forsaken/corpse.png";
