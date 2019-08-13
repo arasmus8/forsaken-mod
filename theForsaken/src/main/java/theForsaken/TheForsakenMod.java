@@ -123,16 +123,16 @@ public class TheForsakenMod implements
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theForsakenResources/images/charSelect/DefaultCharacterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "theForsakenResources/images/charSelect/DefaultCharacterPortraitBG.png";
-    public static final String THE_DEFAULT_SHOULDER_1 = "theForsakenResources/images/char/defaultCharacter/shoulder.png";
-    public static final String THE_DEFAULT_SHOULDER_2 = "theForsakenResources/images/char/defaultCharacter/shoulder2.png";
-    public static final String THE_DEFAULT_CORPSE = "theForsakenResources/images/char/defaultCharacter/corpse.png";
+    public static final String THE_DEFAULT_SHOULDER_1 = "theForsakenResources/images/char/forsaken/shoulder.png";
+    public static final String THE_DEFAULT_SHOULDER_2 = "theForsakenResources/images/char/forsaken/shoulder2.png";
+    public static final String THE_DEFAULT_CORPSE = "theForsakenResources/images/char/forsaken/corpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     private static final String BADGE_IMAGE = "theForsakenResources/images/Badge.png";
 
     // Atlas and JSON files for the Animations
-    public static final String THE_DEFAULT_SKELETON_ATLAS = "theForsakenResources/images/char/defaultCharacter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON = "theForsakenResources/images/char/defaultCharacter/skeleton.json";
+    public static final String THE_DEFAULT_SKELETON_ATLAS = "theForsakenResources/images/char/forsaken/skeleton.atlas";
+    public static final String THE_DEFAULT_SKELETON_JSON = "theForsakenResources/images/char/forsaken/skeleton.json";
 
     // =============== MAKE IMAGE PATHS =================
 

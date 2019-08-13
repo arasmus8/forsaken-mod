@@ -85,17 +85,17 @@ public class TheForsaken extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "theForsakenResources/images/char/defaultCharacter/orb/layer1.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer2.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer3.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer4.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer5.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer6.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer1d.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer2d.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer3d.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer4d.png",
-            "theForsakenResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "theForsakenResources/images/char/forsaken/orb/layer1.png",
+            "theForsakenResources/images/char/forsaken/orb/layer2.png",
+            "theForsakenResources/images/char/forsaken/orb/layer3.png",
+            "theForsakenResources/images/char/forsaken/orb/layer4.png",
+            "theForsakenResources/images/char/forsaken/orb/layer5.png",
+            "theForsakenResources/images/char/forsaken/orb/layer6.png",
+            "theForsakenResources/images/char/forsaken/orb/layer1d.png",
+            "theForsakenResources/images/char/forsaken/orb/layer2d.png",
+            "theForsakenResources/images/char/forsaken/orb/layer3d.png",
+            "theForsakenResources/images/char/forsaken/orb/layer4d.png",
+            "theForsakenResources/images/char/forsaken/orb/layer5d.png",};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
@@ -103,9 +103,9 @@ public class TheForsaken extends CustomPlayer {
 
     public TheForsaken(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theForsakenResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "theForsakenResources/images/char/forsaken/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theForsakenResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "theForsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
