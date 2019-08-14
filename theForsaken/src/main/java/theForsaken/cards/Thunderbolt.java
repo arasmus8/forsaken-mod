@@ -44,6 +44,7 @@ public class Thunderbolt extends AbstractDynamicCard {
 
 
     // Actions the card should do.
+    // TODO make a custom action with a wait so we don't strike a dead target
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));

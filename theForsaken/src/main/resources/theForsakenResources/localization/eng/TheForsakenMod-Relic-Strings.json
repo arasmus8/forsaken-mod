@@ -57,6 +57,13 @@
       "Whenever you are inflicted with poison, apply it to a random enemy also."
     ]
   },
+  "theForsaken:ScalesOfTruth": {
+    "NAME": "Scales of Truth",
+    "FLAVOR": "It is said that if one's heart is light as a feather, the Truth will be understood.",
+    "DESCRIPTIONS": [
+      "For every 3 #yunplayed skills, gain 1 dexterity. For every 3 #yunplayed attacks, gain 1 strength."
+    ]
+  },
   "theForsaken:ScaryMask": {
     "NAME": "Scary Mask",
     "FLAVOR": "Created to terrify the Spire's weaker denizens.",
