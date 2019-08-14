@@ -65,6 +65,12 @@ public class ScalesOfTruth extends CustomRelic {
         while (attackCount >= 3) {
             attackCount -= 3;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
+            this.flash();
         }
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return AbstractDungeon.player.hasRelic(JudgementScales.ID);
     }
 }

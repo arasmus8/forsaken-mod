@@ -134,7 +134,7 @@
 	}
 },
 "animations": {
-	"rally": {
+  "Hit": {
 		"bones": {
 			"head": {
 				"rotate": [
@@ -596,7 +596,7 @@
 			}
 		}
 	},
-	"animation": {
+  "Idle": {
 		"bones": {
 			"head": {
 				"rotate": [

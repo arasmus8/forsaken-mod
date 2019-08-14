@@ -61,7 +61,7 @@
     "NAME": "Scales of Truth",
     "FLAVOR": "It is said that if one's heart is light as a feather, the Truth will be understood.",
     "DESCRIPTIONS": [
-      "For every 3 #yunplayed skills, gain 1 dexterity. For every 3 #yunplayed attacks, gain 1 strength."
+      "Replaces #yJudgement #yScales. For every 3 #yunplayed skills, gain 1 dexterity. For every 3 #yunplayed attacks, gain 1 strength."
     ]
   },
   "theForsaken:ScaryMask": {

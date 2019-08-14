@@ -87,7 +87,7 @@
             </mainline>
             <timeline id="0" name="Shield">
                 <key id="0" spin="0">
-                    <object folder="0" file="2" x="1.728684" y="6.249012"/>
+                    <object folder="0" file="2" x="1.728684" y="6.249012" angle="0"/>
                 </key>
             </timeline>
             <timeline id="1" name="ShoulderR">
@@ -300,7 +300,7 @@
             </mainline>
             <timeline id="0" name="Shield">
                 <key id="0" spin="0">
-                    <object folder="0" file="2" x="1.728684" y="6.249012" angle="0"/>
+                    <object folder="0" file="2" x="1.728684" y="6.249012"/>
                 </key>
             </timeline>
             <timeline id="1" name="ShoulderR">
@@ -365,15 +365,15 @@
             </timeline>
             <timeline id="13" name="shadow">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="-94.805195" y="-226.623377" angle="0"/>
+                    <object folder="0" file="0" x="-106.805195" y="25.376623" angle="0"/>
                 </key>
             </timeline>
             <timeline id="14" obj="0" name="bone_000" object_type="bone">
                 <key id="0">
-                    <bone x="9.090909" y="-86.363636" angle="88.636072"/>
+                    <bone x="-2.909091" y="165.636364" angle="88.636072"/>
                 </key>
                 <key id="1" time="349" spin="-1">
-                    <bone x="1.604278" y="-92.780749" angle="92.690772" scale_x="0.993292"/>
+                    <bone x="-10.395722" y="159.219251" angle="92.690772" scale_x="0.993292"/>
                 </key>
             </timeline>
             <timeline id="15" obj="1" name="bone_007" object_type="bone">

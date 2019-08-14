@@ -374,6 +374,7 @@ public class TheForsakenMod implements
         BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new PaleLantern(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
+        BaseMod.addRelicToCustomPool(new ScalesOfTruth(), TheForsaken.Enums.COLOR_GOLD);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new Gavel(), RelicType.SHARED);
