@@ -15,7 +15,7 @@
         <SlayTheSpire.version>07-17-2019</SlayTheSpire.version>
         <ModTheSpire.version>3.8.0</ModTheSpire.version>
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
-        <Steam.path>D:\Programs\steamapps</Steam.path>
+        <Steam.path>D:\Steam\steamapps</Steam.path>
     </properties>
 
     <dependencies>

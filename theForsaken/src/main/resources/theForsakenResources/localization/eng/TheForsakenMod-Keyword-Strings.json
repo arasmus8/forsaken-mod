@@ -8,6 +8,13 @@
   },
   {
     "NAMES": [
+      "Recompense",
+      "recompense"
+    ],
+    "DESCRIPTION": "#yRecompense are status cards that cost 1 and draw a card."
+  },
+  {
+    "NAMES": [
       "Unplayed",
       "unplayed"
     ],

@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theForsaken.cards.PlagueCurse;
+import theForsaken.cards.Recompense;
 import theForsaken.characters.TheForsaken;
 import theForsaken.events.PlagueDoctorEvent;
 import theForsaken.potions.FearPotion;
@@ -415,6 +416,9 @@ public class TheForsakenMod implements
 
         BaseMod.addCard(new PlagueCurse());
         UnlockTracker.markCardAsSeen(PlagueCurse.ID);
+
+        BaseMod.addCard(new Recompense());
+        UnlockTracker.markCardAsSeen(Recompense.ID);
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
