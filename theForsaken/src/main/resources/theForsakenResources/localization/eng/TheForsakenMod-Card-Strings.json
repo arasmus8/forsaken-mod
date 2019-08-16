@@ -94,8 +94,8 @@
   },
   "theForsaken:DarkBargain": {
     "NAME": "Dark Bargain",
-    "DESCRIPTION": "Each turn, gain [E] and shuffle a void into your discard pile.",
-    "UPGRADE_DESCRIPTION": "Each turn, gain [E] and shuffle a void into your discard pile. NL Innate"
+    "DESCRIPTION": "Each turn, gain [E] and shuffle a theforsaken:recompense into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Each turn, gain [E] and shuffle a theforsaken:recompense into your discard pile. NL Innate"
   },
   "theForsaken:DarkBarrier": {
     "NAME": "Dark Barrier",
@@ -233,6 +233,10 @@
   "theForsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL theforsaken:Unplayed: Your next attack deals !M! bonus damage."
+  },
+  "theForsaken:Recompense": {
+    "NAME": "Recompense",
+    "DESCRIPTION": "Ethereal. NL Draw !M! card. NL Exhaust."
   },
   "theForsaken:Retribution": {
     "NAME": "Retribution",

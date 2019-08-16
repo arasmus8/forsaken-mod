@@ -5,14 +5,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.lwjgl.Sys;
 import theForsaken.TheForsakenMod;
+import theForsaken.cards.Recompense;
 import theForsaken.util.TextureLoader;
 
 import static theForsaken.TheForsakenMod.makePowerPath;
@@ -68,7 +67,7 @@ public class DarkBargainPower extends AbstractPower implements CloneablePowerInt
 
     public void atStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new VoidCard(), this.amount));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Recompense(), this.amount));
         this.flash();
     }
 

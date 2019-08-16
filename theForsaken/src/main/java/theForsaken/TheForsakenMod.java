@@ -420,6 +420,9 @@ public class TheForsakenMod implements
         BaseMod.addCard(new PlagueCurse());
         UnlockTracker.markCardAsSeen(PlagueCurse.ID);
 
+        BaseMod.addCard(new Recompense());
+        UnlockTracker.markCardAsSeen(Recompense.ID);
+
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         // This is so that they are all "seen" in the library, for people who like to look at the card list
