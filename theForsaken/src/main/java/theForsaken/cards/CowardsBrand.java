@@ -31,8 +31,8 @@ public class CowardsBrand extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 14;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 18;
+    private static final int UPGRADE_PLUS_DMG = 6;
 
     private static final float DAMAGE_ADJUST = 2.0F;
     // /STAT DECLARATION/
