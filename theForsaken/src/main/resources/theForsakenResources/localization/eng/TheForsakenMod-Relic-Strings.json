@@ -3,7 +3,7 @@
     "NAME": "Armor of Thorns",
     "FLAVOR": "It may be good for battle, but it also prevents hugs :(",
     "DESCRIPTIONS": [
-      "Whenever you gain armor, deal #b4 damage to all enemies."
+      "Whenever you gain armor, deal #b3 damage to all enemies."
     ]
   },
   "theForsaken:Gavel": {
