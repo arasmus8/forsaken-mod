@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theForsaken.TheForsakenMod;
 
 public class NobleSacrificeAction extends AbstractGameAction {
@@ -29,10 +30,16 @@ public class NobleSacrificeAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (this.p.hand.isEmpty()) {
                 this.isDone = true;
+                if (amount > 0) {
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.p, this.amount));
+                }
             } else if (this.p.hand.size() == 1) {
                 AbstractCard c = this.p.hand.getTopCard();
 
-                int cardsToDraw = c.costForTurn + this.amount;
+                int cardsToDraw = Math.max(c.costForTurn, 0) + this.amount;
+                if (c.costForTurn == -1) {// 49
+                    cardsToDraw = EnergyPanel.getCurrentEnergy() + this.amount;
+                }
                 if (cardsToDraw > 0) {
                     AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.p, cardsToDraw));
                 }
@@ -46,7 +53,10 @@ public class NobleSacrificeAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                    int cardsToDraw = c.costForTurn + this.amount;
+                    int cardsToDraw = Math.max(c.costForTurn, 0) + this.amount;
+                    if (c.costForTurn == -1) {// 49
+                        cardsToDraw = EnergyPanel.getCurrentEnergy() + this.amount;
+                    }
                     if (cardsToDraw > 0) {
                         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.p, cardsToDraw));
                     }
