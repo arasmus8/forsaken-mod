@@ -32,7 +32,7 @@ public class SacrificeSoul extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 5;
 
     private static final int DAMAGE_PER_BUFF = 3;
-    private static final int UPGRADE_DAMAGE_PER_BUFF = 4;
+    private static final int UPGRADE_DAMAGE_PER_BUFF = 2;
 
     // /STAT DECLARATION/
 
