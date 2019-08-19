@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
@@ -41,5 +42,10 @@ public class Kindling extends CustomRelic {
     public void onRest() {
         this.flash();
         AbstractDungeon.player.increaseMaxHp(MAX_HP_AMOUNT, true);
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !UnlockTracker.isRelicLocked(this.relicId);
     }
 }

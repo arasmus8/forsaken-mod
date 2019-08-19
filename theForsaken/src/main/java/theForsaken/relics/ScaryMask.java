@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.powers.FearPower;
 import theForsaken.util.TextureLoader;
@@ -78,4 +79,8 @@ public class ScaryMask extends CustomRelic {
         this.pulse = false;
     }
 
+    @Override
+    public boolean canSpawn() {
+        return !UnlockTracker.isRelicLocked(this.relicId);
+    }
 }

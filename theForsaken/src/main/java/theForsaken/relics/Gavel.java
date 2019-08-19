@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.powers.BonusDamagePower;
 import theForsaken.util.TextureLoader;
@@ -66,4 +67,8 @@ public class Gavel extends CustomRelic {
         counter = -1;
     }
 
+    @Override
+    public boolean canSpawn() {
+        return !UnlockTracker.isRelicLocked(this.relicId);
+    }
 }

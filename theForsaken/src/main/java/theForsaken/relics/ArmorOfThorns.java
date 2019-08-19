@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
@@ -48,4 +49,9 @@ public class ArmorOfThorns extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
+
+    @Override
+    public boolean canSpawn() {
+        return !UnlockTracker.isRelicLocked(this.relicId);
+    }
 }

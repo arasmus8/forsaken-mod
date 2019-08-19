@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
@@ -71,6 +72,9 @@ public class ScalesOfTruth extends CustomRelic {
 
     @Override
     public boolean canSpawn() {
+        if (UnlockTracker.isRelicLocked(this.relicId)) {
+            return false;
+        }
         return AbstractDungeon.player.hasRelic(JudgementScales.ID);
     }
 }

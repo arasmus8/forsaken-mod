@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RegenPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
@@ -46,5 +47,10 @@ public class Lifeblossom extends CustomRelic {
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractPlayer p = AbstractDungeon.player;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, REGEN_AMOUNT), REGEN_AMOUNT));
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !UnlockTracker.isRelicLocked(this.relicId);
     }
 }

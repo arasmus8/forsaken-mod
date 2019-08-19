@@ -541,55 +541,6 @@ public class TheForsakenMod implements
 
     @Override
     public void receivePreStartGame() {
-        // remove locked cards
-        if (UnlockTracker.isCardLocked(Terrorize.ID)) {
-            BaseMod.removeCard(Terrorize.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(CowardsBrand.ID)) {
-            BaseMod.removeCard(CowardsBrand.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(Horror.ID)) {
-            BaseMod.removeCard(Horror.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(HymnOfRest.ID)) {
-            BaseMod.removeCard(HymnOfRest.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(BattleHymn.ID)) {
-            BaseMod.removeCard(BattleHymn.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(WardingHymn.ID)) {
-            BaseMod.removeCard(WardingHymn.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(CorruptedForm.ID)) {
-            BaseMod.removeCard(CorruptedForm.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(BottledPlague.ID)) {
-            BaseMod.removeCard(BottledPlague.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-        if (UnlockTracker.isCardLocked(CorruptedWord.ID)) {
-            BaseMod.removeCard(CorruptedWord.ID, TheForsaken.Enums.COLOR_GOLD);
-        }
-
-        // Remove locked relics
-        if (UnlockTracker.isRelicLocked(Lifeblossom.ID)) {
-            BaseMod.removeRelic(new Lifeblossom());
-        }
-        if (UnlockTracker.isRelicLocked(Kindling.ID)) {
-            BaseMod.removeRelic(new Kindling());
-        }
-        if (UnlockTracker.isRelicLocked(ArmorOfThorns.ID)) {
-            BaseMod.removeRelic(new ArmorOfThorns());
-        }
-
-        if (UnlockTracker.isRelicLocked(ScalesOfTruth.ID)) {
-            BaseMod.removeRelic(new ScalesOfTruth());
-        }
-        if (UnlockTracker.isRelicLocked(Gavel.ID)) {
-            BaseMod.removeRelic(new Gavel());
-        }
-        if (UnlockTracker.isRelicLocked(ArmorOfThorns.ID)) {
-            BaseMod.removeRelic(new ArmorOfThorns());
-        }
     }
 
     // this adds "ModName:" before the ID of any card/relic/power etc.
