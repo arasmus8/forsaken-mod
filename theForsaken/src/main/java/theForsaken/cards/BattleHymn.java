@@ -56,7 +56,10 @@ public class BattleHymn extends AbstractDynamicCard {
     }
 
     private void calculateDamage() {
-        this.baseDamage = Math.max(this.actualBaseDamage - ((this.actualBaseDamage * this.otherCardsPlayed) / this.magicNumber), 0);
+        // this.baseDamage = Math.max(this.actualBaseDamage - ((this.actualBaseDamage * this.otherCardsPlayed) / this.magicNumber), 0);
+        this.baseDamage = this.actualBaseDamage;
+        this.applyPowers();
+        this.baseDamage = Math.max(this.baseDamage - ((this.baseDamage * this.otherCardsPlayed) / this.magicNumber), 0);
     }
 
     // Actions the card should do.

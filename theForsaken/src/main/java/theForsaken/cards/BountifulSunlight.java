@@ -29,8 +29,8 @@ public class BountifulSunlight extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int MAGIC = 6;
-    private static final int UPGRADED_MAGIC = 3;
+    private static final int MAGIC = 4;
+    private static final int UPGRADED_MAGIC = 2;
 
     // /STAT DECLARATION/
 

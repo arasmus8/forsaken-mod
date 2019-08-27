@@ -32,7 +32,7 @@ public class ShieldBash extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int POWER = 4;
+    private static final int POWER = 2;
     private static final int GROWTH = 1;
     private static final int UPGRADE_MAGIC = 1;
 

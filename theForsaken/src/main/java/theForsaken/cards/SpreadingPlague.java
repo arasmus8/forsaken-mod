@@ -32,7 +32,7 @@ public class SpreadingPlague extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int POISON_AMT = 2;
-    private static final int UPGRADE_POISON_AMT = 2;
+    private static final int UPGRADE_POISON_AMT = 1;
 
     // /STAT DECLARATION/
 

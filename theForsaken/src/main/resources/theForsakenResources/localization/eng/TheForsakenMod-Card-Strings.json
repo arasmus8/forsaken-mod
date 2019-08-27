@@ -25,7 +25,7 @@
   },
   "theForsaken:BindingThorns": {
     "NAME": "Binding Thorns",
-    "DESCRIPTION": "Whenever the target attacks, it takes !M! damage."
+    "DESCRIPTION": "Whenever the target attacks, it takes !M! damage. The damage is reduced by 1 with each attack."
   },
   "theForsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
@@ -244,7 +244,7 @@
   },
   "theForsaken:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "When your block is broken, your attacks deal double damage next turn."
+    "DESCRIPTION": "When your block is broken, your next attack deals 50% more damage."
   },
   "theForsaken:SacredOath": {
     "NAME": "Sacred Oath",
@@ -281,7 +281,7 @@
   },
   "theForsaken:SpinAttack": {
     "NAME": "Spin Attack",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each dexterity."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for every !M! dexterity."
   },
   "theForsaken:SpreadingPlague": {
     "NAME": "Spreading Plague",
@@ -294,7 +294,7 @@
   },
   "theForsaken:TearsOfSunlight": {
     "NAME": "Tears of Sunlight",
-    "DESCRIPTION": "Gain !M! Regen each turn."
+    "DESCRIPTION": "Gain !M! Regen each turn. Lose !theForsaken:SecondMagic! dexterity."
   },
   "theForsaken:Temperance": {
     "NAME": "Temperance",

@@ -31,7 +31,7 @@ public class MagicWeapon extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int BONUS_DMG = 1;
+    private static final int BONUS_DMG = 2;
     private static final int UPGRADE_BONUS_DMG = 1;
 
     // /STAT DECLARATION/

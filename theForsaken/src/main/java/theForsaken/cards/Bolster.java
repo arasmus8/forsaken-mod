@@ -31,8 +31,8 @@ public class Bolster extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int BLOCK_AMT = 4;
-    private static final int UPGRADE_BLOCK_AMT = 3;
+    private static final int BLOCK_AMT = 3;
+    private static final int UPGRADE_BLOCK_AMT = 1;
 
     // /STAT DECLARATION/
 

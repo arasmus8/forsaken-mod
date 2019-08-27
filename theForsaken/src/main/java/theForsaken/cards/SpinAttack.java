@@ -1,7 +1,7 @@
 package theForsaken.cards;
 
-import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,21 +28,34 @@ public class SpinAttack extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DAMAGE = 6;
+
+    private static final int DEX_PER_SPIN = 3;
+    private static final int UPGRADE_DEX_PER_SPIN = -1;
     // /STAT DECLARATION/
 
     public SpinAttack() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseMagicNumber = DEX_PER_SPIN;
+        magicNumber = DEX_PER_SPIN;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amount = 1 + (p.hasPower("Dexterity") ? p.getPower("Dexterity").amount : 0);
-        AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, damage, damageTypeForTurn), amount));
+        int amount = 1;
+        if (p.hasPower("Dexterity")) {
+            int dex = p.getPower("Dexterity").amount;
+            while (dex >= magicNumber) {
+                amount += 1;
+                dex -= magicNumber;
+            }
+        }
+        for (int i = 0; i < amount; ++i) {// 41
+            AbstractDungeon.actionManager.addToBottom(new AttackDamageRandomEnemyAction(this, AttackEffect.SLASH_HORIZONTAL));// 42
+        }
     }
 
 
@@ -51,7 +64,7 @@ public class SpinAttack extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_DEX_PER_SPIN);
             initializeDescription();
         }
     }

@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -49,6 +50,7 @@ public class BindingThornsPower extends AbstractPower implements CloneablePowerI
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (info.type != DamageType.THORNS && info.type != DamageType.HP_LOSS) {
+            AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, 1));
             AbstractDungeon.actionManager.addToTop(new DamageAction(owner, new DamageInfo(owner, amount, DamageType.THORNS)));
         }
     }

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.TearsOfSunlightPower;
@@ -34,6 +35,9 @@ public class TearsOfSunlight extends AbstractDynamicCard {
     private static final int REGEN_AMT = 1;
     private static final int UPGRADE_REGEN_AMT = 1;
 
+    private static final int DEX_LOSS = 3;
+    private static final int UPGRADE_DEX_LOSS = -1;
+
     // /STAT DECLARATION/
 
 
@@ -41,6 +45,8 @@ public class TearsOfSunlight extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = REGEN_AMT;
         magicNumber = REGEN_AMT;
+        defaultBaseSecondMagicNumber = DEX_LOSS;
+        defaultSecondMagicNumber = DEX_LOSS;
         tags.add(CardTags.HEALING);
     }
 
@@ -49,6 +55,7 @@ public class TearsOfSunlight extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TearsOfSunlightPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, -this.defaultSecondMagicNumber), -this.defaultSecondMagicNumber));
     }
 
 
@@ -58,6 +65,7 @@ public class TearsOfSunlight extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_REGEN_AMT);
+            upgradeDefaultSecondMagicNumber(UPGRADE_DEX_LOSS);
             initializeDescription();
         }
     }

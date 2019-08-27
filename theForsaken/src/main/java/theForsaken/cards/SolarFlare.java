@@ -37,7 +37,7 @@ public class SolarFlare extends AbstractDynamicCard {
     private static final int DAMAGE = 27;
     private static final int UPGRADE_PLUS_DMG = 5;
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     // /STAT DECLARATION/
 
     public SolarFlare() {

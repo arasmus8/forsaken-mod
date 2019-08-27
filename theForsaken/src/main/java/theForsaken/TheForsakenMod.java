@@ -31,6 +31,7 @@ import theForsaken.potions.FearPotion;
 import theForsaken.relics.*;
 import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
+import theForsaken.variables.DefaultSecondMagicNumber;
 import theForsaken.variables.SacrificeSoulVariable;
 import theForsaken.variables.UnplayedCardsVariable;
 
@@ -404,6 +405,7 @@ public class TheForsakenMod implements
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
         // Add the Custom Dynamic variables
+        BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         BaseMod.addDynamicVariable(new SacrificeSoulVariable());
         BaseMod.addDynamicVariable(new UnplayedCardsVariable());
 

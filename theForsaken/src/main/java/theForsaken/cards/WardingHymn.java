@@ -34,8 +34,8 @@ public class WardingHymn extends AbstractDynamicCard {
     public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
     private static final int COST = -2;
-    private static final int BLOCK = 15;
-    private static final int UPGRADE_BLOCK_AMT = 5;
+    private static final int BLOCK = 12;
+    private static final int UPGRADE_BLOCK_AMT = 4;
 
     private int actualBaseBlock;
 
@@ -57,8 +57,10 @@ public class WardingHymn extends AbstractDynamicCard {
     }
 
     public void calculateBlock() {
-       this.baseBlock = Math.max(this.actualBaseBlock - ((this.actualBaseBlock * this.otherCardsPlayed) / this.magicNumber), 0);
-       this.applyPowers();
+        // this.baseBlock = Math.max(this.actualBaseBlock - ((this.actualBaseBlock * this.otherCardsPlayed) / this.magicNumber), 0);
+        this.baseBlock = this.actualBaseBlock;
+        this.applyPowers();
+        this.baseBlock = Math.max(this.baseBlock - ((this.baseBlock * this.otherCardsPlayed) / this.magicNumber), 0);
     }
 
     @Override

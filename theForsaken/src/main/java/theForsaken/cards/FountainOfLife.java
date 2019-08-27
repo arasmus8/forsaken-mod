@@ -29,9 +29,9 @@ public class FountainOfLife extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
-    private static final int COST = 1;
+    private static final int COST = 3;
 
-    private static final int LIFE_GAIN_AMT = 3;
+    private static final int LIFE_GAIN_AMT = 2;
     private static final int UPGRADE_LIFE_GAIN_AMT = 1;
 
     // /STAT DECLARATION/

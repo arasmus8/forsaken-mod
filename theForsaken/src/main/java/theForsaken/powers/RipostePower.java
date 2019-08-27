@@ -4,10 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -15,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PhantasmalPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
@@ -79,7 +75,7 @@ public class RipostePower extends AbstractPower implements CloneablePowerInterfa
             int block = owner.currentBlock;
             if (block <= 0) {
                 this.flash();
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new PhantasmalPower(owner, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new PercentageBonusDamagePower(owner, 1), 1));
                 hasBlock = false;
             }
         }

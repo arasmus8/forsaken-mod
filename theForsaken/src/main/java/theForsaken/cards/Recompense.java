@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
-import theForsaken.characters.TheForsaken;
 
 import static theForsaken.TheForsakenMod.makeCardPath;
 
@@ -21,10 +20,10 @@ public class Recompense extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.STATUS;
-    public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
+    public static final CardColor COLOR = CardColor.COLORLESS;
 
     private static final int COST = 1;
 
