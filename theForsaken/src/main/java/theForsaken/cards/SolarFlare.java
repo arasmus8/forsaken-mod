@@ -45,6 +45,7 @@ public class SolarFlare extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
+        isMultiDamage = true;
     }
 
 
