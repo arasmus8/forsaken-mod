@@ -143,6 +143,13 @@
       "Half the strength is returned each turn."
     ]
   },
+  "theForsaken:WordsOfMightPower": {
+    "NAME": "Words of Might",
+    "DESCRIPTIONS": [
+      "After you play a skill, your next attack deals #b",
+      " bonus damage."
+    ]
+  },
   "theForsaken:CommonPower": {
     "NAME": "Placeholder Power",
     "DESCRIPTIONS": [

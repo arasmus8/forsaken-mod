@@ -4,7 +4,9 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,18 +20,18 @@ import static theForsaken.TheForsakenMod.makePowerPath;
 
 //Gain 1 dex for the turn for each card played.
 
-public class MagicWeaponPower extends AbstractPower implements CloneablePowerInterface {
-    public static final String POWER_ID = TheForsakenMod.makeID(MagicWeaponPower.class.getSimpleName());
+public class WordsOfMightPower extends AbstractPower implements CloneablePowerInterface {
+    public static final String POWER_ID = TheForsakenMod.makeID(WordsOfMightPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("magic_weapon84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("magic_weapon32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("words_of_might84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("words_of_might32.png"));
 
-    public MagicWeaponPower(final AbstractCreature owner, final int amount) {
+    public WordsOfMightPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -47,10 +49,12 @@ public class MagicWeaponPower extends AbstractPower implements CloneablePowerInt
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        this.flash();
-        AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, this.amount)));
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == CardType.SKILL) {
+            this.flash();
+            AbstractCreature c = this.owner;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(c, c, new BonusDamagePower(c, this.amount)));
+        }
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
@@ -61,6 +65,6 @@ public class MagicWeaponPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public AbstractPower makeCopy() {
-        return new MagicWeaponPower(owner, amount);
+        return new WordsOfMightPower(owner, amount);
     }
 }

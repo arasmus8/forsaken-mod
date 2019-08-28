@@ -9,7 +9,7 @@
   },
   "theForsaken:AncientWords": {
     "NAME": "Ancient Words",
-    "DESCRIPTION": "Gain !M! artifact."
+    "DESCRIPTION": "~WORDS~ NL Gain !M! artifact."
   },
   "theForsaken:Backlash": {
     "NAME": "Backlash",
@@ -82,7 +82,7 @@
   },
   "theForsaken:CorruptedWord": {
     "NAME": "Corrupted Word",
-    "DESCRIPTION": "Apply !M! poison to ALL enemies AND yourself."
+    "DESCRIPTION": "~WORDS~ NL Apply !M! poison to ALL enemies AND yourself."
   },
   "theForsaken:CowardsBrand": {
     "NAME": "Coward's Brand",
@@ -112,7 +112,7 @@
   },
   "theForsaken:DesperatePlea": {
     "NAME": "Desperate Plea",
-    "DESCRIPTION": "Remove all debuffs. Gain !M! strength. If you are below 1/2 hp, NL Gain [E] [E]."
+    "DESCRIPTION": "~WORDS~ NL Remove all debuffs. Gain !M! strength. If you are below 1/2 hp, NL Gain [E] [E]."
   },
   "theForsaken:Devotion": {
     "NAME": "Devotion",
@@ -129,7 +129,7 @@
   },
   "theForsaken:Eulogy": {
     "NAME": "Eulogy",
-    "DESCRIPTION": "Ethereal. NL Apply !M! vulnerable to ALL enemies. NL theforsaken:Unplayed: Your next attack deals 3 bonus damage."
+    "DESCRIPTION": "~WORDS~ NL Ethereal. NL Apply !M! vulnerable to ALL enemies. NL theforsaken:Unplayed: Your next attack deals 3 bonus damage."
   },
   "theForsaken:FatRoll": {
     "NAME": "Fat Roll",
@@ -248,8 +248,8 @@
   },
   "theForsaken:SacredOath": {
     "NAME": "Sacred Oath",
-    "DESCRIPTION": "Double your Strength and Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your Strength and Dexterity. NL Exhaust."
+    "DESCRIPTION": "~WORDS~ NL Double your Strength and Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "~WORDS~ NL Triple your Strength and Dexterity. NL Exhaust."
   },
   "theForsaken:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
@@ -322,15 +322,15 @@
   },
   "theForsaken:WordOfPower": {
     "NAME": "Word of Power",
-    "DESCRIPTION": "Deal !D! damage. Increase by !M! for each \"Words\" card in your deck."
+    "DESCRIPTION": "~WORDS~ NL Deal !D! damage. Increase by !M! for each \"Words\" card in your deck."
   },
   "theForsaken:WordsOfMight": {
     "NAME": "Words of Might",
-    "DESCRIPTION": "Gain !M! strength and dexterity."
+    "DESCRIPTION": "~WORDS~ NL Whenever you play a skill, your next attack does !M! bonus damage."
   },
   "theForsaken:WordsOfPestilence": {
     "NAME": "Words of Pestilence",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies and !M! to yourself."
+    "DESCRIPTION": "~WORDS~ NL Deal !D! damage to ALL enemies and !M! to yourself."
   },
   "theForsaken:WrathOfGod": {
     "NAME": "Wrath of God",
