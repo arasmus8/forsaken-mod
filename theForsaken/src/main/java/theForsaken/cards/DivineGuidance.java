@@ -40,6 +40,7 @@ public class DivineGuidance extends AbstractDynamicCard {
         this.baseMagicNumber = CARDS_TO_CHOOSE;
         this.magicNumber = CARDS_TO_CHOOSE;
         this.exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
 

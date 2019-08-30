@@ -41,6 +41,7 @@ public class FountainOfLife extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = LIFE_GAIN_AMT;
         magicNumber = LIFE_GAIN_AMT;
+        tags.add(CardTags.HEALING);
     }
 
 
