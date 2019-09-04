@@ -60,9 +60,10 @@ public class ShieldCharge extends AbstractDynamicCard {
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        this.dontTriggerOnUseCard = true;
         AbstractMonster mo = AbstractDungeon.getRandomMonster();
         if (mo != null) {
+            this.dontTriggerOnUseCard = true;
+            this.freeToPlayOnce = true;
             CardQueueItem queueItem = new CardQueueItem(this, mo, EnergyPanel.getCurrentEnergy(), false);
             queueItem.isEndTurnAutoPlay = true;
             AbstractDungeon.actionManager.cardQueue.add(queueItem);

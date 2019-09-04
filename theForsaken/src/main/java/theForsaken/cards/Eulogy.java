@@ -62,6 +62,7 @@ public class Eulogy extends AbstractDynamicCard {
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
         this.dontTriggerOnUseCard = true;
+        this.freeToPlayOnce = true;
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
