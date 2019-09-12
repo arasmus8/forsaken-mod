@@ -112,7 +112,7 @@
   },
   "theForsaken:DesperatePlea": {
     "NAME": "Desperate Plea",
-    "DESCRIPTION": "(WORDS) NL Remove all debuffs. Gain !M! strength. If you are below 1/2 hp, NL Gain [E] [E]."
+    "DESCRIPTION": "(WORDS) NL Remove all debuffs. Gain !M! Strength. If you are below 1/2 hp, NL Gain [E] [E]."
   },
   "theForsaken:Devotion": {
     "NAME": "Devotion",
@@ -125,7 +125,7 @@
   },
   "theForsaken:Enfeeble": {
     "NAME": "Enfeeble",
-    "DESCRIPTION": "Deal !D! Damage 6 times. The target loses !M! strength this turn. NL Exhaust."
+    "DESCRIPTION": "Deal !D! Damage 6 times. The target loses !M! Strength this turn. NL Exhaust."
   },
   "theForsaken:Eulogy": {
     "NAME": "Eulogy",
@@ -277,11 +277,11 @@
   },
   "theForsaken:SolarFlare": {
     "NAME": "Solar Flare",
-    "DESCRIPTION": "Deal !D! Damage to ALL enemies. Lose !M! strength."
+    "DESCRIPTION": "Deal !D! Damage to ALL enemies. Lose !M! Strength."
   },
   "theForsaken:SpinAttack": {
     "NAME": "Spin Attack",
-    "DESCRIPTION": "Deal !D! Damage to a random enemy. NL Repeat for every !M! dexterity."
+    "DESCRIPTION": "Deal !D! Damage to a random enemy. NL Repeat for every !M! Dexterity."
   },
   "theForsaken:SpreadingPlague": {
     "NAME": "Spreading Plague",
@@ -294,7 +294,7 @@
   },
   "theForsaken:TearsOfSunlight": {
     "NAME": "Tears of Sunlight",
-    "DESCRIPTION": "Gain !M! Regen each turn. Lose !theForsaken:SecondMagic! dexterity."
+    "DESCRIPTION": "Gain !M! Regen each turn. Lose !theForsaken:SecondMagic! Dexterity."
   },
   "theForsaken:Temperance": {
     "NAME": "Temperance",
@@ -310,7 +310,7 @@
   },
   "theForsaken:Tranquility": {
     "NAME": "Tranquility",
-    "DESCRIPTION": "Reduce target strength by !M!. Return half each turn. Permanently increase by 1. NL Exhaust."
+    "DESCRIPTION": "Reduce target Strength by !M!. Return half each turn. Permanently increase by 1. NL Exhaust."
   },
   "theForsaken:WardingHymn": {
     "NAME": "Warding Hymn",
