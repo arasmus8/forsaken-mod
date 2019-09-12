@@ -46,7 +46,9 @@ public class ChargeAttack extends AbstractDynamicCard {
 
     private void recalculateCost() {
         int tempCost = Math.max(this.cost - UnplayedCardsVariable.unplayedCardCount(), 0);
-        this.setCostForTurn(tempCost);
+        if (!this.freeToPlayOnce) {
+            this.setCostForTurn(tempCost);
+        }
     }
 
     @Override
