@@ -28,8 +28,7 @@ public class ShieldBashAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            AbstractCard shieldBashCard = this.card;
-            shieldBashCard.baseDamage += this.amount;
+            growCardPower(this.card, this.amount);
             this.card.applyPowers();
             Iterator var1 = AbstractDungeon.player.discardPile.group.iterator();
 
