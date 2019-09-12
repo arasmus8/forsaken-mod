@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theForsaken.TheForsakenMod;
 import theForsaken.powers.FearPower;
@@ -69,7 +67,11 @@ public class FearPotion extends AbstractPotion {
     // This is your potency.
     @Override
     public int getPotency(final int potency) {
-        return 1;
+        if (AbstractDungeon.player == null) {
+            return 1;
+        } else {
+            return AbstractDungeon.player.hasRelic("SacredBark") ? 2 : 1;
+        }
     }
 
     public void upgradePotion()

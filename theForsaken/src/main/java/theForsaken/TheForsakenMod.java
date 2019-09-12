@@ -3,7 +3,6 @@ package theForsaken;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
-import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -20,11 +19,11 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theForsaken.cards.*;
+import theForsaken.cards.PlagueCurse;
+import theForsaken.cards.Recompense;
 import theForsaken.characters.TheForsaken;
 import theForsaken.events.PlagueDoctorEvent;
 import theForsaken.potions.FearPotion;
@@ -77,8 +76,7 @@ public class TheForsakenMod implements
         OnStartBattleSubscriber,
         PostInitializeSubscriber,
         PostDrawSubscriber,
-        PreStartGameSubscriber,
-        SetUnlocksSubscriber {
+        PreStartGameSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     private static final Logger logger = LogManager.getLogger(TheForsakenMod.class.getName());
@@ -98,12 +96,12 @@ public class TheForsakenMod implements
 
     // Colors (RGB)
     // Character Color
-    public static final Color FORSAKEN_GOLD = CardHelper.getColor(227.0f, 203.0f, 43.0f);
+    public static final Color FORSAKEN_GOLD = CardHelper.getColor(227, 203, 43);
 
     // Potion Colors in RGB
-    private static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
-    private static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
-    private static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
+    private static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209, 53, 18); // Orange-ish Red
+    private static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255, 230, 230); // Near White
+    private static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100, 25, 10); // Super Dark Red/Brown
 
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -377,7 +375,6 @@ public class TheForsakenMod implements
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new ArmorOfThorns(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GOLD);
-        BaseMod.addRelicToCustomPool(new PaleLantern(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new ScalesOfTruth(), TheForsaken.Enums.COLOR_GOLD);
 
@@ -387,8 +384,20 @@ public class TheForsakenMod implements
         BaseMod.addRelic(new Kindling(), RelicType.SHARED);
         BaseMod.addRelic(new Lifeblossom(), RelicType.SHARED);
         BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);
+        BaseMod.addRelic(new PaleLantern(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
+        UnlockTracker.markRelicAsSeen(ArmorOfThorns.ID);
+        UnlockTracker.markRelicAsSeen(JudgementScales.ID);
+        UnlockTracker.markRelicAsSeen(PlagueMask.ID);
+        UnlockTracker.markRelicAsSeen(ScalesOfTruth.ID);
+
+        UnlockTracker.markRelicAsSeen(Gavel.ID);
+        UnlockTracker.markRelicAsSeen(HumbleEgg.ID);
+        UnlockTracker.markRelicAsSeen(Kindling.ID);
+        UnlockTracker.markRelicAsSeen(Lifeblossom.ID);
+        UnlockTracker.markRelicAsSeen(PaleLantern.ID);
+        UnlockTracker.markRelicAsSeen(ScaryMask.ID);
         logger.info("Done adding relics!");
     }
 
@@ -417,6 +426,7 @@ public class TheForsakenMod implements
         CardLibrary library = new CardLibrary();
         for(AbstractCard card : library.cardGroup.group) {
             BaseMod.addCard(card);
+            UnlockTracker.markCardAsSeen(card.cardID);
         }
 
         BaseMod.addCard(new PlagueCurse());
@@ -513,6 +523,7 @@ public class TheForsakenMod implements
     // ------------- UNLOCKS -----------------
 
 
+    /*
     @Override
     public void receiveSetUnlocks() {
         BaseMod.addUnlockBundle(new CustomUnlockBundle(
@@ -540,6 +551,7 @@ public class TheForsakenMod implements
                 CorruptedForm.ID, BottledPlague.ID, CorruptedWord.ID
         ), TheForsaken.Enums.THE_FORSAKEN, 4);
     }
+    */
 
     @Override
     public void receivePreStartGame() {
