@@ -3,6 +3,7 @@ package theForsaken.characters;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -14,8 +15,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -30,6 +33,7 @@ import theForsaken.cards.TheForsaken_Strike;
 import theForsaken.relics.JudgementScales;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static theForsaken.TheForsakenMod.*;
 import static theForsaken.characters.TheForsaken.Enums.COLOR_GOLD;
@@ -280,6 +284,20 @@ public class TheForsaken extends CustomPlayer {
     @Override
     public String getSpireHeartText() {
         return TEXT[1];
+    }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("theForsakenResources/images/goldbg.jpg");// 307
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();// 312
+        panels.add(new CutscenePanel("theForsakenResources/images/heart1.png", "ATTACK_HEAVY"));// 313
+        panels.add(new CutscenePanel("theForsakenResources/images/heart2.png"));// 314
+        panels.add(new CutscenePanel("theForsakenResources/images/heart3.png"));// 315
+        return panels;// 316
     }
 
     // The vampire events refer to the base game characters as "brother", "sister",
