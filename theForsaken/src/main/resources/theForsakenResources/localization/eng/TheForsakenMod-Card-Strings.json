@@ -92,7 +92,7 @@
   },
   "theForsaken:CreepingInfection": {
     "NAME": "Creeping Infection",
-    "DESCRIPTION": "Apply !M! Poison. NL When drawn, add a copy to your hand. NL Exhaust."
+    "DESCRIPTION": "Reduce your Poison by !M! and heal the same amount. NL theforsaken:Unplayed: Apply !M! Poison to ALL enemies AND yourself, and add a copy to your draw pile."
   },
   "theForsaken:DarkBargain": {
     "NAME": "Dark Bargain",
@@ -183,8 +183,8 @@
   },
   "theForsaken:Mantra": {
     "NAME": "Mantra",
-    "DESCRIPTION": "The first card you play next turn is repeated !M! time.",
-    "UPGRADE_DESCRIPTION": "The first card you play next turn is repeated !M! times."
+    "DESCRIPTION": "(WORDS) NL The first card you play next turn is repeated !M! time.",
+    "UPGRADE_DESCRIPTION": "(WORDS) NL The first card you play next turn is repeated !M! times."
   },
   "theForsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",
