@@ -42,7 +42,8 @@
   },
   "theForsaken:Bolster": {
     "NAME": "Bolster",
-    "DESCRIPTION": "The first attack each turn applies 1 Weak and gains !M! Block."
+    "DESCRIPTION": "The first attack each turn applies 1 Weak and gains !M! Block.",
+    "UPGRADE_DESCRIPTION": "The first attack each turn applies 1 Weak and gains !M! Block. NL Innate"
   },
   "theForsaken:BottledPlague": {
     "NAME": "Bottled Plague",

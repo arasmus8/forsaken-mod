@@ -2,7 +2,9 @@ package theForsaken.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
@@ -17,7 +19,8 @@ public class Bolster extends AbstractDynamicCard {
     public static final String ID = TheForsakenMod.makeID(Bolster.class.getSimpleName());
     public static final String IMG = makeCardPath("Bolster.png");
     // Must have an image with the same NAME as the card in your image folder!
-
+    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -29,10 +32,9 @@ public class Bolster extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheForsaken.Enums.COLOR_GOLD;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     private static final int BLOCK_AMT = 3;
-    private static final int UPGRADE_BLOCK_AMT = 1;
 
     // /STAT DECLARATION/
 
@@ -56,7 +58,8 @@ public class Bolster extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BLOCK_AMT);
+            rawDescription = UPGRADE_DESCRIPTION;
+            isInnate = true;
             initializeDescription();
         }
     }
