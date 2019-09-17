@@ -83,7 +83,8 @@
   },
   "theForsaken:CorruptedWord": {
     "NAME": "Corrupted Word",
-    "DESCRIPTION": "(WORDS) NL Apply !M! Poison to ALL enemies AND yourself."
+    "DESCRIPTION": "(WORDS) NL Transfer your Poison to a random enemy. NL theforsaken:Unplayed: Apply !M! Poison to ALL enemies AND yourself.",
+    "UPGRADE_DESCRIPTION": "(WORDS) NL Transfer your Poison to a random enemy. NL theforsaken:Unplayed: Apply !M! Poison to yourself, and 2x to ALL enemies."
   },
   "theForsaken:CowardsBrand": {
     "NAME": "Coward's Brand",
