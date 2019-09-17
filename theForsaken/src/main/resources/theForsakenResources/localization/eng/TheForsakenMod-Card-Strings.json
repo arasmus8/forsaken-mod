@@ -34,7 +34,7 @@
   },
   "theForsaken:BlightOfFamine": {
     "NAME": "Blight of Famine",
-    "DESCRIPTION": "Apply !M! Vulnerable and Weak to ALL enemies AND yourself."
+    "DESCRIPTION": "Transfer your Vulnerable and Weak to an enemy. NL theforsaken:Unplayed: Apply !M! Vulnerable and Weak to ALL enemies AND yourself."
   },
   "theForsaken:BlindFaith": {
     "NAME": "Blind Faith",
