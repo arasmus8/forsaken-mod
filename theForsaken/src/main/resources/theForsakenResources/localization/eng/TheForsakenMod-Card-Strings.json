@@ -301,7 +301,7 @@
   },
   "theForsaken:Temperance": {
     "NAME": "Temperance",
-    "DESCRIPTION": "Deal !D! Damage. NL Damage is increased by !M! for each unplayed card in your discard pile."
+    "DESCRIPTION": "Deal !D! Damage. NL Damage is increased by !M! for each unplayed card in your discard pile. NL theforsaken:Unplayed: Shuffle this card into your draw pile."
   },
   "theForsaken:Terrorize": {
     "NAME": "Terrorize",

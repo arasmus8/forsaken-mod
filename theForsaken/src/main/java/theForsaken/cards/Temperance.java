@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
+import theForsaken.actions.MoveToDrawPileAction;
 import theForsaken.characters.TheForsaken;
 import theForsaken.variables.UnplayedCardsVariable;
 
@@ -65,6 +66,11 @@ public class Temperance extends AbstractDynamicCard {
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    @Override
+    public void triggerOnEndOfTurnForPlayingCard() {
+        AbstractDungeon.actionManager.addToBottom(new MoveToDrawPileAction(this));
     }
 
     // Upgraded stats.
