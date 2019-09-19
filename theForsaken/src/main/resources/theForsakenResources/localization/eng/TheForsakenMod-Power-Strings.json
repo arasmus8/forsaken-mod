@@ -53,6 +53,17 @@
       " voids into your discard pile."
     ]
   },
+  "theForsaken:HymnOfRestPower": {
+    "NAME": "Hymn of Rest",
+    "DESCRIPTIONS": [
+      "Retain ",
+      "half ",
+      "your block ",
+      "this turn.",
+      "for #b",
+      "turns."
+    ]
+  },
   "theForsaken:PercentageBonusDamagePower": {
     "NAME": "50% Bonus Damage",
     "DESCRIPTIONS": [

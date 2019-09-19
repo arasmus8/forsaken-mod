@@ -15,6 +15,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -27,6 +28,7 @@ import theForsaken.cards.Recompense;
 import theForsaken.characters.TheForsaken;
 import theForsaken.events.PlagueDoctorEvent;
 import theForsaken.potions.FearPotion;
+import theForsaken.powers.HymnOfRestPower;
 import theForsaken.relics.*;
 import theForsaken.util.IDCheckDontTouchPls;
 import theForsaken.util.TextureLoader;
@@ -73,6 +75,7 @@ public class TheForsakenMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         OnCardUseSubscriber,
+        OnPlayerLoseBlockSubscriber,
         OnStartBattleSubscriber,
         PostInitializeSubscriber,
         PostDrawSubscriber,
@@ -582,5 +585,14 @@ public class TheForsakenMod implements
     public void receivePostDraw(AbstractCard abstractCard) {
         UUID uuid = abstractCard.uuid;
         usedCards.remove(uuid);
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(HymnOfRestPower.POWER_ID)) {
+            HymnOfRestPower p = (HymnOfRestPower) AbstractDungeon.player.getPower(HymnOfRestPower.POWER_ID);
+            return p.modifiedBlock(i);
+        }
+        return i;
     }
 }

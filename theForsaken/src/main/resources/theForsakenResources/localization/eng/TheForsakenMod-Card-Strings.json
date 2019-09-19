@@ -164,7 +164,8 @@
   },
   "theForsaken:HymnOfRest": {
     "NAME": "Hymn of Rest",
-    "DESCRIPTION": "Unplayable. NL Gain !M! Blur at end of turn. Reduce by 1 for each card played this turn.",
+    "DESCRIPTION": "Unplayable. NL Retain half your block next turn. If you play 3 cards or fewer, retain all your block instead.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain half your block for 2 turns. If you play 3 cards or fewer, retain all your block instead.",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
     ]
