@@ -46,7 +46,6 @@ public class CreepingInfection extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-        exhaust = true;
     }
 
 
@@ -66,7 +65,7 @@ public class CreepingInfection extends AbstractDynamicCard {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, amount), amount, AttackEffect.POISON));
                 }
             }
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, true, true));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new CreepingInfection(), 1, true, true));
         } else {
             if (p.hasPower(PoisonPower.POWER_ID)) {
                 int amount = p.getPower(PoisonPower.POWER_ID).amount;
