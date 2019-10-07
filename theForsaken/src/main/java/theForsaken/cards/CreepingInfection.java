@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -65,7 +66,9 @@ public class CreepingInfection extends AbstractDynamicCard {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, amount), amount, AttackEffect.POISON));
                 }
             }
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new CreepingInfection(), 1, true, true));
+            AbstractCard copy = this.makeStatEquivalentCopy();
+            copy.freeToPlayOnce = false;
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(copy, 1, true, true));
         } else {
             if (p.hasPower(PoisonPower.POWER_ID)) {
                 int amount = p.getPower(PoisonPower.POWER_ID).amount;

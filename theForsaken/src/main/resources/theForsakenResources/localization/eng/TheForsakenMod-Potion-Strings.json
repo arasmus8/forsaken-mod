@@ -1,6 +1,9 @@
 {
-"theForsaken:FearPotion": {
-        "NAME": "Fear Potion",
-        "DESCRIPTIONS": ["Apply ", " Fear to an enemy."]
-}
+        "theForsaken:FearPotion": {
+                "NAME": "Terror Potion",
+                "DESCRIPTIONS": [
+                        "Apply ",
+                        " Fear to an enemy."
+                ]
+        }
 }
