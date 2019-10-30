@@ -67,17 +67,6 @@ public class FearPotion extends AbstractPotion {
     // This is your potency.
     @Override
     public int getPotency(final int potency) {
-        if (AbstractDungeon.player == null) {
-            return 1;
-        } else {
-            return AbstractDungeon.player.hasRelic("SacredBark") ? 2 : 1;
-        }
-    }
-
-    public void upgradePotion()
-    {
-      potency += 1;
-      tips.clear();
-      tips.add(new PowerTip(name, description));
+        return 1;
     }
 }
