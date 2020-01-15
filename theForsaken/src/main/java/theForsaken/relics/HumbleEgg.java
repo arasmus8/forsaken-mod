@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
+import java.util.Objects;
 import java.util.logging.Logger;
 
 import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
@@ -57,6 +58,21 @@ public class HumbleEgg extends CustomRelic {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
             listen = false;
         }
+    }
+
+    @Override
+    public void onEquip() {
+        AbstractDungeon.combatRewardScreen.rewards.stream()
+                .filter(Objects::nonNull)
+                .filter(reward -> reward.cards != null)
+                .forEach(reward -> reward.cards.stream()
+                        .filter(card -> card.rarity == AbstractCard.CardRarity.COMMON)
+                        .forEach(this::onPreviewObtainCard));
+    }
+
+    @Override
+    public void onPreviewObtainCard(AbstractCard c) {
+        onObtainCard(c);
     }
 
     @Override
