@@ -1,12 +1,18 @@
 {
   "modid": "${project.artifactId}",
   "name": "${project.name}",
-  "author_list": ["NotInTheFace"],
+  "author_list": [
+    "NotInTheFace"
+  ],
+  "credits": "Chinese translation by CaptainSnafu",
   "description": "${project.description}",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
   "mts_version": "${ModTheSpire.version}",
-  "dependencies": ["basemod", "stslib"],
+  "dependencies": [
+    "basemod",
+    "stslib"
+  ],
   "update_json": ""
 }
 
