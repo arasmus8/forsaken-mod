@@ -1,0 +1,74 @@
+{
+  "theForsaken:ArmorOfThorns": {
+    "NAME": "针刺盔甲",
+    "FLAVOR": "穿上了它，就没法再拥抱你 :(",
+    "DESCRIPTIONS": [
+      "每当你获得格挡，对所有敌人造成 #b3 伤害。"
+    ]
+  },
+  "theForsaken:Gavel": {
+    "NAME": "法槌",
+    "FLAVOR": "可以砸在法庭的桌上，更能砸在敌人的头上。",
+    "DESCRIPTIONS": [
+      "每当你在一轮内打出 #b3 技能牌，获得 #b",
+      " 额外伤害。"
+    ]
+  },
+  "theForsaken:HumbleEgg": {
+    "NAME": "谦逊之卵",
+    "FLAVOR": "就是一个蛋罢了",
+    "DESCRIPTIONS": [
+      "每当你往牌组添加一张 #y普通 卡牌， #y升级 它。当你在每轮中第一次抽到普通牌，再抽一张牌。"
+    ]
+  },
+  "theForsaken:JudgementScales": {
+    "NAME": "审判天平",
+    "FLAVOR": "追寻万物之均衡。",
+    "DESCRIPTIONS": [
+      "每一回合，如果你没有打出过攻击牌，获得 #b1 #y力量 ，如果你没有打出过技能牌，获得 #b1 #y敏捷 。"
+    ]
+  },
+  "theForsaken:Kindling": {
+    "NAME": "引火物",
+    "FLAVOR": "明亮的火焰似乎在抵御着黑暗的侵蚀。",
+    "DESCRIPTIONS": [
+      "每当你在休息站休息，增加你的最大生命 #b"
+    ]
+  },
+  "theForsaken:Lifeblossom": {
+    "NAME": "生命绽放",
+    "FLAVOR": "这种罕见的花只生长在传说中的森林中的一个隐秘花园里。",
+    "DESCRIPTIONS": [
+      "每场战斗的开始，获取 #b",
+      " 再生。"
+    ]
+  },
+  "theForsaken:PaleLantern": {
+    "NAME": "苍白灯笼",
+    "FLAVOR": "在黑暗中提供舒适的光芒。",
+    "DESCRIPTIONS": [
+      "每回合开始，获取 [E] ，但少抽一张牌。"
+    ]
+  },
+  "theForsaken:PlagueMask": {
+    "NAME": "瘟疫面罩",
+    "FLAVOR": "人们相信这些面具可以预防疾病，但它们似乎只会传播疾病。",
+    "DESCRIPTIONS": [
+      "每当你被施加了 #g中毒 ，也施加到一名随机敌人上。"
+    ]
+  },
+  "theForsaken:ScalesOfTruth": {
+    "NAME": "真理天平",
+    "FLAVOR": "内心轻如鸿毛，真理就会明了。",
+    "DESCRIPTIONS": [
+      "置换 #y审判天平 。 每3 #y停留 技能牌，获取 1 敏捷。 每3 #y停留 攻击牌， 获得 1 力量。"
+    ]
+  },
+  "theForsaken:ScaryMask": {
+    "NAME": "恐骇面具",
+    "FLAVOR": "怪物到底会做些什么噩梦？",
+    "DESCRIPTIONS": [
+      "每场战斗的首次攻击施加 #b1 #y恐惧"
+    ]
+  }
+}

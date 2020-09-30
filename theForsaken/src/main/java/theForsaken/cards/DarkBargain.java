@@ -44,6 +44,7 @@ public class DarkBargain extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = ENERGY_AMT;
         magicNumber = ENERGY_AMT;
+        cardsToPreview = new Recompense();
     }
 
 

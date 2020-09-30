@@ -1,0 +1,21 @@
+{
+  "theForsaken:DivineGuidanceAction": {
+    "TEXT": [
+      "选择一张牌，加进弃牌堆里。",
+      "选择一张牌，加进抽牌堆里。",
+      "选择 ",
+      "张牌，加进弃牌堆里。",
+      "张牌，加进抽牌堆里。"
+    ]
+  },
+  "theForsaken:NobleSacrificeAction": {
+    "TEXT": [
+      "来消耗"
+    ]
+  },
+  "theForsaken:StoreUpAction": {
+    "TEXT": [
+      "加进弃牌堆里。"
+    ]
+  }
+}

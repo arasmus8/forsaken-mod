@@ -427,7 +427,7 @@ public class TheForsakenMod implements
         // when generating card rewards/shop screen items.
 
         CardLibrary library = new CardLibrary();
-        for(AbstractCard card : library.cardGroup.group) {
+        for (AbstractCard card : library.cardGroup.group) {
             BaseMod.addCard(card);
             UnlockTracker.markCardAsSeen(card.cardID);
         }
@@ -460,37 +460,45 @@ public class TheForsakenMod implements
         logger.info("You seeing this?");
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
 
+        String lang = "eng";
+
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            lang = "zhs";
+        }
+
+        logger.info("Loading strings for language: " + lang);
+
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Card-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Card-Strings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Power-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Power-Strings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Relic-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Relic-Strings.json");
 
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Event-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Event-Strings.json");
 
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Potion-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Potion-Strings.json");
 
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Character-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Character-Strings.json");
 
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Orb-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Orb-Strings.json");
 
         // UIStrings
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                getModID() + "Resources/localization/eng/TheForsakenMod-Ui-Strings.json");
+                getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Ui-Strings.json");
 
         logger.info("Done editing strings");
     }
@@ -510,7 +518,13 @@ public class TheForsakenMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
 
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/TheForsakenMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String lang = "eng";
+
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            lang = "zhs";
+        }
+
+        String json = Gdx.files.internal(getModID() + "Resources/localization/" + lang + "/TheForsakenMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
 
         if (keywords != null) {

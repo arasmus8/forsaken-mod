@@ -1,0 +1,180 @@
+{
+  "theForsaken:BindingThornsPower": {
+    "NAME": "束约荆棘",
+    "DESCRIPTIONS": [
+      "每当这个敌人发起进攻，它就遭受 #b",
+      " 伤害。"
+    ]
+  },
+  "theForsaken:BlindFaithPower": {
+    "NAME": "盲目的信仰",
+    "DESCRIPTIONS": [
+      "你不能抽牌，持续 #b",
+      " 回合。",
+      " 回合。"
+    ]
+  },
+  "theForsaken:BolsterPower": {
+    "NAME": "先发制人",
+    "DESCRIPTIONS": [
+      "每回合的首次攻击施加虚弱并获取 ",
+      " 格挡。"
+    ]
+  },
+  "theForsaken:BonusDamagePower": {
+    "NAME": "额外伤害",
+    "DESCRIPTIONS": [
+      "下次攻击造成 #b",
+      " 额外伤害。"
+    ]
+  },
+  "theForsaken:CorruptDeckPower": {
+    "NAME": "腐败",
+    "DESCRIPTIONS": [
+      "抽更多牌。 NL 这回合只能再打出 ",
+      " 张牌。",
+      " 张牌。",
+      "抽更多牌。 NL 这回合不能再打任何牌。"
+    ]
+  },
+  "theForsaken:CorruptedFormPower": {
+    "NAME": "腐化形态",
+    "DESCRIPTIONS": [
+      "减少 1/3 将要损失的生命，转化为中毒。",
+      "减少 1/2 将要损失的生命，转化为中毒。"
+    ]
+  },
+  "theForsaken:DarkBargainPower": {
+    "NAME": "黑暗契约",
+    "DESCRIPTIONS": [
+      "获得 ",
+      "并将",
+      " 虚空洗进你们的弃牌堆。",
+      " 虚空洗进你们的弃牌堆。"
+    ]
+  },
+  "theForsaken:HymnOfRestPower": {
+    "NAME": "静休之赞美诗",
+    "DESCRIPTIONS": [
+      "保留 ",
+      "半数 ",
+      "你的格挡 ",
+      "于此回合。",
+      "持续 #b",
+      "回合。"
+    ]
+  },
+  "theForsaken:PercentageBonusDamagePower": {
+    "NAME": "50%额外伤害",
+    "DESCRIPTIONS": [
+      "下次攻击造成50%额外伤害"
+    ]
+  },
+  "theForsaken:FearPower": {
+    "NAME": "恐惧",
+    "DESCRIPTIONS": [
+      "造成的伤害已被降低至 #b1 ，持续 #b",
+      " 回合",
+      " 回合"
+    ]
+  },
+  "theForsaken:FountainOfLifePower": {
+    "NAME": "生命之泉",
+    "DESCRIPTIONS": [
+      "战斗结束，增加最大生命值 #b"
+    ]
+  },
+  "theForsaken:HealNextTurnPower": {
+    "NAME": "次轮治疗",
+    "DESCRIPTIONS": [
+      "下一回合开始时将获得 #b",
+      " 生命治疗。"
+    ]
+  },
+  "theForsaken:MagicWeaponPower": {
+    "NAME": "魔法武器",
+    "DESCRIPTIONS": [
+      "每回合获得增益：下一次攻击造成 #b",
+      " 额外伤害。"
+    ]
+  },
+  "theForsaken:MantraPower": {
+    "NAME": "祷告咒文",
+    "DESCRIPTIONS": [
+      "下一回合首次打出的卡牌将被重复 #b",
+      " 次。",
+      " 次。"
+    ]
+  },
+  "theForsaken:PreservationPower": {
+    "NAME": "保存",
+    "DESCRIPTIONS": [
+      "你在此回合获得的格挡，也会在下一回合获得。"
+    ]
+  },
+  "theForsaken:PrudencePower": {
+    "NAME": "审慎",
+    "DESCRIPTIONS": [
+      "每回合末，每有一张手牌剩余，获得 #b",
+      " 格挡。"
+    ]
+  },
+  "theForsaken:SpreadingPlaguePower": {
+    "NAME": "传播瘟疫",
+    "DESCRIPTIONS": [
+      "被攻击时对进攻者施加 ",
+      " 中毒。"
+    ]
+  },
+  "theForsaken:RetributionPower": {
+    "NAME": "伤害反射",
+    "DESCRIPTIONS": [
+      "反射所有伤害，",
+      "于此回合",
+      "持续 #b",
+      " 回合"
+    ]
+  },
+  "theForsaken:RipostePower": {
+    "NAME": "还击",
+    "DESCRIPTIONS": [
+      "当你的格挡被破除，你的下一次攻击造成大量额外伤害。"
+    ]
+  },
+  "theForsaken:TearsOfSunlightPower": {
+    "NAME": "阳光之泪",
+    "DESCRIPTIONS": [
+      "每回合开始，获取 #b",
+      " 重生。"
+    ]
+  },
+  "theForsaken:TranquilityPower": {
+    "NAME": "宁静",
+    "DESCRIPTIONS": [
+      "每回合返还一半的力量。"
+    ]
+  },
+  "theForsaken:WordsOfMightPower": {
+    "NAME": "神威圣辞",
+    "DESCRIPTIONS": [
+      "当你打出一张技能牌，你的下次攻击造成 #b",
+      " 额外伤害。"
+    ]
+  },
+  "theForsaken:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "theForsaken:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  }
+}

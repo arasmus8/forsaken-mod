@@ -42,6 +42,7 @@ public class ScorchingSunlight extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
+        cardsToPreview = new Burn();
     }
 
 

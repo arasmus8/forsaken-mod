@@ -1,0 +1,342 @@
+{
+  "theForsaken:TheForsaken_Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获取 !B! 格挡。"
+  },
+  "theForsaken:TheForsaken_Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 伤害。"
+  },
+  "theForsaken:AncientWords": {
+    "NAME": "远古之语",
+    "DESCRIPTION": "(神语) NL 获取 !M! 人工制品 。"
+  },
+  "theForsaken:Backlash": {
+    "NAME": "反冲",
+    "DESCRIPTION": "每当你在此回合受到攻击，对进攻者造成 !M! 伤害。"
+  },
+  "theForsaken:BattleHymn": {
+    "NAME": "战斗之赞美诗",
+    "DESCRIPTION": "不可打出 NL 回合末对一名随机敌人造成 !D! 伤害。 NL 每打出了一张牌，此牌的伤害减少 1/3 。",
+    "UPGRADE_DESCRIPTION": "不可打出 NL 回合末对一名随机敌人造成 !D! 伤害。 NL 每打出了一张牌，此牌的伤害减少 1/4 。",
+    "EXTENDED_DESCRIPTION": [
+      "无法打出此牌。"
+    ]
+  },
+  "theForsaken:BindingThorns": {
+    "NAME": "束约荆棘",
+    "DESCRIPTION": "每当目标发起攻击，其受到 !M! 伤害。 目标每攻击一次，此牌造成的伤害降低1点。"
+  },
+  "theForsaken:BlessedWeapon": {
+    "NAME": "祝福武器",
+    "DESCRIPTION": "你的下一次攻击造成额外50%伤害。",
+    "UPGRADE_DESCRIPTION": "你的下 !M! 次攻击造成50%额外伤害。"
+  },
+  "theForsaken:BlightOfFamine": {
+    "NAME": "饥萎之荒",
+    "DESCRIPTION": "将你的 易伤 和 虚弱 转移给一名敌人。 NL theforsaken:停留: 向自身和所有敌人施加 !M! 易伤 和 虚弱 。"
+  },
+  "theForsaken:BlindFaith": {
+    "NAME": "盲目的信仰",
+    "DESCRIPTION": "丢弃手牌。抽取 !M! 张牌。保留手牌2回合，但2回合不能抽牌。"
+  },
+  "theForsaken:Bolster": {
+    "NAME": "先发制人",
+    "DESCRIPTION": "每回合的首次攻击施加 1 虚弱 并 获取 !M! 格挡。",
+    "UPGRADE_DESCRIPTION": "每回合的首次攻击施加 1 虚弱 并 获取 !M! 格挡。 NL 固有"
+  },
+  "theForsaken:BottledPlague": {
+    "NAME": "封装瘟疫",
+    "DESCRIPTION": "移除你的所有 中毒 。 NL 获取一瓶毒药水。",
+    "EXTENDED_DESCRIPTION": [
+      "没有足够的药剂槽位！"
+    ]
+  },
+  "theForsaken:BountifulSunlight": {
+    "NAME": "光耀万物",
+    "DESCRIPTION": "获取 !M! 重生 。 NL 消耗。"
+  },
+  "theForsaken:ChargeAttack": {
+    "NAME": "冲锋",
+    "DESCRIPTION": "造成 !D! 伤害 !M! 次。弃牌堆里每有一张[停留 ]牌，此卡的耗能便减少 1 。"
+  },
+  "theForsaken:CleansingLight": {
+    "NAME": "净化之光",
+    "DESCRIPTION": "虚无。 NL 获取 !B! 格挡。 NL 移除 theforsaken:恐惧 、 中毒 、 易伤 。"
+  },
+  "theForsaken:Confusion": {
+    "NAME": "混乱",
+    "DESCRIPTION": "如目标意图进攻，则对一名随机敌人造成等同于目标攻击力的伤害 3 次。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "如目标意图进攻，则对一名随机敌人造成等同于目标伤害值的伤害 3 次。",
+    "EXTENDED_DESCRIPTION": [
+      "这名敌人没有打算攻击。"
+    ]
+  },
+  "theForsaken:CorruptedForm": {
+    "NAME": "腐化形态",
+    "DESCRIPTION": "所受伤害减少三分之一。将生命损失转化为中毒。",
+    "UPGRADE_DESCRIPTION": "所受伤害减少一半。将生命损失转化为中毒。"
+  },
+  "theForsaken:CorruptDeck": {
+    "NAME": "腐败",
+    "DESCRIPTION": "每轮额外抽取2张牌，但每轮最多只能打出 !M! 张牌。"
+  },
+  "theForsaken:CorruptedWord": {
+    "NAME": "堕落禁词",
+    "DESCRIPTION": "(神语) NL 将你的 中毒 转移给一名随机敌人。 NL theforsaken:停留: 向所有敌人和你自身施加 !M! 中毒。",
+    "UPGRADE_DESCRIPTION": "(神语) NL 将你的 中毒 转移给一名随机敌人。 NL theforsaken:停留: 向自身施加 !M! 中毒 ，并向所有敌人施加2倍。"
+  },
+  "theForsaken:CowardsBrand": {
+    "NAME": "懦夫烙印",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 如果目标处于 theforsaken:恐惧 ，伤害加倍。"
+  },
+  "theForsaken:CreepingInfection": {
+    "NAME": "蠕行之疫",
+    "DESCRIPTION": "减少你的 中毒 !M! 层，并回复等量的生命。 NL theforsaken:停留: 向所有敌人和自身施加 !M! 中毒 ，并复制一张此牌添加进抽牌堆。"
+  },
+  "theForsaken:DarkBargain": {
+    "NAME": "黑暗契约",
+    "DESCRIPTION": "每回合，获取 [E] 并将一张 theforsaken:回报 洗入弃牌堆。",
+    "UPGRADE_DESCRIPTION": "每回合，获取 [E] 并将一张 theforsaken:回报 洗入弃牌堆。 NL 固有"
+  },
+  "theForsaken:DarkBarrier": {
+    "NAME": "黑暗屏障",
+    "DESCRIPTION": "给自身施加 X 层 缓冲 和 脆弱 。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "给自身施加 X+1 层 缓冲 和 x-1 层 脆弱 。 NL 消耗。"
+  },
+  "theForsaken:DarkRift": {
+    "NAME": "黑暗裂缝",
+    "DESCRIPTION": "对所有敌人和你自身造成 !D! 伤害，各自于下回合治疗两倍伤害量。"
+  },
+  "theForsaken:DefensiveStance": {
+    "NAME": "防守架势",
+    "DESCRIPTION": "获取 !M! 多层护甲 。"
+  },
+  "theForsaken:DesperatePlea": {
+    "NAME": "绝望的请求",
+    "DESCRIPTION": "(神语) NL 移除所有减益。获取 !M! 力量。如果你的生命低于 1/2： NL 获得 [E] [E] 。"
+  },
+  "theForsaken:Devotion": {
+    "NAME": "虔诚",
+    "DESCRIPTION": "抽取 !M! 张牌，选择一张牌，置于抽牌堆顶层，并升级。"
+  },
+  "theForsaken:DivineGuidance": {
+    "NAME": "神圣指引",
+    "DESCRIPTION": "选择任意牌。 NL 添加一张复制品到弃牌堆里。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "选择任意牌。 NL 添加一张复制品到抽牌堆里。 NL 消耗。"
+  },
+  "theForsaken:Enfeeble": {
+    "NAME": "无力化",
+    "DESCRIPTION": "造成 !D! 伤害6次。目标在此回合失去 !M! 力量。 NL 消耗。"
+  },
+  "theForsaken:Eulogy": {
+    "NAME": "颂扬",
+    "DESCRIPTION": "(神语) NL 虚无。 NL 向所有敌人施加 !M! 易伤 。 NL theforsaken:停留: 你的下一次攻击造成 3 额外伤害。"
+  },
+  "theForsaken:FatRoll": {
+    "NAME": "沉缓翻滚",
+    "DESCRIPTION": "获取 !B! 格挡。 NL theforsaken:停留: 下回合额外抽取一张牌。"
+  },
+  "theForsaken:FountainOfLife": {
+    "NAME": "生命之泉",
+    "DESCRIPTION": "战斗结束，增加最大生命值 !M! 。"
+  },
+  "theForsaken:FuryStrikes": {
+    "NAME": "狂怒猛击",
+    "DESCRIPTION": "造成 !D! 伤害 3 次 。"
+  },
+  "theForsaken:HealingLight": {
+    "NAME": "治愈之光",
+    "DESCRIPTION": "弃牌堆里每有一张[停留]牌，治疗 !M! 生命。 NL (已弃置 !theForsaken:UNPLAYED_CARDS! 停留牌) NL 消耗。"
+  },
+  "theForsaken:Horror": {
+    "NAME": "震骇",
+    "DESCRIPTION": "向一名敌人施加 X theforsaken:恐惧 。你无法获取 格挡，持续 !M! 轮。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "向一名敌人施加 X + 1 theforsaken:恐惧 。你无法获取 格挡，持续 !M! 轮。 NL 消耗。"
+  },
+  "theForsaken:HorrifyingStrike": {
+    "NAME": "战逃反射",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 向自身施加 !M! theforsaken:恐惧 。"
+  },
+  "theForsaken:HymnOfPatience": {
+    "NAME": "坚忍之赞美诗",
+    "DESCRIPTION": "下一轮，获取 !M! [E] 并额外抽取 !M! 卡牌。"
+  },
+  "theForsaken:HymnOfRest": {
+    "NAME": "静休之赞美诗",
+    "DESCRIPTION": "不可打出。 NL 下回合保留你的半数格挡。如果你只打出了小于4张牌，则保留所有格挡。",
+    "UPGRADE_DESCRIPTION": "不可打出。 NL 下两回合保留你的半数格挡。如果你只打出了小于4张牌，则保留所有格挡。",
+    "EXTENDED_DESCRIPTION": [
+      "无法打出此牌。"
+    ]
+  },
+  "theForsaken:InspiringBlow": {
+    "NAME": "振奋重击",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 如果杀死了一名敌人，每回合获取 !M! 格挡。"
+  },
+  "theForsaken:LightRoll": {
+    "NAME": "快速翻滚",
+    "DESCRIPTION": "获取 !B! 格挡， 施加 !M! 虚弱 。 NL 添加一张复制品到手牌。 NL 消耗。"
+  },
+  "theForsaken:MagicWeapon": {
+    "NAME": "魔法武器",
+    "DESCRIPTION": "每回合获得增益：下一次攻击造成 !M! 额外伤害。"
+  },
+  "theForsaken:Mantra": {
+    "NAME": "祷告咒文",
+    "DESCRIPTION": "(神语) NL 下一回合首次打出的卡牌将被重复 !M! 次。",
+    "UPGRADE_DESCRIPTION": "(神语) NL 下一回合首次打出的卡牌将被重复 !M! 次。"
+  },
+  "theForsaken:NobleSacrifice": {
+    "NAME": "崇高的牺牲",
+    "DESCRIPTION": "消耗一张牌。 NL 抽取[其耗费数]张牌。",
+    "UPGRADE_DESCRIPTION": "消耗一张牌。 NL 抽取[其耗费数+1]张牌。"
+  },
+  "theForsaken:PanicDive": {
+    "NAME": "惊促突降",
+    "DESCRIPTION": "获取 !B! 格挡。 NL 把 !M! 眩晕 洗进弃牌堆。"
+  },
+  "theForsaken:Parry": {
+    "NAME": "闪避格挡",
+    "DESCRIPTION": "获取 !B! 格挡。 NL 复制一张此牌放进弃牌堆。"
+  },
+  "theForsaken:Penitence": {
+    "NAME": "赎罪",
+    "DESCRIPTION": "获取 !B! 格挡。 NL 你的下一次攻击造成 !M! 额外伤害。"
+  },
+  "theForsaken:PlagueCurse": {
+    "NAME": "瘟疫",
+    "DESCRIPTION": "不可打出。 NL 回合末，你被施加 2 中毒。"
+  },
+  "theForsaken:PowerUp": {
+    "NAME": "雄起",
+    "DESCRIPTION": "下一次攻击造成 !M! 额外伤害。"
+  },
+  "theForsaken:PreciseStrike": {
+    "NAME": "精准打击",
+    "DESCRIPTION": "造成 !D! 伤害, 施加 !M! 易伤。 NL 添加一张复制品到手牌。 NL 消耗。"
+  },
+  "theForsaken:Preservation": {
+    "NAME": "保存",
+    "DESCRIPTION": "你在此回合获得的 格挡 ，也会在下一回合获得。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "你在此回合获得的 格挡 ，也会在下一回合获得。"
+  },
+  "theForsaken:Prudence": {
+    "NAME": "审慎",
+    "DESCRIPTION": "每回合末，每有一张手牌剩余，获取 !M! 格挡 。"
+  },
+  "theForsaken:Purification": {
+    "NAME": "涤罪",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 转移你的减益到目标上。"
+  },
+  "theForsaken:QuickAttack": {
+    "NAME": "快攻",
+    "DESCRIPTION": "造成 !D! 伤害。抽取1牌。 NL 固有。"
+  },
+  "theForsaken:RainingSunlight": {
+    "NAME": "日光如雨",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL theforsaken:停留: 你的下一次攻击造成 !M! 额外伤害。"
+  },
+  "theForsaken:Recompense": {
+    "NAME": "回报",
+    "DESCRIPTION": "虚无。 NL 抽取 !M! 张卡。 NL 消耗。"
+  },
+  "theForsaken:Retribution": {
+    "NAME": "报应",
+    "DESCRIPTION": "虚无。 NL 此回合内， 反射 所有将受的伤害。 NL theforsaken:停留: 当被攻击时反射 !M! 伤害。"
+  },
+  "theForsaken:Riposte": {
+    "NAME": "还击",
+    "DESCRIPTION": "当你的 格挡 被破除，你的下一次攻击造成 50% 额外伤害。"
+  },
+  "theForsaken:SacredOath": {
+    "NAME": "神圣誓言",
+    "DESCRIPTION": "(神语) NL 翻倍你的力量和敏捷。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "(神语) NL 把你的力量和敏捷变成3倍。 NL 消耗。"
+  },
+  "theForsaken:SacrificeSoul": {
+    "NAME": "灵魂献祭",
+    "DESCRIPTION": "移除你的所有增益，对所有敌人造成 [ !D! 基础 + !M! X 所移除增益数] 点伤害。 NL ( !theForsaken:SACRIFICE_SOUL_DAMAGE! 伤害) NL 消耗。"
+  },
+  "theForsaken:ScorchingSunlight": {
+    "NAME": "烈日灼光",
+    "DESCRIPTION": "对所有敌人造成造成 !D! 伤害 !M! 次。 NL 将一张 灼伤 放进弃牌堆。"
+  },
+  "theForsaken:ShieldBash": {
+    "NAME": "持盾猛砸",
+    "DESCRIPTION": "获取 !B! 格挡。 NL 造成 !D! 伤害。此场战斗中，增加所有[持盾猛砸]的威力 !M! 。"
+  },
+  "theForsaken:ShieldCharge": {
+    "NAME": "持盾冲撞",
+    "DESCRIPTION": "造成 !D! 伤害。 NL theforsaken:停留: 下回合获取 !M! 格挡 。"
+  },
+  "theForsaken:SiphonStrike": {
+    "NAME": "生命虹吸",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 如果目标被杀死，治疗 !M! 生命。"
+  },
+  "theForsaken:Smite": {
+    "NAME": "毁灭与新生",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 获取 !M! 重生 。"
+  },
+  "theForsaken:SolarFlare": {
+    "NAME": "太阳耀斑",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。失去 !M! 力量。"
+  },
+  "theForsaken:SpinAttack": {
+    "NAME": "旋转打击",
+    "DESCRIPTION": "一名随机敌人造成 !D! 伤害。 NL 每拥有 !M! 敏捷，重复一次。"
+  },
+  "theForsaken:SpreadingPlague": {
+    "NAME": "传播瘟疫",
+    "DESCRIPTION": "每当你被攻击，对进攻者施加 !M! 中毒 。"
+  },
+  "theForsaken:StoreUp": {
+    "NAME": "积聚",
+    "DESCRIPTION": "选择一张手牌，添加 !M! 张复制品到弃牌堆。",
+    "UPGRADE_DESCRIPTION": "选择一张手牌，添加 !M! 张复制品到弃牌堆。"
+  },
+  "theForsaken:TearsOfSunlight": {
+    "NAME": "阳光之泪",
+    "DESCRIPTION": "每回合开始，获取 !M! 重生 。失去 !theForsaken:SecondMagic! 敏捷。"
+  },
+  "theForsaken:Temperance": {
+    "NAME": "节欲",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 弃牌堆里每有一张[停留]牌，增加 !M! 。 NL theforsaken:停留: 把此牌洗进抽牌堆。"
+  },
+  "theForsaken:Terrorize": {
+    "NAME": "恐吓",
+    "DESCRIPTION": "施加 !M! theforsaken:恐惧 。 NL 消耗。"
+  },
+  "theForsaken:Thunderbolt": {
+    "NAME": "霹雳",
+    "DESCRIPTION": "对目标造成 !D! 伤害，再伤害一名随机敌人。"
+  },
+  "theForsaken:Tranquility": {
+    "NAME": "宁静",
+    "DESCRIPTION": "扣减目标 !M! 力量，此后每回合返还一半。永久地增加 1。 NL 消耗。"
+  },
+  "theForsaken:WardingHymn": {
+    "NAME": "守护之赞美诗",
+    "DESCRIPTION": "不可打出 NL 在回合末获取 !B! 格挡。 NL 每打出一张牌，此牌提供的格挡减少 1/3 。",
+    "UPGRADE_DESCRIPTION": "不可打出 NL 在回合末获取 !B! 格挡。 NL 每打出一张牌，此牌提供的格挡减少 1/4 。",
+    "EXTENDED_DESCRIPTION": [
+      "无法打出此牌。"
+    ]
+  },
+  "theForsaken:WordOfPower": {
+    "NAME": "权力真言",
+    "DESCRIPTION": "(神语) NL 造成 !D! 伤害。牌组中每有一张[神语]牌，增加 !M! 伤害。"
+  },
+  "theForsaken:WordsOfMight": {
+    "NAME": "神威圣辞",
+    "DESCRIPTION": "(神语) NL 每当你打出一张技能牌，你的下次攻击造成 !M! 额外伤害。"
+  },
+  "theForsaken:WordsOfPestilence": {
+    "NAME": "疫病宣言",
+    "DESCRIPTION": "(神语) NL 对所有敌人造成 !D! 伤害，并对自身造成 !M! 伤害。"
+  },
+  "theForsaken:WrathOfGod": {
+    "NAME": "真神降怒",
+    "DESCRIPTION": "造成 !D! 伤害并获取 !B! 格挡 X 次。 NL 可被多次升级。"
+  }
+}

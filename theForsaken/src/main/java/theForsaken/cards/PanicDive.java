@@ -43,6 +43,7 @@ public class PanicDive extends AbstractDynamicCard {
         baseBlock = BLOCK;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
+        cardsToPreview = new Dazed();
     }
 
 

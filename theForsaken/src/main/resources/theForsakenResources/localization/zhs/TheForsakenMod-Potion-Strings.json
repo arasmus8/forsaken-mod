@@ -1,0 +1,9 @@
+{
+  "theForsaken:FearPotion": {
+    "NAME": "恐惧药剂",
+    "DESCRIPTIONS": [
+      "向一名敌人施加 ",
+      " 恐惧。"
+    ]
+  }
+}
