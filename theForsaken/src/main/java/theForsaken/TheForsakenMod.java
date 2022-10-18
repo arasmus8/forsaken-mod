@@ -86,7 +86,7 @@ public class TheForsakenMod implements
     private static String modID;
 
     // Mod-settings settings. This is if you want an on/off savable button
-    private static Properties theForsakenDefaultSettings = new Properties();
+    private static final Properties theForsakenDefaultSettings = new Properties();
     private static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
     private static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
@@ -152,10 +152,6 @@ public class TheForsakenMod implements
 
     public static String makeRelicOutlinePath(String resourcePath) {
         return getModID() + "Resources/images/relics/outline/" + resourcePath;
-    }
-
-    public static String makeOrbPath(String resourcePath) {
-        return getModID() + "Resources/orbs/" + resourcePath;
     }
 
     public static String makePowerPath(String resourcePath) {
@@ -580,7 +576,7 @@ public class TheForsakenMod implements
         return getModID() + ":" + idText;
     }
 
-    public static ArrayList<UUID> usedCards;
+    public static ArrayList<UUID> usedCards = new ArrayList<>();
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
@@ -592,7 +588,7 @@ public class TheForsakenMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        usedCards = new ArrayList<>();
+        usedCards.clear();
     }
 
     @Override
