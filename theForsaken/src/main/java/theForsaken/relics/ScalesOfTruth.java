@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class ScalesOfTruth extends CustomRelic {
@@ -27,8 +27,8 @@ public class ScalesOfTruth extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID(ScalesOfTruth.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ScalesOfTruth.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ScalesOfTruth.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("ScalesOfTruth.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("ScalesOfTruth.png"));
 
     private int skillCount = 0;
     private int attackCount = 0;

@@ -1,0 +1,15 @@
+{
+  "TheForsaken:PlagueDoctorEvent": {
+    "NAME": "Plague Doctor",
+    "DESCRIPTIONS": [
+      "You come across a strange person standing before several sick and dying #p~plague~ #p~victims.~ NL He turns to you and offers #g~A~ #g~strange~ #g~mask.~",
+      "You take the #g~mask,~ but start to feel a little #r~feverish.~",
+      "You refuse the offer and continue on your way."
+    ],
+    "OPTIONS": [
+      "[Accept] #gTake #ga #gspecial #grelic #gand #gcurse.",
+      "[Refuse]",
+      "[Leave]"
+    ]
+  }
+}

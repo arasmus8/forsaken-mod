@@ -12,18 +12,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.FearPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class HorrifyingStrike extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class HorrifyingStrike extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HorrifyingStrike.class.getSimpleName());
-    public static final String IMG = makeCardPath("HorrifyingStrike.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -36,18 +26,14 @@ public class HorrifyingStrike extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 5;
 
     private static final int MAGIC = 2;
-    // /STAT DECLARATION/
 
     public HorrifyingStrike() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CardTags.STRIKE);
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-        this.tags.add(CardTags.STRIKE);
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.SLASH_VERTICAL));
@@ -55,8 +41,6 @@ public class HorrifyingStrike extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FearPower(p, magicNumber, false), magicNumber));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

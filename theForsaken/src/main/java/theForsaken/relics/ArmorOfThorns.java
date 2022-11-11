@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class ArmorOfThorns extends CustomRelic {
@@ -27,8 +27,8 @@ public class ArmorOfThorns extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID(ArmorOfThorns.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ArmorOfThorns.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ArmorOfThorns.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("ArmorOfThorns.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("ArmorOfThorns.png"));
 
     public ArmorOfThorns() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.HEAVY);

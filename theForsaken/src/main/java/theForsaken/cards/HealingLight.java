@@ -8,19 +8,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.variables.UnplayedCardsVariable;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class HealingLight extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class HealingLight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HealingLight.class.getSimpleName());
-    public static final String IMG = makeCardPath("HealingLight.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -32,25 +21,18 @@ public class HealingLight extends AbstractDynamicCard {
     private static final int MAGIC = 1;
     private static final int UPGRADED_MAGIC = 1;
 
-    // /STAT DECLARATION/
-
-
     public HealingLight() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CardTags.HEALING);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         exhaust = true;
-        tags.add(CardTags.HEALING);
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, UnplayedCardsVariable.unplayedCardCount() * magicNumber));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

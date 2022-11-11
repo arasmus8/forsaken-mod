@@ -13,8 +13,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.powers.BonusDamagePower;
 import theForsaken.util.TextureLoader;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class Gavel extends CustomRelic {
@@ -28,8 +28,8 @@ public class Gavel extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID(Gavel.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Gavel.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Gavel.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("Gavel.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("Gavel.png"));
 
     private static final int BONUS_DAMAGE = 5;
 

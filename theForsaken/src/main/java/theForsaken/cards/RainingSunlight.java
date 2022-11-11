@@ -14,18 +14,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.BonusDamagePower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class RainingSunlight extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class RainingSunlight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(RainingSunlight.class.getSimpleName());
-    public static final String IMG = makeCardPath("RainingSunlight.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -40,18 +30,14 @@ public class RainingSunlight extends AbstractDynamicCard {
     private static final int BONUS_DMG = 3;
     private static final int UPGRADE_BONUS_DMG = 1;
 
-    // /STAT DECLARATION/
-
     public RainingSunlight() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         baseMagicNumber = BONUS_DMG;
         magicNumber = baseMagicNumber;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
@@ -70,7 +56,6 @@ public class RainingSunlight extends AbstractDynamicCard {
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

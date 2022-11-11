@@ -1,5 +1,5 @@
 {
-  "theForsaken:DivineGuidanceAction": {
+  "TheForsaken:DivineGuidanceAction": {
     "TEXT": [
       "Choose a card to add to your discard pile.",
       "Choose a card to add to your draw pile.",
@@ -8,12 +8,12 @@
       "cards to add to your draw pile."
     ]
   },
-  "theForsaken:NobleSacrificeAction": {
+  "TheForsaken:NobleSacrificeAction": {
     "TEXT": [
       "to exhaust."
     ]
   },
-  "theForsaken:StoreUpAction": {
+  "TheForsaken:StoreUpAction": {
     "TEXT": [
       "to add to your discard pile."
     ]

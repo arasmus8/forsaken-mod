@@ -10,19 +10,8 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class FatRoll extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class FatRoll extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(FatRoll.class.getSimpleName());
-    public static final String IMG = makeCardPath("FatRoll.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -34,15 +23,11 @@ public class FatRoll extends AbstractDynamicCard {
     private static final int BLOCK = 6;
     private static final int UPGRADE_PLUS_BLOCK = 2;
 
-    // /STAT DECLARATION/
-
     public FatRoll() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseBlock = BLOCK;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
@@ -59,7 +44,6 @@ public class FatRoll extends AbstractDynamicCard {
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -11,18 +11,8 @@ import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class WordsOfPestilence extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class WordsOfPestilence extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WordsOfPestilence.class.getSimpleName());
-    public static final String IMG = makeCardPath("WordsOfPestilence.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
@@ -36,27 +26,21 @@ public class WordsOfPestilence extends AbstractDynamicCard {
 
     private static final int SELF_DAMAGE = 8;
     private static final int UPGRADE_SELF_DAMAGE = -3;
-    // /STAT DECLARATION/
 
     public WordsOfPestilence() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         this.isMultiDamage = true;
         baseDamage = DAMAGE;
         baseMagicNumber = SELF_DAMAGE;
         magicNumber = SELF_DAMAGE;
-        this.tags.add(CustomTags.WORD_CARD);
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new DamageInfo(p, magicNumber, damageTypeForTurn), AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, damageTypeForTurn, AttackEffect.POISON));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

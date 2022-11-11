@@ -11,19 +11,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.TranquilityPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Tranquility extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class Tranquility extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Tranquility.class.getSimpleName());
-    public static final String IMG = makeCardPath("Tranquility.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -37,11 +26,8 @@ public class Tranquility extends AbstractDynamicCard {
 
     private static final int INCREASE_AMT = 1;
 
-    // /STAT DECLARATION/
-
-
     public Tranquility() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.misc = MAGIC;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
@@ -64,7 +50,6 @@ public class Tranquility extends AbstractDynamicCard {
         }
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

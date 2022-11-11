@@ -1,21 +1,29 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
-    <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
     <groupId>theforsaken</groupId>
     <artifactId>TheForsaken</artifactId>
     <name>The Forsaken</name>
     <version>1.0.0</version>
-    <description>Custom character centered around self buffs.</description>
+    <description>
+        Praise the Sun!! The Forsaken has been reworked. The original character is still available, enable it in the mod
+        options and restart.
+    </description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <SlayTheSpire.version>07-17-2019</SlayTheSpire.version>
-        <ModTheSpire.version>3.8.0</ModTheSpire.version>
+        <SlayTheSpire.version>07-30-2020</SlayTheSpire.version>
+        <ModTheSpire.version>3.15.0</ModTheSpire.version>
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
         <Steam.path>D:\Programs\steamapps</Steam.path>
+
+        <pack.cards.srcDir>productionAssets/cards</pack.cards.srcDir>
+        <pack.cards.target>target/cards</pack.cards.target>
+
+        <pack.powers.srcDir>productionAssets/powers</pack.powers.srcDir>
+        <pack.powers.target>target/powers</pack.powers.target>
     </properties>
 
     <dependencies>
@@ -25,7 +33,6 @@
             <version>${SlayTheSpire.version}</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/common/SlayTheSpire/desktop-1.0.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
@@ -33,23 +40,20 @@
             <version>${ModTheSpire.version}</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>basemod</groupId>
             <artifactId>basemod</artifactId>
-            <version>5.0.0</version>
+            <version>5.17.0</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/BaseMod.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
             <artifactId>StSLib</artifactId>
-            <version>1.3.2</version>
+            <version>1.17.2</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
-            <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
         </dependency>
     </dependencies>
 
@@ -65,6 +69,8 @@
                 <configuration>
                     <excludes>
                         <exclude>**/*.psd</exclude>
+                        <exclude>${pack.cards.target}</exclude>
+                        <exclude>${pack.powers.target}</exclude>
                     </excludes>
                 </configuration>
             </plugin>
@@ -74,15 +80,109 @@
                 <version>1.8</version>
                 <executions>
                     <execution>
-                        <phase>package</phase>
+                        <id>card art</id>
+                        <phase>generate-resources</phase>
                         <configuration>
-                            <target>
-                                <!-- This moves your mod into a common folder where all mods you make can go. -->
-                                <copy file="target/${project.artifactId}.jar" tofile="${Steam.path}/common/SlayTheSpire/mods/${project.artifactId}.jar"/>
+                            <target name="copy card images">
+                                <copy todir="${pack.cards.target}">
+                                    <fileset dir="${pack.cards.srcDir}" includes="**/*.png"/>
+                                </copy>
                             </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>power art</id>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <target name="copy power images">
+                                <copy todir="${pack.powers.target}">
+                                    <fileset dir="${pack.powers.srcDir}" includes="**/*.png"/>
+                                </copy>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <!-- This moves your mod into a common folder where all mods you make can go. -->
+                                <copy file="target/${project.artifactId}.jar"
+                                      tofile="${Steam.path}/common/SlayTheSpire/mods/${project.artifactId}.jar"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.junkdog</groupId>
+                <artifactId>libgdx-packer-maven-plugin</artifactId>
+                <version>0.1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>pack cards</id>
+                        <goals>
+                            <goal>pack</goal>
+                        </goals>
+                        <configuration>
+                            <assetFolder>${pack.cards.target}</assetFolder>
+                            <packName>forsakenAssets/images/cards/cards</packName>
+                            <packer>
+                                <maxWidth>2048</maxWidth>
+                                <maxHeight>2048</maxHeight>
+                                <filterMin>Linear</filterMin>
+                                <filterMag>Linear</filterMag>
+                                <combineSubdirectories>true</combineSubdirectories>
+                            </packer>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>pack powers</id>
+                        <goals>
+                            <goal>pack</goal>
+                        </goals>
+                        <configuration>
+                            <assetFolder>${pack.powers.target}</assetFolder>
+                            <packName>forsakenAssets/images/powers/powers</packName>
+                            <packer>
+                                <maxWidth>2048</maxWidth>
+                                <maxHeight>2048</maxHeight>
+                                <filterMin>Linear</filterMin>
+                                <filterMag>Linear</filterMag>
+                                <stripWhitespaceX>true</stripWhitespaceX>
+                                <stripWhitespaceY>true</stripWhitespaceY>
+                                <combineSubdirectories>true</combineSubdirectories>
+                            </packer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
                         </goals>
                     </execution>
                 </executions>

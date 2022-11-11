@@ -15,19 +15,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.relics.PlagueMask;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class CreepingInfection extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class CreepingInfection extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(CreepingInfection.class.getSimpleName());
-    public static final String IMG = makeCardPath("CreepingInfection.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -40,17 +29,12 @@ public class CreepingInfection extends AbstractDynamicCard {
     private static final int MAGIC = 3;
     private static final int UPGRADED_MAGIC = 1;
 
-    // /STAT DECLARATION/
-
-
     public CreepingInfection() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
@@ -87,7 +71,6 @@ public class CreepingInfection extends AbstractDynamicCard {
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

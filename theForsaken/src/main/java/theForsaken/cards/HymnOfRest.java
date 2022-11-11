@@ -3,31 +3,15 @@ package theForsaken.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.HymnOfRestPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class HymnOfRest extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class HymnOfRest extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HymnOfRest.class.getSimpleName());
-    public static final String IMG = makeCardPath("HymnOfRest.png");
-    // Must have an image with the same NAME as the card in your image folder!
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
-    private static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -42,10 +26,8 @@ public class HymnOfRest extends AbstractDynamicCard {
     private int otherCardsPlayed;
     private static final int BONUS_THRESHOLD = 4;
 
-    // /STAT DECLARATION/
-
     public HymnOfRest() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
     }

@@ -12,18 +12,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.ShieldBashAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class ShieldBash extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class ShieldBash extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(ShieldBash.class.getSimpleName());
-    public static final String IMG = makeCardPath("ShieldBash.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
@@ -36,19 +26,14 @@ public class ShieldBash extends AbstractDynamicCard {
     private static final int GROWTH = 1;
     private static final int UPGRADE_MAGIC = 1;
 
-    // /STAT DECLARATION/
-
     public ShieldBash() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = POWER;
         baseBlock = POWER;
         baseMagicNumber = GROWTH;
-
         magicNumber = baseMagicNumber;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
@@ -57,8 +42,6 @@ public class ShieldBash extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ShieldBashAction(this, this.magicNumber));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

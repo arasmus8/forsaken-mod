@@ -5,9 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import theForsaken.CustomTags;
@@ -15,21 +13,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.relics.PlagueMask;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class CorruptedWord extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class CorruptedWord extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(CorruptedWord.class.getSimpleName());
-    public static final String IMG = makeCardPath("CorruptedWord.png");
-    // Must have an image with the same NAME as the card in your image folder!\
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
@@ -41,18 +26,12 @@ public class CorruptedWord extends AbstractDynamicCard {
     private static final int MAGIC = 8;
     private static final int UPGRADED_MAGIC = -2;
 
-    // /STAT DECLARATION/
-
-
     public CorruptedWord() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-        this.tags.add(CustomTags.WORD_CARD);
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
@@ -90,7 +69,6 @@ public class CorruptedWord extends AbstractDynamicCard {
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

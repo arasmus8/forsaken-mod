@@ -13,19 +13,8 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class BlightOfFamine extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class BlightOfFamine extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BlightOfFamine.class.getSimpleName());
-    public static final String IMG = makeCardPath("BlightOfFamine.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -38,17 +27,12 @@ public class BlightOfFamine extends AbstractDynamicCard {
     private static final int MAGIC = 3;
     private static final int UPGRADED_MAGIC = 2;
 
-    // /STAT DECLARATION/
-
-
     public BlightOfFamine() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster mon) {
         if (dontTriggerOnUseCard) {

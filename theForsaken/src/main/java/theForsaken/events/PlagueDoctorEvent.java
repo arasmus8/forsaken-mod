@@ -1,23 +1,18 @@
 package theForsaken.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.colorless.Apotheosis;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theForsaken.TheForsakenMod;
 import theForsaken.cards.PlagueCurse;
 import theForsaken.relics.PlagueMask;
 
-import static theForsaken.TheForsakenMod.makeEventPath;
+import static theForsaken.TheForsakenMod.eventResourcePath;
 
 public class PlagueDoctorEvent extends AbstractImageEvent {
 
@@ -28,7 +23,7 @@ public class PlagueDoctorEvent extends AbstractImageEvent {
     private static final String NAME = eventStrings.NAME;
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
-    public static final String IMG = makeEventPath("PlagueDoctorEvent.png");
+    public static final String IMG = eventResourcePath("PlagueDoctorEvent.png");
 
     private int screenNum = 0; // The initial screen we will see when encountering the event - screen 0;
 

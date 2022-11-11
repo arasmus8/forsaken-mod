@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class Lifeblossom extends CustomRelic {
@@ -26,8 +26,8 @@ public class Lifeblossom extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID(Lifeblossom.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Lifeblossom.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Lifeblossom.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("Lifeblossom.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("Lifeblossom.png"));
 
     private static final int REGEN_AMOUNT = 3;
 

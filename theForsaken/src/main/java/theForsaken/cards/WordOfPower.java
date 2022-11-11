@@ -11,18 +11,8 @@ import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class WordOfPower extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class WordOfPower extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WordOfPower.class.getSimpleName());
-    public static final String IMG = makeCardPath("WordOfPower.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -35,30 +25,28 @@ public class WordOfPower extends AbstractDynamicCard {
 
     private static final int MAGIC = 3;
     private static final int UPGRADED_MAGIC = 2;
-    // /STAT DECLARATION/
 
     public WordOfPower() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-        tags.add(CustomTags.WORD_CARD);
     }
 
     private static int countWordsCards() {
         int count = 0;
-        for(AbstractCard c:AbstractDungeon.player.drawPile.group) {
-            if(c.tags.contains(CustomTags.WORD_CARD)) {
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (c.tags.contains(CustomTags.WORD_CARD)) {
                 count += 1;
             }
         }
-        for(AbstractCard c:AbstractDungeon.player.discardPile.group) {
-            if(c.tags.contains(CustomTags.WORD_CARD)) {
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c.tags.contains(CustomTags.WORD_CARD)) {
                 count += 1;
             }
         }
-        for(AbstractCard c:AbstractDungeon.player.hand.group) {
-            if(c.tags.contains(CustomTags.WORD_CARD)) {
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.tags.contains(CustomTags.WORD_CARD)) {
                 count += 1;
             }
         }
@@ -83,14 +71,11 @@ public class WordOfPower extends AbstractDynamicCard {
         this.isDamageModified = this.damage != this.baseDamage;
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -10,18 +10,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.variables.UnplayedCardsVariable;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class ChargeAttack extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class ChargeAttack extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(ChargeAttack.class.getSimpleName());
-    public static final String IMG = makeCardPath("ChargeAttack.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -34,10 +24,9 @@ public class ChargeAttack extends AbstractDynamicCard {
     private static final int DAMAGE = 9;
 
     private static final int MAGIC = 2;
-    // /STAT DECLARATION/
 
     public ChargeAttack() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
@@ -67,7 +56,6 @@ public class ChargeAttack extends AbstractDynamicCard {
         this.recalculateCost();
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
@@ -75,8 +63,6 @@ public class ChargeAttack extends AbstractDynamicCard {
         }
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

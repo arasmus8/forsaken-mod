@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class PaleLantern extends CustomRelic {
@@ -21,8 +21,8 @@ public class PaleLantern extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID("PaleLantern");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PaleLantern.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("PaleLantern.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("PaleLantern.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("PaleLantern.png"));
 
     public PaleLantern() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);

@@ -1,12 +1,12 @@
 {
-  "theForsaken:ArmorOfThorns": {
+  "TheForsaken:ArmorOfThorns": {
     "NAME": "Armor of Thorns",
     "FLAVOR": "It may be good for battle, but it also prevents hugs :(",
     "DESCRIPTIONS": [
       "Whenever you gain Block, deal #b3 damage to all enemies."
     ]
   },
-  "theForsaken:Gavel": {
+  "TheForsaken:Gavel": {
     "NAME": "Gavel",
     "FLAVOR": "Figuratively renders judgement. Literally renders unconscious.",
     "DESCRIPTIONS": [
@@ -14,28 +14,28 @@
       " bonus damage."
     ]
   },
-  "theForsaken:HumbleEgg": {
+  "TheForsaken:HumbleEgg": {
     "NAME": "Humble Egg",
     "FLAVOR": "It's just an egg.",
     "DESCRIPTIONS": [
       "Whenever you add a #yCommon card into your deck, #yUpgrade it. When you first draw a common card each turn, draw an extra card."
     ]
   },
-  "theForsaken:JudgementScales": {
+  "TheForsaken:JudgementScales": {
     "NAME": "Judgement Scales",
     "FLAVOR": "Seek balance in all things.",
     "DESCRIPTIONS": [
       "Each turn, gain #yStrength / #yDexterity based on played cards. NL (Gain #b1 #yStrength if you've played no attacks, and #b1 #yDexterity if you've played no skills.)"
     ]
   },
-  "theForsaken:Kindling": {
+  "TheForsaken:Kindling": {
     "NAME": "Kindling",
     "FLAVOR": "Brighter flames seem to fend off the encroaching dark.",
     "DESCRIPTIONS": [
       "Whenever you rest at a rest site, increase your Max HP by #b"
     ]
   },
-  "theForsaken:Lifeblossom": {
+  "TheForsaken:Lifeblossom": {
     "NAME": "Lifeblossom",
     "FLAVOR": "This rare flower grows only in a hidden garden in a legendary forest.",
     "DESCRIPTIONS": [
@@ -43,28 +43,28 @@
       " regen."
     ]
   },
-  "theForsaken:PaleLantern": {
+  "TheForsaken:PaleLantern": {
     "NAME": "Pale Lantern",
     "FLAVOR": "Provides a comforting glow in the dark.",
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. Draw 1 less card each turn."
     ]
   },
-  "theForsaken:PlagueMask": {
+  "TheForsaken:PlagueMask": {
     "NAME": "Plague Mask",
     "FLAVOR": "It was believed these masks could prevent disease, but they only seem to spread it.",
     "DESCRIPTIONS": [
       "Whenever you are inflicted with poison, apply it to a random enemy also."
     ]
   },
-  "theForsaken:ScalesOfTruth": {
+  "TheForsaken:ScalesOfTruth": {
     "NAME": "Scales of Truth",
     "FLAVOR": "It is said that if one's heart is light as a feather, the Truth will be understood.",
     "DESCRIPTIONS": [
       "Replaces #yJudgement #yScales. For every 3 #yunplayed skills, gain 1 dexterity. For every 3 #yunplayed attacks, gain 1 strength."
     ]
   },
-  "theForsaken:ScaryMask": {
+  "TheForsaken:ScaryMask": {
     "NAME": "Scary Mask",
     "FLAVOR": "Created to terrify the Spire's weaker denizens.",
     "DESCRIPTIONS": [

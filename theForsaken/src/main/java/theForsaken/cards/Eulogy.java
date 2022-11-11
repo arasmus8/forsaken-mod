@@ -11,19 +11,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.BonusDamagePower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Eulogy extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class Eulogy extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Eulogy.class.getSimpleName());
-    public static final String IMG = makeCardPath("Eulogy.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -35,18 +24,13 @@ public class Eulogy extends AbstractDynamicCard {
     private static final int VULNERABILITY_AMT = 1;
     private static final int UPGRADE_PLUS_VULNERABILITY = 1;
 
-    // /STAT DECLARATION/
-
-
     public Eulogy() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         baseMagicNumber = VULNERABILITY_AMT;
         magicNumber = VULNERABILITY_AMT;
         this.isEthereal = true;
-        this.tags.add(CustomTags.WORD_CARD);
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster target) {
         if(this.dontTriggerOnUseCard) {
@@ -66,7 +50,6 @@ public class Eulogy extends AbstractDynamicCard {
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

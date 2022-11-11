@@ -11,19 +11,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class LightRoll extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class LightRoll extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(LightRoll.class.getSimpleName());
-    public static final String IMG = makeCardPath("LightRoll.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -37,19 +26,14 @@ public class LightRoll extends AbstractDynamicCard {
 
     private static final int MAGIC = 1;
 
-    // /STAT DECLARATION/
-
-
     public LightRoll() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseBlock = BLOCK;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         exhaust = true;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
@@ -63,7 +47,6 @@ public class LightRoll extends AbstractDynamicCard {
         }
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

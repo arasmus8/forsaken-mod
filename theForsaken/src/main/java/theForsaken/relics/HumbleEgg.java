@@ -11,8 +11,8 @@ import theForsaken.util.TextureLoader;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class HumbleEgg extends CustomRelic {
@@ -26,8 +26,8 @@ public class HumbleEgg extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID(HumbleEgg.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("HumbleEgg.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("HumbleEgg.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("HumbleEgg.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("HumbleEgg.png"));
 
     private boolean listen = false;
 

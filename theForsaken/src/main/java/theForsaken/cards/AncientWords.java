@@ -9,21 +9,8 @@ import theForsaken.CustomTags;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class AncientWords extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class AncientWords extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(AncientWords.class.getSimpleName());
-    public static final String IMG = makeCardPath("AncientWords.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-
-    // /TEXT DECLARATION/
-
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -39,10 +26,9 @@ public class AncientWords extends AbstractDynamicCard {
 
 
     public AncientWords() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         baseMagicNumber = ARTIFACT_AMT;
         magicNumber = ARTIFACT_AMT;
-        tags.add(CustomTags.WORD_CARD);
     }
 
 

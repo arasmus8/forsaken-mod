@@ -35,7 +35,8 @@ import theForsaken.relics.JudgementScales;
 import java.util.ArrayList;
 import java.util.List;
 
-import static theForsaken.TheForsakenMod.*;
+import static theForsaken.TheForsakenMod.imageResourcePath;
+import static theForsaken.TheForsakenMod.makeID;
 import static theForsaken.characters.TheForsaken.Enums.COLOR_GOLD;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
@@ -90,17 +91,17 @@ public class TheForsaken extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "theForsakenResources/images/char/forsaken/orb/layer1.png",
-            "theForsakenResources/images/char/forsaken/orb/layer2.png",
-            "theForsakenResources/images/char/forsaken/orb/layer3.png",
-            "theForsakenResources/images/char/forsaken/orb/layer4.png",
-            "theForsakenResources/images/char/forsaken/orb/layer5.png",
-            "theForsakenResources/images/char/forsaken/orb/layer6.png",
-            "theForsakenResources/images/char/forsaken/orb/layer1d.png",
-            "theForsakenResources/images/char/forsaken/orb/layer2d.png",
-            "theForsakenResources/images/char/forsaken/orb/layer3d.png",
-            "theForsakenResources/images/char/forsaken/orb/layer4d.png",
-            "theForsakenResources/images/char/forsaken/orb/layer5d.png",};
+            "TheForsakenResources/images/char/forsaken/orb/layer1.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer2.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer3.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer4.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer5.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer6.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer1d.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer2d.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer3d.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer4d.png",
+            "TheForsakenResources/images/char/forsaken/orb/layer5d.png",};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
@@ -108,18 +109,17 @@ public class TheForsaken extends CustomPlayer {
 
     public TheForsaken(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theForsakenResources/images/char/forsaken/orb/vfx.png", null,
+                "TheForsakenResources/images/char/forsaken/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theForsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
+                        "TheForsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
 
         initializeClass(null, // required call to load textures and setup energy/loadout.
-                // I left these in TheForsakenMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
-                THE_DEFAULT_SHOULDER_1, // campfire pose
-                THE_DEFAULT_SHOULDER_2, // another campfire pose
-                THE_DEFAULT_CORPSE, // dead corpse
+                imageResourcePath("char/forsaken/shoulder.png"),
+                imageResourcePath("char/forsaken/shoulder2.png"),
+                imageResourcePath("char/forsaken/corpse.png"),
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
 
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
@@ -128,8 +128,8 @@ public class TheForsaken extends CustomPlayer {
         // =============== ANIMATIONS =================  
 
         loadAnimation(
-                THE_DEFAULT_SKELETON_ATLAS,
-                THE_DEFAULT_SKELETON_JSON,
+                imageResourcePath("char/forsaken/skeleton.atlas"),
+                imageResourcePath("char/forsaken/skeleton.json"),
                 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -288,15 +288,15 @@ public class TheForsaken extends CustomPlayer {
 
     @Override
     public Texture getCutsceneBg() {
-        return ImageMaster.loadImage("theForsakenResources/images/goldbg.jpg");// 307
+        return ImageMaster.loadImage("TheForsakenResources/images/goldbg.jpg");// 307
     }
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
         List<CutscenePanel> panels = new ArrayList();// 312
-        panels.add(new CutscenePanel("theForsakenResources/images/heart1.png", "ATTACK_HEAVY"));// 313
-        panels.add(new CutscenePanel("theForsakenResources/images/heart2.png"));// 314
-        panels.add(new CutscenePanel("theForsakenResources/images/heart3.png"));// 315
+        panels.add(new CutscenePanel("TheForsakenResources/images/heart1.png", "ATTACK_HEAVY"));// 313
+        panels.add(new CutscenePanel("TheForsakenResources/images/heart2.png"));// 314
+        panels.add(new CutscenePanel("TheForsakenResources/images/heart3.png"));// 315
         return panels;// 316
     }
 

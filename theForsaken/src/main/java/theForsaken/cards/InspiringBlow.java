@@ -8,18 +8,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.InspiringBlowAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class InspiringBlow extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class InspiringBlow extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(InspiringBlow.class.getSimpleName());
-    public static final String IMG = makeCardPath("InspiringBlow.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -33,24 +23,18 @@ public class InspiringBlow extends AbstractDynamicCard {
     private static final int MET_AMT = 3;
     private static final int UPGRADE_MET_AMT = 3;
 
-    // /STAT DECLARATION/
-
     public InspiringBlow() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
         baseMagicNumber = MET_AMT;
         magicNumber = baseMagicNumber;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new InspiringBlowAction(m, new DamageInfo(p, damage, damageTypeForTurn), magicNumber));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

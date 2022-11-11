@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.util.TextureLoader;
 
-import static theForsaken.TheForsakenMod.makeRelicOutlinePath;
-import static theForsaken.TheForsakenMod.makeRelicPath;
+import static theForsaken.TheForsakenMod.relicOutlineResourcePath;
+import static theForsaken.TheForsakenMod.relicResourcePath;
 
 
 public class JudgementScales extends CustomRelic {
@@ -27,8 +27,8 @@ public class JudgementScales extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheForsakenMod.makeID(JudgementScales.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("JudgementScales.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("JudgementScales.png"));
+    private static final Texture IMG = TextureLoader.getTexture(relicResourcePath("JudgementScales.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(relicOutlineResourcePath("JudgementScales.png"));
 
     private boolean firstTurn = false;
     private boolean gainStr = false;

@@ -8,19 +8,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.BindingThornsPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class BindingThorns extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class BindingThorns extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BindingThorns.class.getSimpleName());
-    public static final String IMG = makeCardPath("BindingThorns.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -32,11 +21,8 @@ public class BindingThorns extends AbstractDynamicCard {
     private static final int MAGIC = 4;
     private static final int UPGRADE_MAGIC_AMT = 2;
 
-    // /STAT DECLARATION/
-
-
     public BindingThorns() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
     }

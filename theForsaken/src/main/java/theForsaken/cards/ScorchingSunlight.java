@@ -10,18 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class ScorchingSunlight extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class ScorchingSunlight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(ScorchingSunlight.class.getSimpleName());
-    public static final String IMG = makeCardPath("ScorchingSunlight.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -34,10 +24,9 @@ public class ScorchingSunlight extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 1;
 
     private static final int MAGIC = 2;
-    // /STAT DECLARATION/
 
     public ScorchingSunlight() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         isMultiDamage = true;
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
@@ -45,8 +34,6 @@ public class ScorchingSunlight extends AbstractDynamicCard {
         cardsToPreview = new Burn();
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; ++i) {
@@ -55,8 +42,6 @@ public class ScorchingSunlight extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Burn(), 1));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

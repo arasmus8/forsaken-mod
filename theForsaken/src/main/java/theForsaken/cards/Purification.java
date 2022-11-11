@@ -7,18 +7,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.PurificationAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Purification extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class Purification extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Purification.class.getSimpleName());
-    public static final String IMG = makeCardPath("Purification.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -29,22 +19,17 @@ public class Purification extends AbstractDynamicCard {
 
     private static final int DAMAGE = 30;
     private static final int UPGRADE_PLUS_DMG = 9;
-    // /STAT DECLARATION/
 
     public Purification() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new PurificationAction(p, m, damage, damageTypeForTurn));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -10,19 +10,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.RetributionPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Retribution extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class Retribution extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Retribution.class.getSimpleName());
-    public static final String IMG = makeCardPath("Retribution.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -34,16 +23,12 @@ public class Retribution extends AbstractDynamicCard {
     private static final int THORNS_AMT = 5;
     private static final int UPGRADE_THORNS_AMT = 2;
 
-    // /STAT DECLARATION/
-
-
     public Retribution() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.isEthereal = true;
         this.baseMagicNumber = THORNS_AMT;
         this.magicNumber = THORNS_AMT;
     }
-
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -62,8 +47,6 @@ public class Retribution extends AbstractDynamicCard {
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -8,21 +8,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.CorruptDeckPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class CorruptDeck extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class CorruptDeck extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(CorruptDeck.class.getSimpleName());
-    public static final String IMG = makeCardPath("CorruptDeck.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-
-    // /TEXT DECLARATION/
-
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -34,24 +21,18 @@ public class CorruptDeck extends AbstractDynamicCard {
     private static final int MAX_CARDS = 3;
     private static final int UPGRADE_MAX_CARDS = 1;
 
-    // /STAT DECLARATION/
-
-
     public CorruptDeck() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseMagicNumber = MAX_CARDS;
         magicNumber = MAX_CARDS;
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CorruptDeckPower(p, this.magicNumber)));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

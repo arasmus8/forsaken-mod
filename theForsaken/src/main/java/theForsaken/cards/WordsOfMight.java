@@ -9,21 +9,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.WordsOfMightPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class WordsOfMight extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class WordsOfMight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WordsOfMight.class.getSimpleName());
-    public static final String IMG = makeCardPath("WordsOfMight.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-
-    // /TEXT DECLARATION/
-
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -35,25 +22,17 @@ public class WordsOfMight extends AbstractDynamicCard {
     private static final int POWER = 1;
     private static final int UPGRADE_POWER = 1;
 
-    // /STAT DECLARATION/
-
-
     public WordsOfMight() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         baseMagicNumber = POWER;
         magicNumber = POWER;
-        this.tags.add(CustomTags.WORD_CARD);
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WordsOfMightPower(p, this.magicNumber)));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

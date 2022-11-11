@@ -8,18 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class SpinAttack extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class SpinAttack extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(SpinAttack.class.getSimpleName());
-    public static final String IMG = makeCardPath("SpinAttack.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -32,17 +22,14 @@ public class SpinAttack extends AbstractDynamicCard {
 
     private static final int DEX_PER_SPIN = 3;
     private static final int UPGRADE_DEX_PER_SPIN = -1;
-    // /STAT DECLARATION/
 
     public SpinAttack() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
         baseMagicNumber = DEX_PER_SPIN;
         magicNumber = DEX_PER_SPIN;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 1;
@@ -58,8 +45,6 @@ public class SpinAttack extends AbstractDynamicCard {
         }
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

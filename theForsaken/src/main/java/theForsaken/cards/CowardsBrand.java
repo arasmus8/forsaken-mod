@@ -11,18 +11,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.FearPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class CowardsBrand extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class CowardsBrand extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(CowardsBrand.class.getSimpleName());
-    public static final String IMG = makeCardPath("CowardsBrand.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -35,15 +25,12 @@ public class CowardsBrand extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 6;
 
     private static final float DAMAGE_ADJUST = 2.0F;
-    // /STAT DECLARATION/
 
     public CowardsBrand() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int modifiedDamage = m.hasPower(FearPower.POWER_ID) ? MathUtils.floor(damage * DAMAGE_ADJUST) : damage;
@@ -52,8 +39,6 @@ public class CowardsBrand extends AbstractDynamicCard {
         );
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theForsaken.cards.AbstractExtendedCard;
+import theForsaken.cards.AbstractForsakenCard;
 
 @SpirePatch(clz = CardGroup.class, method = "addToBottom")
 
@@ -20,8 +20,8 @@ public class TempCardAddToBottomPatch {
                 AbstractDungeon.player.hand != null
         ) {
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                if (c instanceof AbstractExtendedCard) {
-                    ((AbstractExtendedCard) c).triggerWhenCardAddedInCombat();
+                if (c instanceof AbstractForsakenCard) {
+                    ((AbstractForsakenCard) c).triggerWhenCardAddedInCombat();
                 }
             }
         }

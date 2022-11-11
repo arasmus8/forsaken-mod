@@ -14,18 +14,8 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class SolarFlare extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class SolarFlare extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(SolarFlare.class.getSimpleName());
-    public static final String IMG = makeCardPath("SolarFlare.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -38,18 +28,15 @@ public class SolarFlare extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 5;
 
     private static final int MAGIC = 2;
-    // /STAT DECLARATION/
 
     public SolarFlare() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         isMultiDamage = true;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
@@ -59,8 +46,6 @@ public class SolarFlare extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -magicNumber), -magicNumber));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -15,18 +15,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.HealNextTurnPower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class DarkRift extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class DarkRift extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(DarkRift.class.getSimpleName());
-    public static final String IMG = makeCardPath("DarkRift.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL;
@@ -38,16 +28,12 @@ public class DarkRift extends AbstractDynamicCard {
     private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
 
-    // /STAT DECLARATION/
-
     public DarkRift() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseDamage = DAMAGE;
         isMultiDamage = true;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster monster) {
         int healAmount = damage * 2;
@@ -61,8 +47,6 @@ public class DarkRift extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HealNextTurnPower(p, p, healAmount), healAmount));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

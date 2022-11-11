@@ -4,29 +4,13 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class WardingHymn extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class WardingHymn extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WardingHymn.class.getSimpleName());
-    public static final String IMG = makeCardPath("WardingHymn.png");
-    // Must have an image with the same NAME as the card in your image folder!
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
-    private static final String UPGRADE_DESC = CARD_STRINGS.UPGRADE_DESCRIPTION;
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -44,11 +28,8 @@ public class WardingHymn extends AbstractDynamicCard {
 
     private int otherCardsPlayed;
 
-    // /STAT DECLARATION/
-
-
     public WardingHymn() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.baseBlock = BLOCK;
         this.actualBaseBlock = BLOCK;
         this.baseMagicNumber = MAGIC;
@@ -56,7 +37,7 @@ public class WardingHymn extends AbstractDynamicCard {
         this.otherCardsPlayed = 0;
     }
 
-    public void calculateBlock() {
+    private void calculateBlock() {
         // this.baseBlock = Math.max(this.actualBaseBlock - ((this.actualBaseBlock * this.otherCardsPlayed) / this.magicNumber), 0);
         this.baseBlock = this.actualBaseBlock;
         this.applyPowers();
@@ -99,7 +80,6 @@ public class WardingHymn extends AbstractDynamicCard {
         this.calculateBlock();
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
@@ -107,7 +87,7 @@ public class WardingHymn extends AbstractDynamicCard {
             upgradeBlock(UPGRADE_BLOCK_AMT);
             this.actualBaseBlock += UPGRADE_BLOCK_AMT;
             upgradeMagicNumber(UPGRADE_MAGIC_AMOUNT);
-            rawDescription = UPGRADE_DESC;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

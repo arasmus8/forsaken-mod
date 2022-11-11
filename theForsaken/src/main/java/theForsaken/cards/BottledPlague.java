@@ -3,9 +3,7 @@ package theForsaken.cards;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PoisonPotion;
@@ -14,21 +12,8 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class BottledPlague extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class BottledPlague extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BottledPlague.class.getSimpleName());
-    public static final String IMG = makeCardPath("BottledPlague.png");
-    // Must have an image with the same NAME as the card in your image folder!
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final String[] EXTENDED_DESCRIPTIONS = CARD_STRINGS.EXTENDED_DESCRIPTION;
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -38,15 +23,11 @@ public class BottledPlague extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    // /STAT DECLARATION/
-
-
     public BottledPlague() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, PoisonPower.POWER_ID));
@@ -67,7 +48,7 @@ public class BottledPlague extends AbstractDynamicCard {
             if (!hasSlot) {
 
                 canUse = false;
-                this.cantUseMessage = EXTENDED_DESCRIPTIONS[0];
+                this.cantUseMessage = EXTENDED_DESCRIPTION[0];
             }
         }
         return canUse;

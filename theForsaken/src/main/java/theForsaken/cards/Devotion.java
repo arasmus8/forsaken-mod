@@ -11,19 +11,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.DevotionAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Devotion extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class Devotion extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Devotion.class.getSimpleName());
-    public static final String IMG = makeCardPath("Devotion.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -35,15 +24,11 @@ public class Devotion extends AbstractDynamicCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC_AMT = 1;
 
-    // /STAT DECLARATION/
-
-
     public Devotion() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
     }
-
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -52,7 +37,6 @@ public class Devotion extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DevotionAction(p, p, 1));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

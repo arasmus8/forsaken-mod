@@ -2,29 +2,14 @@ package theForsaken.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.PercentageBonusDamagePower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class BlessedWeapon extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class BlessedWeapon extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BlessedWeapon.class.getSimpleName());
-    public static final String IMG = makeCardPath("BlessedWeapon.png");
-    // Must have an image with the same NAME as the card in your image folder!
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -36,11 +21,8 @@ public class BlessedWeapon extends AbstractDynamicCard {
     private static final int MAGIC = 1;
     private static final int UPGRADED_MAGIC = 1;
 
-    // /STAT DECLARATION/
-
-
     public BlessedWeapon() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
     }

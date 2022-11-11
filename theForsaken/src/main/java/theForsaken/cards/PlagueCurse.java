@@ -1,26 +1,18 @@
 package theForsaken.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import theForsaken.TheForsakenMod;
 import theForsaken.relics.PlagueMask;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class PlagueCurse extends CustomCard {
+public class PlagueCurse extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(PlagueCurse.class.getSimpleName());
-    public static final String IMG = makeCardPath("PlagueCurse.png");
-    private static final CardStrings cardStrings;
-    public static final String NAME;
-    public static final String DESCRIPTION;
+
     private static final int COST = -2;
     private static final int POISON_AMT = 2;
 
@@ -30,7 +22,7 @@ public class PlagueCurse extends CustomCard {
     public static final CardColor COLOR = CardColor.CURSE;
 
     public PlagueCurse() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -55,11 +47,5 @@ public class PlagueCurse extends CustomCard {
     }
 
     public void upgrade() {
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
     }
 }

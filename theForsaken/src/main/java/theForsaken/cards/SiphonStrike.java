@@ -8,18 +8,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.SiphonStrikeAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class SiphonStrike extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class SiphonStrike extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(SiphonStrike.class.getSimpleName());
-    public static final String IMG = makeCardPath("SiphonStrike.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -32,25 +22,19 @@ public class SiphonStrike extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 4;
 
     private static final int MAGIC = 5;
-    // /STAT DECLARATION/
 
     public SiphonStrike() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CardTags.STRIKE);
         baseDamage = DAMAGE;
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-        tags.add(CardTags.STRIKE);
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SiphonStrikeAction(m, new DamageInfo(p, damage, damageTypeForTurn), magicNumber));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

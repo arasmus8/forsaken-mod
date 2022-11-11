@@ -7,18 +7,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.SacrificeSoulAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class SacrificeSoul extends AbstractDynamicCard {
-    // TEXT DECLARATION
-
+public class SacrificeSoul extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(SacrificeSoul.class.getSimpleName());
-    public static final String IMG = makeCardPath("SacrificeSoul.png");
-    // Must have an image with the same NAME as the card in your image folder!.
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -34,10 +24,8 @@ public class SacrificeSoul extends AbstractDynamicCard {
     private static final int DAMAGE_PER_BUFF = 3;
     private static final int UPGRADE_DAMAGE_PER_BUFF = 2;
 
-    // /STAT DECLARATION/
-
     public SacrificeSoul() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         isMultiDamage = true;
         exhaust = true;
         baseDamage = DAMAGE;
@@ -45,15 +33,11 @@ public class SacrificeSoul extends AbstractDynamicCard {
         magicNumber = DAMAGE_PER_BUFF;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SacrificeSoulAction(p, multiDamage, this.magicNumber, this.damageTypeForTurn));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

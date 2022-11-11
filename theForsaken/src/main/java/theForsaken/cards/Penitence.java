@@ -9,19 +9,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 import theForsaken.powers.BonusDamagePower;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Penitence extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class Penitence extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Penitence.class.getSimpleName());
-    public static final String IMG = makeCardPath("Penitence.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -36,26 +25,19 @@ public class Penitence extends AbstractDynamicCard {
     private static final int DMG_AMT = 3;
     private static final int UPGRADE_DMG_AMT = 2;
 
-    // /STAT DECLARATION/
-
-
     public Penitence() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         baseBlock = BLOCK;
         baseMagicNumber = DMG_AMT;
         magicNumber = DMG_AMT;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, this.magicNumber)));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

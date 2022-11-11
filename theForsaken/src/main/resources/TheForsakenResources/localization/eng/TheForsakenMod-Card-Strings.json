@@ -1,21 +1,21 @@
 {
-  "theForsaken:TheForsaken_Defend": {
+  "TheForsaken:TheForsaken_Defend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "theForsaken:TheForsaken_Strike": {
+  "TheForsaken:TheForsaken_Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! Damage."
   },
-  "theForsaken:AncientWords": {
+  "TheForsaken:AncientWords": {
     "NAME": "Ancient Words",
     "DESCRIPTION": "(WORDS) NL Gain !M! artifact."
   },
-  "theForsaken:Backlash": {
+  "TheForsaken:Backlash": {
     "NAME": "Backlash",
     "DESCRIPTION": "Whenever you are attacked this turn, deal !M! Damage back."
   },
-  "theForsaken:BattleHymn": {
+  "TheForsaken:BattleHymn": {
     "NAME": "Battle Hymn",
     "DESCRIPTION": "Unplayable NL Deal !D! Damage to a random enemy at the end of turn. NL Reduce by 1/3 for each card played.",
     "UPGRADE_DESCRIPTION": "Unplayable NL Deal !D! Damage to a random enemy at the end of turn. NL Reduce by 1/4 for each card played.",
@@ -23,48 +23,48 @@
       "I can't play this card."
     ]
   },
-  "theForsaken:BindingThorns": {
+  "TheForsaken:BindingThorns": {
     "NAME": "Binding Thorns",
     "DESCRIPTION": "Whenever the target attacks, it takes !M! Damage. The Damage is reduced by 1 with each attack."
   },
-  "theForsaken:BlessedWeapon": {
+  "TheForsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
     "DESCRIPTION": "Your next attack deals 50% more Damage.",
     "UPGRADE_DESCRIPTION": "Your next !M! attacks deal 50% more Damage."
   },
-  "theForsaken:BlightOfFamine": {
+  "TheForsaken:BlightOfFamine": {
     "NAME": "Blight of Famine",
     "DESCRIPTION": "Transfer your Vulnerable and Weak to an enemy. NL theforsaken:Unplayed: Apply !M! Vulnerable and Weak to ALL enemies AND yourself."
   },
-  "theForsaken:BlindFaith": {
+  "TheForsaken:BlindFaith": {
     "NAME": "Blind Faith",
     "DESCRIPTION": "Discard your hand. Draw !M! cards. You retain your hand for 2 turns, but cannot draw cards for 2 turns."
   },
-  "theForsaken:Bolster": {
+  "TheForsaken:Bolster": {
     "NAME": "Bolster",
     "DESCRIPTION": "The first attack each turn applies 1 Weak and gains !M! Block.",
     "UPGRADE_DESCRIPTION": "The first attack each turn applies 1 Weak and gains !M! Block. NL Innate"
   },
-  "theForsaken:BottledPlague": {
+  "TheForsaken:BottledPlague": {
     "NAME": "Bottled Plague",
     "DESCRIPTION": "Remove all your Poison. NL Receive a Poison Potion.",
     "EXTENDED_DESCRIPTION": [
       "I don't have an open potion slot!"
     ]
   },
-  "theForsaken:BountifulSunlight": {
+  "TheForsaken:BountifulSunlight": {
     "NAME": "Bountiful Sunlight",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
   },
-  "theForsaken:ChargeAttack": {
+  "TheForsaken:ChargeAttack": {
     "NAME": "Charge Attack",
     "DESCRIPTION": "Deal !D! Damage !M! times. Costs 1 less for each unplayed card in your discard pile."
   },
-  "theForsaken:CleansingLight": {
+  "TheForsaken:CleansingLight": {
     "NAME": "Cleansing Light",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Remove theforsaken:Fear, Poison, and Vulnerable."
   },
-  "theForsaken:Confusion": {
+  "TheForsaken:Confusion": {
     "NAME": "Confusion",
     "DESCRIPTION": "If the target intends to attack, deal its Damage to a random enemy 3 times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "If the target intends to attack, deal its Damage to a random enemy 3 times.",
@@ -72,97 +72,97 @@
       "That monster is not attacking."
     ]
   },
-  "theForsaken:CorruptedForm": {
+  "TheForsaken:CorruptedForm": {
     "NAME": "Corrupted Form",
     "DESCRIPTION": "Reduce Damage taken by one third. Convert all HP lost to Poison.",
     "UPGRADE_DESCRIPTION": "Reduce Damage taken by half. Convert all HP lost to Poison."
   },
-  "theForsaken:CorruptDeck": {
+  "TheForsaken:CorruptDeck": {
     "NAME": "Corrupt Deck",
     "DESCRIPTION": "Draw 2 more cards each turn. You can play only !M! cards each turn."
   },
-  "theForsaken:CorruptedWord": {
+  "TheForsaken:CorruptedWord": {
     "NAME": "Corrupted Word",
     "DESCRIPTION": "(WORDS) NL Transfer your Poison to a random enemy. NL theforsaken:Unplayed: Apply !M! Poison to ALL enemies AND yourself.",
     "UPGRADE_DESCRIPTION": "(WORDS) NL Transfer your Poison to a random enemy. NL theforsaken:Unplayed: Apply !M! Poison to yourself, and 2x to ALL enemies."
   },
-  "theForsaken:CowardsBrand": {
+  "TheForsaken:CowardsBrand": {
     "NAME": "Coward's Brand",
     "DESCRIPTION": "Deal !D! Damage. NL If the target has theforsaken:Fear, the Damage is doubled."
   },
-  "theForsaken:CreepingInfection": {
+  "TheForsaken:CreepingInfection": {
     "NAME": "Creeping Infection",
     "DESCRIPTION": "Reduce your Poison by !M! and heal the same amount. NL theforsaken:Unplayed: Apply !M! Poison to ALL enemies AND yourself, and add a copy to your draw pile."
   },
-  "theForsaken:DarkBargain": {
+  "TheForsaken:DarkBargain": {
     "NAME": "Dark Bargain",
     "DESCRIPTION": "Each turn, gain [E] and shuffle a theforsaken:recompense into your discard pile.",
     "UPGRADE_DESCRIPTION": "Each turn, gain [E] and shuffle a theforsaken:recompense into your discard pile. NL Innate"
   },
-  "theForsaken:DarkBarrier": {
+  "TheForsaken:DarkBarrier": {
     "NAME": "Dark Barrier",
     "DESCRIPTION": "Prevent the next X times you would lose HP. Inflict X Frail on yourself. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Prevent the next X + 1 times you would lose HP. Inflict X - 1 Frail on yourself. NL Exhaust."
   },
-  "theForsaken:DarkRift": {
+  "TheForsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! Damage to ALL enemies AND yourself. Next turn, heal each twice as much."
   },
-  "theForsaken:DefensiveStance": {
+  "TheForsaken:DefensiveStance": {
     "NAME": "Defensive Stance",
     "DESCRIPTION": "Gain !M! Plated Armor."
   },
-  "theForsaken:DesperatePlea": {
+  "TheForsaken:DesperatePlea": {
     "NAME": "Desperate Plea",
     "DESCRIPTION": "(WORDS) NL Remove all debuffs. Gain !M! Strength. If you are below 1/2 hp, NL Gain [E] [E]."
   },
-  "theForsaken:Devotion": {
+  "TheForsaken:Devotion": {
     "NAME": "Devotion",
     "DESCRIPTION": "Draw !M! cards. Choose a card to put on top of your draw pile. Upgrade it."
   },
-  "theForsaken:DivineGuidance": {
+  "TheForsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
     "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose ANY card. NL Add a copy to your draw pile. NL Exhaust."
   },
-  "theForsaken:Enfeeble": {
+  "TheForsaken:Enfeeble": {
     "NAME": "Enfeeble",
     "DESCRIPTION": "Deal !D! Damage 6 times. The target loses !M! Strength this turn. NL Exhaust."
   },
-  "theForsaken:Eulogy": {
+  "TheForsaken:Eulogy": {
     "NAME": "Eulogy",
     "DESCRIPTION": "(WORDS) NL Ethereal. NL Apply !M! Vulnerable to ALL enemies. NL theforsaken:Unplayed: Your next attack deals 3 bonus Damage."
   },
-  "theForsaken:FatRoll": {
+  "TheForsaken:FatRoll": {
     "NAME": "Fat Roll",
     "DESCRIPTION": "Gain !B! Block. NL theforsaken:Unplayed: Draw an additional card next turn."
   },
-  "theForsaken:FountainOfLife": {
+  "TheForsaken:FountainOfLife": {
     "NAME": "Fountain of Life",
     "DESCRIPTION": "At the end of battle, increase your Max HP by !M!."
   },
-  "theForsaken:FuryStrikes": {
+  "TheForsaken:FuryStrikes": {
     "NAME": "Fury Strikes",
     "DESCRIPTION": "Deal !D! Damage 3 times."
   },
-  "theForsaken:HealingLight": {
+  "TheForsaken:HealingLight": {
     "NAME": "Healing Light",
-    "DESCRIPTION": "Heal !M! HP for each unplayed card in your discard pile. NL (Discarded !theForsaken:UNPLAYED_CARDS! unplayed cards) NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP for each unplayed card in your discard pile. NL (Discarded !TheForsaken:UNPLAYED_CARDS! unplayed cards) NL Exhaust."
   },
-  "theForsaken:Horror": {
+  "TheForsaken:Horror": {
     "NAME": "Horror",
     "DESCRIPTION": "Apply X theforsaken:Fear on an enemy. You cannot gain Block for !M! turns. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply X + 1 theforsaken:Fear on an enemy. You cannot gain Block for !M! turns. NL Exhaust."
   },
-  "theForsaken:HorrifyingStrike": {
+  "TheForsaken:HorrifyingStrike": {
     "NAME": "Horrifying Strike",
     "DESCRIPTION": "Deal !D! Damage. NL Inflict !M! theforsaken:Fear on yourself."
   },
-  "theForsaken:HymnOfPatience": {
+  "TheForsaken:HymnOfPatience": {
     "NAME": "Hymn of Patience",
     "DESCRIPTION": "Next turn, gain !M! [E] and draw !M! additional card."
   },
-  "theForsaken:HymnOfRest": {
+  "TheForsaken:HymnOfRest": {
     "NAME": "Hymn of Rest",
     "DESCRIPTION": "Unplayable. NL Retain half your block next turn. If you play 3 cards or fewer, retain all your block instead.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Retain half your block for 2 turns. If you play 3 cards or fewer, retain all your block instead.",
@@ -170,152 +170,153 @@
       "I can't play this card."
     ]
   },
-  "theForsaken:InspiringBlow": {
+  "TheForsaken:InspiringBlow": {
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! Block each turn."
   },
-  "theForsaken:LightRoll": {
+  "TheForsaken:LightRoll": {
     "NAME": "Light Roll",
     "DESCRIPTION": "Gain !B! Block, apply !M! Weak. NL Add a copy to your hand. NL Exhaust."
   },
-  "theForsaken:MagicWeapon": {
+  "TheForsaken:MagicWeapon": {
     "NAME": "Magic Weapon",
     "DESCRIPTION": "Each turn, gain !M! bonus Damage for your next attack."
   },
-  "theForsaken:Mantra": {
+  "TheForsaken:Mantra": {
     "NAME": "Mantra",
     "DESCRIPTION": "(WORDS) NL The first card you play next turn is repeated !M! time.",
     "UPGRADE_DESCRIPTION": "(WORDS) NL The first card you play next turn is repeated !M! times."
   },
-  "theForsaken:NobleSacrifice": {
+  "TheForsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",
     "DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost.",
     "UPGRADE_DESCRIPTION": "Exhaust a card. NL Draw as many cards as its cost + 1."
   },
-  "theForsaken:PanicDive": {
+  "TheForsaken:PanicDive": {
     "NAME": "Panic Dive",
     "DESCRIPTION": "Gain !B! Block. NL Shuffle !M! dazed into your discard pile."
   },
-  "theForsaken:Parry": {
+  "TheForsaken:Parry": {
     "NAME": "Parry",
     "DESCRIPTION": "Gain !B! Block. NL Add a copy to your discard pile."
   },
-  "theForsaken:Penitence": {
+  "TheForsaken:Penitence": {
     "NAME": "Penitence",
     "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! bonus Damage."
   },
-  "theForsaken:PlagueCurse": {
+  "TheForsaken:PlagueCurse": {
     "NAME": "Plague",
     "DESCRIPTION": "Unplayable NL At the end of your turn, you are inflicted with 2 Poison."
   },
-  "theForsaken:PowerUp": {
+  "TheForsaken:PowerUp": {
     "NAME": "Power Up",
     "DESCRIPTION": "Your next attack deals !M! bonus Damage."
   },
-  "theForsaken:PreciseStrike": {
+  "TheForsaken:PreciseStrike": {
     "NAME": "Precise Strike",
     "DESCRIPTION": "Deal !D! Damage, apply !M! Vulnerable. NL Add a copy to your hand. NL Exhaust."
   },
-  "theForsaken:Preservation": {
+  "TheForsaken:Preservation": {
     "NAME": "Preservation",
     "DESCRIPTION": "When you gain Block this turn, gain Block next turn as well. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "When you gain Block this turn, gain Block next turn as well."
   },
-  "theForsaken:Prudence": {
+  "TheForsaken:Prudence": {
     "NAME": "Prudence",
     "DESCRIPTION": "At the end of each turn, gain !M! Block for each card left in your hand."
   },
-  "theForsaken:Purification": {
+  "TheForsaken:Purification": {
     "NAME": "Purification",
     "DESCRIPTION": "Deal !D! Damage. NL Transfer your debuffs to the target."
   },
-  "theForsaken:QuickAttack": {
+  "TheForsaken:QuickAttack": {
     "NAME": "Quick Attack",
     "DESCRIPTION": "Deal !D! Damage. Draw 1 card. NL Innate."
   },
-  "theForsaken:RainingSunlight": {
+  "TheForsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! Damage to all enemies. NL theforsaken:Unplayed: Your next attack deals !M! bonus Damage."
   },
-  "theForsaken:Recompense": {
+  "TheForsaken:Recompense": {
     "NAME": "Recompense",
     "DESCRIPTION": "Ethereal. NL Draw !M! card. NL Exhaust."
   },
-  "theForsaken:Retribution": {
+  "TheForsaken:Retribution": {
     "NAME": "Retribution",
     "DESCRIPTION": "Ethereal. NL Reflect all incoming Damage this turn. NL theforsaken:Unplayed: Reflect !M! Damage when attacked."
   },
-  "theForsaken:Riposte": {
+  "TheForsaken:Riposte": {
     "NAME": "Riposte",
     "DESCRIPTION": "When your Block is broken, your next attack deals 50% more Damage."
   },
-  "theForsaken:SacredOath": {
+  "TheForsaken:SacredOath": {
     "NAME": "Sacred Oath",
     "DESCRIPTION": "(WORDS) NL Double your Strength and Dexterity. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "(WORDS) NL Triple your Strength and Dexterity. NL Exhaust."
   },
-  "theForsaken:SacrificeSoul": {
+  "TheForsaken:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
-    "DESCRIPTION": "Sacrifice all your buffs, dealing !D! Damage, + !M! for each buff to ALL enemies. NL ( !theForsaken:SACRIFICE_SOUL_DAMAGE! Damage) NL Exhaust."
+    "DESCRIPTION": "Sacrifice all your buffs, dealing !D! Damage, + !M! for each buff to ALL enemies. NL ( !TheForsaken:SACRIFICE_SOUL_DAMAGE! Damage) NL Exhaust."
   },
-  "theForsaken:ScorchingSunlight": {
+  "TheForsaken:ScorchingSunlight": {
     "NAME": "Scorching Sunlight",
     "DESCRIPTION": "Deal !D! Damage to all enemies !M! times. NL Shuffle a burn into your discard pile."
   },
-  "theForsaken:ShieldBash": {
+  "TheForsaken:ShieldBash": {
     "NAME": "Shield Bash",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! Damage. Increase the power of ALL Shield Bash cards by !M! this combat."
   },
-  "theForsaken:ShieldCharge": {
+  "TheForsaken:ShieldCharge": {
     "NAME": "Shield Charge",
     "DESCRIPTION": "Deal !D! Damage. NL theforsaken:Unplayed: gain !M! Block next turn."
   },
-  "theForsaken:SiphonStrike": {
+  "TheForsaken:SiphonStrike": {
     "NAME": "Siphon Strike",
     "DESCRIPTION": "Deal !D! Damage. NL If this kills the target, heal !M! HP."
   },
-  "theForsaken:Smite": {
+  "TheForsaken:Smite": {
     "NAME": "Smite",
     "DESCRIPTION": "Deal !D! Damage. NL Gain !M! Regen."
   },
-  "theForsaken:SolarFlare": {
+  "TheForsaken:SolarFlare": {
     "NAME": "Solar Flare",
     "DESCRIPTION": "Deal !D! Damage to ALL enemies. Lose !M! Strength."
   },
-  "theForsaken:SpinAttack": {
+  "TheForsaken:SpinAttack": {
     "NAME": "Spin Attack",
     "DESCRIPTION": "Deal !D! Damage to a random enemy. NL Repeat for every !M! Dexterity."
   },
-  "theForsaken:SpreadingPlague": {
+  "TheForsaken:SpreadingPlague": {
     "NAME": "Spreading Plague",
     "DESCRIPTION": "Whenever you are attacked, inflict !M! Poison on the attacker."
   },
-  "theForsaken:StoreUp": {
+  "TheForsaken:StoreUp": {
     "NAME": "Store Up",
     "DESCRIPTION": "Choose a card. Add !M! copy to your discard pile.",
     "UPGRADE_DESCRIPTION": "Choose a card. Add !M! copies to your discard pile."
   },
-  "theForsaken:TearsOfSunlight": {
+  "TheForsaken:TearsOfSunlight": {
     "NAME": "Tears of Sunlight",
-    "DESCRIPTION": "Gain !M! Regen each turn. Lose !theForsaken:SecondMagic! Dexterity."
+    "DESCRIPTION": "Gain !M! Regen each turn. Lose 3 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Regen each turn. Lose 2 Dexterity."
   },
-  "theForsaken:Temperance": {
+  "TheForsaken:Temperance": {
     "NAME": "Temperance",
     "DESCRIPTION": "Deal !D! Damage. NL Damage is increased by !M! for each unplayed card in your discard pile. NL theforsaken:Unplayed: Shuffle this card into your draw pile."
   },
-  "theForsaken:Terrorize": {
+  "TheForsaken:Terrorize": {
     "NAME": "Terrorize",
     "DESCRIPTION": "Apply !M! theforsaken:Fear. NL Exhaust."
   },
-  "theForsaken:Thunderbolt": {
+  "TheForsaken:Thunderbolt": {
     "NAME": "Thunderbolt",
     "DESCRIPTION": "Deal !D! Damage. Also targets 1 random enemy."
   },
-  "theForsaken:Tranquility": {
+  "TheForsaken:Tranquility": {
     "NAME": "Tranquility",
     "DESCRIPTION": "Reduce target Strength by !M!. Return half each turn. Permanently increase by 1. NL Exhaust."
   },
-  "theForsaken:WardingHymn": {
+  "TheForsaken:WardingHymn": {
     "NAME": "Warding Hymn",
     "DESCRIPTION": "Unplayable NL Gain !B! Block at the end of turn. NL Reduce by 1/3 for each card played.",
     "UPGRADE_DESCRIPTION": "Unplayable NL Gain !B! Block at the end of turn. NL Reduce by 1/4 for each card played.",
@@ -323,19 +324,19 @@
       "I can't play this card."
     ]
   },
-  "theForsaken:WordOfPower": {
+  "TheForsaken:WordOfPower": {
     "NAME": "Word of Power",
     "DESCRIPTION": "(WORDS) NL Deal !D! Damage. Increase by !M! for each \"Words\" card in your deck."
   },
-  "theForsaken:WordsOfMight": {
+  "TheForsaken:WordsOfMight": {
     "NAME": "Words of Might",
     "DESCRIPTION": "(WORDS) NL Whenever you play a skill, your next attack does !M! bonus Damage."
   },
-  "theForsaken:WordsOfPestilence": {
+  "TheForsaken:WordsOfPestilence": {
     "NAME": "Words of Pestilence",
     "DESCRIPTION": "(WORDS) NL Deal !D! Damage to ALL enemies and !M! to yourself."
   },
-  "theForsaken:WrathOfGod": {
+  "TheForsaken:WrathOfGod": {
     "NAME": "Wrath of God",
     "DESCRIPTION": "Deal !D! Damage and gain !B! Block X times. NL Can be upgraded any number of times."
   }

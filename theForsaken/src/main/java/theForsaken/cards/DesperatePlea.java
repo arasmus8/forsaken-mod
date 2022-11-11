@@ -9,21 +9,8 @@ import theForsaken.TheForsakenMod;
 import theForsaken.actions.DesperatePleaAction;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class DesperatePlea extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class DesperatePlea extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(DesperatePlea.class.getSimpleName());
-    public static final String IMG = makeCardPath("DesperatePlea.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-
-    // /TEXT DECLARATION/
-
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -35,17 +22,12 @@ public class DesperatePlea extends AbstractDynamicCard {
     private static final int STRENGTH_AMT = 4;
     private static final int UPGRADE_STRENGTH_AMT = 2;
 
-    // /STAT DECLARATION/
-
-
     public DesperatePlea() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR, CustomTags.WORD_CARD);
         baseMagicNumber = STRENGTH_AMT;
         magicNumber = STRENGTH_AMT;
-        this.tags.add(CustomTags.WORD_CARD);
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DesperatePleaAction(p, magicNumber));
@@ -54,8 +36,6 @@ public class DesperatePlea extends AbstractDynamicCard {
         }
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -6,19 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class Recompense extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class Recompense extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Recompense.class.getSimpleName());
-    public static final String IMG = makeCardPath("DarkBargain.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -29,24 +18,19 @@ public class Recompense extends AbstractDynamicCard {
 
     private static final int MAGIC = 1;
 
-    // /STAT DECLARATION/
-
-
     public Recompense() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
         this.isEthereal = true;
         this.exhaust = true;
     }
 
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
     }

@@ -8,19 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theForsaken.TheForsakenMod;
 import theForsaken.characters.TheForsaken;
 
-import static theForsaken.TheForsakenMod.makeCardPath;
-
-public class CleansingLight extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
+public class CleansingLight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(CleansingLight.class.getSimpleName());
-    public static final String IMG = makeCardPath("CleansingLight.png");
-    // Must have an image with the same NAME as the card in your image folder!
-
-    // /TEXT DECLARATION/
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -31,15 +20,11 @@ public class CleansingLight extends AbstractDynamicCard {
     private static final int BLOCK = 8;
     private static final int UPGRADE_BLOCK_AMT = 3;
 
-    // /STAT DECLARATION/
-
-
     public CleansingLight() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         this.isEthereal = true;
         this.baseBlock = BLOCK;
     }
-
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,7 +34,6 @@ public class CleansingLight extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "theForsaken:FearPower"));
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
