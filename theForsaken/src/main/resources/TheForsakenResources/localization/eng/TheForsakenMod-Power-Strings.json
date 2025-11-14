@@ -1,12 +1,12 @@
 {
-  "TheForsaken:BindingThornsPower": {
+  "forsaken:BindingThornsPower": {
     "NAME": "Binding Thorns",
     "DESCRIPTIONS": [
       "Whenever this monster attacks, it takes #b",
       " damage."
     ]
   },
-  "TheForsaken:BlindFaithPower": {
+  "forsaken:BlindFaithPower": {
     "NAME": "Blind Faith",
     "DESCRIPTIONS": [
       "You cannot draw cards for #b",
@@ -14,21 +14,21 @@
       " turns."
     ]
   },
-  "TheForsaken:BolsterPower": {
+  "forsaken:BolsterPower": {
     "NAME": "Bolster",
     "DESCRIPTIONS": [
       "The first attack each turn applies weak and gains ",
       " block."
     ]
   },
-  "TheForsaken:BonusDamagePower": {
+  "forsaken:BonusDamagePower": {
     "NAME": "Bonus Damage",
     "DESCRIPTIONS": [
       "The next attack deals #b",
       " bonus damage."
     ]
   },
-  "TheForsaken:CorruptDeckPower": {
+  "forsaken:CorruptDeckPower": {
     "NAME": "Corrupt Deck",
     "DESCRIPTIONS": [
       "Draw more cards. NL Can only play ",
@@ -37,14 +37,14 @@
       "Draw more cards. NL Cannot play any more cards this turn."
     ]
   },
-  "TheForsaken:CorruptedFormPower": {
+  "forsaken:CorruptedFormPower": {
     "NAME": "Corrupted Form",
     "DESCRIPTIONS": [
       "Reduce lost HP by 1/3, convert to poison instead.",
       "Reduce lost HP by half, convert to poison instead."
     ]
   },
-  "TheForsaken:DarkBargainPower": {
+  "forsaken:DarkBargainPower": {
     "NAME": "Dark Bargain",
     "DESCRIPTIONS": [
       "Gain ",
@@ -53,7 +53,7 @@
       " voids into your discard pile."
     ]
   },
-  "TheForsaken:HymnOfRestPower": {
+  "forsaken:HymnOfRestPower": {
     "NAME": "Hymn of Rest",
     "DESCRIPTIONS": [
       "Retain ",
@@ -64,13 +64,13 @@
       "turns."
     ]
   },
-  "TheForsaken:PercentageBonusDamagePower": {
+  "forsaken:PercentageBonusDamagePower": {
     "NAME": "50% Bonus Damage",
     "DESCRIPTIONS": [
       "The next attack deals 50% more damage."
     ]
   },
-  "TheForsaken:FearPower": {
+  "forsaken:FearPower": {
     "NAME": "Fear",
     "DESCRIPTIONS": [
       "Damage is reduced to #b1 for #b",
@@ -78,27 +78,27 @@
       " turns."
     ]
   },
-  "TheForsaken:FountainOfLifePower": {
+  "forsaken:FountainOfLifePower": {
     "NAME": "Fountain of Life",
     "DESCRIPTIONS": [
       "At the end of battle, increase your Max HP by #b"
     ]
   },
-  "TheForsaken:HealNextTurnPower": {
+  "forsaken:HealNextTurnPower": {
     "NAME": "Heal next turn",
     "DESCRIPTIONS": [
       "Heal #b",
       " at the beginning of next turn."
     ]
   },
-  "TheForsaken:MagicWeaponPower": {
+  "forsaken:MagicWeaponPower": {
     "NAME": "Magic Weapon",
     "DESCRIPTIONS": [
       "Gain #b",
       " bonus damage for your next attack each turn."
     ]
   },
-  "TheForsaken:MantraPower": {
+  "forsaken:MantraPower": {
     "NAME": "Mantra",
     "DESCRIPTIONS": [
       "The first card played next turn is repeated #b",
@@ -106,27 +106,27 @@
       " times."
     ]
   },
-  "TheForsaken:PreservationPower": {
+  "forsaken:PreservationPower": {
     "NAME": "Preservation",
     "DESCRIPTIONS": [
       "When you gain block this turn, also gain block next turn."
     ]
   },
-  "TheForsaken:PrudencePower": {
+  "forsaken:PrudencePower": {
     "NAME": "Prudence",
     "DESCRIPTIONS": [
       "Gain #b",
       " block for each card in hand at the end of turn."
     ]
   },
-  "TheForsaken:SpreadingPlaguePower": {
+  "forsaken:SpreadingPlaguePower": {
     "NAME": "Spreading Plague",
     "DESCRIPTIONS": [
       "Inflict ",
       " poison when attacked."
     ]
   },
-  "TheForsaken:RetributionPower": {
+  "forsaken:RetributionPower": {
     "NAME": "Reflect Damage",
     "DESCRIPTIONS": [
       "Reflect all damage ",
@@ -135,26 +135,26 @@
       " turns."
     ]
   },
-  "TheForsaken:RipostePower": {
+  "forsaken:RipostePower": {
     "NAME": "Riposte",
     "DESCRIPTIONS": [
       "When your block is broken, your attacks deal double damage next turn."
     ]
   },
-  "TheForsaken:TearsOfSunlightPower": {
+  "forsaken:TearsOfSunlightPower": {
     "NAME": "Tears of Sunlight",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " regen."
     ]
   },
-  "TheForsaken:TranquilityPower": {
+  "forsaken:TranquilityPower": {
     "NAME": "Tranquility",
     "DESCRIPTIONS": [
       "Half the strength is returned each turn."
     ]
   },
-  "TheForsaken:WordsOfMightPower": {
+  "forsaken:WordsOfMightPower": {
     "NAME": "Words of Might",
     "DESCRIPTIONS": [
       "After you play a skill, your next attack deals #b",

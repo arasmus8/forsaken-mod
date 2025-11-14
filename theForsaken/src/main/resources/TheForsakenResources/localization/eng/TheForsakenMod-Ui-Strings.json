@@ -1,5 +1,5 @@
 {
-  "TheForsaken:DivineGuidanceAction": {
+  "forsaken:DivineGuidanceAction": {
     "TEXT": [
       "Choose a card to add to your discard pile.",
       "Choose a card to add to your draw pile.",
@@ -8,14 +8,20 @@
       "cards to add to your draw pile."
     ]
   },
-  "TheForsaken:NobleSacrificeAction": {
+  "forsaken:NobleSacrificeAction": {
     "TEXT": [
       "to exhaust."
     ]
   },
-  "TheForsaken:StoreUpAction": {
+  "forsaken:StoreUpAction": {
     "TEXT": [
       "to add to your discard pile."
+    ]
+  },
+  "forsaken:Settings": {
+    "TEXT": [
+      "All this mods relics are for this character only. (Requires restart)",
+      "Use old card list. (Requires Restart)"
     ]
   }
 }
