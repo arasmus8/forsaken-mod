@@ -12,8 +12,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BlindFaithPower;
 
-public class BlindFaith extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(BlindFaith.class.getSimpleName());
+public class BlindFaith extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(BlindFaith.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.variables.UnplayedCardsVariable;
 
-public class HealingLight extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(HealingLight.class.getSimpleName());
+public class HealingLight extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(HealingLight.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

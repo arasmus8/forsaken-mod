@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import forsaken.powers.FearPower;
+import forsaken.powers.OldFearPower;
 
 public class HorrorAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -44,7 +44,7 @@ public class HorrorAction extends AbstractGameAction {
 
         if (effect > 0) {
             for(int i = 0; i < effect; ++i) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new FearPower(m, 1, false), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new OldFearPower(m, 1, false), 1));
             }
             this.tickDuration();
 

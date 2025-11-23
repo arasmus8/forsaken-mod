@@ -7,8 +7,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.StoreUpAction;
 import forsaken.characters.TheForsaken;
 
-public class StoreUp extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(StoreUp.class.getSimpleName());
+public class StoreUp extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(StoreUp.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

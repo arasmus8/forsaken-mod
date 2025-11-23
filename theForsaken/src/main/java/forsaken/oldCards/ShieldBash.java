@@ -12,8 +12,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.ShieldBashAction;
 import forsaken.characters.TheForsaken;
 
-public class ShieldBash extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(ShieldBash.class.getSimpleName());
+public class ShieldBash extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(ShieldBash.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;

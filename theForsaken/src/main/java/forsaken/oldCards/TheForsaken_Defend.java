@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class TheForsaken_Defend extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(TheForsaken_Defend.class.getSimpleName());
+public class TheForsaken_Defend extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(TheForsaken_Defend.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;

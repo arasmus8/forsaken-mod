@@ -19,11 +19,7 @@ public class PrudencePower extends AbstractForsakenPower implements CloneablePow
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public PrudencePower(int amount) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = AbstractDungeon.player;
-        this.amount = amount;
+        super(POWER_ID, AbstractDungeon.player, amount);
 
         type = PowerType.BUFF;
 

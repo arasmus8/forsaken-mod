@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class BountifulSunlight extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(BountifulSunlight.class.getSimpleName());
+public class BountifulSunlight extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(BountifulSunlight.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

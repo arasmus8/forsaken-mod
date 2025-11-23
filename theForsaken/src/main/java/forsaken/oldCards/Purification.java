@@ -7,8 +7,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.PurificationAction;
 import forsaken.characters.TheForsaken;
 
-public class Purification extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Purification.class.getSimpleName());
+public class Purification extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Purification.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;

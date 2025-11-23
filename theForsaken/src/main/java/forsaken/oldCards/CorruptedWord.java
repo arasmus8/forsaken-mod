@@ -13,8 +13,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.relics.PlagueMask;
 
-public class CorruptedWord extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(CorruptedWord.class.getSimpleName());
+public class CorruptedWord extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(CorruptedWord.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;

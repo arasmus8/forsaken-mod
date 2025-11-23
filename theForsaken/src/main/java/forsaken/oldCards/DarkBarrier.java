@@ -7,8 +7,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.DarkBarrierAction;
 import forsaken.characters.TheForsaken;
 
-public class DarkBarrier extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(DarkBarrier.class.getSimpleName());
+public class DarkBarrier extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(DarkBarrier.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

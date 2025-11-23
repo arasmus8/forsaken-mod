@@ -1,0 +1,45 @@
+{
+  "forsaken:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! block."
+  },
+  "forsaken:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "forsaken:Penitence": {
+    "NAME": "Penitence",
+    "DESCRIPTION": "Gain !B! block. NL All attacks in your hand deal !M! more damage."
+  },
+  "forsaken:Smite": {
+    "NAME": "Smite",
+    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and gain !M! forsaken:Sunlight. NL forsaken:Quickdraw",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:ChargeAttack": {
+    "NAME": "Charge Attack",
+    "DESCRIPTION": "Deal !D! damage !M! times. Costs [E] less for each Unplayable card in hand."
+  },
+  "forsaken:FuryStrikes": {
+    "NAME": "Fury Strikes",
+    "DESCRIPTION": "Deal !D! damage 3 times"
+  },
+  "forsaken:HorrifyingStrike": {
+    "NAME": "Horrifying Strike",
+    "DESCRIPTION": "Deal !D! damage. Deal !M! more damage for each stack of forsaken:Fear on the target."
+  },
+  "forsaken:HymnOfPatience": {
+    "NAME": "Hymn of Patience",
+    "DESCRIPTION": "Apply !M! forsaken:Fear"
+  },
+  "forsaken:QuickAttack": {
+    "NAME": "Quick Attack",
+    "DESCRIPTION": "Deal !D! damage. Draw an Unplayable card."
+  },
+  "forsaken:RainingSunlight": {
+    "NAME": "Raining Sunlight",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. forsaken:Unplayed: gain !M! forsaken:Sunlight."
+  }
+}

@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class BattleHymn extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(BattleHymn.class.getSimpleName());
+public class BattleHymn extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(BattleHymn.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;

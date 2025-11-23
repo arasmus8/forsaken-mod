@@ -6,7 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import forsaken.oldCards.AbstractForsakenCard;
+import forsaken.cards.AbstractForsakenCard;
+import forsaken.oldCards.AbstractOldForsakenCard;
 
 @SpirePatch(clz = CardGroup.class, method = "addToTop")
 
@@ -21,7 +22,10 @@ public class TempCardAddToTopPatch {
         ) {
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (c instanceof AbstractForsakenCard) {
-                    ((AbstractForsakenCard) c).triggerWhenCardAddedInCombat();
+                    ((AbstractForsakenCard) c).triggerWhenCardAddedInCombat(card);
+                }
+                if (c instanceof AbstractOldForsakenCard) {
+                    ((AbstractOldForsakenCard) c).triggerWhenCardAddedInCombat();
                 }
             }
         }

@@ -18,11 +18,7 @@ public class TearsOfSunlightPower extends AbstractForsakenPower implements Clone
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public TearsOfSunlightPower(final AbstractCreature owner, final int amount) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = owner;
-        this.amount = amount;
+        super(POWER_ID, owner, amount);
 
         type = PowerType.BUFF;
         isTurnBased = false;

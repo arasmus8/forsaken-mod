@@ -15,8 +15,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.relics.PlagueMask;
 
-public class CreepingInfection extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(CreepingInfection.class.getSimpleName());
+public class CreepingInfection extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(CreepingInfection.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

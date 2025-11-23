@@ -9,8 +9,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.WordsOfMightPower;
 
-public class WordsOfMight extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(WordsOfMight.class.getSimpleName());
+public class WordsOfMight extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(WordsOfMight.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class SpinAttack extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(SpinAttack.class.getSimpleName());
+public class SpinAttack extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(SpinAttack.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

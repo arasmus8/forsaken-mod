@@ -10,8 +10,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.variables.UnplayedCardsVariable;
 
-public class ChargeAttack extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(ChargeAttack.class.getSimpleName());
+public class ChargeAttack extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(ChargeAttack.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

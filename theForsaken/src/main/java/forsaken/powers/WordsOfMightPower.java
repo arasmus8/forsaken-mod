@@ -20,11 +20,7 @@ public class WordsOfMightPower extends AbstractForsakenPower implements Cloneabl
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public WordsOfMightPower(final AbstractCreature owner, final int amount) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = owner;
-        this.amount = amount;
+        super(POWER_ID, owner, amount);
 
         type = PowerType.BUFF;
         isTurnBased = false;

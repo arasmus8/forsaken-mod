@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.PrudencePower;
 
-public class Prudence extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Prudence.class.getSimpleName());
+public class Prudence extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Prudence.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

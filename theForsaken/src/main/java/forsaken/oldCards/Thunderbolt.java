@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.ThunderboltAction;
 import forsaken.characters.TheForsaken;
 
-public class Thunderbolt extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Thunderbolt.class.getSimpleName());
+public class Thunderbolt extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Thunderbolt.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

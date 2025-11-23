@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.ConfusionAction;
 import forsaken.characters.TheForsaken;
 
-public class Confusion extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Confusion.class.getSimpleName());
+public class Confusion extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Confusion.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;

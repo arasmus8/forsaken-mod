@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.RipostePower;
 
-public class Riposte extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Riposte.class.getSimpleName());
+public class Riposte extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Riposte.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

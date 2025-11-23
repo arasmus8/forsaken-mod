@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class PanicDive extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(PanicDive.class.getSimpleName());
+public class PanicDive extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(PanicDive.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BolsterPower;
 
-public class Bolster extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Bolster.class.getSimpleName());
+public class Bolster extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Bolster.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

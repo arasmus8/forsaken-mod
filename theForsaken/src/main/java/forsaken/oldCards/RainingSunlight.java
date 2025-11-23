@@ -14,8 +14,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BonusDamagePower;
 
-public class RainingSunlight extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(RainingSunlight.class.getSimpleName());
+public class RainingSunlight extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(RainingSunlight.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

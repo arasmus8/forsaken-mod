@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.powers.EnergizedPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class HymnOfPatience extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(HymnOfPatience.class.getSimpleName());
+public class HymnOfPatience extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(HymnOfPatience.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

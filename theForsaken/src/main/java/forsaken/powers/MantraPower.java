@@ -24,11 +24,7 @@ public class MantraPower extends AbstractForsakenPower implements CloneablePower
     private boolean cardRepeatedThisTurn = true;
 
     public MantraPower(final AbstractCreature owner, int amount) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = owner;
-        this.amount = amount;
+        super(POWER_ID, owner, amount);
 
         type = PowerType.BUFF;
         isTurnBased = false;

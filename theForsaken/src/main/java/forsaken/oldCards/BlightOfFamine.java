@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class BlightOfFamine extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(BlightOfFamine.class.getSimpleName());
+public class BlightOfFamine extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(BlightOfFamine.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

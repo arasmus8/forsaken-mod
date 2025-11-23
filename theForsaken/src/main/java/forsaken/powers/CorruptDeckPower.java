@@ -22,10 +22,8 @@ public class CorruptDeckPower extends AbstractForsakenPower implements Cloneable
     public int maxCardsEachTurn;
 
     public CorruptDeckPower(final AbstractCreature owner, final int maxCardsEachTurn) {
-        name = NAME;
-        ID = POWER_ID;
+        super(POWER_ID, owner, maxCardsEachTurn);
 
-        this.owner = owner;
         this.maxCardsEachTurn = maxCardsEachTurn;
 
         type = PowerType.BUFF;

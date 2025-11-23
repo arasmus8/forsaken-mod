@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class Enfeeble extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Enfeeble.class.getSimpleName());
+public class Enfeeble extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Enfeeble.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

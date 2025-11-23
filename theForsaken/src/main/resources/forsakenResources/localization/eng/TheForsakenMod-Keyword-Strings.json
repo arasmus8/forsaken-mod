@@ -1,0 +1,37 @@
+[
+  {
+    "NAMES": [
+      "F\u200bear",
+      "f\u200bear"
+    ],
+    "DESCRIPTION": "Damage dealt is reduced to 1."
+  },
+  {
+    "NAMES": [
+      "Fear",
+      "fear"
+    ],
+    "DESCRIPTION": "Reduces damage dealt. Fear is reduced by 1 whenever this is attacked or this attacks."
+  },
+  {
+    "NAMES": [
+      "Recompense",
+      "recompense"
+    ],
+    "DESCRIPTION": "#yRecompense are status cards that cost 1 and draw a card."
+  },
+  {
+    "NAMES": [
+      "Unplayed",
+      "unplayed"
+    ],
+    "DESCRIPTION": "This effect is triggered if the card remains in your hand at the end of turn."
+  },
+  {
+    "NAMES": [
+      "Quickdraw",
+      "quickdraw"
+    ],
+    "DESCRIPTION": "Whenever you play 3 cards in a turn, draw the top #yQuickdraw card."
+  }
+]

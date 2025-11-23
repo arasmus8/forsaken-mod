@@ -11,8 +11,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.DevotionAction;
 import forsaken.characters.TheForsaken;
 
-public class Devotion extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Devotion.class.getSimpleName());
+public class Devotion extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Devotion.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

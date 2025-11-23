@@ -10,8 +10,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.HymnOfRestPower;
 
-public class HymnOfRest extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(HymnOfRest.class.getSimpleName());
+public class HymnOfRest extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(HymnOfRest.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -52,7 +52,7 @@ public class HymnOfRest extends AbstractForsakenCard {
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        this.otherCardsPlayed = AbstractDungeon.player.cardsPlayedThisTurn;
+        this.otherCardsPlayed = TheForsakenMod.cardsUsedThisTurn;
         this.dontTriggerOnUseCard = true;
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }

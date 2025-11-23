@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class DefensiveStance extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(DefensiveStance.class.getSimpleName());
+public class DefensiveStance extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(DefensiveStance.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

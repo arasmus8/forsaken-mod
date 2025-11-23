@@ -9,8 +9,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.CorruptedFormPower;
 
-public class CorruptedForm extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(CorruptedForm.class.getSimpleName());
+public class CorruptedForm extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(CorruptedForm.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

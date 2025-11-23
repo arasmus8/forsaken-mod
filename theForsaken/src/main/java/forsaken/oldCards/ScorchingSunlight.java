@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class ScorchingSunlight extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(ScorchingSunlight.class.getSimpleName());
+public class ScorchingSunlight extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(ScorchingSunlight.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

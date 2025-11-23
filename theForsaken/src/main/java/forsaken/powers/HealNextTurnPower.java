@@ -25,12 +25,9 @@ public class HealNextTurnPower extends AbstractForsakenPower implements Cloneabl
     private final AbstractCreature source;
 
     public HealNextTurnPower(final AbstractCreature owner, final AbstractCreature source, int amount) {
-        name = NAME;
-        ID = POWER_ID;
+        super(POWER_ID, owner, amount);
 
-        this.owner = owner;
         this.source = source;
-        this.amount = amount;
 
         type = PowerType.BUFF;
         isTurnBased = false;

@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class ShieldCharge extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(ShieldCharge.class.getSimpleName());
+public class ShieldCharge extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(ShieldCharge.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

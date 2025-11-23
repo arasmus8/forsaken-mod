@@ -1,5 +1,6 @@
 package forsaken.oldCards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -7,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.WrathOfGodAction;
 import forsaken.characters.TheForsaken;
 
-public class WrathOfGod extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(WrathOfGod.class.getSimpleName());
+public class WrathOfGod extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(WrathOfGod.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -29,13 +30,23 @@ public class WrathOfGod extends AbstractForsakenCard {
     private WrathOfGod(int upgrades) {
         super(ID, COST, TYPE, RARITY, TARGET, COLOR);
         timesUpgraded = upgrades;
-        baseDamage = DAMAGE + timesUpgraded;
-        baseBlock = BLOCK + timesUpgraded;
+        for (int i = 0; i < timesUpgraded; i++) {
+           upgradeDamage(UPGRADE_PLUS_DMG);
+           upgradeBlock(UPGRADE_PLUS_BLK);
+        }
+        upgraded = true;
+        this.name = NAME + "+" + this.timesUpgraded;
+        this.initializeTitle();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new WrathOfGodAction(p, m, damage, block, damageTypeForTurn, freeToPlayOnce, energyOnUse));
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        return new WrathOfGod(this.timesUpgraded);
     }
 
     @Override

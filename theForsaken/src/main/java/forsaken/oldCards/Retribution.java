@@ -10,8 +10,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.RetributionPower;
 
-public class Retribution extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Retribution.class.getSimpleName());
+public class Retribution extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Retribution.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

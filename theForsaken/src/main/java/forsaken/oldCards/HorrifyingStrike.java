@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.FearPower;
+import forsaken.powers.OldFearPower;
 
-public class HorrifyingStrike extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(HorrifyingStrike.class.getSimpleName());
+public class HorrifyingStrike extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(HorrifyingStrike.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -38,7 +38,7 @@ public class HorrifyingStrike extends AbstractForsakenCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.SLASH_VERTICAL));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FearPower(p, magicNumber, false), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldFearPower(p, magicNumber, false), magicNumber));
     }
 
     @Override

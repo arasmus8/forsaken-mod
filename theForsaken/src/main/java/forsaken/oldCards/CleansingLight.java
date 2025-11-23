@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class CleansingLight extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(CleansingLight.class.getSimpleName());
+public class CleansingLight extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(CleansingLight.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

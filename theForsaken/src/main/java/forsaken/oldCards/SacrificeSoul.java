@@ -7,8 +7,8 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.SacrificeSoulAction;
 import forsaken.characters.TheForsaken;
 
-public class SacrificeSoul extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(SacrificeSoul.class.getSimpleName());
+public class SacrificeSoul extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(SacrificeSoul.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

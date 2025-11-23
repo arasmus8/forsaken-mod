@@ -20,11 +20,7 @@ public class SpreadingPlaguePower extends AbstractForsakenPower implements Clone
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public SpreadingPlaguePower(final AbstractCreature owner, final int amount) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = owner;
-        this.amount = amount;
+        super(POWER_ID, owner, amount);
 
         type = PowerType.BUFF;
 

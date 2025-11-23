@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class QuickAttack extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(QuickAttack.class.getSimpleName());
+public class QuickAttack extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(QuickAttack.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

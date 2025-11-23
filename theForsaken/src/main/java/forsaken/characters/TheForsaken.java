@@ -23,6 +23,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import forsaken.cards.Defend;
+import forsaken.cards.Strike;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import forsaken.TheForsakenMod;
@@ -66,23 +68,23 @@ public class TheForsaken extends CustomPlayer {
 
     // TODO: make a bonfire for energy instead
     public static final String[] orbTextures = {
-            "TheForsakenResources/images/char/forsaken/orb/layer1.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer2.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer3.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer4.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer5.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer6.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer1d.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer2d.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer3d.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer4d.png",
-            "TheForsakenResources/images/char/forsaken/orb/layer5d.png",};
+            "forsakenResources/images/char/forsaken/orb/layer1.png",
+            "forsakenResources/images/char/forsaken/orb/layer2.png",
+            "forsakenResources/images/char/forsaken/orb/layer3.png",
+            "forsakenResources/images/char/forsaken/orb/layer4.png",
+            "forsakenResources/images/char/forsaken/orb/layer5.png",
+            "forsakenResources/images/char/forsaken/orb/layer6.png",
+            "forsakenResources/images/char/forsaken/orb/layer1d.png",
+            "forsakenResources/images/char/forsaken/orb/layer2d.png",
+            "forsakenResources/images/char/forsaken/orb/layer3d.png",
+            "forsakenResources/images/char/forsaken/orb/layer4d.png",
+            "forsakenResources/images/char/forsaken/orb/layer5d.png",};
 
     public TheForsaken(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "TheForsakenResources/images/char/forsaken/orb/vfx.png", null,
+                "forsakenResources/images/char/forsaken/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "TheForsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
+                        "forsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -132,21 +134,33 @@ public class TheForsaken extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        logger.info("Begin loading starter Deck Strings");
+        if (TheForsakenMod.enableOldCardList) {
+            retVal.add(TheForsaken_Strike.ID);
+            retVal.add(TheForsaken_Strike.ID);
+            retVal.add(TheForsaken_Strike.ID);
+            retVal.add(TheForsaken_Strike.ID);
 
-        retVal.add(TheForsaken_Strike.ID);
-        retVal.add(TheForsaken_Strike.ID);
-        retVal.add(TheForsaken_Strike.ID);
-        retVal.add(TheForsaken_Strike.ID);
+            retVal.add(TheForsaken_Defend.ID);
+            retVal.add(TheForsaken_Defend.ID);
+            retVal.add(TheForsaken_Defend.ID);
+            retVal.add(TheForsaken_Defend.ID);
 
-        retVal.add(TheForsaken_Defend.ID);
-        retVal.add(TheForsaken_Defend.ID);
-        retVal.add(TheForsaken_Defend.ID);
-        retVal.add(TheForsaken_Defend.ID);
+            retVal.add(Smite.ID);
+            retVal.add(Penitence.ID);
+            return retVal;
+        }
 
-        retVal.add(Smite.ID);
-        retVal.add(Penitence.ID);
-
+        // TODO new starting cards
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(forsaken.cards.Smite.ID);
+        retVal.add(forsaken.cards.Penitence.ID);
         return retVal;
     }
 
@@ -259,15 +273,15 @@ public class TheForsaken extends CustomPlayer {
 
     @Override
     public Texture getCutsceneBg() {
-        return ImageMaster.loadImage("TheForsakenResources/images/goldbg.jpg");// 307
+        return ImageMaster.loadImage("forsakenResources/images/goldbg.jpg");// 307
     }
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
         List<CutscenePanel> panels = new ArrayList();// 312
-        panels.add(new CutscenePanel("TheForsakenResources/images/heart1.png", "ATTACK_HEAVY"));// 313
-        panels.add(new CutscenePanel("TheForsakenResources/images/heart2.png"));// 314
-        panels.add(new CutscenePanel("TheForsakenResources/images/heart3.png"));// 315
+        panels.add(new CutscenePanel("forsakenResources/images/heart1.png", "ATTACK_HEAVY"));// 313
+        panels.add(new CutscenePanel("forsakenResources/images/heart2.png"));// 314
+        panels.add(new CutscenePanel("forsakenResources/images/heart3.png"));// 315
         return panels;// 316
     }
 

@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BonusDamagePower;
 
-public class PowerUp extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(PowerUp.class.getSimpleName());
+public class PowerUp extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(PowerUp.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import forsaken.TheForsakenMod;
-import forsaken.powers.FearPower;
+import forsaken.powers.OldFearPower;
 
 public class FearPotion extends AbstractPotion {
     public static final String POTION_ID = TheForsakenMod.makeID("FearPotion");
@@ -57,7 +57,7 @@ public class FearPotion extends AbstractPotion {
     @Override
     public void use(AbstractCreature target) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new FearPower(target, potency, false), potency));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new OldFearPower(target, potency, false), potency));
         }
     }
     

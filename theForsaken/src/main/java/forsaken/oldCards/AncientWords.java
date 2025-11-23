@@ -9,8 +9,8 @@ import forsaken.CustomTags;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class AncientWords extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(AncientWords.class.getSimpleName());
+public class AncientWords extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(AncientWords.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

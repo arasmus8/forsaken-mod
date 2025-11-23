@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class Smite extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Smite.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+public class Smite extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Smite.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
 
     private static final CardRarity RARITY = CardRarity.BASIC; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.

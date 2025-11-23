@@ -15,8 +15,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.HealNextTurnPower;
 
-public class DarkRift extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(DarkRift.class.getSimpleName());
+public class DarkRift extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(DarkRift.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL;

@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class LightRoll extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(LightRoll.class.getSimpleName());
+public class LightRoll extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(LightRoll.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

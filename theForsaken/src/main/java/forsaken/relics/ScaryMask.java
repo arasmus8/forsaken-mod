@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import forsaken.TheForsakenMod;
-import forsaken.powers.FearPower;
+import forsaken.powers.OldFearPower;
 import forsaken.util.TextureLoader;
 
 import static forsaken.TheForsakenMod.relicOutlineResourcePath;
@@ -59,11 +59,11 @@ public class ScaryMask extends CustomRelic {
             if (card.target.equals(AbstractCard.CardTarget.ALL) || card.target.equals(AbstractCard.CardTarget.ALL_ENEMY)) {
                 for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
 
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new FearPower(m, 1, false), 1));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new OldFearPower(m, 1, false), 1));
                 }
             } else {
                 AbstractCreature m = action.target;
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new FearPower(m, 1, false), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new OldFearPower(m, 1, false), 1));
             }
         }
     }

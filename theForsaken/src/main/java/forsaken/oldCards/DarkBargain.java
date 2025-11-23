@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.DarkBargainPower;
 
-public class DarkBargain extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(DarkBargain.class.getSimpleName());
+public class DarkBargain extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(DarkBargain.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

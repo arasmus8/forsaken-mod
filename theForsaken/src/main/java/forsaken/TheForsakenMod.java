@@ -1,6 +1,7 @@
 package forsaken;
 
 import basemod.*;
+import basemod.abstracts.CustomCard;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -11,7 +12,9 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,10 +23,12 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import forsaken.cards.AbstractForsakenCard;
+import forsaken.cards.AbstractQuickdrawCard;
+import forsaken.cards.Smite;
 import forsaken.characters.TheForsaken;
 import forsaken.events.PlagueDoctorEvent;
+import forsaken.oldCards.AbstractOldForsakenCard;
 import forsaken.potions.FearPotion;
 import forsaken.powers.HymnOfRestPower;
 import forsaken.relics.*;
@@ -31,9 +36,12 @@ import forsaken.util.AssetLoader;
 import forsaken.util.TextureHelper;
 import forsaken.variables.SacrificeSoulVariable;
 import forsaken.variables.UnplayedCardsVariable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Properties;
 import java.util.UUID;
 
@@ -48,9 +56,9 @@ public class TheForsakenMod implements
         OnCardUseSubscriber,
         OnPlayerLoseBlockSubscriber,
         OnStartBattleSubscriber,
+        OnPlayerTurnStartPostDrawSubscriber,
         PostInitializeSubscriber,
-        PostDrawSubscriber,
-        PreStartGameSubscriber {
+        PostDrawSubscriber {
 
     private static final Logger logger = LogManager.getLogger(TheForsakenMod.class.getName());
 
@@ -61,7 +69,7 @@ public class TheForsakenMod implements
     private static final String ALL_RELICS_ARE_CHAR_SPECIFIC = "allRelicsCharSpecific";
     private static final String ENABLE_OLD_CARD_LIST = "enableOldCardList";
     private static boolean allRelicsCharSpecific = true;
-    private static boolean enableOldCardList = false;
+    public static boolean enableOldCardList = false;
 
     public static final Color FORSAKEN_GOLD = CardHelper.getColor(227, 203, 43);
 
@@ -129,8 +137,16 @@ public class TheForsakenMod implements
         }
     }
 
+    public static String getModID() {
+        return modID;
+    }
+
     public static String makeID(String idText) {
         return modID + ":" + idText;
+    }
+
+    public static String makeOldID(String idText) {
+        return modID + ":oldcards:" + idText;
     }
 
     public static void initialize() {
@@ -172,13 +188,15 @@ public class TheForsakenMod implements
 
         settingsPanel.addUIElement(relicsCharacterOnlyButton);
 
-        ModLabeledToggleButton enableOldCardsButton = new ModLabeledToggleButton(uiStrings.TEXT[1], 350.0f, 850.0f,
+        ModLabeledToggleButton enableOldCardsButton = new ModLabeledToggleButton(uiStrings.TEXT[1], 350.0f, 650.0f,
                 Settings.CREAM_COLOR, FontHelper.charDescFont, enableOldCardList, settingsPanel,
                 (label) -> {},
                 (button) -> {
                     enableOldCardList = button.enabled;
                     saveSettings();
                 });
+
+        settingsPanel.addUIElement(enableOldCardsButton);
 
         BaseMod.registerModBadge(badgeTexture, "The Forsaken", "NotInTheFace", "", settingsPanel);
 
@@ -252,64 +270,61 @@ public class TheForsakenMod implements
         BaseMod.addDynamicVariable(new UnplayedCardsVariable());
 
         logger.info("Adding cards");
-        String cardPackage = "theForsaken.cards";
         if (enableOldCardList) {
             BaseMod.addDynamicVariable(new SacrificeSoulVariable());
-            cardPackage = "theForsaken.oldCards";
+            new AutoAdd(modID)
+                    .packageFilter(AbstractOldForsakenCard.class)
+                    .any(CustomCard.class, (info, card) -> {
+                       logger.info("AutoAdd found card: {} :: info: {}", card, info);
+                    });
+            new AutoAdd(modID)
+                    .packageFilter(AbstractOldForsakenCard.class)
+                    .setDefaultSeen(true)
+                    .cards();
+            return;
         }
         new AutoAdd(modID)
-                .packageFilter(cardPackage)
+                .packageFilter(AbstractForsakenCard.class)
                 .setDefaultSeen(true)
                 .cards();
+
+        BaseMod.addCard(new Smite());
     }
 
     @Override
     public void receiveEditStrings() {
-        logger.info("You seeing this?");
-        logger.info("Beginning to edit strings for mod with ID: " + modID);
-
         String lang = "eng";
 
         if (Settings.language == Settings.GameLanguage.ZHS) {
             lang = "zhs";
         }
 
-        logger.info("Loading strings for language: " + lang);
+        logger.info("Loading strings for language: {}", lang);
 
         // CardStrings
-        BaseMod.loadCustomStringsFile(CardStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Card-Strings.json");
+        BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Card-Strings.json");
+        BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-OldCard-Strings.json");
 
         // PowerStrings
-        BaseMod.loadCustomStringsFile(PowerStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Power-Strings.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Power-Strings.json");
 
         // RelicStrings
-        BaseMod.loadCustomStringsFile(RelicStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Relic-Strings.json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Relic-Strings.json");
 
         // Event Strings
-        BaseMod.loadCustomStringsFile(EventStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Event-Strings.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Event-Strings.json");
 
         // PotionStrings
-        BaseMod.loadCustomStringsFile(PotionStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Potion-Strings.json");
+        BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Potion-Strings.json");
 
         // CharacterStrings
-        BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Character-Strings.json");
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Character-Strings.json");
 
         // UIStrings
-        BaseMod.loadCustomStringsFile(UIStrings.class,
-                modID + "Resources/localization/" + lang + "/TheForsakenMod-Ui-Strings.json");
+        BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + lang + "/TheForsakenMod-Ui-Strings.json");
 
         logger.info("Done editing strings");
     }
-
-    // ================ /LOAD THE TEXT/ ===================
-
-    // ================ LOAD THE KEYWORDS ===================
 
     @Override
     public void receiveEditKeywords() {
@@ -330,25 +345,43 @@ public class TheForsakenMod implements
         }
     }
 
-    // ================ /LOAD THE KEYWORDS/ ===================
-
-    @Override
-    public void receivePreStartGame() {
-    }
-
     public static ArrayList<UUID> usedCards = new ArrayList<>();
+    public static int cardsUsedThisTurn = 0;
+    public static int quickdrawTriggeredAt = 0;
 
     @Override
-    public void receiveCardUsed(AbstractCard abstractCard) {
-        UUID uuid = abstractCard.uuid;
+    public void receiveCardUsed(AbstractCard card) {
+        UUID uuid = card.uuid;
         if (!usedCards.contains(uuid)) {
             usedCards.add(uuid);
+        }
+        cardsUsedThisTurn += 1;
+        if (cardsUsedThisTurn >= quickdrawTriggeredAt + 3) {
+            // Draw the next quickdraw card
+            Optional<AbstractCard> nextQuickdrawCard = AbstractDungeon.player.drawPile.group.stream()
+                    .filter(AbstractQuickdrawCard::isQuickdraw)
+                    .limit(1)
+                    .findFirst();
+            nextQuickdrawCard.ifPresent(c -> {
+                AbstractPlayer p = AbstractDungeon.player;
+                p.drawPile.removeCard(c);
+                p.drawPile.addToTop(c);
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+                quickdrawTriggeredAt = cardsUsedThisTurn;
+            });
         }
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         usedCards.clear();
+        cardsUsedThisTurn = quickdrawTriggeredAt = 0;
+    }
+
+    @Override
+    public void receiveOnPlayerTurnStartPostDraw() {
+        // reset the quickdraw trigger on turn start
+        cardsUsedThisTurn = quickdrawTriggeredAt = 0;
     }
 
     @Override

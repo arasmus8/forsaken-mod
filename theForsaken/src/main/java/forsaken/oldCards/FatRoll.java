@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class FatRoll extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(FatRoll.class.getSimpleName());
+public class FatRoll extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(FatRoll.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

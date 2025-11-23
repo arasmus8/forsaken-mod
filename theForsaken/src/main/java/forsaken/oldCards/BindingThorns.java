@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BindingThornsPower;
 
-public class BindingThorns extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(BindingThorns.class.getSimpleName());
+public class BindingThorns extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(BindingThorns.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

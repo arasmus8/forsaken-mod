@@ -6,10 +6,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.FearPower;
+import forsaken.powers.OldFearPower;
 
-public class Terrorize extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Terrorize.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+public class Terrorize extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Terrorize.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -30,7 +30,7 @@ public class Terrorize extends AbstractForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new FearPower(m, this.magicNumber, false), this.magicNumber, false));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new OldFearPower(m, this.magicNumber, false), this.magicNumber, false));
     }
 
     @Override

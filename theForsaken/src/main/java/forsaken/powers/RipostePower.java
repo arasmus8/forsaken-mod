@@ -24,11 +24,7 @@ public class RipostePower extends AbstractForsakenPower implements CloneablePowe
     private boolean hasBlock = false;
 
     public RipostePower(final AbstractCreature owner) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = owner;
-        this.amount = -1;
+        super(POWER_ID, owner);
 
         type = PowerType.BUFF;
 

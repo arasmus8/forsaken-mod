@@ -11,8 +11,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BonusDamagePower;
 
-public class Eulogy extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Eulogy.class.getSimpleName());
+public class Eulogy extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Eulogy.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

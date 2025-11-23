@@ -14,8 +14,6 @@ import forsaken.TheForsakenMod;
 
 
 public class BlindFaithPower extends AbstractForsakenPower implements CloneablePowerInterface {
-    public AbstractCreature source;
-
     public static final String POWER_ID = TheForsakenMod.makeID(BlindFaithPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -25,11 +23,8 @@ public class BlindFaithPower extends AbstractForsakenPower implements CloneableP
     private int originalHandSize = 0;
 
     public BlindFaithPower(final AbstractCreature owner, final int amount, final boolean isSourceMonster) {
-        name = NAME;
-        ID = POWER_ID;
+        super(POWER_ID, owner, amount);
 
-        this.owner = owner;
-        this.amount = amount;
         if (isSourceMonster) {
             this.justApplied = true;
         }

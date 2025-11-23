@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.FountainOfLifePower;
 
-public class FountainOfLife extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(FountainOfLife.class.getSimpleName());
+public class FountainOfLife extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(FountainOfLife.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

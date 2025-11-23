@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class TheForsaken_Strike extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(TheForsaken_Strike.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+public class TheForsaken_Strike extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(TheForsaken_Strike.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
 
     private static final CardRarity RARITY = CardRarity.BASIC; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.

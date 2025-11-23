@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class BottledPlague extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(BottledPlague.class.getSimpleName());
+public class BottledPlague extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(BottledPlague.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

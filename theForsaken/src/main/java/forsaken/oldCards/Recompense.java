@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 
-public class Recompense extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(Recompense.class.getSimpleName());
+public class Recompense extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(Recompense.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

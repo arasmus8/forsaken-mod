@@ -14,8 +14,8 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
-public class SolarFlare extends AbstractForsakenCard {
-    public static final String ID = TheForsakenMod.makeID(SolarFlare.class.getSimpleName());
+public class SolarFlare extends AbstractOldForsakenCard {
+    public static final String ID = TheForsakenMod.makeOldID(SolarFlare.class.getSimpleName());
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

@@ -20,11 +20,7 @@ public class PreservationPower extends AbstractForsakenPower implements Cloneabl
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public PreservationPower(final AbstractCreature owner) {
-        name = NAME;
-        ID = POWER_ID;
-
-        this.owner = owner;
-        this.amount = -1;
+        super(POWER_ID, owner, -1);
 
         type = PowerType.BUFF;
 
