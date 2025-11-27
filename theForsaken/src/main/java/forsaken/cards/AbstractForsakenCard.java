@@ -8,8 +8,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,11 +18,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import forsaken.characters.TheForsaken;
 import forsaken.util.ActionUnit;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static forsaken.TheForsakenMod.cardResourcePath;
 import static forsaken.TheForsakenMod.getModID;
@@ -115,14 +118,24 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
     // called when turn ends while in hand
 
 
+    // This default behavior will call `use` with `dontTriggerOnUseCard` set to true
+    // (the card should be set to 'autoplay' -- bypassing energy use/requirement)
+    // -- override to do something special
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
         if (unplayedEffect) {
-            AbstractCard tmp = this.makeStatEquivalentCopy();
-            tmp.dontTriggerOnUseCard = true;
-            qEffect(new ShowCardBrieflyEffect(makeStatEquivalentCopy()));
-            qAction(new NewQueueCardAction(tmp, true, true, true));
+            dontTriggerOnUseCard = true;
+            CardQueueItem item = new CardQueueItem(this, true);
+            item.autoplayCard = true;
+            item.randomTarget = true;
+            AbstractDungeon.actionManager.addCardQueueItem(item);
         }
+    }
+
+    // Called when the player takes damage, before block is considered
+    // The return value will override the damage taken
+    public int triggerOnPlayerDamaged(int damage, DamageInfo info) {
+        return damage;
     }
 
     public DamageInfo makeDamageInfo(int amount, DamageInfo.DamageType type) {
@@ -146,4 +159,25 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) { }
 
+    public static boolean isUnplayable(AbstractCard c) {
+        return c.cost == -2;
+    }
+
+    public static List<AbstractCard> unplayableCards(CardGroup group) {
+        return group.group.stream().filter(AbstractForsakenCard::isUnplayable).collect(Collectors.toList());
+    }
+
+    public static List<AbstractCard> unplayableCards(boolean inHand, boolean inDrawPile, boolean inDiscardPile) {
+        ArrayList<AbstractCard> combined = new ArrayList<>();
+        if (inHand) {
+            combined.addAll(unplayableCards(AbstractDungeon.player.hand));
+        }
+        if (inDrawPile) {
+            combined.addAll(unplayableCards(AbstractDungeon.player.drawPile));
+        }
+        if (inDiscardPile) {
+            combined.addAll(unplayableCards(AbstractDungeon.player.discardPile));
+        }
+        return combined;
+    }
 }

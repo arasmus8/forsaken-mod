@@ -40,8 +40,7 @@ public class HymnOfRestPower extends AbstractForsakenPower implements CloneableP
         if (retainAll) {
             return 0;
         }
-        double r = removing;
-        return (int) Math.ceil(r / 2.0);
+        return (int) Math.ceil((double) removing / 2.0);
     }
 
     @Override

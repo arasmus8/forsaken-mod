@@ -26,7 +26,6 @@ public class SacrificeSoul extends AbstractOldForsakenCard {
 
     public SacrificeSoul() {
         super(ID, COST, TYPE, RARITY, TARGET, COLOR);
-        isMultiDamage = true;
         exhaust = true;
         baseDamage = DAMAGE;
         baseMagicNumber = DAMAGE_PER_BUFF;
@@ -35,7 +34,7 @@ public class SacrificeSoul extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SacrificeSoulAction(p, multiDamage, this.magicNumber, this.damageTypeForTurn));
+        AbstractDungeon.actionManager.addToBottom(new SacrificeSoulAction(p, damage, this.magicNumber, this.damageTypeForTurn));
     }
 
     @Override

@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class DarkBarrierAction extends AbstractGameAction {
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private AbstractMonster m;
-    private boolean freeToPlayOnce = false;
-    private int energyOnUse = -1;
-    private boolean isUpgraded;
+    private final boolean freeToPlayOnce;
+    private final int energyOnUse;
+    private final boolean isUpgraded;
 
     public DarkBarrierAction(AbstractPlayer p, boolean isUpgraded, boolean freeToPlayOnce, int energyOnUse) {
         this.p = p;

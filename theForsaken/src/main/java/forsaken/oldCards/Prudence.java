@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.PrudencePower;
+import forsaken.powers.OldPrudencePower;
 
 public class Prudence extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Prudence.class.getSimpleName());
@@ -29,7 +29,7 @@ public class Prudence extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PrudencePower(this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldPrudencePower(this.magicNumber)));
     }
 
     @Override

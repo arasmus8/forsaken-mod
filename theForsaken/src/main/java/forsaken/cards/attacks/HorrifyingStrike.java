@@ -39,12 +39,8 @@ public class HorrifyingStrike extends AbstractForsakenCard {
     }
 
     @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int originalBaseDamage = baseDamage;
-        baseDamage += magicNumber * fearStacks(mo);
-        super.calculateCardDamage(mo);
-        baseDamage = originalBaseDamage;
-        isDamageModified = damage != baseDamage;
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        return tmp + magicNumber * fearStacks(mo);
     }
 
 }

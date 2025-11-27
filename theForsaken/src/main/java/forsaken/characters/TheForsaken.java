@@ -278,7 +278,7 @@ public class TheForsaken extends CustomPlayer {
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
-        List<CutscenePanel> panels = new ArrayList();// 312
+        List<CutscenePanel> panels = new ArrayList<>();// 312
         panels.add(new CutscenePanel("forsakenResources/images/heart1.png", "ATTACK_HEAVY"));// 313
         panels.add(new CutscenePanel("forsakenResources/images/heart2.png"));// 314
         panels.add(new CutscenePanel("forsakenResources/images/heart3.png"));// 315

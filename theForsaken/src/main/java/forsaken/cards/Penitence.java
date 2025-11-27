@@ -23,8 +23,6 @@ public class Penitence extends AbstractForsakenCard {
         gainBlock();
         AbstractDungeon.player.hand.group.stream()
                 .filter(c -> c.type.equals(CardType.ATTACK))
-                .forEach(c -> {
-                    BonusDamageMod.applyToCard(c, magicNumber);
-                });
+                .forEach(c -> BonusDamageMod.applyToCard(c, magicNumber));
     }
 }

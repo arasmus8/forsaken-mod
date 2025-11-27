@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
-import forsaken.variables.UnplayedCardsVariable;
 
 public class ChargeAttack extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(ChargeAttack.class.getSimpleName());
@@ -23,9 +22,7 @@ public class ChargeAttack extends AbstractForsakenCard {
     private void recalculateCost() {
         if (AbstractDungeon.player == null ) return;
         AbstractPlayer p = AbstractDungeon.player;
-        int unplayableCount = (int) p.hand.group.stream()
-                .filter(c -> c.cost == -2)
-                .count();
+        int unplayableCount = unplayableCards(p.hand).size();
         int tempCost = this.cost - unplayableCount;
         if (tempCost < this.costForTurn) {
             this.setCostForTurn(tempCost);

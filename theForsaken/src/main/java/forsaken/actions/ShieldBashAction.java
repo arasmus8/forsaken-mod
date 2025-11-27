@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import forsaken.oldCards.ShieldBash;
 
 import java.util.Iterator;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class ShieldBashAction extends AbstractGameAction {
     private AbstractCard card;
@@ -17,40 +20,34 @@ public class ShieldBashAction extends AbstractGameAction {
         this.amount = amount;
     }
 
-    private void growCardPower(AbstractCard c, int amount) {
-        if (c instanceof ShieldBash) {
-            c.baseDamage += amount;
-            c.baseBlock += amount;
-            c.applyPowers();
-        }
-    }
-
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            growCardPower(this.card, this.amount);
-            this.card.applyPowers();
-            Iterator var1 = AbstractDungeon.player.discardPile.group.iterator();
+            isDone = true;
+            Predicate<AbstractCard> isShieldBash = c -> c instanceof ShieldBash;
+            Consumer<AbstractCard> growCardPower = c -> {
+                c.baseDamage += amount;
+                c.baseBlock += amount;
+                c.applyPowers();
+            };
+            growCardPower.accept(card);
+            card.applyPowers();
 
-            AbstractCard c;
-            while(var1.hasNext()) {
-                c = (AbstractCard)var1.next();
-                growCardPower(c, this.amount);
-            }
+            AbstractDungeon.player.discardPile.group.stream()
+                    .filter(isShieldBash)
+                    .forEach(growCardPower);
 
-            var1 = AbstractDungeon.player.drawPile.group.iterator();
+            AbstractDungeon.player.hand.group.stream()
+                    .filter(isShieldBash)
+                    .forEach(growCardPower);
 
-            while(var1.hasNext()) {
-                c = (AbstractCard)var1.next();
-                growCardPower(c, this.amount);
-            }
+            AbstractDungeon.player.drawPile.group.stream()
+                    .filter(isShieldBash)
+                    .forEach(growCardPower);
 
-            var1 = AbstractDungeon.player.hand.group.iterator();
-
-            while(var1.hasNext()) {
-                c = (AbstractCard)var1.next();
-                growCardPower(c, this.amount);
-            }
+            AbstractDungeon.player.exhaustPile.group.stream()
+                    .filter(isShieldBash)
+                    .forEach(growCardPower);
         }
 
         this.tickDuration();

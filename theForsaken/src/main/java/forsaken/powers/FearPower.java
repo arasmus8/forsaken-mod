@@ -1,10 +1,7 @@
 package forsaken.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -24,19 +21,10 @@ public class FearPower extends AbstractForsakenPower implements CloneablePowerIn
         super(POWER_ID, owner, amount);
 
         type = PowerType.DEBUFF;
-        isTurnBased = true;
         priority = 10;
 
         loadRegion("fear");
         updateDescription();
-    }
-
-    public void atEndOfRound() {
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
-        }
     }
 
     public float atDamageGive(float damage, DamageType type) {
@@ -57,9 +45,13 @@ public class FearPower extends AbstractForsakenPower implements CloneablePowerIn
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
-            flash();
-            qAction(new ReducePowerAction(owner, owner, this, 1));
+        if (card.type == AbstractCard.CardType.ATTACK){
+            boolean hitsAllEnemies = card.target == AbstractCard.CardTarget.ALL_ENEMY;
+            boolean targetsPowerOwner =  action != null && action.target != null && action.target.equals(owner);
+            if( hitsAllEnemies || targetsPowerOwner) {
+                flash();
+                qAction(new ReducePowerAction(owner, owner, this, 1));
+            }
         }
 
     }

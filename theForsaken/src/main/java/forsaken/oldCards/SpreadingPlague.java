@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.SpreadingPlaguePower;
+import forsaken.powers.OldSpreadingPlaguePower;
 
 public class SpreadingPlague extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(SpreadingPlague.class.getSimpleName());
@@ -29,7 +29,7 @@ public class SpreadingPlague extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpreadingPlaguePower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldSpreadingPlaguePower(p, this.magicNumber)));
     }
 
     @Override

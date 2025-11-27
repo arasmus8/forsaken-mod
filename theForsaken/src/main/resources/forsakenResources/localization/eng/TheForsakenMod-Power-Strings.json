@@ -31,17 +31,20 @@
   "forsaken:CorruptDeckPower": {
     "NAME": "Corrupt Deck",
     "DESCRIPTIONS": [
-      "Draw more cards. NL Can only play ",
+      "Draw #b",
+      " more cards each turn. NL Can only play #r",
       " more cards this turn.",
       " more card this turn.",
-      "Draw more cards. NL Cannot play any more cards this turn."
+      " more cards each turn. NL Cannot play any more cards this turn."
     ]
   },
   "forsaken:CorruptedFormPower": {
     "NAME": "Corrupted Form",
     "DESCRIPTIONS": [
-      "Reduce lost HP by 1/3, convert to poison instead.",
-      "Reduce lost HP by half, convert to poison instead."
+      "Reduce damage taken by ",
+      "one third",
+      "half",
+      ". Convert lost HP to poison."
     ]
   },
   "forsaken:DarkBargainPower": {
@@ -119,18 +122,31 @@
       "When you gain block this turn, also gain block next turn."
     ]
   },
-  "forsaken:PrudencePower": {
+  "forsaken:OldPrudencePower": {
     "NAME": "Prudence",
     "DESCRIPTIONS": [
       "Gain #b",
       " block for each card in hand at the end of turn."
     ]
   },
-  "forsaken:SpreadingPlaguePower": {
+  "forsaken:PrudencePower": {
+    "NAME": "Prudence",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " block for each unplayable card in hand at the end of turn."
+    ]
+  },
+  "forsaken:OldSpreadingPlaguePower": {
     "NAME": "Spreading Plague",
     "DESCRIPTIONS": [
       "Inflict ",
       " poison when attacked."
+    ]
+  },
+  "forsaken:SpreadingPlaguePower": {
+    "NAME": "Spreading Plague",
+    "DESCRIPTIONS": [
+      "Creeping Infection costs #b0"
     ]
   },
   "forsaken:RetributionPower": {
@@ -154,11 +170,18 @@
       "At the end of your turn, heals #b3 HP."
     ]
   },
-  "forsaken:TearsOfSunlightPower": {
+  "forsaken:OldTearsOfSunlightPower": {
     "NAME": "Tears of Sunlight",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " regen."
+    ]
+  },
+  "forsaken:TearsOfSunlightPower": {
+    "NAME": "Tears of Sunlight",
+    "DESCRIPTIONS": [
+      "Sunlight heals for #b",
+      " more."
     ]
   },
   "forsaken:TranquilityPower": {

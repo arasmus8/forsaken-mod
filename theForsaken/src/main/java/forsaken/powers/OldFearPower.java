@@ -1,10 +1,8 @@
 package forsaken.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -60,10 +58,8 @@ public class OldFearPower extends AbstractForsakenPower implements CloneablePowe
             if (damage >= 1.0F) {
                 return 1.0F;
             }
-            return damage;
-        } else {
-            return damage;
         }
+        return damage;
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))

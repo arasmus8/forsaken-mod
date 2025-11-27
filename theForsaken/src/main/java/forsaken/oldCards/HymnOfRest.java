@@ -52,7 +52,7 @@ public class HymnOfRest extends AbstractOldForsakenCard {
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        this.otherCardsPlayed = TheForsakenMod.cardsUsedThisTurn;
+        this.otherCardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
         this.dontTriggerOnUseCard = true;
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }

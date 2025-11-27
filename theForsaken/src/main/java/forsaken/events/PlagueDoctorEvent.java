@@ -71,10 +71,8 @@ public class PlagueDoctorEvent extends AbstractImageEvent {
                 }
                 break;
             case 1: // Welcome to screenNum = 1;
-                switch (i) {
-                    case 0: // If you press the first (and this should be the only) button,
-                        openMap(); // You'll open the map and end the event.
-                        break;
+                if (i == 0) { // If you press the first (and this should be the only) button,
+                    openMap(); // You'll open the map and end the event.
                 }
                 break;
         }

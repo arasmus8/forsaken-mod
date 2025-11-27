@@ -14,6 +14,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -21,6 +22,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import forsaken.cards.AbstractForsakenCard;
@@ -58,7 +60,9 @@ public class TheForsakenMod implements
         OnStartBattleSubscriber,
         OnPlayerTurnStartPostDrawSubscriber,
         PostInitializeSubscriber,
-        PostDrawSubscriber {
+        PostDrawSubscriber,
+        OnPlayerDamagedSubscriber
+{
 
     private static final Logger logger = LogManager.getLogger(TheForsakenMod.class.getName());
 
@@ -274,9 +278,7 @@ public class TheForsakenMod implements
             BaseMod.addDynamicVariable(new SacrificeSoulVariable());
             new AutoAdd(modID)
                     .packageFilter(AbstractOldForsakenCard.class)
-                    .any(CustomCard.class, (info, card) -> {
-                       logger.info("AutoAdd found card: {} :: info: {}", card, info);
-                    });
+                    .any(CustomCard.class, (info, card) -> logger.info("AutoAdd found card: {} :: info: {}", card, info));
             new AutoAdd(modID)
                     .packageFilter(AbstractOldForsakenCard.class)
                     .setDefaultSeen(true)
@@ -346,28 +348,27 @@ public class TheForsakenMod implements
     }
 
     public static ArrayList<UUID> usedCards = new ArrayList<>();
-    public static int cardsUsedThisTurn = 0;
     public static int quickdrawTriggeredAt = 0;
 
     @Override
     public void receiveCardUsed(AbstractCard card) {
+        if (card == null) {
+            return;
+        }
         UUID uuid = card.uuid;
         if (!usedCards.contains(uuid)) {
             usedCards.add(uuid);
         }
-        cardsUsedThisTurn += 1;
-        if (cardsUsedThisTurn >= quickdrawTriggeredAt + 3) {
+        int countForTrigger = 3;
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + 1 >= quickdrawTriggeredAt + countForTrigger) {
             // Draw the next quickdraw card
-            Optional<AbstractCard> nextQuickdrawCard = AbstractDungeon.player.drawPile.group.stream()
-                    .filter(AbstractQuickdrawCard::isQuickdraw)
-                    .limit(1)
-                    .findFirst();
+            Optional<AbstractCard> nextQuickdrawCard = AbstractQuickdrawCard.nextQuickdrawCard();
             nextQuickdrawCard.ifPresent(c -> {
                 AbstractPlayer p = AbstractDungeon.player;
                 p.drawPile.removeCard(c);
                 p.drawPile.addToTop(c);
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-                quickdrawTriggeredAt = cardsUsedThisTurn;
+                quickdrawTriggeredAt = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
             });
         }
     }
@@ -375,13 +376,13 @@ public class TheForsakenMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         usedCards.clear();
-        cardsUsedThisTurn = quickdrawTriggeredAt = 0;
+        quickdrawTriggeredAt = 0;
     }
 
     @Override
     public void receiveOnPlayerTurnStartPostDraw() {
         // reset the quickdraw trigger on turn start
-        cardsUsedThisTurn = quickdrawTriggeredAt = 0;
+        quickdrawTriggeredAt = 0;
     }
 
     @Override
@@ -397,5 +398,19 @@ public class TheForsakenMod implements
             return p.modifiedBlock(i);
         }
         return i;
+    }
+
+    @Override
+    public int receiveOnPlayerDamaged(int damage, DamageInfo damageInfo) {
+        // called when player takes damage, before block is considered
+        if (damageInfo.owner instanceof AbstractMonster && damageInfo.type != DamageInfo.DamageType.THORNS && damageInfo.type != DamageInfo.DamageType.HP_LOSS) {
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                if (c instanceof AbstractForsakenCard) {
+                    AbstractForsakenCard abstractForsakenCard = (AbstractForsakenCard) c;
+                    damage = abstractForsakenCard.triggerOnPlayerDamaged(damage, damageInfo);
+                }
+            }
+        }
+        return damage;
     }
 }

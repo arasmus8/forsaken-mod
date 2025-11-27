@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.TearsOfSunlightPower;
+import forsaken.powers.OldTearsOfSunlightPower;
 
 public class TearsOfSunlight extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(TearsOfSunlight.class.getSimpleName());
@@ -34,7 +34,7 @@ public class TearsOfSunlight extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TearsOfSunlightPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldTearsOfSunlightPower(p, this.magicNumber)));
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, UPGRADE_DEX_LOSS), UPGRADE_DEX_LOSS));
         } else {

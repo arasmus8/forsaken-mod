@@ -33,5 +33,12 @@
       "quickdraw"
     ],
     "DESCRIPTION": "Whenever you play 3 cards in a turn, draw the top #yQuickdraw card."
+  },
+  {
+    "NAMES": [
+      "Sunlight",
+      "sunlight"
+    ],
+    "DESCRIPTION": "Heals 3 HP at the end of each turn."
   }
 ]

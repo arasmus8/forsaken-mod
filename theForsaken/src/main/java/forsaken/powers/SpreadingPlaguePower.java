@@ -1,54 +1,42 @@
 package forsaken.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import forsaken.TheForsakenMod;
-
+import forsaken.cards.skills.CreepingInfection;
 
 public class SpreadingPlaguePower extends AbstractForsakenPower implements CloneablePowerInterface {
-    private static final String POWER_ID = TheForsakenMod.makeID(SpreadingPlaguePower.class.getSimpleName());
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public static final String NAME = powerStrings.NAME;
-    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static final String POWER_ID = TheForsakenMod.makeID(SpreadingPlaguePower.class.getSimpleName());
 
-    public SpreadingPlaguePower(final AbstractCreature owner, final int amount) {
-        super(POWER_ID, owner, amount);
-
+    public SpreadingPlaguePower(AbstractCreature owner) {
+        super(POWER_ID, owner, -1);
         type = PowerType.BUFF;
 
         loadRegion("spreading_plague");
-        updateDescription();
+        description = DESCRIPTIONS[0];
     }
 
     @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (!(info.type == DamageType.THORNS) && !(info.type == DamageType.HP_LOSS)) {
-            AbstractCreature source = info.owner;
-            AbstractCreature target = this.owner;
-            if (source != target) {
-                this.flash();
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(source, target, new PoisonPower(source, target, amount), amount));
+    public void onInitialApplication() {
+        AbstractDungeon.player.hand.group.forEach(card -> {
+            if (card instanceof CreepingInfection) {
+                card.freeToPlayOnce = true;
             }
-        }
-        return damageAmount;
+        });
     }
 
-    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
-    public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    public void onCardDraw(AbstractCard card) {
+        if (card instanceof CreepingInfection) {
+            card.freeToPlayOnce = true;
+        }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new SpreadingPlaguePower(owner, amount);
+        return new SpreadingPlaguePower(owner);
     }
 }

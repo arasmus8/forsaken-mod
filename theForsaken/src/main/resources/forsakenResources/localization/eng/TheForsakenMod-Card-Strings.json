@@ -18,9 +18,66 @@
       "This card can't be played."
     ]
   },
+  "forsaken:Backlash": {
+    "NAME": "Backlash",
+    "DESCRIPTION": "Unplayable NL Retain NL When you are attacked, discard this and deal !M! damage to the attacker.",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
   "forsaken:ChargeAttack": {
     "NAME": "Charge Attack",
     "DESCRIPTION": "Deal !D! damage !M! times. Costs [E] less for each Unplayable card in hand."
+  },
+  "forsaken:Confusion": {
+    "NAME": "Confusion",
+    "DESCRIPTION": "Unplayable NL Retain NL When you would take unblocked attack damage, instead exhaust this card and deal the damage to the attacker.",
+    "UPGRADE_DESCRIPTION": "Unplayable NL Retain NL When you would take unblocked attack damage, instead exhaust this card and deal double the damage to the attacker.",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:CorruptDeck": {
+    "NAME": "Corrupt Deck",
+    "DESCRIPTION": "Draw 2 more cards each turn. You can only play !M! cards each turn."
+  },
+  "forsaken:CorruptedForm": {
+    "NAME": "Corrupted Form",
+    "DESCRIPTION": "Reduce damage taken by one third. Convert all lost HP to Poison.",
+    "UPGRADE_DESCRIPTION": "Reduce damage taken by half. Convert all lost HP to Poison."
+  },
+  "forsaken:CreepingInfection": {
+    "NAME": "Creeping Infection",
+    "DESCRIPTION": "Reduce your poison by !M! and heal the same amount. NL forsaken:Unplayed: Apply !M! poison to ALL."
+  },
+  "forsaken:DarkRift": {
+    "NAME": "Dark Rift",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Repeat for each of your debuffs. NL Exhaust"
+  },
+  "forsaken:DesperatePlea": {
+    "NAME": "Desperate Plea",
+    "DESCRIPTION": "Convert your forsaken:Sunlight into Strength. NL Exhaust"
+  },
+  "forsaken:DivineGuidance": {
+    "NAME": "Divine Guidance",
+    "DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random unplayable card. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with an upgraded random unplayable card. NL Exhaust"
+  },
+  "forsaken:Elegy": {
+    "NAME": "Elegy",
+    "DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage. Discard it.",
+    "UPGRADE_DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage. Shuffle it into the draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose an attack:"
+    ]
+  },
+  "forsaken:FatRoll": {
+    "NAME": "Fat Roll",
+    "DESCRIPTION": "Gain !B! block. NL forsaken:Unplayed: Draw an 1 more card next turn."
+  },
+  "forsaken:FountainOfLife": {
+    "NAME": "Fountain of Life",
+    "DESCRIPTION": "At the end of battle, increase your max HP by !M!."
   },
   "forsaken:FuryStrikes": {
     "NAME": "Fury Strikes",
@@ -34,6 +91,42 @@
     "NAME": "Hymn of Patience",
     "DESCRIPTION": "Apply !M! forsaken:Fear"
   },
+  "forsaken:NobleSacrifice": {
+    "NAME": "Noble Sacrifice",
+    "DESCRIPTION": "Exhaust a card. Draw as many cards as its [E] cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Draw as many cards as its [E] cost + 1.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to exhaust."
+    ]
+  },
+  "forsaken:PanicDive": {
+    "NAME": "Panic Dive",
+    "DESCRIPTION": "Gain !B! block. Shuffle a Dazed into your draw and discard piles."
+  },
+  "forsaken:Parry": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Unplayable NL When drawn: gain !B! block. Repeat for each Unplayable card in hand. NL forsaken:Quickdraw",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:PowerUp": {
+    "NAME": "Power Up",
+    "DESCRIPTION": "Gain !M! forsaken:Sunlight. Deal damage equal to your sunlight to ALL enemies."
+  },
+  "forsaken:Preservation": {
+    "NAME": "Preservation",
+    "DESCRIPTION": "When you gain block this turn, also gain as much block next turn.",
+    "UPGRADE_DESCRIPTION": "When you gain block this turn, also gain as much block next turn. Gain !B! block."
+  },
+  "forsaken:Prudence": {
+    "NAME": "Prudence",
+    "DESCRIPTION": "At the end of each turn, gain !M! block for each unplayable card in hand."
+  },
+  "forsaken:Purification": {
+    "NAME": "Purification",
+    "DESCRIPTION": "Deal !D! damage. Transfer your debuffs to the target."
+  },
   "forsaken:QuickAttack": {
     "NAME": "Quick Attack",
     "DESCRIPTION": "Deal !D! damage. Draw an Unplayable card."
@@ -41,5 +134,51 @@
   "forsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. forsaken:Unplayed: gain !M! forsaken:Sunlight."
+  },
+  "forsaken:SacrificeSoul": {
+    "NAME": "Sacrifice Soul",
+    "DESCRIPTION": "Remove all your forsaken:Sunlight. Deal !D! damage to ALL enemies. Damage is increased by !M! for each stack removed."
+  },
+  "forsaken:ScorchingSunlight": {
+    "NAME": "Scorching Sunlight",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Does 50% more damage if you have forsaken:Sunlight.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Does double damage if you have forsaken:Sunlight."
+  },
+  "forsaken:ShieldBash": {
+    "NAME": "Shield Bash",
+    "DESCRIPTION": "Unplayable NL forsaken:Unplayed: Deal !D! damage to a random enemy. Repeat for each Unplayable card in hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable NL forsaken:Unplayed: Deal !D! damage to the lowest-HP enemy. Repeat for each Unplayable card in hand.",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:ShieldCharge": {
+    "NAME": "Shield Charge",
+    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy. NL forsaken:Quickdraw",
+    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy and draw a card. NL forsaken:Quickdraw",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:SpreadingPlague": {
+    "NAME": "Spreading Plague",
+    "DESCRIPTION": "Shuffle !M! copies of Creeping Infection into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! copies of Creeping Infection into your draw pile. Creeping Infection costs 0."
+  },
+  "forsaken:StoreUp": {
+    "NAME": "Store Up",
+    "DESCRIPTION": "Draw a card. If it is Unplayable, gain !B! block."
+  },
+  "forsaken:TearsOfSunlight": {
+    "NAME": "Tears Of Sunlight",
+    "DESCRIPTION": "Gain !M! forsaken:Sunlight. Sunlight heals 1 more."
+  },
+  "forsaken:Temperance": {
+    "NAME": "Temperance",
+    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each unplayable card in your discard pile."
+  },
+  "forsaken:Thunderbolt": {
+    "NAME": "Thunderbolt",
+    "DESCRIPTION": "Deal !D! damage. Also targets 1 random enemy."
   }
 }

@@ -2,17 +2,21 @@ package forsaken.util;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public interface ActionUnit {
     default void qAction(AbstractGameAction action) {
@@ -45,6 +49,14 @@ public interface ActionUnit {
 
     default void shuffleIn(AbstractCard c) {
         shuffleIn(c, 1);
+    }
+
+    default void makeInDiscard(AbstractCard c, int i) {
+        qAction(new MakeTempCardInDiscardAction(c, i));
+    }
+
+    default void makeInDiscard(AbstractCard c) {
+        makeInDiscard(c, 1);
     }
 
     default void topDeck(AbstractCard c, int i) {

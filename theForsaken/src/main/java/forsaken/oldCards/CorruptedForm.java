@@ -30,7 +30,7 @@ public class CorruptedForm extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CorruptedFormPower(p, this.magicNumber, this.upgraded)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CorruptedFormPower(p, this.magicNumber)));
     }
 
     @Override

@@ -38,15 +38,9 @@ public class SacrificeSoulVariable extends DynamicVariable
     {
         AbstractPlayer player = AbstractDungeon.player;
         if (player != null) {
-            Iterator powerIterator = player.powers.iterator();
-            int buffsCount = 0;
-
-            while (powerIterator.hasNext()) {
-                AbstractPower p = (AbstractPower) powerIterator.next();
-                if (p.type == AbstractPower.PowerType.BUFF) {
-                    buffsCount += 1;
-                }
-            }
+            int buffsCount = (int)player.powers.stream()
+                    .filter(pow -> pow.type.equals(AbstractPower.PowerType.BUFF))
+                    .count();
 
             return card.damage + card.magicNumber * buffsCount;
         }
