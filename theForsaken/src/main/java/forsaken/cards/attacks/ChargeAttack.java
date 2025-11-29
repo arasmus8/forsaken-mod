@@ -19,7 +19,7 @@ public class ChargeAttack extends AbstractForsakenCard {
         upgradeMagicNumberBy = 1;
     }
 
-    private void recalculateCost() {
+    public void recalculateCost() {
         if (AbstractDungeon.player == null ) return;
         AbstractPlayer p = AbstractDungeon.player;
         int unplayableCount = unplayableCards(p.hand).size();

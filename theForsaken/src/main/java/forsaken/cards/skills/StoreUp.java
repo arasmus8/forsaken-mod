@@ -12,7 +12,7 @@ public class StoreUp extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(StoreUp.class.getSimpleName());
 
     public StoreUp() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         block = baseBlock = 3;
         upgradeBlockBy = 2;
     }

@@ -25,6 +25,14 @@
       "This card can't be played."
     ]
   },
+  "forsaken:BlessedWeapon": {
+    "NAME": "Blessed Weapon",
+    "DESCRIPTION": "Choose an attack. It deals X more damage.",
+    "UPGRADE_DESCRIPTION": "Choose an attack. It deals X+1 more damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose an attack:"
+    ]
+  },
   "forsaken:ChargeAttack": {
     "NAME": "Charge Attack",
     "DESCRIPTION": "Deal !D! damage !M! times. Costs [E] less for each Unplayable card in hand."
@@ -87,9 +95,26 @@
     "NAME": "Horrifying Strike",
     "DESCRIPTION": "Deal !D! damage. Deal !M! more damage for each stack of forsaken:Fear on the target."
   },
+  "forsaken:Horror": {
+    "NAME": "Horror",
+    "DESCRIPTION": "Apply !M! forsaken:Fear to the target X times."
+  },
   "forsaken:HymnOfPatience": {
     "NAME": "Hymn of Patience",
     "DESCRIPTION": "Apply !M! forsaken:Fear"
+  },
+  "forsaken:JollyCooperation": {
+    "NAME": "Jolly Cooperation",
+    "DESCRIPTION": "forsaken:Quickdraw triggers every 2 cards played.",
+    "UPGRADE_DESCRIPTION": "Innate NL forsaken:Quickdraw triggers every 2 cards played."
+  },
+  "forsaken:Mantra": {
+    "NAME": "Mantra",
+    "DESCRIPTION": "Choose a card. It is now Innate. NL Fleeting",
+    "UPGRADE_DESCRIPTION": "Choose ANY card. It is now Innate. NL Fleeting",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card. It becomes innate:"
+    ]
   },
   "forsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",

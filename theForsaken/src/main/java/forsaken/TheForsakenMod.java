@@ -28,13 +28,16 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.cards.AbstractQuickdrawCard;
 import forsaken.cards.Smite;
+import forsaken.cards.attacks.ChargeAttack;
 import forsaken.characters.TheForsaken;
 import forsaken.events.PlagueDoctorEvent;
 import forsaken.oldCards.AbstractOldForsakenCard;
 import forsaken.potions.FearPotion;
 import forsaken.powers.HymnOfRestPower;
+import forsaken.powers.JollyCooperationPower;
 import forsaken.relics.*;
 import forsaken.util.AssetLoader;
+import forsaken.util.MantraInnateManager;
 import forsaken.util.TextureHelper;
 import forsaken.variables.SacrificeSoulVariable;
 import forsaken.variables.UnplayedCardsVariable;
@@ -74,6 +77,8 @@ public class TheForsakenMod implements
     private static final String ENABLE_OLD_CARD_LIST = "enableOldCardList";
     private static boolean allRelicsCharSpecific = true;
     public static boolean enableOldCardList = false;
+
+    public static MantraInnateManager mantraInnateManager = new MantraInnateManager();
 
     public static final Color FORSAKEN_GOLD = CardHelper.getColor(227, 203, 43);
 
@@ -206,6 +211,10 @@ public class TheForsakenMod implements
 
 
         BaseMod.addEvent(PlagueDoctorEvent.ID, PlagueDoctorEvent.class);
+
+        // Setup MantraInnateManager
+        BaseMod.addSaveField(makeID(MantraInnateManager.class.getSimpleName()), mantraInnateManager);
+
         logger.info("Done loading badge Image and mod options");
     }
 
@@ -360,7 +369,12 @@ public class TheForsakenMod implements
             usedCards.add(uuid);
         }
         int countForTrigger = 3;
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + 1 >= quickdrawTriggeredAt + countForTrigger) {
+        if (AbstractDungeon.player.hasPower(JollyCooperationPower.POWER_ID)) {
+            countForTrigger = 2;
+        }
+        // have to include the card currently being played
+        int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + 1;
+        if (cardsPlayed >= quickdrawTriggeredAt + countForTrigger) {
             // Draw the next quickdraw card
             Optional<AbstractCard> nextQuickdrawCard = AbstractQuickdrawCard.nextQuickdrawCard();
             nextQuickdrawCard.ifPresent(c -> {
@@ -368,7 +382,7 @@ public class TheForsakenMod implements
                 p.drawPile.removeCard(c);
                 p.drawPile.addToTop(c);
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-                quickdrawTriggeredAt = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+                quickdrawTriggeredAt = cardsPlayed;
             });
         }
     }
@@ -389,6 +403,12 @@ public class TheForsakenMod implements
     public void receivePostDraw(AbstractCard abstractCard) {
         UUID uuid = abstractCard.uuid;
         usedCards.remove(uuid);
+        for (AbstractCard card : AbstractDungeon.player.hand.group) {
+            if (card instanceof ChargeAttack) {
+                ChargeAttack chargeAttack = (ChargeAttack) card;
+                chargeAttack.recalculateCost();
+            }
+        }
     }
 
     @Override

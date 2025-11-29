@@ -101,6 +101,12 @@
       " at the beginning of next turn."
     ]
   },
+  "forsaken:JollyCooperationPower": {
+    "NAME": "Jolly Cooperation",
+    "DESCRIPTIONS": [
+      "#yQuickdraw triggers after every 2 cards played."
+    ]
+  },
   "forsaken:MagicWeaponPower": {
     "NAME": "Magic Weapon",
     "DESCRIPTIONS": [
