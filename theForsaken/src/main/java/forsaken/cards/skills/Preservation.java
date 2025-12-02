@@ -13,6 +13,7 @@ public class Preservation extends AbstractForsakenCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         block = baseBlock = 0;
         upgradeBlockBy = 6;
+        exhaust = true;
     }
 
     @Override

@@ -2,6 +2,7 @@ package forsaken.cards.skills;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,8 +31,7 @@ public class PowerUp extends AbstractForsakenCard {
             sunlightPower.ifPresent(pow -> {
                 int damage = pow.amount;
                 monsterList().forEach(mon -> {
-                    DamageInfo info = makeDamageInfo(damage, DamageInfo.DamageType.THORNS);
-                    qAction(new DamageAction(mon, info, AbstractGameAction.AttackEffect.FIRE));
+                    qAction(new LoseHPAction(mon, p, damage, AbstractGameAction.AttackEffect.FIRE));
                 });
             });
             return true;

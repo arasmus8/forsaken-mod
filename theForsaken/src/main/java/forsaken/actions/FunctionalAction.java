@@ -23,5 +23,6 @@ public class FunctionalAction extends AbstractGameAction {
     public void update() {
         isDone = actionFunction.test(firstUpdate);
         firstUpdate = false;
+        tickDuration();
     }
 }

@@ -24,15 +24,9 @@ public class Smite extends AbstractQuickdrawCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyPowers();
         dealAoeDamage(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         qAction(new ApplyPowerAction(p, p, new SunlightPower(magicNumber), magicNumber));
     }
 
-    @Override
-    public void triggerWhenDrawn() {
-        super.triggerWhenDrawn();
-        applyPowers();
-        new UseCardAction(this);
-        use(AbstractDungeon.player, null);
-    }
 }

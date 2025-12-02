@@ -2,8 +2,10 @@ package forsaken.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
+import forsaken.actions.MoveToDrawPileAction;
 import forsaken.cards.AbstractForsakenCard;
 
 public class Temperance extends AbstractForsakenCard {
@@ -25,5 +27,10 @@ public class Temperance extends AbstractForsakenCard {
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster m, float tmp) {
         int discardedUnplayableCards = AbstractForsakenCard.unplayableCards(player.discardPile).size();
         return tmp + discardedUnplayableCards * magicNumber;
+    }
+
+    @Override
+    public void triggerOnEndOfTurnForPlayingCard() {
+        qAction(new MoveToDrawPileAction(this));
     }
 }

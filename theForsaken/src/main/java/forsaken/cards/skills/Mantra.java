@@ -1,6 +1,7 @@
 package forsaken.cards.skills;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,10 +30,14 @@ public class Mantra extends AbstractForsakenCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) {
-            BiConsumer<List<AbstractCard>, Map<AbstractCard, CardGroup>> callback = (list, map) -> {
-
+            Consumer<List<AbstractCard>> callback = list -> {
+                if (list.isEmpty()) {
+                    return;
+                }
+                AbstractCard card = list.get(0);
+                qAction(new BiFunctionalAction<>(this::applyMantra, card));
             };
-            qAction(new MultiGroupSelectAction(EXTENDED_DESCRIPTION[0], callback, 1, Mantra::cardIsNotInnate, CardGroup.CardGroupType.MASTER_DECK));
+            qAction(new SelectCardsAction(p.masterDeck.group, 1, EXTENDED_DESCRIPTION[0], false, Mantra::cardIsNotInnate, callback));
             return;
         }
         Consumer<List<AbstractCard>> callback = list -> {

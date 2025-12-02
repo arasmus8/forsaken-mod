@@ -33,10 +33,4 @@ public class Parry extends AbstractQuickdrawCard {
             return true;
         }));
     }
-
-    @Override
-    public void triggerWhenDrawn() {
-        super.triggerWhenDrawn();
-        use(AbstractDungeon.player, null);
-    }
 }

@@ -25,12 +25,19 @@
       "This card can't be played."
     ]
   },
+  "forsaken:BattleHymn": {
+    "NAME": "Battle Hymn",
+    "DESCRIPTION": "Unplayable NL End of turn: deal !D! damage to a random enemy. NL Discard this after playing !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
   "forsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
-    "DESCRIPTION": "Choose an attack. It deals X more damage.",
-    "UPGRADE_DESCRIPTION": "Choose an attack. It deals X+1 more damage.",
+    "DESCRIPTION": "Choose X attacks. They deal !M! more damage.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an attack:"
+      "Choose up to ",
+      " attacks."
     ]
   },
   "forsaken:ChargeAttack": {
@@ -54,6 +61,10 @@
     "DESCRIPTION": "Reduce damage taken by one third. Convert all lost HP to Poison.",
     "UPGRADE_DESCRIPTION": "Reduce damage taken by half. Convert all lost HP to Poison."
   },
+  "forsaken:CowardsBrand": {
+    "NAME": "Coward's Brand",
+    "DESCRIPTION": "Deal !D! damage. If the target has forsaken:Fear, the damage is doubled."
+  },
   "forsaken:CreepingInfection": {
     "NAME": "Creeping Infection",
     "DESCRIPTION": "Reduce your poison by !M! and heal the same amount. NL forsaken:Unplayed: Apply !M! poison to ALL."
@@ -76,8 +87,12 @@
     "DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage. Discard it.",
     "UPGRADE_DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage. Shuffle it into the draw pile.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an attack:"
+      "Choose an attack."
     ]
+  },
+  "forsaken:Enfeeble": {
+    "NAME": "Enfeeble",
+    "DESCRIPTION": "Deal !D! damage 4 times. Apply !M! forsaken:Fear."
   },
   "forsaken:FatRoll": {
     "NAME": "Fat Roll",
@@ -103,6 +118,14 @@
     "NAME": "Hymn of Patience",
     "DESCRIPTION": "Apply !M! forsaken:Fear"
   },
+  "forsaken:InspiringBlow": {
+    "NAME": "Inspiring Blow",
+    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies. NL Quickdraw",
+    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and draw a card. NL Quickdraw",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
   "forsaken:JollyCooperation": {
     "NAME": "Jolly Cooperation",
     "DESCRIPTION": "forsaken:Quickdraw triggers every 2 cards played.",
@@ -113,7 +136,7 @@
     "DESCRIPTION": "Choose a card. It is now Innate. NL Fleeting",
     "UPGRADE_DESCRIPTION": "Choose ANY card. It is now Innate. NL Fleeting",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card. It becomes innate:"
+      "Choose a card. It becomes innate."
     ]
   },
   "forsaken:NobleSacrifice": {
@@ -130,19 +153,24 @@
   },
   "forsaken:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Unplayable NL When drawn: gain !B! block. Repeat for each Unplayable card in hand. NL forsaken:Quickdraw",
+    "DESCRIPTION": "Unplayable NL When drawn, gain !B! block. Repeat for each Unplayable card in hand. NL forsaken:Quickdraw",
     "EXTENDED_DESCRIPTION": [
       "This card can't be played."
     ]
   },
   "forsaken:PowerUp": {
     "NAME": "Power Up",
-    "DESCRIPTION": "Gain !M! forsaken:Sunlight. Deal damage equal to your sunlight to ALL enemies."
+    "DESCRIPTION": "Gain !M! forsaken:Sunlight. ALL enemies lose HP equal to your Sunlight."
+  },
+  "forsaken:PreciseStrike": {
+    "NAME": "Precise Strike",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable and Weak."
   },
   "forsaken:Preservation": {
     "NAME": "Preservation",
-    "DESCRIPTION": "When you gain block this turn, also gain as much block next turn.",
-    "UPGRADE_DESCRIPTION": "When you gain block this turn, also gain as much block next turn. Gain !B! block."
+    "DESCRIPTION": "When you gain block this turn, also gain as much block next turn. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "When you gain block this turn, also gain as much block next turn. Gain !B! block. NL Exhaust"
   },
   "forsaken:Prudence": {
     "NAME": "Prudence",
@@ -159,6 +187,17 @@
   "forsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. forsaken:Unplayed: gain !M! forsaken:Sunlight."
+  },
+  "forsaken:Retribution": {
+    "NAME": "Retribution",
+    "DESCRIPTION": "Unplayable NL When drawn, gain !M! thorns NL forsaken:Quickdraw",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:SacredOath": {
+    "NAME": "Sacred Oath",
+    "DESCRIPTION": "Ethereal NL Gain !B! block."
   },
   "forsaken:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
@@ -185,6 +224,18 @@
       "This card can't be played."
     ]
   },
+  "forsaken:SiphonStrike": {
+    "NAME": "Siphon Strike",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! forsaken:Sunlight."
+  },
+  "forsaken:SolarFlare": {
+    "NAME": "Solar Flare",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Repeat for each forsaken:Sunlight."
+  },
+  "forsaken:SpinAttack": {
+    "NAME": "Spin Attack",
+    "DESCRIPTION": "Deal !D! damage to a random enemy and draw a card. If you draw an unplayable card, repeat."
+  },
   "forsaken:SpreadingPlague": {
     "NAME": "Spreading Plague",
     "DESCRIPTION": "Shuffle !M! copies of Creeping Infection into your draw pile.",
@@ -205,5 +256,18 @@
   "forsaken:Thunderbolt": {
     "NAME": "Thunderbolt",
     "DESCRIPTION": "Deal !D! damage. Also targets 1 random enemy."
+  },
+  "forsaken:WordOfPower": {
+    "NAME": "Word of Power",
+    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each unplayable card in your deck."
+  },
+  "forsaken:WordsOfPestilence": {
+    "NAME": "Words of Pestilence",
+    "DESCRIPTION": "Deal !D! damage. Shuffle all forsaken:quickdraw cards in your discard pile into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Shuffle all forsaken:quickdraw cards in your discard pile into your draw pile. Draw a card."
+  },
+  "forsaken:WrathOfGod": {
+    "NAME": "Wrath of God",
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Gain block equal to the unblocked damage dealt."
   }
 }

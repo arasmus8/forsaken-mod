@@ -2,26 +2,26 @@ package forsaken.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractQuickdrawCard;
 
-public class ShieldCharge extends AbstractQuickdrawCard {
-    public static final String ID = TheForsakenMod.makeID(ShieldCharge.class.getSimpleName());
+public class InspiringBlow extends AbstractQuickdrawCard {
+    public static final String ID = TheForsakenMod.makeID(InspiringBlow.class.getSimpleName());
 
-    public ShieldCharge() {
-        super(ID, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 4;
-        upgradeDamageBy = 1;
+    public InspiringBlow() {
+        super(ID, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.NONE);
+        damage = baseDamage = 5;
+        upgradeDamageBy = 2;
+        isMultiDamage = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyPowers();
-        dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dealAoeDamage(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (upgraded) {
             qAction(new DrawCardAction(1));
         }

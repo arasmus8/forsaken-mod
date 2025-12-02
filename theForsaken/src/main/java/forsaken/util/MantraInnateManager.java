@@ -20,6 +20,7 @@ public class MantraInnateManager implements CustomSavableRaw {
 
     public MantraInnateManager() {
         innateCards = new ArrayList<>();
+        uuidList = new ArrayList<>();
     }
 
     public void addToInnateList(AbstractCard c) {

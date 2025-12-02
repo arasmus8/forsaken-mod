@@ -1,5 +1,6 @@
 package forsaken.cards;
 
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
@@ -35,6 +36,9 @@ public abstract class AbstractQuickdrawCard extends AbstractForsakenCard {
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
         qEffect(new ShowCardBrieflyEffect(makeStatEquivalentCopy()));
+        // Triggers things like onUseCard
+        new UseCardAction(this);
+        use(AbstractDungeon.player, AbstractDungeon.getRandomMonster());
     }
 
     @Override

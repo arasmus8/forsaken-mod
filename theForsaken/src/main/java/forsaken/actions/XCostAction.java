@@ -44,7 +44,7 @@ public class XCostAction<T> extends AbstractGameAction {
                 AbstractDungeon.player.getRelic(ChemicalX.ID).flash();
             }
 
-            isDone = xActionUpdate.apply(effect, options) || duration < 0.0f;
+            isDone = xActionUpdate.apply(effect, options);
             firstUpdate = false;
 
             if (!this.freeToPlayOnce) {
@@ -53,5 +53,6 @@ public class XCostAction<T> extends AbstractGameAction {
         } else {
             isDone = xActionUpdate.apply(effect, options) || duration < 0.0f;
         }
+        tickDuration();
     }
 }

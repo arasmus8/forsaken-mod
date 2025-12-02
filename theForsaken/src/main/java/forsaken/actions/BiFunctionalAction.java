@@ -1,10 +1,9 @@
 package forsaken.actions;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.core.Settings;
 
 import java.util.function.BiPredicate;
-import java.util.function.Predicate;
 
 public class BiFunctionalAction<T> extends AbstractGameAction {
     private final BiPredicate<Boolean, T> actionFunction;
@@ -19,12 +18,18 @@ public class BiFunctionalAction<T> extends AbstractGameAction {
     }
 
     public BiFunctionalAction(BiPredicate<Boolean, T> actionFunction, T data) {
-        this(Settings.ACTION_DUR_XFAST, actionFunction, data);
+        this(0f, actionFunction, data);
     }
 
     @Override
     public void update() {
-        isDone = actionFunction.test(firstUpdate, data);
-        firstUpdate = false;
+        duration -= Gdx.graphics.getDeltaTime();
+        if (duration < 0.0F) {
+            isDone = actionFunction.test(firstUpdate, data);
+            firstUpdate = false;
+            if (!isDone) {
+                duration = startDuration;
+            }
+        }
     }
 }
