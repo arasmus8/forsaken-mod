@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.BolsterPower;
+import forsaken.powers.OldBolsterPower;
 
 public class Bolster extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Bolster.class.getSimpleName());
@@ -30,7 +30,7 @@ public class Bolster extends AbstractOldForsakenCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BolsterPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldBolsterPower(p, this.magicNumber)));
     }
 
 

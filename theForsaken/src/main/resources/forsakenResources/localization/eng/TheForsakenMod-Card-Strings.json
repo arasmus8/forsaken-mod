@@ -9,7 +9,7 @@
   },
   "forsaken:Penitence": {
     "NAME": "Penitence",
-    "DESCRIPTION": "Gain !B! block. NL All attacks in your hand deal !M! more damage."
+    "DESCRIPTION": "Gain !B! block. NL All attacks in your hand deal !M! more damage this combat."
   },
   "forsaken:Smite": {
     "NAME": "Smite",
@@ -17,6 +17,17 @@
     "EXTENDED_DESCRIPTION": [
       "This card can't be played."
     ]
+  },
+  "forsaken:Recompense": {
+    "NAME": "Recompense",
+    "DESCRIPTION": "Unplayable NL Ethereal NL When drawn, lose [E] NL forsaken:Quickdraw",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
+  },
+  "forsaken:AncientWords": {
+    "NAME": "Ancient Words",
+    "DESCRIPTION": "When you lose HP from poison, a random enemy also loses HP."
   },
   "forsaken:Backlash": {
     "NAME": "Backlash",
@@ -34,11 +45,15 @@
   },
   "forsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
-    "DESCRIPTION": "Choose X attacks. They deal !M! more damage.",
+    "DESCRIPTION": "Choose X attacks. They deal !M! more damage this combat.",
     "EXTENDED_DESCRIPTION": [
       "Choose up to ",
       " attacks."
     ]
+  },
+  "forsaken:Bolster": {
+    "NAME": "Bolster",
+    "DESCRIPTION": "The first block card you play each turn blocks for !M! more."
   },
   "forsaken:ChargeAttack": {
     "NAME": "Charge Attack",
@@ -69,9 +84,18 @@
     "NAME": "Creeping Infection",
     "DESCRIPTION": "Reduce your poison by !M! and heal the same amount. NL forsaken:Unplayed: Apply !M! poison to ALL."
   },
+  "forsaken:DarkBargain": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTION": "Each turn, gain [E] and shuffle a Recompense into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Innate NL Each turn, gain [E] and shuffle a Recompense into your discard pile."
+  },
   "forsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Repeat for each of your debuffs. NL Exhaust"
+  },
+  "forsaken:DefensiveStance": {
+    "NAME": "Defensive Stance",
+    "DESCRIPTION": "Become immune to Frail. Gain 25% more block. Deal 25% less damage."
   },
   "forsaken:DesperatePlea": {
     "NAME": "Desperate Plea",
@@ -84,8 +108,8 @@
   },
   "forsaken:Elegy": {
     "NAME": "Elegy",
-    "DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage. Discard it.",
-    "UPGRADE_DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage. Shuffle it into the draw pile.",
+    "DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage this combat. Discard it.",
+    "UPGRADE_DESCRIPTION": "Ethereal NL Choose an attack in your hand. It deals !M! more damage this combat. Shuffle it into the draw pile.",
     "EXTENDED_DESCRIPTION": [
       "Choose an attack."
     ]
@@ -130,6 +154,10 @@
     "NAME": "Jolly Cooperation",
     "DESCRIPTION": "forsaken:Quickdraw triggers every 2 cards played.",
     "UPGRADE_DESCRIPTION": "Innate NL forsaken:Quickdraw triggers every 2 cards played."
+  },
+  "forsaken:MagicWeapon": {
+    "NAME": "Magic Weapon",
+    "DESCRIPTION": "The first attack you draw each turn deals !M! more damage this combat."
   },
   "forsaken:Mantra": {
     "NAME": "Mantra",
@@ -194,6 +222,10 @@
     "EXTENDED_DESCRIPTION": [
       "This card can't be played."
     ]
+  },
+  "forsaken:Riposte": {
+    "NAME": "Riposte",
+    "DESCRIPTION": "Shuffle !M! Parry into your draw pile. Whenever you draw a Parry, apply 1 Vulnerable to a random enemy."
   },
   "forsaken:SacredOath": {
     "NAME": "Sacred Oath",

@@ -1,4 +1,10 @@
 {
+  "forsaken:AncientWordsPower": {
+    "NAME": "Ancient Words",
+    "DESCRIPTIONS": [
+      "When losing HP from poison, a random enemy also loses HP."
+    ]
+  },
   "forsaken:BindingThornsPower": {
     "NAME": "Binding Thorns",
     "DESCRIPTIONS": [
@@ -15,6 +21,13 @@
     ]
   },
   "forsaken:BolsterPower": {
+    "NAME": "Bolster",
+    "DESCRIPTIONS": [
+      "The first block card played each turn blocks for #b",
+      " more."
+    ]
+  },
+  "forsaken:OldBolsterPower": {
     "NAME": "Bolster",
     "DESCRIPTIONS": [
       "The first attack each turn applies weak and gains ",
@@ -50,10 +63,25 @@
   "forsaken:DarkBargainPower": {
     "NAME": "Dark Bargain",
     "DESCRIPTIONS": [
+      "Each turn, gain ",
+      " and shuffle a Recompense into your discard pile."
+    ]
+  },
+  "forsaken:OldDarkBargainPower": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTIONS": [
       "Gain ",
       " and shuffle ",
       " void into your discard pile.",
       " voids into your discard pile."
+    ]
+  },
+  "forsaken:DefensiveStancePower": {
+    "NAME": "Defensive Stance",
+    "DESCRIPTIONS": [
+      "Immune to #yFrail. Gain #b",
+      " more block. Deal #r",
+      " less damage."
     ]
   },
   "forsaken:HymnOfRestPower": {
@@ -108,6 +136,13 @@
     ]
   },
   "forsaken:MagicWeaponPower": {
+    "NAME": "Magic Weapon",
+    "DESCRIPTIONS": [
+      "The first attack you draw each turn deals #b",
+      " more damage this combat."
+    ]
+  },
+  "forsaken:OldMagicWeaponPower": {
     "NAME": "Magic Weapon",
     "DESCRIPTIONS": [
       "Gain #b",
@@ -165,6 +200,13 @@
     ]
   },
   "forsaken:RipostePower": {
+    "NAME": "Riposte",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #yParry, apply #b",
+      " vulnerable to a random enemy."
+    ]
+  },
+  "forsaken:OldRipostePower": {
     "NAME": "Riposte",
     "DESCRIPTIONS": [
       "When your block is broken, your attacks deal double damage next turn."

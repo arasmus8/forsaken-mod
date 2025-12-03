@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.RipostePower;
+import forsaken.powers.OldRipostePower;
 
 public class Riposte extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Riposte.class.getSimpleName());
@@ -25,7 +25,7 @@ public class Riposte extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RipostePower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldRipostePower(p)));
     }
 
     @Override

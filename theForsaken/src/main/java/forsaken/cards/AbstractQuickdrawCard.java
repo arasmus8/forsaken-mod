@@ -22,6 +22,10 @@ public abstract class AbstractQuickdrawCard extends AbstractForsakenCard {
         super(id, -2, type, rarity, target, TheForsaken.Enums.COLOR_GOLD, QUICKDRAW_CARD);
     }
 
+    public AbstractQuickdrawCard(String id, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
+        super(id, -2, type, rarity, target, color);
+    }
+
     public static boolean isQuickdraw(AbstractCard c) {
         return c.tags.contains(QUICKDRAW_CARD);
     }

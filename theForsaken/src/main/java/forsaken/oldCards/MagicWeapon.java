@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.MagicWeaponPower;
+import forsaken.powers.OldMagicWeaponPower;
 
 public class MagicWeapon extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(MagicWeapon.class.getSimpleName());
@@ -29,7 +29,7 @@ public class MagicWeapon extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MagicWeaponPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldMagicWeaponPower(p, magicNumber), magicNumber));
     }
 
     @Override

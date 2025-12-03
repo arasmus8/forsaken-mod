@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.DarkBargainPower;
+import forsaken.powers.OldDarkBargainPower;
 
 public class DarkBargain extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DarkBargain.class.getSimpleName());
@@ -29,7 +29,7 @@ public class DarkBargain extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DarkBargainPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldDarkBargainPower(p, this.magicNumber)));
     }
 
     @Override
