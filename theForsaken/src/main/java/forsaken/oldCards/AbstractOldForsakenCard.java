@@ -61,7 +61,7 @@ public abstract class AbstractOldForsakenCard extends CustomCard {
 
     @Override
     protected Texture getPortraitImage() {
-        return ImageMaster.loadImage(cardResourcePath(String.format("%s_p.png", getBaseImagePath(cardID))));
+        return ImageMaster.loadImage(cardResourcePath(String.format("old/%s_p.png", getBaseImagePath(cardID))));
     }
 
     protected ArrayList<AbstractMonster> monsterList() {

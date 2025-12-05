@@ -11,7 +11,7 @@ public class Strike extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Strike.class.getSimpleName());
 
     public Strike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, TheForsaken.Enums.COLOR_GOLD, CardTags.STARTER_STRIKE);
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, TheForsaken.Enums.COLOR_GOLD, "TheForsaken_Strike", CardTags.STARTER_STRIKE);
         baseDamage = damage = 6;
         upgradeDamageBy = 3;
     }

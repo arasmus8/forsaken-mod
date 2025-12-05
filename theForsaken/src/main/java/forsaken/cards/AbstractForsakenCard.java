@@ -14,10 +14,12 @@ import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import forsaken.characters.TheForsaken;
 import forsaken.util.ActionUnit;
 
@@ -34,6 +36,7 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
     protected final String NAME;
     protected final String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+    protected String oldImageName = null;
     protected Integer upgradeDamageBy;
     protected Integer upgradeBlockBy;
     protected Integer upgradeMagicNumberBy;
@@ -46,6 +49,7 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
                                 final AbstractCard.CardRarity rarity,
                                 final AbstractCard.CardTarget target,
                                 final AbstractCard.CardColor color,
+                                final String oldImageName,
                                 CardTags... tagsList) {
         super(id, "", getRegionName(id), cost, "", type, color, rarity, target);
         CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
@@ -54,11 +58,32 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
         rawDescription = cardStrings.DESCRIPTION;
         UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+
+        // load beta image
+        TextureAtlas cardAtlas = ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas");
+        if (oldImageName != null) {
+            CustomCard.RegionName region = getRegionName(String.format("old/%s", oldImageName));
+            jokePortrait = cardAtlas.findRegion(region.name);
+        } else {
+            CustomCard.RegionName region = getRegionName(String.format("old/%s", getBaseImagePath(id)));
+            jokePortrait = cardAtlas.findRegion(region.name);
+        }
+
         initializeTitle();
         initializeDescription();
         if (tagsList != null) {
             tags.addAll(Arrays.asList(tagsList));
         }
+    }
+
+    public AbstractForsakenCard(final String id,
+                                final int cost,
+                                final AbstractCard.CardType type,
+                                final AbstractCard.CardRarity rarity,
+                                final AbstractCard.CardTarget target,
+                                final AbstractCard.CardColor color,
+                                CardTags... tagsList) {
+        this(id, cost, type, rarity, target, color, (String)null);
     }
 
     public AbstractForsakenCard(final String id,
@@ -79,14 +104,28 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
     }
 
     @Override
-    public void loadCardImage(String img) {
-        TextureAtlas cardAtlas = ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas");
-        portrait = cardAtlas.findRegion(img);
-    }
-
-    @Override
     protected Texture getPortraitImage() {
-        return ImageMaster.loadImage(cardResourcePath(String.format("%s_p.png", getBaseImagePath(cardID))));
+        String newPath;
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (oldImageName != null) {
+                newPath = cardResourcePath(String.format("old/%s_p.png", oldImageName));
+            } else {
+                newPath = cardResourcePath(String.format("old/%s_p.png", cardID));
+            }
+        } else {
+            newPath = cardResourcePath(String.format("%s_p.png", cardID));
+        }
+
+        System.out.println("Finding texture: " + newPath);
+
+        Texture portraitTexture;
+        try {
+            portraitTexture = ImageMaster.loadImage(newPath);
+        } catch (Exception ex) {
+            portraitTexture = null;
+        }
+
+        return portraitTexture;
     }
 
     @Override

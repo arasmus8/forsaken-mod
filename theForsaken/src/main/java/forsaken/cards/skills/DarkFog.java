@@ -5,13 +5,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractQuickdrawCard;
+import forsaken.characters.TheForsaken;
 
 @SuppressWarnings("unused")
 public class DarkFog extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(DarkFog.class.getSimpleName());
 
     public DarkFog() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, TheForsaken.Enums.COLOR_GOLD, "CorruptedWord");
         magicNumber = baseMagicNumber = 3;
         upgradeMagicNumberBy = 1;
     }

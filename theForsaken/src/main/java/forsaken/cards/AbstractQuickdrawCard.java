@@ -26,6 +26,10 @@ public abstract class AbstractQuickdrawCard extends AbstractForsakenCard {
         super(id, -2, type, rarity, target, color);
     }
 
+    public AbstractQuickdrawCard(String id, CardType type, CardRarity rarity, CardTarget target, CardColor color, String oldImageName) {
+        super(id, -2, type, rarity, target, color, oldImageName);
+    }
+
     public static boolean isQuickdraw(AbstractCard c) {
         return c.tags.contains(QUICKDRAW_CARD);
     }

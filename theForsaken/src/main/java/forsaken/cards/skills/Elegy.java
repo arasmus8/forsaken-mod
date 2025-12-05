@@ -9,6 +9,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.BiFunctionalAction;
 import forsaken.cardmods.BonusDamageMod;
 import forsaken.cards.AbstractForsakenCard;
+import forsaken.characters.TheForsaken;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -19,7 +20,7 @@ public class Elegy extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Elegy.class.getSimpleName());
 
     public Elegy() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, TheForsaken.Enums.COLOR_GOLD, "Eulogy");
         isEthereal = true;
         magicNumber = baseMagicNumber = 4;
     }

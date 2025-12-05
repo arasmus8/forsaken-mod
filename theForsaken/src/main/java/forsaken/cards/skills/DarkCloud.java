@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.FunctionalAction;
 import forsaken.actions.XCostAction;
 import forsaken.cards.AbstractForsakenCard;
+import forsaken.characters.TheForsaken;
 import forsaken.powers.SunlightPower;
 
 import java.util.Optional;
@@ -17,7 +18,7 @@ public class DarkCloud extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(DarkCloud.class.getSimpleName());
 
     public DarkCloud() {
-        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, TheForsaken.Enums.COLOR_GOLD, "DarkBarrier");
         cardsToPreview = new DarkFog();
     }
 
