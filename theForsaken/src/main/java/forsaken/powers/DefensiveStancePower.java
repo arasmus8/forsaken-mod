@@ -41,6 +41,15 @@ public class DefensiveStancePower extends AbstractForsakenPower implements Clone
     }
 
     @Override
+    public void onInitialApplication() {
+        AbstractPower power = owner.getPower(FrailPower.POWER_ID);
+        if (power != null) {
+            flash();
+            addToTop(new RemoveSpecificPowerAction(owner, owner, FrailPower.POWER_ID));
+        }
+    }
+
+    @Override
     public void updateDescription() {
         StringBuilder b = new StringBuilder(DESCRIPTIONS[0]);
         b.append(amount * 25).append("%");

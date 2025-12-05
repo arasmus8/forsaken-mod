@@ -19,8 +19,8 @@ public class Backlash extends AbstractForsakenCard {
 
     @Override
     public int triggerOnPlayerDamaged(int damage, DamageInfo info) {
-        qAction(new DiscardSpecificCardAction(this));
-        qAction(new DamageAction(info.owner, makeDamageInfo(magicNumber, DamageInfo.DamageType.THORNS)));
+        addToTop(new DamageAction(info.owner, makeDamageInfo(magicNumber, DamageInfo.DamageType.THORNS)));
+        addToTop(new DiscardSpecificCardAction(this));
         // TODO VFX
         return damage;
     }

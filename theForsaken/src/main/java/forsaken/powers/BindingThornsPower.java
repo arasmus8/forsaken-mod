@@ -15,9 +15,6 @@ import forsaken.TheForsakenMod;
 
 public class BindingThornsPower extends AbstractForsakenPower implements CloneablePowerInterface {
     private static final String POWER_ID = TheForsakenMod.makeID(BindingThornsPower.class.getSimpleName());
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public static final String NAME = powerStrings.NAME;
-    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public BindingThornsPower(final AbstractCreature owner, final int amount) {
         super(POWER_ID, owner, amount);

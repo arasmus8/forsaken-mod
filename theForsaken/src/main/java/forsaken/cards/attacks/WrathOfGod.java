@@ -48,12 +48,10 @@ public class WrathOfGod extends AbstractForsakenCard {
         if (target == null) return true;
 
         AbstractDungeon.effectList.add(new FlashAtkImgEffect(target.hb.cX, target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
+        calculateCardDamage(target);
         target.damage(makeDamageInfo(damage, damageTypeForTurn));
         if (target.lastDamageTaken > 0) {
             addToTop(new GainBlockAction(source, target.lastDamageTaken));
-            // if (target.hb != null) {
-                // TODO: VFX
-            // }
         }
         return timesToDealDamage < 1;
     }

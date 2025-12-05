@@ -1,4 +1,11 @@
 {
+  "forsaken:BottledPlaguePotion": {
+    "NAME": "Bottled Plague",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison to an enemy."
+    ]
+  },
   "forsaken:FearPotion": {
     "NAME": "Terror Potion",
     "DESCRIPTIONS": [

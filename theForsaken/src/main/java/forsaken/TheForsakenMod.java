@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import forsaken.actions.FunctionalAction;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.cards.AbstractQuickdrawCard;
 import forsaken.cards.Smite;
@@ -32,6 +33,7 @@ import forsaken.cards.attacks.ChargeAttack;
 import forsaken.characters.TheForsaken;
 import forsaken.events.PlagueDoctorEvent;
 import forsaken.oldCards.AbstractOldForsakenCard;
+import forsaken.potions.BottledPlaguePotion;
 import forsaken.potions.FearPotion;
 import forsaken.powers.HymnOfRestPower;
 import forsaken.powers.JollyCooperationPower;
@@ -231,6 +233,7 @@ public class TheForsakenMod implements
 
     private void receiveEditPotions() {
         BaseMod.addPotion( FearPotion.class, FearPotion.LIQUID_COLOR, FearPotion.HYBRID_COLOR, FearPotion.SPOTS_COLOR, FearPotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN );
+        BaseMod.addPotion(BottledPlaguePotion.class, BottledPlaguePotion.LIQUID_COLOR, BottledPlaguePotion.HYBRID_COLOR, BottledPlaguePotion.SPOTS_COLOR, BottledPlaguePotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN);
     }
 
     @Override
@@ -376,14 +379,17 @@ public class TheForsakenMod implements
         int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + 1;
         if (cardsPlayed >= quickdrawTriggeredAt + countForTrigger) {
             // Draw the next quickdraw card
-            Optional<AbstractCard> nextQuickdrawCard = AbstractQuickdrawCard.nextQuickdrawCard();
-            nextQuickdrawCard.ifPresent(c -> {
-                AbstractPlayer p = AbstractDungeon.player;
-                p.drawPile.removeCard(c);
-                p.drawPile.addToTop(c);
-                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-                quickdrawTriggeredAt = cardsPlayed;
-            });
+            AbstractDungeon.actionManager.addToBottom(new FunctionalAction(firstUpdate -> {
+                Optional<AbstractCard> nextQuickdrawCard = AbstractQuickdrawCard.nextQuickdrawCard();
+                nextQuickdrawCard.ifPresent(c -> {
+                    AbstractPlayer p = AbstractDungeon.player;
+                    p.drawPile.removeCard(c);
+                    p.drawPile.addToTop(c);
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+                    quickdrawTriggeredAt = cardsPlayed;
+                });
+                return true;
+            }));
         }
     }
 

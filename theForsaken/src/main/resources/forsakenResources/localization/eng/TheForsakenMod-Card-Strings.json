@@ -13,17 +13,11 @@
   },
   "forsaken:Smite": {
     "NAME": "Smite",
-    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and gain !M! forsaken:Sunlight. NL forsaken:Quickdraw",
-    "EXTENDED_DESCRIPTION": [
-      "This card can't be played."
-    ]
+    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and gain !M! forsaken:Sunlight. NL forsaken:Quickdraw"
   },
   "forsaken:Recompense": {
     "NAME": "Recompense",
-    "DESCRIPTION": "Unplayable NL Ethereal NL When drawn, lose [E] NL forsaken:Quickdraw",
-    "EXTENDED_DESCRIPTION": [
-      "This card can't be played."
-    ]
+    "DESCRIPTION": "Unplayable NL Ethereal NL When drawn, lose [E] NL forsaken:Quickdraw"
   },
   "forsaken:AncientWords": {
     "NAME": "Ancient Words",
@@ -43,6 +37,10 @@
       "This card can't be played."
     ]
   },
+  "forsaken:BindingThorns": {
+    "NAME": "Binding Thorns",
+    "DESCRIPTION": "Whenever the target attacks, it takes !M! damage. The damage is reduced by 1 with each attack."
+  },
   "forsaken:BlessedWeapon": {
     "NAME": "Blessed Weapon",
     "DESCRIPTION": "Choose X attacks. They deal !M! more damage this combat.",
@@ -51,13 +49,37 @@
       " attacks."
     ]
   },
+  "forsaken:BlightOfFamine": {
+    "NAME": "Blight of Famine",
+    "DESCRIPTION": "Transfer your Weak to an enemy. NL forsaken:Unplayed: Apply !M! Weak to ALL enemies AND yourself."
+  },
+  "forsaken:BlindFaith": {
+    "NAME": "Blind Faith",
+    "DESCRIPTION": "Discard your hand. Draw a card for each unplayable card discarded.",
+    "UPGRADE_DESCRIPTION": "Retain NL Discard your hand. Draw a card for each unplayable card discarded."
+  },
   "forsaken:Bolster": {
     "NAME": "Bolster",
     "DESCRIPTION": "The first block card you play each turn blocks for !M! more."
   },
+  "forsaken:BottledPlague": {
+    "NAME": "Bottled Plague",
+    "DESCRIPTION": "Remove all your Poison. Obtain a potion that inflicts that much Poison. NL Exhaust",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have an empty potion slot."
+    ]
+  },
+  "forsaken:BountifulSunlight": {
+    "NAME": "Bountiful Sunlight",
+    "DESCRIPTION": "Gain !M! forsaken:Sunlight. NL Exhaust"
+  },
   "forsaken:ChargeAttack": {
     "NAME": "Charge Attack",
     "DESCRIPTION": "Deal !D! damage !M! times. Costs [E] less for each Unplayable card in hand."
+  },
+  "forsaken:CleansingLight": {
+    "NAME": "Cleansing Light",
+    "DESCRIPTION": "Ethereal NL Gain !B! block. Remove your Poison and Vulnerable."
   },
   "forsaken:Confusion": {
     "NAME": "Confusion",
@@ -89,6 +111,15 @@
     "DESCRIPTION": "Each turn, gain [E] and shuffle a Recompense into your discard pile.",
     "UPGRADE_DESCRIPTION": "Innate NL Each turn, gain [E] and shuffle a Recompense into your discard pile."
   },
+  "forsaken:DarkCloud": {
+    "NAME": "Dark Cloud",
+    "DESCRIPTION": "Shuffle X copies of Dark Fog into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Immediately trigger forsaken:Sunlight X times. Shuffle X copies of Dark Fog into your draw pile."
+  },
+  "forsaken:DarkFog": {
+    "NAME": "Dark Fog",
+    "DESCRIPTION": "Unplayable NL When drawn: apply !M! poison to ALL. NL forsaken:Quickdraw"
+  },
   "forsaken:DarkRift": {
     "NAME": "Dark Rift",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Repeat for each of your debuffs. NL Exhaust"
@@ -100,6 +131,10 @@
   "forsaken:DesperatePlea": {
     "NAME": "Desperate Plea",
     "DESCRIPTION": "Convert your forsaken:Sunlight into Strength. NL Exhaust"
+  },
+  "forsaken:Devotion": {
+    "NAME": "Devotion",
+    "DESCRIPTION": "Draw !M! cards. Choose a card to put on top of your draw pile. Upgrade it."
   },
   "forsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
@@ -130,6 +165,10 @@
     "NAME": "Fury Strikes",
     "DESCRIPTION": "Deal !D! damage 3 times"
   },
+  "forsaken:HealingLight": {
+    "NAME": "Healing Light",
+    "DESCRIPTION": "Immediately trigger forsaken:Sunlight !M! times. Apply 2 forsaken:Fear on ALL enemies for each Sunlight removed."
+  },
   "forsaken:HorrifyingStrike": {
     "NAME": "Horrifying Strike",
     "DESCRIPTION": "Deal !D! damage. Deal !M! more damage for each stack of forsaken:Fear on the target."
@@ -142,13 +181,15 @@
     "NAME": "Hymn of Patience",
     "DESCRIPTION": "Apply !M! forsaken:Fear"
   },
+  "forsaken:HymnOfRest": {
+    "NAME": "Hymn of Rest",
+    "DESCRIPTION": "Shuffle all forsaken:Quickdraw cards in your hand into the draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain NL Shuffle all forsaken:Quickdraw cards in your hand into the draw pile."
+  },
   "forsaken:InspiringBlow": {
     "NAME": "Inspiring Blow",
     "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies. NL Quickdraw",
-    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and draw a card. NL Quickdraw",
-    "EXTENDED_DESCRIPTION": [
-      "This card can't be played."
-    ]
+    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and draw a card. NL Quickdraw"
   },
   "forsaken:JollyCooperation": {
     "NAME": "Jolly Cooperation",
@@ -181,10 +222,7 @@
   },
   "forsaken:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Unplayable NL When drawn, gain !B! block. Repeat for each Unplayable card in hand. NL forsaken:Quickdraw",
-    "EXTENDED_DESCRIPTION": [
-      "This card can't be played."
-    ]
+    "DESCRIPTION": "Unplayable NL When drawn, gain !B! block. Repeat for each Unplayable card in hand. NL forsaken:Quickdraw"
   },
   "forsaken:PowerUp": {
     "NAME": "Power Up",
@@ -218,14 +256,11 @@
   },
   "forsaken:Retribution": {
     "NAME": "Retribution",
-    "DESCRIPTION": "Unplayable NL When drawn, gain !M! thorns NL forsaken:Quickdraw",
-    "EXTENDED_DESCRIPTION": [
-      "This card can't be played."
-    ]
+    "DESCRIPTION": "Unplayable NL When drawn, gain !M! thorns NL forsaken:Quickdraw"
   },
   "forsaken:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Shuffle !M! Parry into your draw pile. Whenever you draw a Parry, apply 1 Vulnerable to a random enemy."
+    "DESCRIPTION": "Shuffle !M! copies of Parry into your draw pile. Whenever you draw a Parry, apply 1 Vulnerable to a random enemy."
   },
   "forsaken:SacredOath": {
     "NAME": "Sacred Oath",
@@ -251,10 +286,7 @@
   "forsaken:ShieldCharge": {
     "NAME": "Shield Charge",
     "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy. NL forsaken:Quickdraw",
-    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy and draw a card. NL forsaken:Quickdraw",
-    "EXTENDED_DESCRIPTION": [
-      "This card can't be played."
-    ]
+    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy and draw a card. NL forsaken:Quickdraw"
   },
   "forsaken:SiphonStrike": {
     "NAME": "Siphon Strike",

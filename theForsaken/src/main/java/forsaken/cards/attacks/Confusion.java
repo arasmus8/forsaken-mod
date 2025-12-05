@@ -33,10 +33,10 @@ public class Confusion extends AbstractForsakenCard {
                 unblockedDamage *= 2;
             }
             final int damageToDeal = unblockedDamage;
-            qAction(new FunctionalAction(firstUpdate -> {
-                qEffect(new ShowCardBrieflyEffect(this));
-                qAction(new DamageAction(info.owner, makeDamageInfo(damageToDeal, DamageInfo.DamageType.THORNS)));
-                qAction(new ExhaustSpecificCardAction(this, p.hand));
+            addToTop(new FunctionalAction(firstUpdate -> {
+                qEffect(new ShowCardBrieflyEffect(this.makeStatEquivalentCopy()));
+                addToTop(new ExhaustSpecificCardAction(this, p.hand));
+                addToTop(new DamageAction(info.owner, makeDamageInfo(damageToDeal, DamageInfo.DamageType.THORNS)));
                 return true;
             }));
             return 0;

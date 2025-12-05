@@ -2,7 +2,9 @@ package forsaken.cards;
 
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import forsaken.characters.TheForsaken;
 
@@ -11,6 +13,10 @@ import java.util.Optional;
 import static forsaken.util.ForsakenCardTags.QUICKDRAW_CARD;
 
 public abstract class AbstractQuickdrawCard extends AbstractForsakenCard {
+    private static final UIStrings uiStrings;
+    private static final String[] TEXT;
+    private static final String cantUseString;
+
 //    private static CardTags[] append(CardTags tag, CardTags[] orig) {
 //        CardTags[] result = new CardTags[orig.length + 1];
 //        System.arraycopy(orig, 0, result, 0, orig.length);
@@ -47,7 +53,13 @@ public abstract class AbstractQuickdrawCard extends AbstractForsakenCard {
 
     @Override
     public boolean canPlay(AbstractCard card) {
-        this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+        cantUseMessage = cantUseString;
         return !card.equals(this);
+    }
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("SingleCardViewPopup");
+        TEXT = uiStrings.TEXT;
+        cantUseString = TEXT[13];
     }
 }

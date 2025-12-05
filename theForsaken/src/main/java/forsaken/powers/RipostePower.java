@@ -25,6 +25,7 @@ public class RipostePower extends AbstractForsakenPower implements CloneablePowe
     public void onCardDraw(AbstractCard card) {
         // When we draw a Parry, apply vulnerable
         if (card.cardID.equals(Parry.ID)) {
+            flash();
             AbstractMonster target = AbstractDungeon.getRandomMonster();
             if (target != null) {
                 applyToEnemy(target, new VulnerablePower(target, amount, false));

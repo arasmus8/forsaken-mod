@@ -3,6 +3,7 @@ package forsaken.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -23,18 +24,31 @@ public class SunlightPower extends AbstractForsakenPower implements CloneablePow
         updateDescription();
     }
 
-    @Override
-    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        if (isPlayer) {
+    private void trigger() {
+        if (amount > 0) {
             flash();
             AbstractPlayer p = AbstractDungeon.player;
             int heal = HEAL_AMOUNT;
             Optional<AbstractPower> maybeTearsOfSunlight = Optional.ofNullable(p.getPower(TearsOfSunlightPower.POWER_ID));
-            if(maybeTearsOfSunlight.isPresent()) {
+            if (maybeTearsOfSunlight.isPresent()) {
                 heal += maybeTearsOfSunlight.get().amount;
             }
-            qAction(new HealAction(owner, owner, heal));
-            qAction(new ReducePowerAction(owner, owner, this, 1));
+            addToTop(new ReducePowerAction(owner, owner, this, 1));
+            addToTop(new HealAction(owner, owner, heal));
+        } else {
+            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        }
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        trigger();
+    }
+
+    @Override
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+        if (isPlayer) {
+            trigger();
         }
     }
 
