@@ -2,6 +2,7 @@ package forsaken;
 
 import basemod.*;
 import basemod.abstracts.CustomCard;
+import basemod.devcommands.ConsoleCommand;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -41,6 +42,7 @@ import forsaken.relics.*;
 import forsaken.util.AssetLoader;
 import forsaken.util.MantraInnateManager;
 import forsaken.util.TextureHelper;
+import forsaken.util.TopdeckConsoleCommand;
 import forsaken.variables.SacrificeSoulVariable;
 import forsaken.variables.UnplayedCardsVariable;
 import org.apache.logging.log4j.LogManager;
@@ -216,6 +218,9 @@ public class TheForsakenMod implements
 
         // Setup MantraInnateManager
         BaseMod.addSaveField(makeID(MantraInnateManager.class.getSimpleName()), mantraInnateManager);
+
+        // TopdeckConsoleCommand
+        ConsoleCommand.addCommand("topdeck", TopdeckConsoleCommand.class);
 
         logger.info("Done loading badge Image and mod options");
     }

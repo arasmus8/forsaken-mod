@@ -1,26 +1,21 @@
-package forsaken.cards.attacks;
+package forsaken.cards.skills;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-public class BattleHymn extends AbstractForsakenCard {
-    private static final Logger logger = LogManager.getLogger(BattleHymn.class);
-    public static final String ID = TheForsakenMod.makeID(BattleHymn.class.getSimpleName());
+public class WardingHymn extends AbstractForsakenCard {
+    public static final String ID = TheForsakenMod.makeID(WardingHymn.class.getSimpleName());
 
     private int cardsPlayed = 0;
 
-    public BattleHymn() {
-        super(ID, -2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.NONE);
-        damage = baseDamage = 18;
+    public WardingHymn() {
+        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        block = baseBlock = 20;
         magicNumber = baseMagicNumber = 3;
         upgradeMagicNumberBy = 1;
         unplayedEffect = true;
@@ -28,8 +23,7 @@ public class BattleHymn extends AbstractForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        qEffect(new ViolentAttackEffect(m.drawX, m.drawY, TheForsakenMod.FORSAKEN_GOLD));
-        dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        gainBlock();
     }
 
     @Override
@@ -38,7 +32,6 @@ public class BattleHymn extends AbstractForsakenCard {
         if (c == this || !AbstractDungeon.player.hand.contains(this)) {
             return;
         }
-        logger.info("BattleHymn: Other card played: {}", c);
         cardsPlayed += 1;
         if (cardsPlayed >= magicNumber) {
             qAction(new DiscardSpecificCardAction(this));

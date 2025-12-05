@@ -188,13 +188,17 @@
   },
   "forsaken:InspiringBlow": {
     "NAME": "Inspiring Blow",
-    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies. NL Quickdraw",
-    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and draw a card. NL Quickdraw"
+    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies. NL forsaken:Quickdraw",
+    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to ALL enemies and draw a card. NL forsaken:Quickdraw"
   },
   "forsaken:JollyCooperation": {
     "NAME": "Jolly Cooperation",
     "DESCRIPTION": "forsaken:Quickdraw triggers every 2 cards played.",
     "UPGRADE_DESCRIPTION": "Innate NL forsaken:Quickdraw triggers every 2 cards played."
+  },
+  "forsaken:LightRoll": {
+    "NAME": "Light Roll",
+    "DESCRIPTION": "Unplayable NL When drawn, gain !B! block and apply !M! forsaken:Fear on ALL enemies. NL forsaken:Quickdraw"
   },
   "forsaken:MagicWeapon": {
     "NAME": "Magic Weapon",
@@ -317,9 +321,24 @@
     "NAME": "Temperance",
     "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each unplayable card in your discard pile."
   },
+  "forsaken:Terrorize": {
+    "NAME": "Terrorize",
+    "DESCRIPTION": "Apply !M! forsaken:Fear. NL Exhaust"
+  },
   "forsaken:Thunderbolt": {
     "NAME": "Thunderbolt",
     "DESCRIPTION": "Deal !D! damage. Also targets 1 random enemy."
+  },
+  "forsaken:Tranquility": {
+    "NAME": "Tranquility",
+    "DESCRIPTION": "Reduce target Strength by !M!. NL Exhaust"
+  },
+  "forsaken:WardingHymn": {
+    "NAME": "Warding Hymn",
+    "DESCRIPTION": "Unplayable NL End of turn: gain !B! block. NL Discard this after playing !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "This card can't be played."
+    ]
   },
   "forsaken:WordOfPower": {
     "NAME": "Word of Power",
