@@ -11,6 +11,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.DevotionAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Devotion extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Devotion.class.getSimpleName());
 

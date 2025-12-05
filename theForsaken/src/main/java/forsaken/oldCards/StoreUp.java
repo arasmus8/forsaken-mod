@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.StoreUpAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class StoreUp extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(StoreUp.class.getSimpleName());
 

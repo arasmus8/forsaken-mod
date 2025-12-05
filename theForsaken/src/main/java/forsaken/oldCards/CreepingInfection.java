@@ -15,6 +15,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.relics.PlagueMask;
 
+@SuppressWarnings("unused")
 public class CreepingInfection extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(CreepingInfection.class.getSimpleName());
 

@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.JollyCooperationPower;
 
+@SuppressWarnings("unused")
 public class JollyCooperation extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(JollyCooperation.class.getSimpleName());
 

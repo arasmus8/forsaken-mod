@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.OldFearPower;
 
+@SuppressWarnings("unused")
 public class Terrorize extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Terrorize.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
 

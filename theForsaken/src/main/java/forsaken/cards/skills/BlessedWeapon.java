@@ -1,7 +1,6 @@
 package forsaken.cards.skills;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,9 +13,9 @@ import forsaken.cards.AbstractForsakenCard;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+@SuppressWarnings("unused")
 public class BlessedWeapon extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BlessedWeapon.class.getSimpleName());
 

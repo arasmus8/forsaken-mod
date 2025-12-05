@@ -9,6 +9,7 @@ import forsaken.actions.BiFunctionalAction;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.cards.AbstractQuickdrawCard;
 
+@SuppressWarnings("unused")
 public class HymnOfRest extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HymnOfRest.class.getSimpleName());
 

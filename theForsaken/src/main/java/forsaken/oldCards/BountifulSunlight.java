@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class BountifulSunlight extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(BountifulSunlight.class.getSimpleName());
 

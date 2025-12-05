@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.InspiringBlowAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class InspiringBlow extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(InspiringBlow.class.getSimpleName());
 

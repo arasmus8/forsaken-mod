@@ -2,7 +2,6 @@ package forsaken.cards.skills;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,6 +14,7 @@ import forsaken.cards.AbstractForsakenCard;
 
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class Devotion extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Devotion.class.getSimpleName());
     private static final UIStrings uiStrings;

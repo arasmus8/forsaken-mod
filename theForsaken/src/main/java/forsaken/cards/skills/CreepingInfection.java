@@ -1,6 +1,5 @@
 package forsaken.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +10,7 @@ import forsaken.cards.AbstractForsakenCard;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class CreepingInfection extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(CreepingInfection.class.getSimpleName());
 
@@ -25,9 +25,7 @@ public class CreepingInfection extends AbstractForsakenCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (dontTriggerOnUseCard) {
             applyToSelf(new PoisonPower(p, p, magicNumber));
-            monsterList().forEach(mon -> {
-                applyToEnemy(mon, new PoisonPower(mon, p, magicNumber));
-            });
+            monsterList().forEach(mon -> applyToEnemy(mon, new PoisonPower(mon, p, magicNumber)));
             return;
         }
         Optional<PoisonPower> poison = p.powers.stream()

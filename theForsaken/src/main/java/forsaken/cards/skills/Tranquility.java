@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class Tranquility extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Tranquility.class.getSimpleName());
 

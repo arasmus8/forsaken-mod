@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.OldSpreadingPlaguePower;
 
+@SuppressWarnings("unused")
 public class SpreadingPlague extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(SpreadingPlague.class.getSimpleName());
 

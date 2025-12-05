@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.OldDarkBargainPower;
 
+@SuppressWarnings("unused")
 public class DarkBargain extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DarkBargain.class.getSimpleName());
 

@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.CorruptDeckPower;
 
+@SuppressWarnings("unused")
 public class CorruptDeck extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(CorruptDeck.class.getSimpleName());
 

@@ -9,6 +9,7 @@ import forsaken.CustomTags;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class AncientWords extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(AncientWords.class.getSimpleName());
 

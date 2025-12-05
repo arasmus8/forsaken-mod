@@ -15,6 +15,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.HealNextTurnPower;
 
+@SuppressWarnings("unused")
 public class DarkRift extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DarkRift.class.getSimpleName());
 

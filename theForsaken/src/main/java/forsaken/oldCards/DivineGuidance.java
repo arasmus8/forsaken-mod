@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.DivineGuidanceAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class DivineGuidance extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DivineGuidance.class.getSimpleName());
 

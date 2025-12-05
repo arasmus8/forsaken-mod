@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class DefensiveStance extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DefensiveStance.class.getSimpleName());
 

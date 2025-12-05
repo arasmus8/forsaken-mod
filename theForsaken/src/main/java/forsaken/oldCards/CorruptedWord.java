@@ -13,6 +13,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.relics.PlagueMask;
 
+@SuppressWarnings("unused")
 public class CorruptedWord extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(CorruptedWord.class.getSimpleName());
 

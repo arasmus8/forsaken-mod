@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class CleansingLight extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(CleansingLight.class.getSimpleName());
 

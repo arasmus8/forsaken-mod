@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class Backlash extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Backlash.class.getSimpleName());
 

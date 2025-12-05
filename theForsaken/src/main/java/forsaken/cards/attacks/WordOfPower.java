@@ -9,6 +9,7 @@ import forsaken.cards.AbstractForsakenCard;
 
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class WordOfPower extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WordOfPower.class.getSimpleName());
 

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class LightRoll extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(LightRoll.class.getSimpleName());
 

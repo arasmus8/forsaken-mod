@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.NobleSacrificeAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class NobleSacrifice extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(NobleSacrifice.class.getSimpleName());
 

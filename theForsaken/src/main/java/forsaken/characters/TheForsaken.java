@@ -23,11 +23,9 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import forsaken.TheForsakenMod;
 import forsaken.cards.Defend;
 import forsaken.cards.Strike;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import forsaken.TheForsakenMod;
 import forsaken.oldCards.Penitence;
 import forsaken.oldCards.Smite;
 import forsaken.oldCards.TheForsaken_Defend;
@@ -42,7 +40,7 @@ import static forsaken.TheForsakenMod.makeID;
 import static forsaken.characters.TheForsaken.Enums.COLOR_GOLD;
 
 public class TheForsaken extends CustomPlayer {
-    public static final Logger logger = LogManager.getLogger(TheForsaken.class.getName());
+    // public static final Logger logger = LogManager.getLogger(TheForsaken.class.getName());
 
     public static class Enums {
         @SpireEnum

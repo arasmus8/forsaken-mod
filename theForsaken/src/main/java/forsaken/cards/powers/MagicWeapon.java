@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.MagicWeaponPower;
 
+@SuppressWarnings("unused")
 public class MagicWeapon extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(MagicWeapon.class.getSimpleName());
 

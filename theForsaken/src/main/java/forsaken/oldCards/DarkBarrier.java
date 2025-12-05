@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.DarkBarrierAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class DarkBarrier extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DarkBarrier.class.getSimpleName());
 

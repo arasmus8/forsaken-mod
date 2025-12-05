@@ -6,13 +6,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
-import com.megacrit.cardcrawl.localization.KeywordStrings;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.PoisonPower;
@@ -23,6 +20,7 @@ public class BottledPlaguePotion extends AbstractPotion implements CustomSavable
     public static final String POTION_ID = TheForsakenMod.makeID(BottledPlaguePotion.class.getSimpleName());
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
+    @SuppressWarnings("UnusedAssignment")
     private int poisonAmt = 6;
 
     public static final Color LIQUID_COLOR = new Color(0x3C5E1CA0);
@@ -45,6 +43,7 @@ public class BottledPlaguePotion extends AbstractPotion implements CustomSavable
         initializeData();
     }
 
+    @SuppressWarnings("unused")
     public BottledPlaguePotion() {
         this(6);
     }

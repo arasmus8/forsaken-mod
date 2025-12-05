@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.SacredOathAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class SacredOath extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(SacredOath.class.getSimpleName());
 

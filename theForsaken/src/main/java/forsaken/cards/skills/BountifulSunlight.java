@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.SunlightPower;
 
+@SuppressWarnings("unused")
 public class BountifulSunlight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BountifulSunlight.class.getSimpleName());
 

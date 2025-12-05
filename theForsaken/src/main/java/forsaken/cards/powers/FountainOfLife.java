@@ -7,6 +7,7 @@ import forsaken.cards.AbstractForsakenCard;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.FountainOfLifePower;
 
+@SuppressWarnings("unused")
 public class FountainOfLife extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(FountainOfLife.class.getSimpleName());
 

@@ -18,15 +18,13 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 
-import java.util.Iterator;
-
 public class PurificationAction extends AbstractGameAction {
     private final AbstractMonster target;
     private final float duration;
     private final int damage;
     private final DamageType damageType;
 
-    public PurificationAction(AbstractPlayer player, AbstractMonster target, int damage, DamageType damageType) {
+    public PurificationAction(AbstractMonster target, int damage, DamageType damageType) {
         this.duration = Settings.ACTION_DUR_MED;
         this.target = target;
         this.damage = damage;

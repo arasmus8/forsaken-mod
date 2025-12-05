@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.FearPower;
 
+@SuppressWarnings("unused")
 public class Enfeeble extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Enfeeble.class.getSimpleName());
 

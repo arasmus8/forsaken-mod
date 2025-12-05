@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractQuickdrawCard;
 import forsaken.powers.FearPower;
 
+@SuppressWarnings("unused")
 public class LightRoll extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(LightRoll.class.getSimpleName());
 

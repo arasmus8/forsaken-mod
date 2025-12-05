@@ -14,9 +14,9 @@ import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 public class ThunderboltAction extends AbstractGameAction {
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
     private static final float POST_ATTACK_WAIT_DURATION = Settings.ACTION_DUR_FAST;
-    private AbstractMonster target;
-    private DamageInfo damageInfo;
-    private int amount;
+    private final AbstractMonster target;
+    private final DamageInfo damageInfo;
+    private final int amount;
 
     public ThunderboltAction(AbstractMonster target, DamageInfo damageInfo, int amount) {
         this.duration = DURATION;

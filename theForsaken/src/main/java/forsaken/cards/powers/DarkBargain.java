@@ -7,6 +7,7 @@ import forsaken.cards.AbstractForsakenCard;
 import forsaken.cards.Recompense;
 import forsaken.powers.DarkBargainPower;
 
+@SuppressWarnings("unused")
 public class DarkBargain extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(DarkBargain.class.getSimpleName());
 

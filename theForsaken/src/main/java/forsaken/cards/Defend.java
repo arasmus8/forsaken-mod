@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Defend extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Defend.class.getSimpleName());
 

@@ -2,12 +2,12 @@ package forsaken.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.actions.MoveToDrawPileAction;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class Temperance extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Temperance.class.getSimpleName());
 

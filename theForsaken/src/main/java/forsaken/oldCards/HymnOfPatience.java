@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.EnergizedPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class HymnOfPatience extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(HymnOfPatience.class.getSimpleName());
 

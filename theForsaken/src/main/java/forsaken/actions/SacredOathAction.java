@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class SacredOathAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private int amount;
+    private final AbstractPlayer p;
+    private final int amount;
 
     public SacredOathAction(int amount) {
         this.actionType = ActionType.WAIT;

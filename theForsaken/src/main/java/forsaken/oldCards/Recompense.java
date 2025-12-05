@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 
+@SuppressWarnings("unused")
 public class Recompense extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Recompense.class.getSimpleName());
 

@@ -10,6 +10,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.FunctionalAction;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class SpinAttack extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(SpinAttack.class.getSimpleName());
 

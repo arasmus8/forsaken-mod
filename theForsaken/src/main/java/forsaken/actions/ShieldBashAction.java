@@ -6,13 +6,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import forsaken.oldCards.ShieldBash;
 
-import java.util.Iterator;
-import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class ShieldBashAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public ShieldBashAction(AbstractCard card, int amount) {
         this.duration = Settings.ACTION_DUR_FAST;

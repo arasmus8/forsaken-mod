@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.BolsterPower;
 
+@SuppressWarnings("unused")
 public class Bolster extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Bolster.class.getSimpleName());
 

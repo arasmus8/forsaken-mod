@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 
 public class TextureLoader {
-    private static HashMap<String, Texture> textures = new HashMap<>();
+    private static final HashMap<String, Texture> textures = new HashMap<>();
     public static final Logger logger = LogManager.getLogger(TextureLoader.class.getName());
 
     /**
@@ -40,7 +40,7 @@ public class TextureLoader {
      *
      * @param textureString - String path to the texture you want to load relative to resources,
      *                      Example: "img/ui/missingtexture.png"
-     * @throws GdxRuntimeException
+     * @throws GdxRuntimeException - error if not found
      */
     private static void loadTexture(final String textureString) throws GdxRuntimeException {
         logger.info("TheForsakenMod | Loading Texture: {}", textureString);

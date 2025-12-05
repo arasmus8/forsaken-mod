@@ -12,6 +12,7 @@ import forsaken.cards.AbstractForsakenCard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+@SuppressWarnings("unused")
 public class BattleHymn extends AbstractForsakenCard {
     private static final Logger logger = LogManager.getLogger(BattleHymn.class);
     public static final String ID = TheForsakenMod.makeID(BattleHymn.class.getSimpleName());

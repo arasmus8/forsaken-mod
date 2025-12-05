@@ -10,6 +10,7 @@ import forsaken.cards.AbstractForsakenCard;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class QuickAttack extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(QuickAttack.class.getSimpleName());
 

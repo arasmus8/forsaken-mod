@@ -11,6 +11,7 @@ import forsaken.actions.MoveToDrawPileAction;
 import forsaken.characters.TheForsaken;
 import forsaken.variables.UnplayedCardsVariable;
 
+@SuppressWarnings("unused")
 public class Temperance extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Temperance.class.getSimpleName());
 

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Parry extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Parry.class.getSimpleName());
 

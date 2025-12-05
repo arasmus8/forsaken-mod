@@ -10,6 +10,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.RetributionPower;
 
+@SuppressWarnings("unused")
 public class Retribution extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Retribution.class.getSimpleName());
 

@@ -51,12 +51,10 @@ public class DefensiveStancePower extends AbstractForsakenPower implements Clone
 
     @Override
     public void updateDescription() {
-        StringBuilder b = new StringBuilder(DESCRIPTIONS[0]);
-        b.append(amount * 25).append("%");
-        b.append(DESCRIPTIONS[1]);
-        b.append(amount * 25).append("%");
-        b.append(DESCRIPTIONS[2]);
-        description = b.toString();
+        description = DESCRIPTIONS[0] + amount * 25 + "%" +
+                DESCRIPTIONS[1] +
+                amount * 25 + "%" +
+                DESCRIPTIONS[2];
     }
 
     @Override

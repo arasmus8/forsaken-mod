@@ -14,6 +14,7 @@ import java.util.Comparator;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+@SuppressWarnings("unused")
 public class ShieldBash extends AbstractForsakenCard {
     private static final Logger logger = LogManager.getLogger(ShieldBash.class.getName());
     public static final String ID = TheForsakenMod.makeID(ShieldBash.class.getSimpleName());
@@ -35,9 +36,7 @@ public class ShieldBash extends AbstractForsakenCard {
 
     private void damageAction(int i) {
         Optional<AbstractMonster> target = target();
-        target.ifPresent(m -> {
-            dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        });
+        target.ifPresent(m -> dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
     private Optional<AbstractMonster> target() {

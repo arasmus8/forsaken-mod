@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.variables.UnplayedCardsVariable;
 
+@SuppressWarnings("unused")
 public class HealingLight extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(HealingLight.class.getSimpleName());
 

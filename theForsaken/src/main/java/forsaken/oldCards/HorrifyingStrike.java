@@ -12,6 +12,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.OldFearPower;
 
+@SuppressWarnings("unused")
 public class HorrifyingStrike extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(HorrifyingStrike.class.getSimpleName());
 

@@ -9,8 +9,8 @@ import forsaken.TheForsakenMod;
 
 public class MoveToDrawPileAction extends AbstractGameAction {
     public static final String ID = TheForsakenMod.makeID(MoveToDrawPileAction.class.getSimpleName());
-    private AbstractPlayer p;
-    private AbstractCard card;
+    private final AbstractPlayer p;
+    private final AbstractCard card;
 
     public MoveToDrawPileAction(AbstractCard card) {
         this.p = AbstractDungeon.player;

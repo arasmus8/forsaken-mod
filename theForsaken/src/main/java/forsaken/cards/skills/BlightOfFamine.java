@@ -3,7 +3,6 @@ package forsaken.cards.skills;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -11,6 +10,7 @@ import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class BlightOfFamine extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BlightOfFamine.class.getSimpleName());
 
@@ -25,9 +25,7 @@ public class BlightOfFamine extends AbstractForsakenCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (dontTriggerOnUseCard) {
             // unplayed trigger
-            monsterList().forEach(mon -> {
-                applyToEnemy(mon, new WeakPower(mon, magicNumber, false));
-            });
+            monsterList().forEach(mon -> applyToEnemy(mon, new WeakPower(mon, magicNumber, false)));
             applyToSelf(new WeakPower(p, magicNumber, false));
             return;
         }

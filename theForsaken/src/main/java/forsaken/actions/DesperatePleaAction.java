@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class DesperatePleaAction extends AbstractGameAction {
     private final AbstractPlayer player;
-    private int amount;
+    private final int amount;
 
 
     public DesperatePleaAction(AbstractPlayer player, int amount) {

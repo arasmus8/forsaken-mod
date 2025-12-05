@@ -7,6 +7,7 @@ import forsaken.cards.AbstractForsakenCard;
 import forsaken.cards.skills.Parry;
 import forsaken.powers.RipostePower;
 
+@SuppressWarnings("unused")
 public class Riposte extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Riposte.class.getSimpleName());
 

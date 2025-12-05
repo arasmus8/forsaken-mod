@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import forsaken.TheForsakenMod;
 import forsaken.relics.PlagueMask;
 
+@SuppressWarnings("unused")
 public class PlagueCurse extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(PlagueCurse.class.getSimpleName());
 

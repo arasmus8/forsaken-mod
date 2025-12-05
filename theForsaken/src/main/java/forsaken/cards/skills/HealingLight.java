@@ -9,6 +9,7 @@ import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.FearPower;
 import forsaken.powers.SunlightPower;
 
+@SuppressWarnings("unused")
 public class HealingLight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HealingLight.class.getSimpleName());
 
@@ -29,9 +30,7 @@ public class HealingLight extends AbstractForsakenCard {
         AbstractPower power = p.getPower(SunlightPower.POWER_ID);
         if (power != null && power.amount > 0) {
             power.onSpecificTrigger();
-            monsterList().forEach(m -> {
-                applyToEnemy(m, new FearPower(m, 2));
-            });
+            monsterList().forEach(m -> applyToEnemy(m, new FearPower(m, 2)));
         }
         return true;
     }

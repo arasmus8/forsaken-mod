@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.SunlightPower;
 
+@SuppressWarnings("unused")
 public class ScorchingSunlight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(ScorchingSunlight.class.getSimpleName());
 

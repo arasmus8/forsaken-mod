@@ -12,6 +12,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BlindFaithPower;
 
+@SuppressWarnings("unused")
 public class BlindFaith extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(BlindFaith.class.getSimpleName());
 

@@ -2,7 +2,6 @@ package forsaken.cards.skills;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,8 +12,8 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
 import java.util.List;
-import java.util.function.Consumer;
 
+@SuppressWarnings("unused")
 public class NobleSacrifice extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(NobleSacrifice.class.getSimpleName());
 

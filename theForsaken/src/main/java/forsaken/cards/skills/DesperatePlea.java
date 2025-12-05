@@ -11,6 +11,7 @@ import forsaken.powers.SunlightPower;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class DesperatePlea extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(DesperatePlea.class.getSimpleName());
 

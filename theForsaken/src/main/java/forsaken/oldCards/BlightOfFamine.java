@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class BlightOfFamine extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(BlightOfFamine.class.getSimpleName());
 

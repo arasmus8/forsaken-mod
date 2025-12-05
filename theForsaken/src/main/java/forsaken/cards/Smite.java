@@ -2,14 +2,12 @@ package forsaken.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.powers.SunlightPower;
 
+@SuppressWarnings("unused")
 public class Smite extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(Smite.class.getSimpleName());
 

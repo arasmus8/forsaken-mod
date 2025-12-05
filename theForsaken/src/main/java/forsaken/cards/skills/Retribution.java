@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractQuickdrawCard;
 
+@SuppressWarnings("unused")
 public class Retribution extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(Retribution.class.getSimpleName());
 

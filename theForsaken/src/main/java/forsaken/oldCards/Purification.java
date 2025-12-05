@@ -7,6 +7,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.PurificationAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Purification extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Purification.class.getSimpleName());
 
@@ -27,7 +28,7 @@ public class Purification extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new PurificationAction(p, m, damage, damageTypeForTurn));
+        AbstractDungeon.actionManager.addToBottom(new PurificationAction(m, damage, damageTypeForTurn));
     }
 
     @Override

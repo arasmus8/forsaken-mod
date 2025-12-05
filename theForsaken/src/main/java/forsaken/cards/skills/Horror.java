@@ -7,6 +7,7 @@ import forsaken.actions.XCostAction;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.FearPower;
 
+@SuppressWarnings("unused")
 public class Horror extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Horror.class.getSimpleName());
 
@@ -19,7 +20,7 @@ public class Horror extends AbstractForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        qAction(new XCostAction<AbstractMonster>(this, this::doEffect, m));
+        qAction(new XCostAction<>(this, this::doEffect, m));
     }
 
     public boolean doEffect(Integer energyCount, AbstractMonster m) {

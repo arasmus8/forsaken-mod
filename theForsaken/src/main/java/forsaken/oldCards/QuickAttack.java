@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class QuickAttack extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(QuickAttack.class.getSimpleName());
 

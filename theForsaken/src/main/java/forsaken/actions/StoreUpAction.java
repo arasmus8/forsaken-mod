@@ -13,8 +13,8 @@ import forsaken.TheForsakenMod;
 
 public class StoreUpAction extends AbstractGameAction {
     public static final String ID = TheForsakenMod.makeID(StoreUpAction.class.getSimpleName());
-    private AbstractPlayer p;
-    private int amount;
+    private final AbstractPlayer p;
+    private final int amount;
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
 

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Smite extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Smite.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
 

@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.FearPower;
 
+@SuppressWarnings("unused")
 public class HorrifyingStrike extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HorrifyingStrike.class.getSimpleName());
 

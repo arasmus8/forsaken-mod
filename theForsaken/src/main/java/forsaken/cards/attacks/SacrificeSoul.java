@@ -11,6 +11,7 @@ import forsaken.powers.SunlightPower;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class SacrificeSoul extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(SacrificeSoul.class.getSimpleName());
 

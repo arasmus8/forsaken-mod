@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractQuickdrawCard;
 
+@SuppressWarnings("unused")
 public class DarkFog extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(DarkFog.class.getSimpleName());
 
@@ -18,8 +19,6 @@ public class DarkFog extends AbstractQuickdrawCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new PoisonPower(p, p, magicNumber));
-        monsterList().forEach(mon -> {
-            applyToEnemy(mon, new PoisonPower(mon, p, magicNumber));
-        });
+        monsterList().forEach(mon -> applyToEnemy(mon, new PoisonPower(mon, p, magicNumber)));
     }
 }

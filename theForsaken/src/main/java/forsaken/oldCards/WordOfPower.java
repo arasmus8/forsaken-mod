@@ -11,6 +11,7 @@ import forsaken.CustomTags;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class WordOfPower extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(WordOfPower.class.getSimpleName());
 

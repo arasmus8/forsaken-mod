@@ -12,6 +12,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.FunctionalAction;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class Confusion extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Confusion.class.getSimpleName());
 

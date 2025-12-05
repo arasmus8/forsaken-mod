@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.BindingThornsPower;
 
+@SuppressWarnings("unused")
 public class BindingThorns extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BindingThorns.class.getSimpleName());
 

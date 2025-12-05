@@ -2,13 +2,12 @@ package forsaken.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractQuickdrawCard;
 
+@SuppressWarnings("unused")
 public class ShieldCharge extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(ShieldCharge.class.getSimpleName());
 

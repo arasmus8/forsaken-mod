@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.AncientWordsPower;
 
+@SuppressWarnings("unused")
 public class AncientWords extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(AncientWords.class.getSimpleName());
 

@@ -7,6 +7,7 @@ import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.SunlightPower;
 import forsaken.powers.TearsOfSunlightPower;
 
+@SuppressWarnings("unused")
 public class TearsOfSunlight extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(TearsOfSunlight.class.getSimpleName());
 

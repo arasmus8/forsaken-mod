@@ -6,6 +6,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.FearPower;
 
+@SuppressWarnings("unused")
 public class HymnOfPatience extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(HymnOfPatience.class.getSimpleName());
 

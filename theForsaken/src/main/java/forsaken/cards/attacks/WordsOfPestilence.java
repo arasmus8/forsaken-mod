@@ -14,6 +14,7 @@ import forsaken.cards.AbstractQuickdrawCard;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unused")
 public class WordsOfPestilence extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WordsOfPestilence.class.getSimpleName());
 

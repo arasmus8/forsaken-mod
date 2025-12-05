@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.WrathOfGodAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class WrathOfGod extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(WrathOfGod.class.getSimpleName());
 

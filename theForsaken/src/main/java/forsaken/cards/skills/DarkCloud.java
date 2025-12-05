@@ -12,6 +12,7 @@ import forsaken.powers.SunlightPower;
 import java.util.Optional;
 import java.util.function.BiFunction;
 
+@SuppressWarnings("unused")
 public class DarkCloud extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(DarkCloud.class.getSimpleName());
 

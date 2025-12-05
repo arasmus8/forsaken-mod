@@ -10,11 +10,11 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import forsaken.powers.OldFearPower;
 
 public class HorrorAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private AbstractMonster m;
-    private boolean freeToPlayOnce;
-    private int energyOnUse;
-    private boolean isUpgraded;
+    private final AbstractPlayer p;
+    private final AbstractMonster m;
+    private final boolean freeToPlayOnce;
+    private final int energyOnUse;
+    private final boolean isUpgraded;
 
     public HorrorAction(AbstractPlayer p, AbstractMonster m, boolean isUpgraded, boolean freeToPlayOnce, int energyOnUse) {
         this.p = p;

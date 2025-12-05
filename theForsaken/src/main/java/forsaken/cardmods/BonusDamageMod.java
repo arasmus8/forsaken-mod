@@ -22,18 +22,16 @@ public class BonusDamageMod extends AbstractCardModifier {
 
     // TODO: flash the card to indicate damage bonus
 
-    public static BonusDamageMod applyToCard(AbstractCard c, int amount) {
+    public static void applyToCard(AbstractCard c, int amount) {
         c.superFlash();
         Optional<BonusDamageMod> current = BonusDamageMod.getForCard(c);
         if (current.isPresent()) {
             BonusDamageMod mod = current.get();
             mod.damage += amount;
-            return mod;
         }
 
         BonusDamageMod mod = new BonusDamageMod(amount);
         CardModifierManager.addModifier(c, mod);
-        return mod;
     }
 
     public static Optional<BonusDamageMod> getForCard(AbstractCard c) {

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class PreciseStrike extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(PreciseStrike.class.getSimpleName());
 

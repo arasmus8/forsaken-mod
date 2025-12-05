@@ -1,12 +1,12 @@
 package forsaken.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class FatRoll extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(FatRoll.class.getSimpleName());
 

@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
 public class ConfusionAction extends AbstractGameAction {
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
     private static final int ATTACK_TIMES = 3;
-    private AbstractMonster target;
+    private final AbstractMonster target;
 
     public ConfusionAction(AbstractMonster target) {
         this.duration = DURATION;

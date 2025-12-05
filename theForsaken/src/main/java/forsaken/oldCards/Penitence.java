@@ -9,6 +9,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BonusDamagePower;
 
+@SuppressWarnings("unused")
 public class Penitence extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Penitence.class.getSimpleName());
 

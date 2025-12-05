@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import forsaken.TheForsakenMod;
 import forsaken.util.ActionUnit;
 
+@SuppressWarnings("unused")
 public class AbstractForsakenPower extends AbstractPower implements ActionUnit {
     protected PowerStrings powerStrings;
     protected String[] DESCRIPTIONS;

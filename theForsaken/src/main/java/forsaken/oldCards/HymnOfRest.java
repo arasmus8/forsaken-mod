@@ -10,6 +10,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.HymnOfRestPower;
 
+@SuppressWarnings("unused")
 public class HymnOfRest extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(HymnOfRest.class.getSimpleName());
 

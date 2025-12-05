@@ -18,6 +18,7 @@ import java.util.Arrays;
 import static forsaken.TheForsakenMod.cardResourcePath;
 import static forsaken.TheForsakenMod.getModID;
 
+@SuppressWarnings("unused")
 public abstract class AbstractOldForsakenCard extends CustomCard {
     protected final String NAME;
     protected final String UPGRADE_DESCRIPTION;

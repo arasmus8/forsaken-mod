@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class FatRoll extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(FatRoll.class.getSimpleName());
 

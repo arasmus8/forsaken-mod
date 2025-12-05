@@ -1,9 +1,7 @@
 package forsaken.cards.skills;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -14,6 +12,7 @@ import forsaken.powers.SunlightPower;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class PowerUp extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(PowerUp.class.getSimpleName());
 
@@ -30,9 +29,7 @@ public class PowerUp extends AbstractForsakenCard {
             Optional<AbstractPower> sunlightPower = Optional.ofNullable(p.getPower(SunlightPower.POWER_ID));
             sunlightPower.ifPresent(pow -> {
                 int damage = pow.amount;
-                monsterList().forEach(mon -> {
-                    qAction(new LoseHPAction(mon, p, damage, AbstractGameAction.AttackEffect.FIRE));
-                });
+                monsterList().forEach(mon -> qAction(new LoseHPAction(mon, p, damage, AbstractGameAction.AttackEffect.FIRE)));
             });
             return true;
         }));

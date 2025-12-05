@@ -1,7 +1,6 @@
 package forsaken.cards.skills;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.actions.FunctionalAction;
@@ -12,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.IntStream;
 
+@SuppressWarnings("unused")
 public class Parry extends AbstractQuickdrawCard {
     private static final Logger logger = LogManager.getLogger(Parry.class);
     public static final String ID = TheForsakenMod.makeID(Parry.class.getSimpleName());

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Enfeeble extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Enfeeble.class.getSimpleName());
 

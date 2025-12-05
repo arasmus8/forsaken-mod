@@ -12,6 +12,7 @@ import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.potions.BottledPlaguePotion;
 
+@SuppressWarnings("unused")
 public class BottledPlague extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(BottledPlague.class.getSimpleName());
 

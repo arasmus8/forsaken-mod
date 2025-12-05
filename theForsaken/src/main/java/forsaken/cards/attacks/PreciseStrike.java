@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class PreciseStrike extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(PreciseStrike.class.getSimpleName());
 

@@ -1,16 +1,12 @@
 package forsaken.cards.skills;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.actions.BiFunctionalAction;
-import forsaken.actions.FunctionalAction;
 import forsaken.cardmods.BonusDamageMod;
 import forsaken.cards.AbstractForsakenCard;
 
@@ -18,6 +14,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+@SuppressWarnings("unused")
 public class Elegy extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Elegy.class.getSimpleName());
 

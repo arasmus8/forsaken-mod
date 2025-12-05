@@ -16,6 +16,7 @@ import forsaken.actions.BiFunctionalAction;
 import forsaken.actions.XCostAction;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class WrathOfGod extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WrathOfGod.class.getSimpleName());
 

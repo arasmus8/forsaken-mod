@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class ShieldCharge extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(ShieldCharge.class.getSimpleName());
 

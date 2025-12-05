@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class BottledPlague extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(BottledPlague.class.getSimpleName());
 

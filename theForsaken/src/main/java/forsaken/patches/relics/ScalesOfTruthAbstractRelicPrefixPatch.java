@@ -5,16 +5,12 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import forsaken.relics.ScalesOfTruth;
 
 import java.util.Objects;
 
 @SpirePatch(clz = AbstractRelic.class, method = "obtain")
 public class ScalesOfTruthAbstractRelicPrefixPatch {
-
-    private static final Logger logger = LogManager.getLogger(ScalesOfTruthAbstractRelicPrefixPatch.class.getName());
 
     @SpirePrefixPatch
     public static SpireReturn<Void> ReturnIfRelicIsScalesOfTruth(AbstractRelic __instance) {

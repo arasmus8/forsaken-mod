@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.SiphonStrikeAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class SiphonStrike extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(SiphonStrike.class.getSimpleName());
 

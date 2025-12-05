@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class SolarFlare extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(SolarFlare.class.getSimpleName());
 

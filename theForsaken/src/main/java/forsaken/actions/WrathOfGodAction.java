@@ -13,13 +13,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class WrathOfGodAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private AbstractMonster m;
-    private boolean freeToPlayOnce = false;
-    private int energyOnUse = -1;
-    private DamageType damageType;
-    private int damage = 0;
-    private int block = 0;
+    private final AbstractPlayer p;
+    private final AbstractMonster m;
+    private final boolean freeToPlayOnce;
+    private final int energyOnUse;
+    private final DamageType damageType;
+    private final int damage;
+    private final int block;
 
     public WrathOfGodAction(AbstractPlayer p, AbstractMonster m, int damage, int block, DamageType damageType, boolean freeToPlayOnce, int energyOnUse) {
         this.damageType = damageType;

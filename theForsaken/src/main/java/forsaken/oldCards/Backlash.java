@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Backlash extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Backlash.class.getSimpleName());
 

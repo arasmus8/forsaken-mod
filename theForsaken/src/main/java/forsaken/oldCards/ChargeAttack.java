@@ -10,6 +10,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.variables.UnplayedCardsVariable;
 
+@SuppressWarnings("unused")
 public class ChargeAttack extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(ChargeAttack.class.getSimpleName());
 

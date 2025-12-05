@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 public class DevotionAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     public static int numPlaced;
 
     public DevotionAction(AbstractCreature target, AbstractCreature source, int amount) {

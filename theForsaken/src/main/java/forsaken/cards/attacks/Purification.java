@@ -10,11 +10,11 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import forsaken.TheForsakenMod;
-import forsaken.actions.BiFunctionalAction;
 import forsaken.actions.FunctionalAction;
 import forsaken.cards.AbstractForsakenCard;
 import forsaken.powers.FearPower;
 
+@SuppressWarnings("unused")
 public class Purification extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(Purification.class.getSimpleName());
 

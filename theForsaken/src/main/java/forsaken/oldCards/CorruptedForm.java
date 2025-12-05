@@ -9,6 +9,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.CorruptedFormPower;
 
+@SuppressWarnings("unused")
 public class CorruptedForm extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(CorruptedForm.class.getSimpleName());
 

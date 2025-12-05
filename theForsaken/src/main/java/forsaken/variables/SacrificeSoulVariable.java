@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import java.util.Iterator;
-
 import static forsaken.TheForsakenMod.makeID;
 
 

@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.BonusDamagePower;
 
+@SuppressWarnings("unused")
 public class PowerUp extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(PowerUp.class.getSimpleName());
 

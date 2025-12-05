@@ -13,11 +13,9 @@ import forsaken.characters.TheForsaken;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unused")
 public class DivineGuidance extends AbstractForsakenCard {
     private static final Logger logger = LogManager.getLogger(DivineGuidance.class);
     public static final String ID = TheForsakenMod.makeID(DivineGuidance.class.getSimpleName());

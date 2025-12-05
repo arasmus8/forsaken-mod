@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
 import forsaken.cards.AbstractForsakenCard;
 
+@SuppressWarnings("unused")
 public class WardingHymn extends AbstractForsakenCard {
     public static final String ID = TheForsakenMod.makeID(WardingHymn.class.getSimpleName());
 

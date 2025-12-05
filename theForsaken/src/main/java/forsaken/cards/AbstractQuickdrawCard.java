@@ -12,17 +12,11 @@ import java.util.Optional;
 
 import static forsaken.util.ForsakenCardTags.QUICKDRAW_CARD;
 
+@SuppressWarnings("unused")
 public abstract class AbstractQuickdrawCard extends AbstractForsakenCard {
     private static final UIStrings uiStrings;
     private static final String[] TEXT;
     private static final String cantUseString;
-
-//    private static CardTags[] append(CardTags tag, CardTags[] orig) {
-//        CardTags[] result = new CardTags[orig.length + 1];
-//        System.arraycopy(orig, 0, result, 0, orig.length);
-//        result[orig.length] = tag;
-//        return result;
-//    }
 
     public AbstractQuickdrawCard(String id, CardType type, CardRarity rarity, CardTarget target) {
         super(id, -2, type, rarity, target, TheForsaken.Enums.COLOR_GOLD, QUICKDRAW_CARD);

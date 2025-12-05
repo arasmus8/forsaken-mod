@@ -9,6 +9,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.DesperatePleaAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class DesperatePlea extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(DesperatePlea.class.getSimpleName());
 

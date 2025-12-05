@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
 import forsaken.powers.OldRipostePower;
 
+@SuppressWarnings("unused")
 public class Riposte extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Riposte.class.getSimpleName());
 

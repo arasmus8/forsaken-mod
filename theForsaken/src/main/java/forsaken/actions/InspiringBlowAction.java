@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class InspiringBlowAction extends AbstractGameAction {
-    private float duration;
-    private AbstractMonster target;
-    private DamageInfo damageInfo;
-    private int amount;
+    private final float duration;
+    private final AbstractMonster target;
+    private final DamageInfo damageInfo;
+    private final int amount;
 
     public InspiringBlowAction(AbstractMonster target, DamageInfo damageInfo, int amount) {
         this.duration = Settings.ACTION_DUR_XFAST;

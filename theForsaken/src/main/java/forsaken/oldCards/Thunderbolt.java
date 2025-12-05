@@ -8,6 +8,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.ThunderboltAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Thunderbolt extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Thunderbolt.class.getSimpleName());
 

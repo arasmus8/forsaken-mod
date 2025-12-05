@@ -17,10 +17,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class SacrificeSoulAction extends AbstractGameAction {
     private final AbstractPlayer player;
-    private float duration;
-    private int damage;
-    private int bonusDamage;
-    private DamageType damageType;
+    private final float duration;
+    private final int damage;
+    private final int bonusDamage;
+    private final DamageType damageType;
 
     public SacrificeSoulAction(AbstractPlayer player, int damage, int bonusDamage, DamageType damageType) {
         this.duration = Settings.ACTION_DUR_XFAST;

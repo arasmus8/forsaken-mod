@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
 import static forsaken.TheForsakenMod.cardResourcePath;
 import static forsaken.TheForsakenMod.getModID;
 
+@SuppressWarnings("unused")
 public abstract class AbstractForsakenCard extends CustomCard implements ActionUnit {
     protected final String NAME;
     protected final String UPGRADE_DESCRIPTION;

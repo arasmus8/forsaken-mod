@@ -9,6 +9,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.HorrorAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class Horror extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(Horror.class.getSimpleName());
 

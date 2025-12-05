@@ -12,6 +12,7 @@ import forsaken.TheForsakenMod;
 import forsaken.actions.ShieldBashAction;
 import forsaken.characters.TheForsaken;
 
+@SuppressWarnings("unused")
 public class ShieldBash extends AbstractOldForsakenCard {
     public static final String ID = TheForsakenMod.makeOldID(ShieldBash.class.getSimpleName());
 
