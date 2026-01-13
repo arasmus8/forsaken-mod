@@ -139,7 +139,7 @@
   "forsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
     "DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random unplayable card. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with an upgraded random unplayable card. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random upgraded unplayable card. NL Exhaust"
   },
   "forsaken:Elegy": {
     "NAME": "Elegy",
@@ -155,7 +155,7 @@
   },
   "forsaken:FatRoll": {
     "NAME": "Fat Roll",
-    "DESCRIPTION": "Gain !B! block. NL forsaken:Unplayed: Draw an 1 more card next turn."
+    "DESCRIPTION": "Gain !B! block. NL forsaken:Unplayed: Draw 1 more card next turn."
   },
   "forsaken:FountainOfLife": {
     "NAME": "Fountain of Life",
@@ -171,7 +171,7 @@
   },
   "forsaken:HorrifyingStrike": {
     "NAME": "Horrifying Strike",
-    "DESCRIPTION": "Deal !D! damage. Deal !M! more damage for each stack of forsaken:Fear on the target."
+    "DESCRIPTION": "Deal !D! damage. Deal !M! more damage for each forsaken:Fear on the target."
   },
   "forsaken:Horror": {
     "NAME": "Horror",
@@ -206,8 +206,8 @@
   },
   "forsaken:Mantra": {
     "NAME": "Mantra",
-    "DESCRIPTION": "Choose a card. It is now Innate. NL Fleeting",
-    "UPGRADE_DESCRIPTION": "Choose ANY card. It is now Innate. NL Fleeting",
+    "DESCRIPTION": "Choose a card in your hand. It is now Innate. NL Fleeting",
+    "UPGRADE_DESCRIPTION": "Choose any card in your deck. It is now Innate. NL Fleeting",
     "EXTENDED_DESCRIPTION": [
       "Choose a card. It becomes innate."
     ]
@@ -272,7 +272,7 @@
   },
   "forsaken:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
-    "DESCRIPTION": "Remove all your forsaken:Sunlight. Deal !D! damage to ALL enemies. Damage is increased by !M! for each stack removed."
+    "DESCRIPTION": "Remove all your forsaken:Sunlight. Deal !D! damage to ALL enemies. Damage is increased by !M! for each Sunlight removed."
   },
   "forsaken:ScorchingSunlight": {
     "NAME": "Scorching Sunlight",

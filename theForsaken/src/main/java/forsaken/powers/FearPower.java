@@ -44,16 +44,12 @@ public class FearPower extends AbstractForsakenPower implements CloneablePowerIn
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK){
-            boolean hitsAllEnemies = card.target == AbstractCard.CardTarget.ALL_ENEMY;
-            boolean targetsPowerOwner =  action != null && action.target != null && action.target.equals(owner);
-            if( hitsAllEnemies || targetsPowerOwner) {
-                flash();
-                qAction(new ReducePowerAction(owner, owner, this, 1));
-            }
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.type != DamageType.THORNS && info.type != DamageType.HP_LOSS) {
+            flash();
+            addToTop(new ReducePowerAction(owner, owner, this, 1));
         }
-
+        return damageAmount;
     }
 
     @Override

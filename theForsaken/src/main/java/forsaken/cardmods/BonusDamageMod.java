@@ -20,14 +20,13 @@ public class BonusDamageMod extends AbstractCardModifier {
         this.damage = damage;
     }
 
-    // TODO: flash the card to indicate damage bonus
-
     public static void applyToCard(AbstractCard c, int amount) {
         c.superFlash();
         Optional<BonusDamageMod> current = BonusDamageMod.getForCard(c);
         if (current.isPresent()) {
             BonusDamageMod mod = current.get();
             mod.damage += amount;
+            return;
         }
 
         BonusDamageMod mod = new BonusDamageMod(amount);
@@ -51,6 +50,11 @@ public class BonusDamageMod extends AbstractCardModifier {
     @Override
     public float modifyBaseDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
         return damage + this.damage;
+    }
+
+    @Override
+    public String modifyName(String cardName, AbstractCard card) {
+        return cardName + " +" + this.damage;
     }
 
     @Override

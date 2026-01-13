@@ -70,5 +70,12 @@
     "DESCRIPTIONS": [
       "The first attack played each combat inflicts #b1 #yFear"
     ]
+  },
+  "forsaken:SunlightMedallion": {
+    "NAME": "Sunlight Medallion",
+    "FLAVOR": "A simple token to commemorate Jolly Cooperation.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b3 #ySunlight"
+    ]
   }
 }

@@ -276,6 +276,11 @@ public class TheForsakenMod implements
         UnlockTracker.markRelicAsSeen(Lifeblossom.ID);
         UnlockTracker.markRelicAsSeen(PaleLantern.ID);
         UnlockTracker.markRelicAsSeen(ScaryMask.ID);
+
+        // New Relics
+        BaseMod.addRelicToCustomPool(new SunlightMedallion(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(SunlightMedallion.ID);
+
         logger.info("Done adding relics!");
     }
 
@@ -385,8 +390,7 @@ public class TheForsakenMod implements
         if (cardsPlayed >= quickdrawTriggeredAt + countForTrigger) {
             // Draw the next quickdraw card
             AbstractDungeon.actionManager.addToBottom(new FunctionalAction(firstUpdate -> {
-                Optional<AbstractCard> nextQuickdrawCard = AbstractQuickdrawCard.nextQuickdrawCard();
-                nextQuickdrawCard.ifPresent(c -> {
+                AbstractQuickdrawCard.nextQuickdrawCard().ifPresent(c -> {
                     AbstractPlayer p = AbstractDungeon.player;
                     p.drawPile.removeCard(c);
                     p.drawPile.addToTop(c);

@@ -31,6 +31,8 @@ import forsaken.oldCards.Smite;
 import forsaken.oldCards.TheForsaken_Defend;
 import forsaken.oldCards.TheForsaken_Strike;
 import forsaken.relics.JudgementScales;
+import forsaken.relics.SunlightMedallion;
+import sun.security.provider.Sun;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -166,9 +168,13 @@ public class TheForsaken extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(JudgementScales.ID);
-
-        UnlockTracker.markRelicAsSeen(JudgementScales.ID);
+        if (TheForsakenMod.enableOldCardList) {
+            retVal.add(JudgementScales.ID);
+            UnlockTracker.markRelicAsSeen(JudgementScales.ID);
+        } else {
+            retVal.add(SunlightMedallion.ID);
+            UnlockTracker.markRelicAsSeen(SunlightMedallion.ID);
+        }
 
         return retVal;
     }

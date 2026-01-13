@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
+import forsaken.actions.FunctionalAction;
 import forsaken.cards.AbstractForsakenCard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,10 +32,13 @@ public class ShieldBash extends AbstractForsakenCard {
         int unplayableCardsInHand = unplayableCards(p.hand).size();
         logger.info("ShieldBash::dealing damage {} times", unplayableCardsInHand);
         IntStream.range(0, unplayableCardsInHand)
-                .forEach(this::damageAction);
+                .forEach(i -> qAction(new FunctionalAction(firstUpdate -> {
+                    damageAction();
+                    return true;
+                })));
     }
 
-    private void damageAction(int i) {
+    private void damageAction() {
         Optional<AbstractMonster> target = target();
         target.ifPresent(m -> dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
