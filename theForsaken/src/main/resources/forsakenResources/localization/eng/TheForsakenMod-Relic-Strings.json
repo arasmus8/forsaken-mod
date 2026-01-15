@@ -6,12 +6,34 @@
       "Whenever you gain Block, deal #b3 damage to all enemies."
     ]
   },
+  "forsaken:BlackenedSunEmblem": {
+    "NAME": "Blackened Sun Emblem",
+    "FLAVOR": "Provides a familiar warmth.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yWeak, #yVulnerable, or #yPoison, also gain #b",
+      " #yVigor."
+    ]
+  },
+  "forsaken:FadingSunlight": {
+    "NAME": "Fading Sunlight",
+    "FLAVOR": "A passing gleam in the darkness.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. Whenever you finish an Elite or Boss combat, lose #r5 max HP."
+    ]
+  },
   "forsaken:Gavel": {
     "NAME": "Gavel",
     "FLAVOR": "Figuratively renders judgement. Literally renders unconscious.",
     "DESCRIPTIONS": [
       "Whenever you play #b3 skills in a turn, gain #b",
       " bonus damage."
+    ]
+  },
+  "forsaken:GuardianBells": {
+    "NAME": "Guardian Bells",
+    "FLAVOR": "Fashioned into the form of a pair of gargoyles.",
+    "DESCRIPTIONS": [
+      "It takes 1 more card played to trigger #yQuickdraw. Quickdraw activates twice."
     ]
   },
   "forsaken:HumbleEgg": {
@@ -57,6 +79,13 @@
       "Whenever you are inflicted with poison, apply it to a random enemy also."
     ]
   },
+  "forsaken:MarkOfTheForsaken": {
+    "NAME": "Mark of the Forsaken",
+    "FLAVOR": "Those who bear the mark can no longer seek absolution.",
+    "DESCRIPTIONS": [
+      "Whenever you begin your turn with #yWeak or #yVulnerable, all attacks in your hand deal 1 more damage this combat."
+    ]
+  },
   "forsaken:ScalesOfTruth": {
     "NAME": "Scales of Truth",
     "FLAVOR": "It is said that if one's heart is light as a feather, the Truth will be understood.",
@@ -71,11 +100,34 @@
       "The first attack played each combat inflicts #b1 #yFear"
     ]
   },
+  "forsaken:Sunblade": {
+    "NAME": "Sunblade",
+    "FLAVOR": "Forged for a single, perfect strike.",
+    "DESCRIPTIONS": [
+      "The first attack you play each combat does #b",
+      " more damage for the rest of this combat."
+    ]
+  },
   "forsaken:SunlightMedallion": {
     "NAME": "Sunlight Medallion",
     "FLAVOR": "A simple token to commemorate Jolly Cooperation.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b3 #ySunlight"
+    ]
+  },
+  "forsaken:TearstoneRing": {
+    "NAME": "Tearstone Ring",
+    "FLAVOR": "This rare gem can sense when its bearer is in danger.",
+    "DESCRIPTIONS": [
+      "Whenever you draw #b10 #yUnplayable cards, gain #b",
+      " #yVigor"
+    ]
+  },
+  "forsaken:WornEffigy": {
+    "NAME": "Worn Effigy",
+    "FLAVOR": "Worn smooth by hands that needed it.",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP from #yPoison, draw 2 cards."
     ]
   }
 }

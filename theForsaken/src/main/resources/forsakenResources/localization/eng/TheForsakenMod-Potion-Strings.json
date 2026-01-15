@@ -6,6 +6,13 @@
       " #yPoison to an enemy."
     ]
   },
+  "forsaken:EstusFlask": {
+    "NAME": "Estus Flask",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #ySunlight."
+    ]
+  },
   "forsaken:FearPotion": {
     "NAME": "Terror Potion",
     "DESCRIPTIONS": [

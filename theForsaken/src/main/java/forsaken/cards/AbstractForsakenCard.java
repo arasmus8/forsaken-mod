@@ -83,7 +83,7 @@ public abstract class AbstractForsakenCard extends CustomCard implements ActionU
                                 final AbstractCard.CardTarget target,
                                 final AbstractCard.CardColor color,
                                 CardTags... tagsList) {
-        this(id, cost, type, rarity, target, color, (String)null);
+        this(id, cost, type, rarity, target, color, null, tagsList);
     }
 
     public AbstractForsakenCard(final String id,

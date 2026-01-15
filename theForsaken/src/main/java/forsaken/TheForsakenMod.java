@@ -35,6 +35,7 @@ import forsaken.characters.TheForsaken;
 import forsaken.events.PlagueDoctorEvent;
 import forsaken.oldCards.AbstractOldForsakenCard;
 import forsaken.potions.BottledPlaguePotion;
+import forsaken.potions.EstusFlask;
 import forsaken.potions.FearPotion;
 import forsaken.powers.HymnOfRestPower;
 import forsaken.powers.JollyCooperationPower;
@@ -49,10 +50,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Optional;
-import java.util.Properties;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
 @SpireInitializer
@@ -239,21 +238,19 @@ public class TheForsakenMod implements
     private void receiveEditPotions() {
         BaseMod.addPotion( FearPotion.class, FearPotion.LIQUID_COLOR, FearPotion.HYBRID_COLOR, FearPotion.SPOTS_COLOR, FearPotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN );
         BaseMod.addPotion(BottledPlaguePotion.class, BottledPlaguePotion.LIQUID_COLOR, BottledPlaguePotion.HYBRID_COLOR, BottledPlaguePotion.SPOTS_COLOR, BottledPlaguePotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN);
+        BaseMod.addPotion(EstusFlask.class, EstusFlask.LIQUID_COLOR, EstusFlask.HYBRID_COLOR, EstusFlask.SPOTS_COLOR, EstusFlask.POTION_ID, TheForsaken.Enums.THE_FORSAKEN);
     }
 
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new ArmorOfThorns(), TheForsaken.Enums.COLOR_GOLD);
-        BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GOLD);
         BaseMod.addRelicToCustomPool(new PlagueMask(), TheForsaken.Enums.COLOR_GOLD);
-        BaseMod.addRelicToCustomPool(new ScalesOfTruth(), TheForsaken.Enums.COLOR_GOLD);
 
         if (allRelicsCharSpecific) {
             BaseMod.addRelicToCustomPool(new Gavel(), TheForsaken.Enums.COLOR_GOLD);
             BaseMod.addRelicToCustomPool(new HumbleEgg(), TheForsaken.Enums.COLOR_GOLD);
             BaseMod.addRelicToCustomPool(new Kindling(), TheForsaken.Enums.COLOR_GOLD);
             BaseMod.addRelicToCustomPool(new Lifeblossom(), TheForsaken.Enums.COLOR_GOLD);
-            BaseMod.addRelicToCustomPool(new ScaryMask(), TheForsaken.Enums.COLOR_GOLD);
             BaseMod.addRelicToCustomPool(new PaleLantern(), TheForsaken.Enums.COLOR_GOLD);
         } else {
             // This adds a relic to the Shared pool. Every character can find this relic.
@@ -261,25 +258,44 @@ public class TheForsakenMod implements
             BaseMod.addRelic(new HumbleEgg(), RelicType.SHARED);
             BaseMod.addRelic(new Kindling(), RelicType.SHARED);
             BaseMod.addRelic(new Lifeblossom(), RelicType.SHARED);
-            BaseMod.addRelic(new ScaryMask(), RelicType.SHARED);
             BaseMod.addRelic(new PaleLantern(), RelicType.SHARED);
+        }
+
+        if (enableOldCardList) {
+            BaseMod.addRelicToCustomPool(new JudgementScales(), TheForsaken.Enums.COLOR_GOLD);
+            BaseMod.addRelicToCustomPool(new ScalesOfTruth(), TheForsaken.Enums.COLOR_GOLD);
+            BaseMod.addRelicToCustomPool(new ScaryMask(), TheForsaken.Enums.COLOR_GOLD);
+            UnlockTracker.markRelicAsSeen(JudgementScales.ID);
+            UnlockTracker.markRelicAsSeen(ScalesOfTruth.ID);
+            UnlockTracker.markRelicAsSeen(ScaryMask.ID);
         }
 
         // Mark relics as seen
         UnlockTracker.markRelicAsSeen(ArmorOfThorns.ID);
-        UnlockTracker.markRelicAsSeen(JudgementScales.ID);
         UnlockTracker.markRelicAsSeen(PlagueMask.ID);
-        UnlockTracker.markRelicAsSeen(ScalesOfTruth.ID);
         UnlockTracker.markRelicAsSeen(Gavel.ID);
         UnlockTracker.markRelicAsSeen(HumbleEgg.ID);
         UnlockTracker.markRelicAsSeen(Kindling.ID);
         UnlockTracker.markRelicAsSeen(Lifeblossom.ID);
         UnlockTracker.markRelicAsSeen(PaleLantern.ID);
-        UnlockTracker.markRelicAsSeen(ScaryMask.ID);
 
         // New Relics
         BaseMod.addRelicToCustomPool(new SunlightMedallion(), TheForsaken.Enums.COLOR_GOLD);
         UnlockTracker.markRelicAsSeen(SunlightMedallion.ID);
+        BaseMod.addRelicToCustomPool(new GuardianBells(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(GuardianBells.ID);
+        BaseMod.addRelicToCustomPool(new TearstoneRing(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(TearstoneRing.ID);
+        BaseMod.addRelicToCustomPool(new MarkOfTheForsaken(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(MarkOfTheForsaken.ID);
+        BaseMod.addRelicToCustomPool(new WornEffigy(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(WornEffigy.ID);
+        BaseMod.addRelicToCustomPool(new BlackenedSunEmblem(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(BlackenedSunEmblem.ID);
+        BaseMod.addRelicToCustomPool(new Sunblade(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(Sunblade.ID);
+        BaseMod.addRelicToCustomPool(new FadingSunlight(), TheForsaken.Enums.COLOR_GOLD);
+        UnlockTracker.markRelicAsSeen(FadingSunlight.ID);
 
         logger.info("Done adding relics!");
     }
@@ -381,24 +397,40 @@ public class TheForsakenMod implements
         if (!usedCards.contains(uuid)) {
             usedCards.add(uuid);
         }
+        if (AbstractQuickdrawCard.isQuickdraw(card)) {
+            // Don't trigger quickdraw when triggering quickdraw.
+            return;
+        }
         int countForTrigger = 3;
         if (AbstractDungeon.player.hasPower(JollyCooperationPower.POWER_ID)) {
             countForTrigger = 2;
         }
+        if (AbstractDungeon.player.hasRelic(GuardianBells.ID)) {
+            countForTrigger += 1;
+        }
         // have to include the card currently being played
-        int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + 1;
+        List<AbstractCard> nonQuickdrawCards = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .filter(c -> !(AbstractQuickdrawCard.isQuickdraw(c)))
+                .collect(Collectors.toList());
+        int cardsPlayed = nonQuickdrawCards.size() + 1;
         if (cardsPlayed >= quickdrawTriggeredAt + countForTrigger) {
             // Draw the next quickdraw card
-            AbstractDungeon.actionManager.addToBottom(new FunctionalAction(firstUpdate -> {
-                AbstractQuickdrawCard.nextQuickdrawCard().ifPresent(c -> {
-                    AbstractPlayer p = AbstractDungeon.player;
-                    p.drawPile.removeCard(c);
-                    p.drawPile.addToTop(c);
-                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-                    quickdrawTriggeredAt = cardsPlayed;
-                });
-                return true;
-            }));
+            int timesToTrigger = 1;
+            if (AbstractDungeon.player.hasRelic(GuardianBells.ID)) {
+                timesToTrigger = 2;
+            }
+            for (int i = 0; i < timesToTrigger; i++) {
+                AbstractDungeon.actionManager.addToBottom(new FunctionalAction(firstUpdate -> {
+                    AbstractQuickdrawCard.nextQuickdrawCard().ifPresent(c -> {
+                        AbstractPlayer p = AbstractDungeon.player;
+                        p.drawPile.removeCard(c);
+                        p.drawPile.addToTop(c);
+                        AbstractDungeon.actionManager.addToTop(new DrawCardAction(p, 1));
+                        quickdrawTriggeredAt = cardsPlayed;
+                    });
+                    return true;
+                }));
+            }
         }
     }
 
