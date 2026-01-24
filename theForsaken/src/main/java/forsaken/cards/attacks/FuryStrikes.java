@@ -12,7 +12,7 @@ public class FuryStrikes extends AbstractForsakenCard {
 
     public FuryStrikes() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 2;
+        damage = baseDamage = 3;
         upgradeDamageBy = 1;
     }
 

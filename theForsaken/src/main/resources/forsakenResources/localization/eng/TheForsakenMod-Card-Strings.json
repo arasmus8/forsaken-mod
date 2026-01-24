@@ -21,7 +21,8 @@
   },
   "forsaken:AncientWords": {
     "NAME": "Ancient Words",
-    "DESCRIPTION": "When you lose HP from poison, a random enemy also loses HP."
+    "DESCRIPTION": "Whenever you lose HP from poison, a random enemy loses HP.",
+    "UPGRADE_DESCRIPTION": "Whenever you lose HP from poison, a random enemy loses HP twice."
   },
   "forsaken:Backlash": {
     "NAME": "Backlash",
@@ -113,8 +114,8 @@
   },
   "forsaken:DarkCloud": {
     "NAME": "Dark Cloud",
-    "DESCRIPTION": "Shuffle X copies of Dark Fog into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Immediately trigger forsaken:Sunlight X times. Shuffle X copies of Dark Fog into your draw pile."
+    "DESCRIPTION": "Shuffle X copies of Dark Fog into your draw pile. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Shuffle X copies of Dark Fog into your draw pile. Trigger forsaken:Quickdraw X times. NL Exhaust"
   },
   "forsaken:DarkFog": {
     "NAME": "Dark Fog",
@@ -264,7 +265,8 @@
   },
   "forsaken:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Shuffle !M! copies of Parry into your draw pile. Whenever you draw a Parry, apply 1 Vulnerable to a random enemy."
+    "DESCRIPTION": "Shuffle !M! copy of Parry into your draw pile. Whenever you draw a Parry, apply 1 Vulnerable to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! copies of Parry into your draw pile. Whenever you draw a Parry, apply 1 Vulnerable to a random enemy."
   },
   "forsaken:SacredOath": {
     "NAME": "Sacred Oath",

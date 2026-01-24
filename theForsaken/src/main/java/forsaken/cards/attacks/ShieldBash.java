@@ -22,7 +22,7 @@ public class ShieldBash extends AbstractForsakenCard {
 
     public ShieldBash () {
         super(ID, -2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 3;
+        damage = baseDamage = 2;
         upgradeDamageBy = 1;
         unplayedEffect = true;
     }

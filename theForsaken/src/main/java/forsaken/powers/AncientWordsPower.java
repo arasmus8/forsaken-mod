@@ -8,8 +8,8 @@ import forsaken.TheForsakenMod;
 public class AncientWordsPower extends AbstractForsakenPower implements CloneablePowerInterface {
     public static final String POWER_ID = TheForsakenMod.makeID(AncientWordsPower.class.getSimpleName());
 
-    public AncientWordsPower(AbstractCreature owner) {
-        super(POWER_ID, owner, -1);
+    public AncientWordsPower(AbstractCreature owner, int amount) {
+        super(POWER_ID, owner, amount);
         type = PowerType.BUFF;
 
         loadRegion("artifact");
@@ -18,11 +18,19 @@ public class AncientWordsPower extends AbstractForsakenPower implements Cloneabl
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        StringBuilder sb = new StringBuilder();
+        sb.append(DESCRIPTIONS[0]);
+        sb.append(amount);
+        if (amount == 1) {
+            sb.append(DESCRIPTIONS[1]);
+        } else {
+            sb.append(DESCRIPTIONS[2]);
+        }
+        description = sb.toString();
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new AncientWordsPower(owner);
+        return new AncientWordsPower(owner, amount);
     }
 }

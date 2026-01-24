@@ -16,6 +16,10 @@ public class AncientWords extends AbstractForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new AncientWordsPower(p));
+        int amount = 1;
+        if (upgraded) {
+            amount = 2;
+        }
+        applyToSelf(new AncientWordsPower(p, amount));
     }
 }

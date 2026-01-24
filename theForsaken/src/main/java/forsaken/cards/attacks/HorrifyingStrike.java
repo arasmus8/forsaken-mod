@@ -15,8 +15,9 @@ public class HorrifyingStrike extends AbstractForsakenCard {
     public HorrifyingStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         damage = baseDamage = 8;
-        magicNumber = baseMagicNumber = 1;
-        upgradeMagicNumberBy = 1;
+        upgradeDamageBy = 2;
+        magicNumber = baseMagicNumber = 2;
+        upgradeMagicNumberBy = 2;
     }
 
     @Override

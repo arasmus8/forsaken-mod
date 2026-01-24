@@ -2,7 +2,9 @@
   "forsaken:AncientWordsPower": {
     "NAME": "Ancient Words",
     "DESCRIPTIONS": [
-      "When losing HP from poison, a random enemy also loses HP."
+      "When losing HP from poison, a random enemy loses HP #b",
+      " time.",
+      " times"
     ]
   },
   "forsaken:BindingThornsPower": {

@@ -1,17 +1,19 @@
 package forsaken.cards.skills;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import forsaken.TheForsakenMod;
 import forsaken.actions.FunctionalAction;
 import forsaken.actions.XCostAction;
 import forsaken.cards.AbstractForsakenCard;
+import forsaken.cards.AbstractQuickdrawCard;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.SunlightPower;
 
-import java.util.Optional;
+import java.util.List;
 import java.util.function.BiFunction;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
 public class DarkCloud extends AbstractForsakenCard {
@@ -20,22 +22,29 @@ public class DarkCloud extends AbstractForsakenCard {
     public DarkCloud() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, TheForsaken.Enums.COLOR_GOLD, "DarkBarrier");
         cardsToPreview = new DarkFog();
+        exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         BiFunction<Integer, Boolean, Boolean> action = (x, isUpgraded) -> {
-            if (isUpgraded) {
-                // trigger Sunlight x times
-                for (int i = 0; i < x; i++) {
-                    qAction(new FunctionalAction(firstUpdate -> {
-                        Optional<AbstractPower> maybeSunlight = Optional.ofNullable(p.getPower(SunlightPower.POWER_ID));
-                        maybeSunlight.ifPresent(AbstractPower::onSpecificTrigger);
-                        return true;
-                    }));
-                }
-            }
             shuffleIn(new DarkFog(), x);
+            if (isUpgraded) {
+                qAction(new FunctionalAction(firstUpdate -> {
+                    List<AbstractCard> quickdrawCards = p.drawPile.group.stream()
+                            .filter(AbstractQuickdrawCard::isQuickdraw)
+                            .limit(x)
+                            .collect(Collectors.toList());
+                    if (!quickdrawCards.isEmpty()) {
+                        quickdrawCards.forEach(card -> {
+                            p.drawPile.removeCard(card);
+                            p.drawPile.addToTop(card);
+                            addToTop(new DrawCardAction(1));
+                        });
+                    }
+                    return true;
+                }));
+            }
             return true;
         };
         qAction(new XCostAction<>(this, action, upgraded));
