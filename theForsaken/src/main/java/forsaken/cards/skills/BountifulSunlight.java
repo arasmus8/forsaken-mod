@@ -12,8 +12,8 @@ public class BountifulSunlight extends AbstractForsakenCard {
 
     public BountifulSunlight() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 8;
-        upgradeMagicNumberBy = 4;
+        magicNumber = baseMagicNumber = 6;
+        upgradeMagicNumberBy = 3;
         exhaust = true;
     }
 

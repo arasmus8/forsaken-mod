@@ -35,6 +35,7 @@ public class NobleSacrifice extends AbstractForsakenCard {
             if (cardsToDraw == -1) {
                 cardsToDraw = EnergyPanel.getCurrentEnergy();
             }
+            cardsToDraw = cardsToDraw + magicNumber;
             if (cardsToDraw > 0) {
                 qAction(new DrawCardAction(cardsToDraw));
             }

@@ -13,8 +13,8 @@ public class Terrorize extends AbstractForsakenCard {
     public Terrorize() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         exhaust = true;
-        magicNumber = baseMagicNumber = 15;
-        upgradeMagicNumberBy = 5;
+        magicNumber = baseMagicNumber = 10;
+        upgradeMagicNumberBy = 4;
     }
 
     @Override
