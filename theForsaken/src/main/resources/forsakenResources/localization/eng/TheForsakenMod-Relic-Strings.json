@@ -33,14 +33,14 @@
     "NAME": "Guardian Bells",
     "FLAVOR": "Fashioned into the form of a pair of gargoyles.",
     "DESCRIPTIONS": [
-      "It takes 1 more card played to trigger #yQuickdraw. Quickdraw activates twice."
+      "It takes 1 more card played to trigger #yQuickdraw. #yQuickdraw activates twice."
     ]
   },
   "forsaken:HumbleEgg": {
     "NAME": "Humble Egg",
     "FLAVOR": "It's just an egg.",
     "DESCRIPTIONS": [
-      "Whenever you add a #yCommon card into your deck, #yUpgrade it. When you first draw a common card each turn, draw an extra card."
+      "Whenever you add a #yCommon card into your deck, #yUpgrade it. When you first draw a #yCommon card each turn, draw an extra card."
     ]
   },
   "forsaken:JudgementScales": {
@@ -62,7 +62,7 @@
     "FLAVOR": "This rare flower grows only in a hidden garden in a legendary forest.",
     "DESCRIPTIONS": [
       "At the beginning of each battle, gain #b",
-      " regen."
+      " #yRegen."
     ]
   },
   "forsaken:PaleLantern": {
@@ -76,7 +76,7 @@
     "NAME": "Plague Mask",
     "FLAVOR": "It was believed these masks could prevent disease, but they only seem to spread it.",
     "DESCRIPTIONS": [
-      "Whenever you are inflicted with poison, apply it to a random enemy also."
+      "Whenever you are inflicted with #yPoison, also apply it to a random enemy."
     ]
   },
   "forsaken:MarkOfTheForsaken": {
@@ -90,14 +90,14 @@
     "NAME": "Scales of Truth",
     "FLAVOR": "It is said that if one's heart is light as a feather, the Truth will be understood.",
     "DESCRIPTIONS": [
-      "Replaces #yJudgement #yScales. For every 3 #yunplayed skills, gain 1 dexterity. For every 3 #yunplayed attacks, gain 1 strength."
+      "Replaces #yJudgement #yScales. For every 3 #yUnplayed skills, gain 1 #yDexterity. For every 3 #yUnplayed attacks, gain 1 #yStrength."
     ]
   },
   "forsaken:ScaryMask": {
     "NAME": "Scary Mask",
     "FLAVOR": "Created to terrify the Spire's weaker denizens.",
     "DESCRIPTIONS": [
-      "The first attack played each combat inflicts #b1 #yFear"
+      "The first attack played each combat inflicts #b1 #yFear."
     ]
   },
   "forsaken:Sunblade": {
@@ -112,7 +112,7 @@
     "NAME": "Sunlight Medallion",
     "FLAVOR": "A simple token to commemorate Jolly Cooperation.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b3 #ySunlight"
+      "At the start of each combat, gain #b3 #ySunlight."
     ]
   },
   "forsaken:TearstoneRing": {
@@ -120,7 +120,7 @@
     "FLAVOR": "This rare gem can sense when its bearer is in danger.",
     "DESCRIPTIONS": [
       "Whenever you draw #b10 #yUnplayable cards, gain #b",
-      " #yVigor"
+      " #yVigor."
     ]
   },
   "forsaken:WornEffigy": {

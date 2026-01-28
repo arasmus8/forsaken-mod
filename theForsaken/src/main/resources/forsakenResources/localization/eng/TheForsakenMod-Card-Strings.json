@@ -21,8 +21,8 @@
   },
   "forsaken:AncientWords": {
     "NAME": "Ancient Words",
-    "DESCRIPTION": "Whenever you lose HP from poison, a random enemy loses HP.",
-    "UPGRADE_DESCRIPTION": "Whenever you lose HP from poison, a random enemy loses HP twice."
+    "DESCRIPTION": "Whenever you lose HP from Poison, a random enemy loses HP.",
+    "UPGRADE_DESCRIPTION": "Whenever you lose HP from Poison, a random enemy loses HP twice."
   },
   "forsaken:Backlash": {
     "NAME": "Backlash",
@@ -56,8 +56,8 @@
   },
   "forsaken:BlindFaith": {
     "NAME": "Blind Faith",
-    "DESCRIPTION": "Discard your hand. Draw a card for each unplayable card discarded.",
-    "UPGRADE_DESCRIPTION": "Retain NL Discard your hand. Draw a card for each unplayable card discarded."
+    "DESCRIPTION": "Discard your hand. Draw a card for each Unplayable card discarded.",
+    "UPGRADE_DESCRIPTION": "Retain NL Discard your hand. Draw a card for each Unplayable card discarded."
   },
   "forsaken:Bolster": {
     "NAME": "Bolster",
@@ -105,7 +105,7 @@
   },
   "forsaken:CreepingInfection": {
     "NAME": "Creeping Infection",
-    "DESCRIPTION": "Reduce your poison by !M! and heal the same amount. NL forsaken:Unplayed: Apply !M! poison to ALL."
+    "DESCRIPTION": "Reduce your Poison by !M! and heal the same amount. NL forsaken:Unplayed: Apply !M! Poison to ALL."
   },
   "forsaken:DarkBargain": {
     "NAME": "Dark Bargain",
@@ -119,7 +119,7 @@
   },
   "forsaken:DarkFog": {
     "NAME": "Dark Fog",
-    "DESCRIPTION": "Unplayable NL When drawn: apply !M! poison to ALL. NL forsaken:Quickdraw"
+    "DESCRIPTION": "Unplayable NL When drawn: apply !M! Poison to ALL. NL forsaken:Quickdraw"
   },
   "forsaken:DarkRift": {
     "NAME": "Dark Rift",
@@ -139,8 +139,8 @@
   },
   "forsaken:DivineGuidance": {
     "NAME": "Divine Guidance",
-    "DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random unplayable card. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random upgraded unplayable card. NL Exhaust"
+    "DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random Unplayable card. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Exhaust ALL cards in your hand. Replace each with a random upgraded Unplayable card. NL Exhaust"
   },
   "forsaken:Elegy": {
     "NAME": "Elegy",
@@ -164,11 +164,11 @@
   },
   "forsaken:FuryStrikes": {
     "NAME": "Fury Strikes",
-    "DESCRIPTION": "Deal !D! damage 3 times"
+    "DESCRIPTION": "Deal !D! damage 3 times."
   },
   "forsaken:HealingLight": {
     "NAME": "Healing Light",
-    "DESCRIPTION": "Immediately trigger forsaken:Sunlight !M! times. Apply 2 forsaken:Fear on ALL enemies for each Sunlight removed."
+    "DESCRIPTION": "Immediately trigger forsaken:Sunlight !M! times. Apply 2 forsaken:Fear to ALL enemies for each Sunlight removed."
   },
   "forsaken:HorrifyingStrike": {
     "NAME": "Horrifying Strike",
@@ -180,7 +180,7 @@
   },
   "forsaken:HymnOfPatience": {
     "NAME": "Hymn of Patience",
-    "DESCRIPTION": "Apply !M! forsaken:Fear"
+    "DESCRIPTION": "Apply !M! forsaken:Fear."
   },
   "forsaken:HymnOfRest": {
     "NAME": "Hymn of Rest",
@@ -199,7 +199,7 @@
   },
   "forsaken:LightRoll": {
     "NAME": "Light Roll",
-    "DESCRIPTION": "Unplayable NL When drawn, gain !B! block and apply !M! forsaken:Fear on ALL enemies. NL forsaken:Quickdraw"
+    "DESCRIPTION": "Unplayable NL When drawn, gain !B! block and apply !M! forsaken:Fear to ALL enemies. NL forsaken:Quickdraw"
   },
   "forsaken:MagicWeapon": {
     "NAME": "Magic Weapon",
@@ -210,7 +210,7 @@
     "DESCRIPTION": "Choose a card in your hand. It is now Innate. NL Fleeting",
     "UPGRADE_DESCRIPTION": "Choose any card in your deck. It is now Innate. NL Fleeting",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card. It becomes innate."
+      "Choose a card. It becomes Innate."
     ]
   },
   "forsaken:NobleSacrifice": {
@@ -245,7 +245,7 @@
   },
   "forsaken:Prudence": {
     "NAME": "Prudence",
-    "DESCRIPTION": "At the end of each turn, gain !M! block for each unplayable card in hand."
+    "DESCRIPTION": "At the end of each turn, gain !M! block for each Unplayable card in hand."
   },
   "forsaken:Purification": {
     "NAME": "Purification",
@@ -257,11 +257,11 @@
   },
   "forsaken:RainingSunlight": {
     "NAME": "Raining Sunlight",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. forsaken:Unplayed: gain !M! forsaken:Sunlight."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. forsaken:Unplayed: Gain !M! forsaken:Sunlight."
   },
   "forsaken:Retribution": {
     "NAME": "Retribution",
-    "DESCRIPTION": "Unplayable NL When drawn, gain !M! thorns NL forsaken:Quickdraw"
+    "DESCRIPTION": "Unplayable NL When drawn, gain !M! Thorns. NL forsaken:Quickdraw"
   },
   "forsaken:Riposte": {
     "NAME": "Riposte",
@@ -291,8 +291,7 @@
   },
   "forsaken:ShieldCharge": {
     "NAME": "Shield Charge",
-    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy. NL forsaken:Quickdraw",
-    "UPGRADE_DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy and draw a card. NL forsaken:Quickdraw"
+    "DESCRIPTION": "Unplayable NL When drawn, deal !D! damage to a random enemy and gain block equal to the unblocked damage dealt. NL forsaken:Quickdraw"
   },
   "forsaken:SiphonStrike": {
     "NAME": "Siphon Strike",
@@ -304,7 +303,7 @@
   },
   "forsaken:SpinAttack": {
     "NAME": "Spin Attack",
-    "DESCRIPTION": "Deal !D! damage to a random enemy and draw a card. If you draw an unplayable card, repeat."
+    "DESCRIPTION": "Deal !D! damage to a random enemy and draw a card. If you draw an Unplayable card, repeat."
   },
   "forsaken:SpreadingPlague": {
     "NAME": "Spreading Plague",
@@ -316,12 +315,12 @@
     "DESCRIPTION": "Draw a card. If it is Unplayable, gain !B! block."
   },
   "forsaken:TearsOfSunlight": {
-    "NAME": "Tears Of Sunlight",
+    "NAME": "Tears of Sunlight",
     "DESCRIPTION": "Gain !M! forsaken:Sunlight. Sunlight heals 1 more."
   },
   "forsaken:Temperance": {
     "NAME": "Temperance",
-    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each unplayable card in your discard pile."
+    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each Unplayable card in your discard pile."
   },
   "forsaken:Terrorize": {
     "NAME": "Terrorize",
@@ -344,12 +343,12 @@
   },
   "forsaken:WordOfPower": {
     "NAME": "Word of Power",
-    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each unplayable card in your deck."
+    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each Unplayable card in your deck."
   },
   "forsaken:WordsOfPestilence": {
     "NAME": "Words of Pestilence",
-    "DESCRIPTION": "Deal !D! damage. Shuffle all forsaken:quickdraw cards in your discard pile into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Shuffle all forsaken:quickdraw cards in your discard pile into your draw pile. Draw a card."
+    "DESCRIPTION": "Deal !D! damage. Shuffle all forsaken:Quickdraw cards in your discard pile into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Shuffle all forsaken:Quickdraw cards in your discard pile into your draw pile. Draw a card."
   },
   "forsaken:WrathOfGod": {
     "NAME": "Wrath of God",

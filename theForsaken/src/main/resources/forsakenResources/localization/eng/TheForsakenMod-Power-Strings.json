@@ -2,9 +2,9 @@
   "forsaken:AncientWordsPower": {
     "NAME": "Ancient Words",
     "DESCRIPTIONS": [
-      "When losing HP from poison, a random enemy loses HP #b",
+      "When losing HP from Poison, a random enemy loses HP #b",
       " time.",
-      " times"
+      " times."
     ]
   },
   "forsaken:BindingThornsPower": {
@@ -32,7 +32,7 @@
   "forsaken:OldBolsterPower": {
     "NAME": "Bolster",
     "DESCRIPTIONS": [
-      "The first attack each turn applies weak and gains ",
+      "The first attack each turn applies Weak and gains ",
       " block."
     ]
   },
@@ -59,7 +59,7 @@
       "Reduce damage taken by ",
       "one third",
       "half",
-      ". Convert lost HP to poison."
+      ". Convert lost HP to Poison."
     ]
   },
   "forsaken:DarkBargainPower": {
@@ -121,7 +121,7 @@
   "forsaken:FountainOfLifePower": {
     "NAME": "Fountain of Life",
     "DESCRIPTIONS": [
-      "At the end of battle, increase your Max HP by #b"
+      "At the end of battle, increase your Max HP by #b."
     ]
   },
   "forsaken:HealNextTurnPower": {
@@ -183,13 +183,13 @@
     "NAME": "Spreading Plague",
     "DESCRIPTIONS": [
       "Inflict ",
-      " poison when attacked."
+      " Poison when attacked."
     ]
   },
   "forsaken:SpreadingPlaguePower": {
     "NAME": "Spreading Plague",
     "DESCRIPTIONS": [
-      "Creeping Infection costs #b0"
+      "Creeping Infection costs #b0."
     ]
   },
   "forsaken:RetributionPower": {
@@ -205,7 +205,7 @@
     "NAME": "Riposte",
     "DESCRIPTIONS": [
       "Whenever you draw a #yParry, apply #b",
-      " vulnerable to a random enemy."
+      " Vulnerable to a random enemy."
     ]
   },
   "forsaken:OldRipostePower": {
@@ -217,7 +217,7 @@
   "forsaken:SunlightPower": {
     "NAME": "Sunlight",
     "DESCRIPTIONS": [
-      "At the end of your turn, heals #b3 HP."
+      "At the end of your turn, heal #b3 HP."
     ]
   },
   "forsaken:OldTearsOfSunlightPower": {
@@ -237,7 +237,7 @@
   "forsaken:TranquilityPower": {
     "NAME": "Tranquility",
     "DESCRIPTIONS": [
-      "Half the strength is returned each turn."
+      "Half the Strength is returned each turn."
     ]
   },
   "forsaken:WordsOfMightPower": {

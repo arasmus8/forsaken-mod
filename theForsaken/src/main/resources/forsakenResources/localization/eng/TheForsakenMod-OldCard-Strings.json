@@ -9,7 +9,7 @@
   },
   "forsaken:oldcards:AncientWords": {
     "NAME": "Ancient Words",
-    "DESCRIPTION": "(WORDS) NL Gain !M! artifact."
+    "DESCRIPTION": "(WORDS) NL Gain !M! Artifact."
   },
   "forsaken:oldcards:Backlash": {
     "NAME": "Backlash",
@@ -54,7 +54,7 @@
   },
   "forsaken:oldcards:BountifulSunlight": {
     "NAME": "Bountiful Sunlight",
-    "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Regen. NL Exhaust"
   },
   "forsaken:oldcards:ChargeAttack": {
     "NAME": "Charge Attack",
@@ -66,7 +66,7 @@
   },
   "forsaken:oldcards:Confusion": {
     "NAME": "Confusion",
-    "DESCRIPTION": "If the target intends to attack, deal its Damage to a random enemy 3 times. NL Exhaust.",
+    "DESCRIPTION": "If the target intends to attack, deal its Damage to a random enemy 3 times. NL Exhaust",
     "UPGRADE_DESCRIPTION": "If the target intends to attack, deal its Damage to a random enemy 3 times.",
     "EXTENDED_DESCRIPTION": [
       "That monster is not attacking."
@@ -101,8 +101,8 @@
   },
   "forsaken:oldcards:DarkBarrier": {
     "NAME": "Dark Barrier",
-    "DESCRIPTION": "Prevent the next X times you would lose HP. Inflict X Frail on yourself. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Prevent the next X + 1 times you would lose HP. Inflict X - 1 Frail on yourself. NL Exhaust."
+    "DESCRIPTION": "Prevent the next X times you would lose HP. Inflict X Frail on yourself. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Prevent the next X + 1 times you would lose HP. Inflict X - 1 Frail on yourself. NL Exhaust"
   },
   "forsaken:oldcards:DarkRift": {
     "NAME": "Dark Rift",
@@ -114,7 +114,7 @@
   },
   "forsaken:oldcards:DesperatePlea": {
     "NAME": "Desperate Plea",
-    "DESCRIPTION": "(WORDS) NL Remove all debuffs. Gain !M! Strength. If you are below 1/2 hp, NL Gain [E] [E]."
+    "DESCRIPTION": "(WORDS) NL Remove all debuffs. Gain !M! Strength. If you are below 1/2 HP, NL Gain [E] [E]."
   },
   "forsaken:oldcards:Devotion": {
     "NAME": "Devotion",
@@ -122,16 +122,16 @@
   },
   "forsaken:oldcards:DivineGuidance": {
     "NAME": "Divine Guidance",
-    "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose ANY card. NL Add a copy to your draw pile. NL Exhaust."
+    "DESCRIPTION": "Choose ANY card. NL Add a copy to your discard pile. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Choose ANY card. NL Add a copy to your draw pile. NL Exhaust"
   },
   "forsaken:oldcards:Enfeeble": {
     "NAME": "Enfeeble",
-    "DESCRIPTION": "Deal !D! Damage 6 times. The target loses !M! Strength this turn. NL Exhaust."
+    "DESCRIPTION": "Deal !D! Damage 6 times. The target loses !M! Strength this turn. NL Exhaust"
   },
   "forsaken:oldcards:Eulogy": {
     "NAME": "Eulogy",
-    "DESCRIPTION": "(WORDS) NL Ethereal. NL Apply !M! Vulnerable to ALL enemies. NL forsaken:Unplayed: Your next attack deals 3 bonus Damage."
+    "DESCRIPTION": "(WORDS) NL Ethereal NL Apply !M! Vulnerable to ALL enemies. NL forsaken:Unplayed: Your next attack deals 3 bonus Damage."
   },
   "forsaken:oldcards:FatRoll": {
     "NAME": "Fat Roll",
@@ -147,12 +147,12 @@
   },
   "forsaken:oldcards:HealingLight": {
     "NAME": "Healing Light",
-    "DESCRIPTION": "Heal !M! HP for each unplayed card in your discard pile. NL (Discarded !forsaken:UNPLAYED_CARDS! unplayed cards) NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP for each unplayed card in your discard pile. NL (Discarded !forsaken:UNPLAYED_CARDS! unplayed cards) NL Exhaust"
   },
   "forsaken:oldcards:Horror": {
     "NAME": "Horror",
-    "DESCRIPTION": "Apply X forsaken:F\u200bear on an enemy. You cannot gain Block for !M! turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply X + 1 forsaken:F\u200bear on an enemy. You cannot gain Block for !M! turns. NL Exhaust."
+    "DESCRIPTION": "Apply X forsaken:F\u200bear to an enemy. You cannot gain Block for !M! turns. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Apply X + 1 forsaken:F\u200bear to an enemy. You cannot gain Block for !M! turns. NL Exhaust"
   },
   "forsaken:oldcards:HorrifyingStrike": {
     "NAME": "Horrifying Strike",
@@ -160,7 +160,7 @@
   },
   "forsaken:oldcards:HymnOfPatience": {
     "NAME": "Hymn of Patience",
-    "DESCRIPTION": "Next turn, gain !M! [E] and draw !M! additional card."
+    "DESCRIPTION": "Next turn, gain !M! [E] and draw !M! additional cards."
   },
   "forsaken:oldcards:HymnOfRest": {
     "NAME": "Hymn of Rest",
@@ -172,11 +172,11 @@
   },
   "forsaken:oldcards:InspiringBlow": {
     "NAME": "Inspiring Blow",
-    "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy gain !M! Block each turn."
+    "DESCRIPTION": "Deal !D! Damage. NL If this kills an enemy, gain !M! Block each turn."
   },
   "forsaken:oldcards:LightRoll": {
     "NAME": "Light Roll",
-    "DESCRIPTION": "Gain !B! Block, apply !M! Weak. NL Add a copy to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block, apply !M! Weak. NL Add a copy to your hand. NL Exhaust"
   },
   "forsaken:oldcards:MagicWeapon": {
     "NAME": "Magic Weapon",
@@ -194,7 +194,7 @@
   },
   "forsaken:oldcards:PanicDive": {
     "NAME": "Panic Dive",
-    "DESCRIPTION": "Gain !B! Block. NL Shuffle !M! dazed into your discard pile."
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle !M! Dazed into your discard pile."
   },
   "forsaken:oldcards:Parry": {
     "NAME": "Parry",
@@ -214,11 +214,11 @@
   },
   "forsaken:oldcards:PreciseStrike": {
     "NAME": "Precise Strike",
-    "DESCRIPTION": "Deal !D! Damage, apply !M! Vulnerable. NL Add a copy to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! Damage. Apply !M! Vulnerable. NL Add a copy to your hand. NL Exhaust"
   },
   "forsaken:oldcards:Preservation": {
     "NAME": "Preservation",
-    "DESCRIPTION": "When you gain Block this turn, gain Block next turn as well. NL Exhaust.",
+    "DESCRIPTION": "When you gain Block this turn, gain Block next turn as well. NL Exhaust",
     "UPGRADE_DESCRIPTION": "When you gain Block this turn, gain Block next turn as well."
   },
   "forsaken:oldcards:Prudence": {
@@ -231,7 +231,7 @@
   },
   "forsaken:oldcards:QuickAttack": {
     "NAME": "Quick Attack",
-    "DESCRIPTION": "Deal !D! Damage. Draw 1 card. NL Innate."
+    "DESCRIPTION": "Deal !D! Damage. Draw 1 card. NL Innate"
   },
   "forsaken:oldcards:RainingSunlight": {
     "NAME": "Raining Sunlight",
@@ -239,7 +239,7 @@
   },
   "forsaken:oldcards:Recompense": {
     "NAME": "Recompense",
-    "DESCRIPTION": "Ethereal. NL Draw !M! card. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL Exhaust"
   },
   "forsaken:oldcards:Retribution": {
     "NAME": "Retribution",
@@ -251,16 +251,16 @@
   },
   "forsaken:oldcards:SacredOath": {
     "NAME": "Sacred Oath",
-    "DESCRIPTION": "(WORDS) NL Double your Strength and Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "(WORDS) NL Triple your Strength and Dexterity. NL Exhaust."
+    "DESCRIPTION": "(WORDS) NL Double your Strength and Dexterity. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "(WORDS) NL Triple your Strength and Dexterity. NL Exhaust"
   },
   "forsaken:oldcards:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
-    "DESCRIPTION": "Sacrifice all your buffs, dealing !D! Damage, + !M! for each buff to ALL enemies. NL ( !forsaken:SACRIFICE_SOUL_DAMAGE! Damage) NL Exhaust."
+    "DESCRIPTION": "Sacrifice all your buffs, dealing !D! Damage plus !M! for each buff to ALL enemies. NL ( !forsaken:SACRIFICE_SOUL_DAMAGE! Damage) NL Exhaust"
   },
   "forsaken:oldcards:ScorchingSunlight": {
     "NAME": "Scorching Sunlight",
-    "DESCRIPTION": "Deal !D! Damage to all enemies !M! times. NL Shuffle a burn into your discard pile."
+    "DESCRIPTION": "Deal !D! Damage to all enemies !M! times. NL Shuffle a Burn into your discard pile."
   },
   "forsaken:oldcards:ShieldBash": {
     "NAME": "Shield Bash",
@@ -292,7 +292,7 @@
   },
   "forsaken:oldcards:StoreUp": {
     "NAME": "Store Up",
-    "DESCRIPTION": "Choose a card. Add !M! copy to your discard pile.",
+    "DESCRIPTION": "Choose a card. Add !M! copies to your discard pile.",
     "UPGRADE_DESCRIPTION": "Choose a card. Add !M! copies to your discard pile."
   },
   "forsaken:oldcards:TearsOfSunlight": {
@@ -306,7 +306,7 @@
   },
   "forsaken:oldcards:Terrorize": {
     "NAME": "Terrorize",
-    "DESCRIPTION": "Apply !M! forsaken:F\u200bear. NL Exhaust."
+    "DESCRIPTION": "Apply !M! forsaken:F\u200bear. NL Exhaust"
   },
   "forsaken:oldcards:Thunderbolt": {
     "NAME": "Thunderbolt",
@@ -314,7 +314,7 @@
   },
   "forsaken:oldcards:Tranquility": {
     "NAME": "Tranquility",
-    "DESCRIPTION": "Reduce target Strength by !M!. Return half each turn. Permanently increase by 1. NL Exhaust."
+    "DESCRIPTION": "Reduce target Strength by !M!. Return half each turn. Permanently increase by 1. NL Exhaust"
   },
   "forsaken:oldcards:WardingHymn": {
     "NAME": "Warding Hymn",

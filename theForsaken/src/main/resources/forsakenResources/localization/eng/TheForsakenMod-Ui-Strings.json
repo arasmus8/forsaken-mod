@@ -20,8 +20,8 @@
   },
   "forsaken:Settings": {
     "TEXT": [
-      "All this mods relics are for this character only. (Requires restart)",
-      "Use old card list. (Requires Restart)"
+      "All relics in this mod are for this character only. (Requires restart)",
+      "Use old card list. (Requires restart)"
     ]
   }
 }

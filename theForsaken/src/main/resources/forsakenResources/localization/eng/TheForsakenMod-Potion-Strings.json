@@ -16,8 +16,8 @@
   "forsaken:FearPotion": {
     "NAME": "Terror Potion",
     "DESCRIPTIONS": [
-      "Apply ",
-      " Fear to an enemy."
+      "Apply #b",
+      " #yFear to an enemy."
     ]
   }
 }
