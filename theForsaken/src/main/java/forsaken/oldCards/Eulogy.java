@@ -6,10 +6,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import forsaken.CustomTags;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.BonusDamagePower;
 
 @SuppressWarnings("unused")
 public class Eulogy extends AbstractOldForsakenCard {
@@ -36,7 +36,7 @@ public class Eulogy extends AbstractOldForsakenCard {
     public void use(AbstractPlayer p, AbstractMonster target) {
         if(this.dontTriggerOnUseCard) {
             this.exhaust = true;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, 3), 3));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, 3), 3));
         } else {
             for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));

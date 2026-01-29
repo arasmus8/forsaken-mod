@@ -4,9 +4,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.BonusDamagePower;
 
 @SuppressWarnings("unused")
 public class PowerUp extends AbstractOldForsakenCard {
@@ -30,7 +30,7 @@ public class PowerUp extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, magicNumber), magicNumber));
     }
 
     @Override

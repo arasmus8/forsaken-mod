@@ -12,7 +12,7 @@ public class AncientWordsPower extends AbstractForsakenPower implements Cloneabl
         super(POWER_ID, owner, amount);
         type = PowerType.BUFF;
 
-        loadRegion("artifact");
+        loadRegion("ancient_words");
         updateDescription();
     }
 

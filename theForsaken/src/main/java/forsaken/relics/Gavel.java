@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import forsaken.TheForsakenMod;
-import forsaken.powers.BonusDamagePower;
 import forsaken.util.TextureLoader;
 
 import static forsaken.TheForsakenMod.relicOutlineResourcePath;
@@ -57,7 +57,7 @@ public class Gavel extends CustomRelic {
                 this.counter = 0;
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractPlayer p = AbstractDungeon.player;
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, BONUS_DAMAGE), BONUS_DAMAGE));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, BONUS_DAMAGE), BONUS_DAMAGE));
             }
         }
     }

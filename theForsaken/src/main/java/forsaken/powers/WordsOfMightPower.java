@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import forsaken.TheForsakenMod;
 
 
@@ -34,7 +35,7 @@ public class WordsOfMightPower extends AbstractForsakenPower implements Cloneabl
         if (card.type == CardType.SKILL) {
             this.flash();
             AbstractCreature c = this.owner;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(c, c, new BonusDamagePower(c, this.amount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(c, c, new VigorPower(c, this.amount)));
         }
     }
 

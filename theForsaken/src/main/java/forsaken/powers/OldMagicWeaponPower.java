@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import forsaken.TheForsakenMod;
 
 
@@ -31,7 +32,7 @@ public class OldMagicWeaponPower extends AbstractForsakenPower implements Clonea
     public void atStartOfTurnPostDraw() {
         this.flash();
         AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BonusDamagePower(p, this.amount)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, this.amount)));
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
