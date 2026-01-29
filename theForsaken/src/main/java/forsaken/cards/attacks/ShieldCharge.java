@@ -32,7 +32,7 @@ public class ShieldCharge extends AbstractQuickdrawCard {
                 if (upgraded) {
                     int block = Math.max(0, m.lastDamageTaken);
                     if (block > 0) {
-                        addToBot(new GainBlockAction(p, p, block));
+                        addToTop(new GainBlockAction(p, p, block));
                     }
                 }
             }
