@@ -15,7 +15,7 @@ public class DefensiveStancePower extends AbstractForsakenPower implements Clone
         super(POWER_ID, owner, amount);
         type = PowerType.BUFF;
 
-        loadRegion("dexterity");
+        loadRegion("defensive_stance");
         updateDescription();
     }
 

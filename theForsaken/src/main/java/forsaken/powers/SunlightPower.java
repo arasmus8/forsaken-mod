@@ -20,7 +20,7 @@ public class SunlightPower extends AbstractForsakenPower implements CloneablePow
         type = PowerType.BUFF;
         isTurnBased = true;
 
-        loadRegion("regen");
+        loadRegion("sunlight");
         updateDescription();
     }
 

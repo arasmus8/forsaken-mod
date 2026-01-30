@@ -36,13 +36,6 @@
       " block."
     ]
   },
-  "forsaken:BonusDamagePower": {
-    "NAME": "Bonus Damage",
-    "DESCRIPTIONS": [
-      "The next attack deals #b",
-      " bonus damage."
-    ]
-  },
   "forsaken:CorruptDeckPower": {
     "NAME": "Corrupt Deck",
     "DESCRIPTIONS": [
@@ -74,8 +67,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " and shuffle ",
-      " void into your discard pile.",
-      " voids into your discard pile."
+      " Recompense into your discard pile.",
+      " Recompense into your discard pile."
     ]
   },
   "forsaken:DefensiveStancePower": {

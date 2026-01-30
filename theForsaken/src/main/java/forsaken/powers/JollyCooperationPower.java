@@ -12,7 +12,7 @@ public class JollyCooperationPower extends AbstractForsakenPower implements Clon
         super(POWER_ID, AbstractDungeon.player, -1);
         type = PowerType.BUFF;
 
-        loadRegion("energized_green");
+        loadRegion("jolly_cooperation");
         updateDescription();
     }
 
