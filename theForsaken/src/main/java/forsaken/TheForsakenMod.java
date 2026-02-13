@@ -413,6 +413,7 @@ public class TheForsakenMod implements
                 .filter(c -> !(AbstractQuickdrawCard.isQuickdraw(c)))
                 .collect(Collectors.toList());
         int cardsPlayed = nonQuickdrawCards.size() + 1;
+        TheForsaken.forsakenEnergyOrb.setRuneCount(cardsPlayed - quickdrawTriggeredAt);
         if (cardsPlayed >= quickdrawTriggeredAt + countForTrigger) {
             // Draw the next quickdraw card
             int timesToTrigger = 1;
@@ -426,11 +427,15 @@ public class TheForsakenMod implements
                         p.drawPile.removeCard(c);
                         p.drawPile.addToTop(c);
                         AbstractDungeon.actionManager.addToTop(new DrawCardAction(p, 1));
-                        quickdrawTriggeredAt = cardsPlayed;
                     });
                     return true;
                 }));
             }
+            AbstractDungeon.actionManager.addToBottom(new FunctionalAction(firstUpdate -> {
+                quickdrawTriggeredAt = cardsPlayed;
+                TheForsaken.forsakenEnergyOrb.setRuneCount(0);
+                return true;
+            }));
         }
     }
 
@@ -438,12 +443,14 @@ public class TheForsakenMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         usedCards.clear();
         quickdrawTriggeredAt = 0;
+        TheForsaken.forsakenEnergyOrb.setRuneCount(0);
     }
 
     @Override
     public void receiveOnPlayerTurnStartPostDraw() {
         // reset the quickdraw trigger on turn start
         quickdrawTriggeredAt = 0;
+        TheForsaken.forsakenEnergyOrb.setRuneCount(0);
     }
 
     @Override

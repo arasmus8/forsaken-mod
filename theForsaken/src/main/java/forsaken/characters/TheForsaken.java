@@ -32,7 +32,6 @@ import forsaken.oldCards.TheForsaken_Defend;
 import forsaken.oldCards.TheForsaken_Strike;
 import forsaken.relics.JudgementScales;
 import forsaken.relics.SunlightMedallion;
-import sun.security.provider.Sun;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,39 +65,16 @@ public class TheForsaken extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    // TODO: make a bonfire for energy instead
-    public static final String[] orbTextures = {
-            "forsakenResources/images/char/forsaken/orb/layer1.png",
-            "forsakenResources/images/char/forsaken/orb/layer2.png",
-            "forsakenResources/images/char/forsaken/orb/layer3.png",
-            "forsakenResources/images/char/forsaken/orb/layer4.png",
-            "forsakenResources/images/char/forsaken/orb/layer5.png",
-            "forsakenResources/images/char/forsaken/orb/layer6.png",
-            "forsakenResources/images/char/forsaken/orb/layer1d.png",
-            "forsakenResources/images/char/forsaken/orb/layer2d.png",
-            "forsakenResources/images/char/forsaken/orb/layer3d.png",
-            "forsakenResources/images/char/forsaken/orb/layer4d.png",
-            "forsakenResources/images/char/forsaken/orb/layer5d.png",};
+    public static final ForsakenEnergyOrb forsakenEnergyOrb = new ForsakenEnergyOrb();
 
     public TheForsaken(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures,
-                "forsakenResources/images/char/forsaken/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "forsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
-
-
-        // =============== TEXTURES, ENERGY, LOADOUT =================  
+        super(name, setClass, forsakenEnergyOrb, new SpriterAnimation("forsakenResources/images/char/forsaken/Spriter/forsaken.scml"));
 
         initializeClass(null, // required call to load textures and setup energy/loadout.
                 imageResourcePath("char/forsaken/shoulder.png"),
                 imageResourcePath("char/forsaken/shoulder2.png"),
                 imageResourcePath("char/forsaken/corpse.png"),
-                getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
-
-        // =============== /TEXTURES, ENERGY, LOADOUT/ =================
-
-
-        // =============== ANIMATIONS =================  
+                getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 
         loadAnimation(
                 imageResourcePath("char/forsaken/skeleton.atlas"),
@@ -107,19 +83,9 @@ public class TheForsaken extends CustomPlayer {
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
-        // =============== /ANIMATIONS/ =================
-
-
-        // =============== TEXT BUBBLE LOCATION =================
-
         dialogX = (drawX + 0.0F * Settings.scale); // set location for text bubbles
         dialogY = (drawY + 220.0F * Settings.scale); // you can just copy these values
-
-        // =============== /TEXT BUBBLE LOCATION/ =================
-
     }
-
-    // =============== /CHARACTER CLASS END/ =================
 
     // Starting description and loadout
     @Override
