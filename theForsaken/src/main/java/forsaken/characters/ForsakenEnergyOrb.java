@@ -7,20 +7,14 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import forsaken.TheForsakenMod;
-import forsaken.powers.JollyCooperationPower;
-import forsaken.relics.GuardianBells;
 import forsaken.util.TextureHelper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ForsakenEnergyOrb extends CustomEnergyOrb {
-    private static final Logger logger = LogManager.getLogger(ForsakenEnergyOrb.class.getName());
-    private static final float ORB_IMG_SCALE;
+    private static final float ORB_IMG_SCALE = 1.45F * Settings.scale;
     private static final float PULSE_SPEED = 0.6f;
     private static final float RUNE_FADE_DURATION = 0.5f;
     private static final float RUNE_PULSE_SPEED = 1.2f;
@@ -46,7 +40,11 @@ public class ForsakenEnergyOrb extends CustomEnergyOrb {
         textures.put("EmberNoEnergy", TextureHelper.getTexture(TheForsakenMod.imageResourcePath("char/forsaken/orb/EnergyOrbEmberNoEnergy.png")));
     }
 
-    public void setRuneCount(int c) {
+    public void resetRuneCount() {
+        setRuneCount(0, false);
+    }
+
+    public void setRuneCount(int c, boolean shouldPulse) {
         if (runeCount > 0 && c == 0) {
             runefade[4] = RUNE_FADE_DURATION;
         }
@@ -59,14 +57,7 @@ public class ForsakenEnergyOrb extends CustomEnergyOrb {
         if (runeCount == 2 && c > 2) {
             runefade[3] = RUNE_FADE_DURATION; // fade in the third rune
         }
-        int quickdrawTriggersAt = 3;
-        if (AbstractDungeon.player.hasPower(JollyCooperationPower.POWER_ID)) {
-            quickdrawTriggersAt = 2;
-        }
-        if (AbstractDungeon.player.hasRelic(GuardianBells.ID)) {
-            quickdrawTriggersAt += 1;
-        }
-        if (c == quickdrawTriggersAt - 1) {
+        if (shouldPulse) {
             // pulse the runes when quickdraw is about to trigger
             runefade[0] = 1f;
         } else {
@@ -98,8 +89,13 @@ public class ForsakenEnergyOrb extends CustomEnergyOrb {
             alpha = (float) (Math.sin(tick * Math.PI * PULSE_SPEED) * 0.2f + 0.8f);
             sb.setColor(1f, 1f, 1f, alpha);
             TextureHelper.drawScaled(sb, textures.get("Ember"), x, y, ORB_IMG_SCALE);
+            sb.setColor(Color.WHITE);
+            TextureHelper.drawScaled(sb, textures.get("PitInnerRing"), x, y, ORB_IMG_SCALE);
+            sb.setColor(1f, 1f, 1f, alpha);
             TextureHelper.drawScaled(sb, textures.get("FireGlow"), x, y, ORB_IMG_SCALE);
             sb.setColor(Color.WHITE);
+        } else {
+            TextureHelper.drawScaled(sb, textures.get("PitInnerRing"), x, y, ORB_IMG_SCALE);
         }
         float runepulsefade = runefade[0];
         if (runepulsefade < 0f) {
@@ -122,17 +118,10 @@ public class ForsakenEnergyOrb extends CustomEnergyOrb {
             case 1:
                 alpha = Interpolation.exp5Out.apply(1 - runefade[1] / RUNE_FADE_DURATION) * runepulsefade;
                 alpha = Math.max(alpha, runeresetfade);
-                if (runefade[1] > 0f) {
-                    logger.info("fade in: runefade={}, alpha={}", runefade[1], alpha);
-                }
                 sb.setColor(1f, 1f, 1f, alpha);
                 TextureHelper.drawScaled(sb, textures.get("LeftRune"), x, y, ORB_IMG_SCALE);
         }
         sb.setColor(Color.WHITE);
-        TextureHelper.drawScaled(sb, textures.get("PitInnerRing"), x, y, ORB_IMG_SCALE);
     }
 
-    static {
-        ORB_IMG_SCALE = 1.45F * Settings.scale;
-    }
 }

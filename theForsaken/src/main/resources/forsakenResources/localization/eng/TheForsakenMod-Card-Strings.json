@@ -176,7 +176,7 @@
   },
   "forsaken:Horror": {
     "NAME": "Horror",
-    "DESCRIPTION": "Apply !M! forsaken:Fear to the target X times."
+    "DESCRIPTION": "Apply !M! forsaken:Fear to the target X times. NL Exhaust"
   },
   "forsaken:HymnOfPatience": {
     "NAME": "Hymn of Patience",
