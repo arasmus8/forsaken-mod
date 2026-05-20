@@ -13,15 +13,14 @@ public class SpreadingPlague extends AbstractForsakenCard {
 
     public SpreadingPlague() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.NONE);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
+        upgradeMagicNumberBy = 1;
         cardsToPreview = new CreepingInfection();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            applyToSelf(new SpreadingPlaguePower(p));
-        }
+        applyToSelf(new SpreadingPlaguePower(p));
         shuffleIn(new CreepingInfection(), magicNumber);
     }
 }

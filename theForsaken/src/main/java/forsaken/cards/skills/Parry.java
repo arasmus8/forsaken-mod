@@ -17,7 +17,7 @@ public class Parry extends AbstractQuickdrawCard {
     public static final String ID = TheForsakenMod.makeID(Parry.class.getSimpleName());
 
     public Parry() {
-        super(ID, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         block = baseBlock = 2;
         upgradeBlockBy = 1;
     }

@@ -24,8 +24,8 @@ public class WrathOfGod extends AbstractForsakenCard {
 
     public WrathOfGod() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        damage = baseDamage = 7;
-        upgradeDamageBy = 3;
+        damage = baseDamage = 5;
+        upgradeDamageBy = 2;
     }
 
     @Override

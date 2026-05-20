@@ -119,7 +119,7 @@
   },
   "forsaken:DarkFog": {
     "NAME": "Dark Fog",
-    "DESCRIPTION": "Unplayable NL When drawn: apply !M! Poison to ALL. NL forsaken:Quickdraw"
+    "DESCRIPTION": "Unplayable NL When drawn: apply !M! Poison to ALL enemies. NL forsaken:Quickdraw"
   },
   "forsaken:DarkRift": {
     "NAME": "Dark Rift",
@@ -270,7 +270,7 @@
   },
   "forsaken:SacredOath": {
     "NAME": "Sacred Oath",
-    "DESCRIPTION": "Ethereal NL Gain !B! block."
+    "DESCRIPTION": "Gain !B! block. NL Retain"
   },
   "forsaken:SacrificeSoul": {
     "NAME": "Sacrifice Soul",
@@ -307,8 +307,7 @@
   },
   "forsaken:SpreadingPlague": {
     "NAME": "Spreading Plague",
-    "DESCRIPTION": "Shuffle !M! copies of Creeping Infection into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle !M! copies of Creeping Infection into your draw pile. Creeping Infection costs 0."
+    "DESCRIPTION": "Shuffle !M! copies of Creeping Infection into your draw pile. Creeping Infection costs 0."
   },
   "forsaken:StoreUp": {
     "NAME": "Store Up",

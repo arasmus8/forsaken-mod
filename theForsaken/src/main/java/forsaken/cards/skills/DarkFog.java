@@ -19,7 +19,6 @@ public class DarkFog extends AbstractQuickdrawCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PoisonPower(p, p, magicNumber));
         monsterList().forEach(mon -> applyToEnemy(mon, new PoisonPower(mon, p, magicNumber)));
     }
 }

@@ -11,7 +11,7 @@ public class SacredOath extends AbstractForsakenCard {
 
     public SacredOath() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
+        selfRetain = true;
         block = baseBlock = 12;
         upgradeBlockBy = 4;
     }

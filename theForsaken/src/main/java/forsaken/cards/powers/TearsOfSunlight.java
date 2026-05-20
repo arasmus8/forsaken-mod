@@ -13,8 +13,8 @@ public class TearsOfSunlight extends AbstractForsakenCard {
 
     public TearsOfSunlight() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.NONE);
-        magicNumber = baseMagicNumber = 1;
-        upgradeMagicNumberBy = 1;
+        magicNumber = baseMagicNumber = 2;
+        upgradeMagicNumberBy = 3;
     }
 
     @Override
