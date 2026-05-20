@@ -116,7 +116,6 @@ public class TheForsaken extends CustomPlayer {
             return retVal;
         }
 
-        // TODO new starting cards
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);

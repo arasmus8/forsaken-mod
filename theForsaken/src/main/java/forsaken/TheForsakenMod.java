@@ -236,9 +236,12 @@ public class TheForsakenMod implements
 
 
     private void receiveEditPotions() {
-        BaseMod.addPotion( FearPotion.class, FearPotion.LIQUID_COLOR, FearPotion.HYBRID_COLOR, FearPotion.SPOTS_COLOR, FearPotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN );
         BaseMod.addPotion(BottledPlaguePotion.class, BottledPlaguePotion.LIQUID_COLOR, BottledPlaguePotion.HYBRID_COLOR, BottledPlaguePotion.SPOTS_COLOR, BottledPlaguePotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN);
-        BaseMod.addPotion(EstusFlask.class, EstusFlask.LIQUID_COLOR, EstusFlask.HYBRID_COLOR, EstusFlask.SPOTS_COLOR, EstusFlask.POTION_ID, TheForsaken.Enums.THE_FORSAKEN);
+        if (enableOldCardList) {
+            BaseMod.addPotion( FearPotion.class, FearPotion.LIQUID_COLOR, FearPotion.HYBRID_COLOR, FearPotion.SPOTS_COLOR, FearPotion.POTION_ID, TheForsaken.Enums.THE_FORSAKEN );
+        } else {
+            BaseMod.addPotion(EstusFlask.class, EstusFlask.LIQUID_COLOR, EstusFlask.HYBRID_COLOR, EstusFlask.SPOTS_COLOR, EstusFlask.POTION_ID, TheForsaken.Enums.THE_FORSAKEN);
+        }
     }
 
     @Override
