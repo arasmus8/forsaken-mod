@@ -207,11 +207,8 @@
   },
   "forsaken:Mantra": {
     "NAME": "Mantra",
-    "DESCRIPTION": "Choose a card in your hand. It is now Innate. NL Fleeting",
-    "UPGRADE_DESCRIPTION": "Choose any card in your deck. It is now Innate. NL Fleeting",
-    "EXTENDED_DESCRIPTION": [
-      "Choose a card. It becomes Innate."
-    ]
+    "DESCRIPTION": "Each turn, add a random unplayable card to the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Each turn, add a random upgraded unplayable card to the top of your draw pile."
   },
   "forsaken:NobleSacrifice": {
     "NAME": "Noble Sacrifice",
@@ -319,7 +316,7 @@
   },
   "forsaken:Temperance": {
     "NAME": "Temperance",
-    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each Unplayable card in your discard pile."
+    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each Unplayable card in your hand."
   },
   "forsaken:Terrorize": {
     "NAME": "Terrorize",

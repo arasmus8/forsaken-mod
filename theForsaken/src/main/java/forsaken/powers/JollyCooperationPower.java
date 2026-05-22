@@ -17,6 +17,11 @@ public class JollyCooperationPower extends AbstractForsakenPower implements Clon
     }
 
     @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0];
+    }
+
+    @Override
     public AbstractPower makeCopy() {
         return null;
     }

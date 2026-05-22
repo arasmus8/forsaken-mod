@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.CustomTags;
 import forsaken.TheForsakenMod;
 import forsaken.characters.TheForsaken;
-import forsaken.powers.MantraPower;
+import forsaken.powers.OldMantraPower;
 
 @SuppressWarnings("unused")
 public class Mantra extends AbstractOldForsakenCard {
@@ -33,7 +33,7 @@ public class Mantra extends AbstractOldForsakenCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MantraPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OldMantraPower(p, magicNumber), magicNumber));
     }
 
     @Override

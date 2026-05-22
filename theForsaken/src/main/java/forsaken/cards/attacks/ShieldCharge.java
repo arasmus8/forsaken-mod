@@ -29,11 +29,9 @@ public class ShieldCharge extends AbstractQuickdrawCard {
                 DamageInfo info = makeDamageInfo(damage, damageTypeForTurn);
                 AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
                 m.damage(info);
-                if (upgraded) {
-                    int block = Math.max(0, m.lastDamageTaken);
-                    if (block > 0) {
-                        addToTop(new GainBlockAction(p, p, block));
-                    }
+                int block = Math.max(0, m.lastDamageTaken);
+                if (block > 0) {
+                    addToTop(new GainBlockAction(p, p, block));
                 }
             }
             return true;

@@ -11,12 +11,12 @@ import forsaken.characters.TheForsaken;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MantraPower extends AbstractForsakenPower implements CloneablePowerInterface {
-    public static final String POWER_ID = TheForsakenMod.makeID(MantraPower.class.getSimpleName());
+public class UpgradedMantraPower extends AbstractForsakenPower implements CloneablePowerInterface {
+    public static final String POWER_ID = TheForsakenMod.makeID(UpgradedMantraPower.class.getSimpleName());
 
     private final List<AbstractCard> allUnplayableCards;
 
-    public MantraPower() {
+    public UpgradedMantraPower() {
         super(POWER_ID, AbstractDungeon.player, -1);
         type = PowerType.BUFF;
 
@@ -44,12 +44,13 @@ public class MantraPower extends AbstractForsakenPower implements CloneablePower
         flash();
         for (int i = 0; i < amount; i++) {
             AbstractCard randomUnplayableCard = allUnplayableCards.get(AbstractDungeon.cardRandomRng.random(allUnplayableCards.size() - 1)).makeCopy();
+            randomUnplayableCard.upgrade();
             topDeck(randomUnplayableCard);
         }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new MantraPower();
+        return new UpgradedMantraPower();
     }
 }

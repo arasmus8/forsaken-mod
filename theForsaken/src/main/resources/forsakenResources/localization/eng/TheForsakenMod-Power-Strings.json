@@ -147,6 +147,22 @@
   "forsaken:MantraPower": {
     "NAME": "Mantra",
     "DESCRIPTIONS": [
+      "Each turn, add ",
+      " random unplayable card on top of your draw pile.",
+      " random unplayable cards on top of your draw pile."
+    ]
+  },
+  "forsaken:UpgradedMantraPower": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "Each turn, add ",
+      " random upgraded unplayable card on top of your draw pile.",
+      " random upgraded unplayable cards on top of your draw pile."
+    ]
+  },
+  "forsaken:OldMantraPower": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
       "The first card played next turn is repeated #b",
       " time.",
       " times."

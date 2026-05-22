@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import forsaken.TheForsakenMod;
-import forsaken.actions.MoveToDrawPileAction;
 import forsaken.cards.AbstractForsakenCard;
 
 @SuppressWarnings("unused")
@@ -13,9 +12,9 @@ public class Temperance extends AbstractForsakenCard {
 
     public Temperance() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        damage = baseDamage = 9;
-        magicNumber = baseMagicNumber = 2;
-        upgradeMagicNumberBy = 1;
+        damage = baseDamage = 8;
+        magicNumber = baseMagicNumber = 3;
+        upgradeMagicNumberBy = 2;
     }
 
     @Override
@@ -25,12 +24,7 @@ public class Temperance extends AbstractForsakenCard {
 
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster m, float tmp) {
-        int discardedUnplayableCards = AbstractForsakenCard.unplayableCards(player.discardPile).size();
-        return tmp + discardedUnplayableCards * magicNumber;
-    }
-
-    @Override
-    public void triggerOnEndOfTurnForPlayingCard() {
-        qAction(new MoveToDrawPileAction(this));
+        int unplayableCardsInHand = AbstractForsakenCard.unplayableCards(player.hand).size();
+        return tmp + unplayableCardsInHand * magicNumber;
     }
 }

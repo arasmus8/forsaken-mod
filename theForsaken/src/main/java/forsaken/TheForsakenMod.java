@@ -41,7 +41,6 @@ import forsaken.powers.HymnOfRestPower;
 import forsaken.powers.JollyCooperationPower;
 import forsaken.relics.*;
 import forsaken.util.AssetLoader;
-import forsaken.util.MantraInnateManager;
 import forsaken.util.TextureHelper;
 import forsaken.util.TopdeckConsoleCommand;
 import forsaken.variables.SacrificeSoulVariable;
@@ -80,8 +79,6 @@ public class TheForsakenMod implements
     private static final String ENABLE_OLD_CARD_LIST = "enableOldCardList";
     private static boolean allRelicsCharSpecific = true;
     public static boolean enableOldCardList = false;
-
-    public static MantraInnateManager mantraInnateManager = new MantraInnateManager();
 
     public static final Color FORSAKEN_GOLD = CardHelper.getColor(227, 203, 43);
 
@@ -214,9 +211,6 @@ public class TheForsakenMod implements
 
 
         BaseMod.addEvent(PlagueDoctorEvent.ID, PlagueDoctorEvent.class);
-
-        // Setup MantraInnateManager
-        BaseMod.addSaveField(makeID(MantraInnateManager.class.getSimpleName()), mantraInnateManager);
 
         // TopdeckConsoleCommand
         ConsoleCommand.addCommand("topdeck", TopdeckConsoleCommand.class);
